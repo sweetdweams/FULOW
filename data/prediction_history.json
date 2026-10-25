@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T14:29:19+00:00",
+  "generated_at": "2026-10-25T20:55:27+00:00",
   "crosszone_history": [
     {
       "key": "Season SoSe26|0",
@@ -537,15 +537,15 @@
       "key": "Season WiSe26/27|1",
       "season": "Season WiSe26/27",
       "matchday": "1",
-      "date": "24.10.2026",
+      "date": "25.10.2026",
       "phase": "regular_season",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (1)",
       "zones": [
         {
           "id": "1_2",
           "label": "1. Liga \u2194 2. Liga",
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         {
           "id": "2_3",
@@ -556,8 +556,8 @@
         {
           "id": "3_4",
           "label": "3. Liga \u2194 4. Liga",
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       ]
     }
@@ -13414,16 +13414,16 @@
       "actual_winner_id": "T081",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13446,16 +13446,16 @@
       "actual_winner_id": "T010",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13478,16 +13478,16 @@
       "actual_winner_id": "T002",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13510,16 +13510,16 @@
       "actual_winner_id": "T082",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13542,16 +13542,16 @@
       "actual_winner_id": "T012",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13574,16 +13574,16 @@
       "actual_winner_id": "T038",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13606,16 +13606,16 @@
       "actual_winner_id": "T083",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13638,16 +13638,16 @@
       "actual_winner_id": "T022",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13670,16 +13670,16 @@
       "actual_winner_id": "T072",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13702,16 +13702,16 @@
       "actual_winner_id": "T080",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13734,16 +13734,16 @@
       "actual_winner_id": "T020",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13766,16 +13766,16 @@
       "actual_winner_id": "T086",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13798,16 +13798,16 @@
       "actual_winner_id": "T046",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13830,16 +13830,16 @@
       "actual_winner_id": "T077",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13862,16 +13862,16 @@
       "actual_winner_id": "T067",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13894,16 +13894,16 @@
       "actual_winner_id": "T053",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13926,16 +13926,16 @@
       "actual_winner_id": "T003",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13958,16 +13958,16 @@
       "actual_winner_id": "T018",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -13990,16 +13990,16 @@
       "actual_winner_id": "T041",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14022,16 +14022,16 @@
       "actual_winner_id": "T069",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14054,16 +14054,16 @@
       "actual_winner_id": "T024",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14086,16 +14086,16 @@
       "actual_winner_id": "T039",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14118,16 +14118,16 @@
       "actual_winner_id": "T065",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14150,16 +14150,16 @@
       "actual_winner_id": "T025",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14182,16 +14182,16 @@
       "actual_winner_id": "T043",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14214,16 +14214,16 @@
       "actual_winner_id": "T059",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14246,16 +14246,16 @@
       "actual_winner_id": "T064",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14278,16 +14278,16 @@
       "actual_winner_id": "T056",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14310,16 +14310,16 @@
       "actual_winner_id": "T007",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14342,16 +14342,16 @@
       "actual_winner_id": "T074",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14374,16 +14374,16 @@
       "actual_winner_id": "T034",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14406,16 +14406,16 @@
       "actual_winner_id": "T055",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14438,16 +14438,16 @@
       "actual_winner_id": "T076",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     },
@@ -14470,16 +14470,80 @@
       "actual_winner_id": "T054",
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
+        }
+      }
+    },
+    {
+      "match_id": "M038",
+      "date": "25.10.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "1",
+      "phase": "Regular Season",
+      "team_a_id": "T078",
+      "team_b_id": "T027",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "KIT SC Ragebait Raudis",
+      "team_b": "KIT SC [k\u0153ri]werk addicted tryhards",
+      "probability_a": 0.079179,
+      "probability_b": 0.920821,
+      "confidence": 0.841642,
+      "correct": true,
+      "actual_winner_id": "T027",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2231.1552,
+          "sigma": 138.0918
+        },
+        "2_3": {
+          "rating": 1648.6163,
+          "sigma": 90.0203
+        },
+        "3_4": {
+          "rating": 1303.861,
+          "sigma": 74.4848
+        }
+      }
+    },
+    {
+      "match_id": "M069",
+      "date": "25.10.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "1",
+      "phase": "Regular Season",
+      "team_a_id": "T040",
+      "team_b_id": "T062",
+      "score_a": 2,
+      "score_b": 3,
+      "team_a": "DG Elysium",
+      "team_b": "HGI Amber",
+      "probability_a": 0.218815,
+      "probability_b": 0.781185,
+      "confidence": 0.562371,
+      "correct": true,
+      "actual_winner_id": "T062",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2231.1552,
+          "sigma": 138.0918
+        },
+        "2_3": {
+          "rating": 1648.6163,
+          "sigma": 90.0203
+        },
+        "3_4": {
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     }

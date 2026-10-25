@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T14:29:19+00:00",
+  "generated_at": "2026-10-25T20:55:27+00:00",
   "source": "performance.json",
   "description": "Historical cumulative performance metrics and dynamic crossover rating boundaries by season and matchday.",
   "history": [
@@ -539,27 +539,27 @@
       "key": "Season WiSe26/27|1",
       "season": "Season WiSe26/27",
       "matchday": "1",
-      "date": "24.10.2026",
+      "date": "25.10.2026",
       "phase": "Regular Season",
       "phase_label": "Regular Season \u00b7 Tag (1)",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (1)",
-      "predictions": 435,
-      "accuracy": 0.671264,
-      "log_loss": 0.618399,
-      "brier_score": 0.212267,
-      "calibration_error": 0.096572,
+      "predictions": 437,
+      "accuracy": 0.672769,
+      "log_loss": 0.616322,
+      "brier_score": 0.211419,
+      "calibration_error": 0.095448,
       "crossover_zones": {
         "1_2": {
-          "rating": 2252.2786,
-          "sigma": 148.1714
+          "rating": 2231.1552,
+          "sigma": 138.0918
         },
         "2_3": {
           "rating": 1648.6163,
           "sigma": 90.0203
         },
         "3_4": {
-          "rating": 1160.0067,
-          "sigma": 71.8608
+          "rating": 1303.861,
+          "sigma": 74.4848
         }
       }
     }

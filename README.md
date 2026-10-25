@@ -14,28 +14,59 @@ Then open `http://localhost:8000/`.
 
 The site only reads JSON files from `data/`. It does not contain the private prediction engine, settings, training data, feature calculations, model weights or calibration internals. The JSON snapshot is generated separately by the private project with `python publish.py` and then copied into this repository's `data/` directory.
 
-## How the model works
+## How the current model works
 
-The private engine processes matches in chronological order. It maintains
-Glicko-style team ratings and rating deviation (RD), then combines the rating
-difference with recent form, direct matches, common opponents, graph-path
-evidence and opponent quality. The evidence weights can vary by league.
-Predictions use only information available before the match and are published
-as win probabilities with uncertainty-aware confidence.
+The private engine processes every match strictly in chronological order. It
+maintains Glicko-based team ratings, rating deviation (RD) and volatility.
+Inactivity increases the RD, while new results update both the rating and its
+uncertainty. Each prediction uses only information available before that
+match.
 
-Seasons are connected through stable team IDs. Promotion, relegation and
-wildcards are explicit transitions: existing teams carry their previous
-regular-season rating into wildcard attempts, failed attempts are reset before
-a follow-up, and a successful wildcard change is applied once before the
-season adjustment. New teams receive a configured target-league wildcard seed.
+The model combines the rating difference with several matchup signals:
+
+- recent form and recency weighting
+- direct head-to-head matches
+- common-opponent results
+- graph-path evidence through shared opponents
+- the strength of previous opponents
+- league strength differences and the current RD
+
+These signals are combined into a match score and converted into a win
+probability. Feature weights are learned incrementally after completed
+matchdays with regularization and can be overridden per league for direct
+matches, common opponents and graph paths. Confidence reflects the available
+evidence and the uncertainty of both teams. Probability calibration is learned
+chronologically from prior predictions only.
+
+### Season transitions
+
+Team IDs remain stable across seasons, so historical ratings and predictions
+can be connected without confusing a rename with a new team. Promotion,
+relegation and wildcards are explicit state transitions:
+
+- Existing teams start every wildcard attempt with their final regular-season
+  rating.
+- A failed wildcard attempt is discarded before a follow-up attempt.
+- After the wildcard path is finalized, only the actual wildcard rating change
+  is applied once, followed by the season adjustment.
+- New teams receive a configured target-league wildcard seed, do not receive a
+  season adjustment and retain their actual wildcard rating after success.
+
 The engine also derives an informational sustainable-league distribution from
-rating, RD and league thresholds; this does not replace the official league.
+rating, RD and configured league thresholds. This estimate does not replace
+the official league assignment.
 
-The optional optimization workflow uses a chronological walk-forward train and
-holdout split. Parameters are optimized for Log Loss, and optional Platt
-scaling is fitted only on training predictions. Published performance includes
-Accuracy, Log Loss, Brier Score and Calibration Error. The browser never
-recalculates these values; it only renders the generated JSON snapshot.
+### Optimization and evaluation
+
+The optional optimization workflow uses a chronological 70/30 train/holdout
+split. Optuna TPE searches up to 200 trials with seed 42. The objective is
+walk-forward Log Loss; the holdout remains untouched during optimization.
+Optional Platt scaling is fitted only on training predictions using
+`sigmoid(a * logit(p) + b)`.
+
+Published performance includes Accuracy, Log Loss, Brier Score and Calibration
+Error. The browser never recalculates ratings, probabilities, optimization or
+metrics; it only renders the generated JSON snapshot.
 
 The Analytics page uses the optional historical and crossover-zone series in
 `data/performance.json`. Older snapshots without these fields remain usable

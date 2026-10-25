@@ -605,7 +605,7 @@ async function home() {
 async function predictionsPage() {
   const data = await load('predictions');
   const list = document.querySelector('#prediction-list');
-  const fields = [['prediction-league', 'league'], ['prediction-matchday', 'matchday'], ['prediction-season', 'season']];
+  const fields = [['prediction-league', 'league']];
   fields.forEach(([id, key]) => {
     const select = document.querySelector(`#${id}`);
     if (select) select.append(...[...new Set(data.predictions.map(item => item[key]).filter(Boolean))].sort().map(value => element('option', { text: value, attributes: { value } })));
@@ -2065,23 +2065,29 @@ function initGermanLocalization() {
     ['Evaluation', 'Auswertung'], ['Transparency:', 'Transparenz:']
   ];
 
+  const replaceTranslations = value => {
+    translations.forEach(([source, target]) => {
+      const escapedSource = source.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const pattern = /^\w+$/.test(source)
+        ? new RegExp(`\\b${escapedSource}\\b`, 'g')
+        : new RegExp(escapedSource, 'g');
+      value = value.replace(pattern, target);
+    });
+    return value;
+  };
+
   const translate = root => {
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
     const nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
     nodes.forEach(node => {
-      let value = node.nodeValue;
-      translations.forEach(([source, target]) => {
-        value = value.split(source).join(target);
-      });
-      node.nodeValue = value;
+      node.nodeValue = replaceTranslations(node.nodeValue);
     });
     root.querySelectorAll?.('[aria-label], [title], input[placeholder]').forEach(node => {
       ['aria-label', 'title', 'placeholder'].forEach(attribute => {
         let value = node.getAttribute(attribute);
         if (!value) return;
-        translations.forEach(([source, target]) => { value = value.split(source).join(target); });
-        node.setAttribute(attribute, value);
+        node.setAttribute(attribute, replaceTranslations(value));
       });
     });
   };
