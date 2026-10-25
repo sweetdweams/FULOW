@@ -1,24 +1,6 @@
 {
-  "generated_at": "2026-10-25T14:16:24+00:00",
+  "generated_at": "2026-10-25T14:29:19+00:00",
   "predictions": [
-    {
-      "match_id": "M059",
-      "date": "24.10.2026",
-      "season": "Season WiSe26/27",
-      "league": "2. Liga",
-      "matchday": "1",
-      "team_a": {
-        "id": "T068",
-        "name": "RUB Goats N\u00f6 LG"
-      },
-      "team_b": {
-        "id": "T054",
-        "name": "Mainhardt"
-      },
-      "probability_a": 0.666935,
-      "probability_b": 0.333065,
-      "confidence": 0.333871
-    },
     {
       "match_id": "M038",
       "date": "25.10.2026",
@@ -51,9 +33,9 @@
         "id": "T062",
         "name": "HGI Amber"
       },
-      "probability_a": 0.273108,
-      "probability_b": 0.726892,
-      "confidence": 0.453784
+      "probability_a": 0.259198,
+      "probability_b": 0.740802,
+      "confidence": 0.481605
     }
   ]
 }
