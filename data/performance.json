@@ -1,0 +1,1486 @@
+{
+  "generated_at": "2026-10-25T14:16:24+00:00",
+  "season": "Season WiSe26/27",
+  "available_seasons": [
+    "Season SoSe26",
+    "Season WiSe26/27"
+  ],
+  "evaluation_start": "22.04.2026",
+  "evaluation_end": "23.10.2026",
+  "predictions": 434,
+  "accuracy": 0.672811,
+  "log_loss": 0.617824,
+  "brier_score": 0.21198,
+  "calibration_error": 0.098131,
+  "periods": [
+    {
+      "id": "all_time",
+      "label": "All Time",
+      "season": null,
+      "evaluation_start": "22.04.2026",
+      "evaluation_end": "23.10.2026",
+      "predictions": 434,
+      "accuracy": 0.672811,
+      "log_loss": 0.617824,
+      "brier_score": 0.21198,
+      "calibration_error": 0.098131
+    },
+    {
+      "id": "last_20",
+      "label": "Last 20",
+      "season": null,
+      "evaluation_start": "21.10.2026",
+      "evaluation_end": "23.10.2026",
+      "predictions": 20,
+      "accuracy": 0.65,
+      "log_loss": 0.582243,
+      "brier_score": 0.205264,
+      "calibration_error": 0.148267
+    },
+    {
+      "id": "last_50",
+      "label": "Last 50",
+      "season": null,
+      "evaluation_start": "18.10.2026",
+      "evaluation_end": "23.10.2026",
+      "predictions": 50,
+      "accuracy": 0.58,
+      "log_loss": 0.707631,
+      "brier_score": 0.244983,
+      "calibration_error": 0.19226
+    },
+    {
+      "id": "season_Season SoSe26",
+      "label": "Season Season Sose26",
+      "season": "Season SoSe26",
+      "evaluation_start": "22.04.2026",
+      "evaluation_end": "17.06.2026",
+      "predictions": 368,
+      "accuracy": 0.690217,
+      "log_loss": 0.596417,
+      "brier_score": 0.204133,
+      "calibration_error": 0.09527
+    },
+    {
+      "id": "season_Season WiSe26/27",
+      "label": "Season Season Wise26/27",
+      "season": "Season WiSe26/27",
+      "evaluation_start": "10.10.2026",
+      "evaluation_end": "23.10.2026",
+      "predictions": 66,
+      "accuracy": 0.575758,
+      "log_loss": 0.737183,
+      "brier_score": 0.255733,
+      "calibration_error": 0.16586
+    }
+  ],
+  "matchday_history": [
+    {
+      "key": "Season SoSe26|0",
+      "season": "Season SoSe26",
+      "matchday": "0",
+      "date": "22.04.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (0)",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (0)",
+      "predictions": 9,
+      "accuracy": 0.555556,
+      "log_loss": 0.693147,
+      "brier_score": 0.25,
+      "calibration_error": 0.055556,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2307.48,
+          "sigma": 112.6466
+        },
+        "2_3": {
+          "rating": 1955.6,
+          "sigma": 184.7243
+        },
+        "3_4": {
+          "rating": 1036.2556,
+          "sigma": 153.8478
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|1",
+      "season": "Season SoSe26",
+      "matchday": "1",
+      "date": "22.04.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (1)",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (1)",
+      "predictions": 19,
+      "accuracy": 0.526316,
+      "log_loss": 0.7608,
+      "brier_score": 0.27645,
+      "calibration_error": 0.111476,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2353.3444,
+          "sigma": 126.4907
+        },
+        "2_3": {
+          "rating": 1894.0116,
+          "sigma": 142.4895
+        },
+        "3_4": {
+          "rating": 991.6802,
+          "sigma": 123.0041
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|2",
+      "season": "Season SoSe26",
+      "matchday": "2",
+      "date": "22.04.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (2)",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (2)",
+      "predictions": 27,
+      "accuracy": 0.555556,
+      "log_loss": 0.717056,
+      "brier_score": 0.258627,
+      "calibration_error": 0.079962,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2314.048,
+          "sigma": 152.8411
+        },
+        "2_3": {
+          "rating": 1874.7085,
+          "sigma": 112.9502
+        },
+        "3_4": {
+          "rating": 998.4186,
+          "sigma": 97.1128
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|3",
+      "season": "Season SoSe26",
+      "matchday": "3",
+      "date": "22.04.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (3)",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (3)",
+      "predictions": 28,
+      "accuracy": 0.571429,
+      "log_loss": 0.706481,
+      "brier_score": 0.253607,
+      "calibration_error": 0.089378,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2337.3919,
+          "sigma": 130.2251
+        },
+        "2_3": {
+          "rating": 1874.7085,
+          "sigma": 113.3328
+        },
+        "3_4": {
+          "rating": 998.4186,
+          "sigma": 97.1128
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|4",
+      "season": "Season SoSe26",
+      "matchday": "4",
+      "date": "22.04.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (4)",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (4)",
+      "predictions": 29,
+      "accuracy": 0.586207,
+      "log_loss": 0.702888,
+      "brier_score": 0.25192,
+      "calibration_error": 0.082688,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2347.223,
+          "sigma": 95.6621
+        },
+        "2_3": {
+          "rating": 1874.7085,
+          "sigma": 109.6779
+        },
+        "3_4": {
+          "rating": 998.4186,
+          "sigma": 97.1128
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|5",
+      "season": "Season SoSe26",
+      "matchday": "5",
+      "date": "22.04.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (5)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (5)",
+      "predictions": 61,
+      "accuracy": 0.57377,
+      "log_loss": 0.737058,
+      "brier_score": 0.268633,
+      "calibration_error": 0.132731,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2352.8489,
+          "sigma": 108.8163
+        },
+        "2_3": {
+          "rating": 1868.9865,
+          "sigma": 65.5236
+        },
+        "3_4": {
+          "rating": 1034.3347,
+          "sigma": 68.3244
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|6",
+      "season": "Season SoSe26",
+      "matchday": "6",
+      "date": "22.04.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (6)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (6)",
+      "predictions": 93,
+      "accuracy": 0.623656,
+      "log_loss": 0.705032,
+      "brier_score": 0.252989,
+      "calibration_error": 0.155228,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2309.4408,
+          "sigma": 102.2758
+        },
+        "2_3": {
+          "rating": 1851.9139,
+          "sigma": 70.3422
+        },
+        "3_4": {
+          "rating": 1039.0153,
+          "sigma": 73.8727
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|7",
+      "season": "Season SoSe26",
+      "matchday": "7",
+      "date": "29.04.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (7)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (7)",
+      "predictions": 125,
+      "accuracy": 0.64,
+      "log_loss": 0.68836,
+      "brier_score": 0.245498,
+      "calibration_error": 0.185246,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2342.3139,
+          "sigma": 109.4757
+        },
+        "2_3": {
+          "rating": 1833.9355,
+          "sigma": 76.7161
+        },
+        "3_4": {
+          "rating": 1055.3044,
+          "sigma": 75.1324
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|8",
+      "season": "Season SoSe26",
+      "matchday": "8",
+      "date": "06.05.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (8)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (8)",
+      "predictions": 157,
+      "accuracy": 0.649682,
+      "log_loss": 0.649441,
+      "brier_score": 0.229645,
+      "calibration_error": 0.152884,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2364.5389,
+          "sigma": 115.139
+        },
+        "2_3": {
+          "rating": 1813.6305,
+          "sigma": 82.2853
+        },
+        "3_4": {
+          "rating": 1070.4542,
+          "sigma": 77.6437
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|9",
+      "season": "Season SoSe26",
+      "matchday": "9",
+      "date": "13.05.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (9)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (9)",
+      "predictions": 189,
+      "accuracy": 0.661376,
+      "log_loss": 0.618375,
+      "brier_score": 0.21714,
+      "calibration_error": 0.131736,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2365.8502,
+          "sigma": 119.1105
+        },
+        "2_3": {
+          "rating": 1738.5071,
+          "sigma": 84.4745
+        },
+        "3_4": {
+          "rating": 1067.2814,
+          "sigma": 78.9988
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|10",
+      "season": "Season SoSe26",
+      "matchday": "10",
+      "date": "20.05.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (10)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (10)",
+      "predictions": 221,
+      "accuracy": 0.656109,
+      "log_loss": 0.606817,
+      "brier_score": 0.213013,
+      "calibration_error": 0.118346,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2374.8826,
+          "sigma": 119.3691
+        },
+        "2_3": {
+          "rating": 1739.6185,
+          "sigma": 87.8293
+        },
+        "3_4": {
+          "rating": 1073.7554,
+          "sigma": 82.1479
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|11",
+      "season": "Season SoSe26",
+      "matchday": "11",
+      "date": "27.05.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (11)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (11)",
+      "predictions": 253,
+      "accuracy": 0.679842,
+      "log_loss": 0.592572,
+      "brier_score": 0.206662,
+      "calibration_error": 0.12201,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2393.4425,
+          "sigma": 120.5743
+        },
+        "2_3": {
+          "rating": 1738.5718,
+          "sigma": 91.0379
+        },
+        "3_4": {
+          "rating": 1057.6749,
+          "sigma": 85.4275
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|12",
+      "season": "Season SoSe26",
+      "matchday": "12",
+      "date": "03.06.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (12)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (12)",
+      "predictions": 285,
+      "accuracy": 0.666667,
+      "log_loss": 0.592623,
+      "brier_score": 0.206548,
+      "calibration_error": 0.11313,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2384.8961,
+          "sigma": 121.9745
+        },
+        "2_3": {
+          "rating": 1735.0876,
+          "sigma": 92.8698
+        },
+        "3_4": {
+          "rating": 1053.259,
+          "sigma": 87.4876
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|13",
+      "season": "Season SoSe26",
+      "matchday": "13",
+      "date": "03.06.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (13)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (13)",
+      "predictions": 301,
+      "accuracy": 0.667774,
+      "log_loss": 0.6063,
+      "brier_score": 0.208519,
+      "calibration_error": 0.111244,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2457.5095,
+          "sigma": 118.6502
+        },
+        "2_3": {
+          "rating": 1735.0876,
+          "sigma": 91.407
+        },
+        "3_4": {
+          "rating": 1056.5409,
+          "sigma": 86.7844
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|14",
+      "season": "Season SoSe26",
+      "matchday": "14",
+      "date": "10.06.2026",
+      "phase": "Playoffs, Relegation, Showdown 4. Liga",
+      "phase_label": "Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (14)",
+      "label": "Season SoSe26 \u00b7 Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (14)",
+      "predictions": 327,
+      "accuracy": 0.669725,
+      "log_loss": 0.605306,
+      "brier_score": 0.208459,
+      "calibration_error": 0.105991,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2468.0608,
+          "sigma": 117.9345
+        },
+        "2_3": {
+          "rating": 1734.4321,
+          "sigma": 96.7587
+        },
+        "3_4": {
+          "rating": 1056.8178,
+          "sigma": 90.7728
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|15",
+      "season": "Season SoSe26",
+      "matchday": "15",
+      "date": "17.06.2026",
+      "phase": "Playoffs, Relegation, Showdown 4. Liga",
+      "phase_label": "Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (15)",
+      "label": "Season SoSe26 \u00b7 Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (15)",
+      "predictions": 355,
+      "accuracy": 0.690141,
+      "log_loss": 0.59601,
+      "brier_score": 0.203974,
+      "calibration_error": 0.098244,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2469.2206,
+          "sigma": 120.354
+        },
+        "2_3": {
+          "rating": 1726.6232,
+          "sigma": 98.6784
+        },
+        "3_4": {
+          "rating": 1056.2418,
+          "sigma": 91.0745
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|16",
+      "season": "Season SoSe26",
+      "matchday": "16",
+      "date": "17.06.2026",
+      "phase": "Playoffs, Relegation",
+      "phase_label": "Playoffs, Relegation \u00b7 Tag (16)",
+      "label": "Season SoSe26 \u00b7 Playoffs, Relegation \u00b7 Tag (16)",
+      "predictions": 358,
+      "accuracy": 0.687151,
+      "log_loss": 0.596615,
+      "brier_score": 0.204265,
+      "calibration_error": 0.095323,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2480.5602,
+          "sigma": 120.643
+        },
+        "2_3": {
+          "rating": 1726.6232,
+          "sigma": 99.0307
+        },
+        "3_4": {
+          "rating": 1056.2418,
+          "sigma": 91.0745
+        }
+      }
+    },
+    {
+      "key": "Season SoSe26|17",
+      "season": "Season SoSe26",
+      "matchday": "17",
+      "date": "17.06.2026",
+      "phase": "Relegation",
+      "phase_label": "Relegation \u00b7 Tag (17)",
+      "label": "Season SoSe26 \u00b7 Relegation \u00b7 Tag (17)",
+      "predictions": 368,
+      "accuracy": 0.690217,
+      "log_loss": 0.596417,
+      "brier_score": 0.204133,
+      "calibration_error": 0.09527,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2486.7105,
+          "sigma": 119.2969
+        },
+        "2_3": {
+          "rating": 1684.482,
+          "sigma": 101.0667
+        },
+        "3_4": {
+          "rating": 1057.0072,
+          "sigma": 92.319
+        }
+      }
+    },
+    {
+      "key": "Season WiSe26/27|0",
+      "season": "Season WiSe26/27",
+      "matchday": "0",
+      "date": "18.10.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (0)",
+      "label": "Season WiSe26/27 \u00b7 Wildcard \u00b7 Tag (0)",
+      "predictions": 401,
+      "accuracy": 0.683292,
+      "log_loss": 0.614154,
+      "brier_score": 0.209749,
+      "calibration_error": 0.098845,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2188.8536,
+          "sigma": 121.6451
+        },
+        "2_3": {
+          "rating": 1535.7383,
+          "sigma": 154.0163
+        },
+        "3_4": {
+          "rating": 997.7397,
+          "sigma": 130.1197
+        }
+      }
+    },
+    {
+      "key": "Season WiSe26/27|1",
+      "season": "Season WiSe26/27",
+      "matchday": "1",
+      "date": "23.10.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (1)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (1)",
+      "predictions": 434,
+      "accuracy": 0.672811,
+      "log_loss": 0.617824,
+      "brier_score": 0.21198,
+      "calibration_error": 0.098131,
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2252.2786,
+          "sigma": 149.7306
+        },
+        "2_3": {
+          "rating": 1648.6163,
+          "sigma": 92.5641
+        },
+        "3_4": {
+          "rating": 1160.0067,
+          "sigma": 71.8608
+        }
+      }
+    }
+  ],
+  "history": [
+    {
+      "key": "Season SoSe26|0",
+      "season": "Season SoSe26",
+      "matchday": "0",
+      "date": "22.04.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (0)",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (0)",
+      "predictions": 9,
+      "accuracy": 0.555556,
+      "log_loss": 0.693147,
+      "brier_score": 0.25,
+      "calibration_error": 0.055556
+    },
+    {
+      "key": "Season SoSe26|1",
+      "season": "Season SoSe26",
+      "matchday": "1",
+      "date": "22.04.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (1)",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (1)",
+      "predictions": 19,
+      "accuracy": 0.526316,
+      "log_loss": 0.7608,
+      "brier_score": 0.27645,
+      "calibration_error": 0.111476
+    },
+    {
+      "key": "Season SoSe26|2",
+      "season": "Season SoSe26",
+      "matchday": "2",
+      "date": "22.04.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (2)",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (2)",
+      "predictions": 27,
+      "accuracy": 0.555556,
+      "log_loss": 0.717056,
+      "brier_score": 0.258627,
+      "calibration_error": 0.079962
+    },
+    {
+      "key": "Season SoSe26|3",
+      "season": "Season SoSe26",
+      "matchday": "3",
+      "date": "22.04.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (3)",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (3)",
+      "predictions": 28,
+      "accuracy": 0.571429,
+      "log_loss": 0.706481,
+      "brier_score": 0.253607,
+      "calibration_error": 0.089378
+    },
+    {
+      "key": "Season SoSe26|4",
+      "season": "Season SoSe26",
+      "matchday": "4",
+      "date": "22.04.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (4)",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (4)",
+      "predictions": 29,
+      "accuracy": 0.586207,
+      "log_loss": 0.702888,
+      "brier_score": 0.25192,
+      "calibration_error": 0.082688
+    },
+    {
+      "key": "Season SoSe26|5",
+      "season": "Season SoSe26",
+      "matchday": "5",
+      "date": "22.04.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (5)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (5)",
+      "predictions": 61,
+      "accuracy": 0.57377,
+      "log_loss": 0.737058,
+      "brier_score": 0.268633,
+      "calibration_error": 0.132731
+    },
+    {
+      "key": "Season SoSe26|6",
+      "season": "Season SoSe26",
+      "matchday": "6",
+      "date": "22.04.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (6)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (6)",
+      "predictions": 93,
+      "accuracy": 0.623656,
+      "log_loss": 0.705032,
+      "brier_score": 0.252989,
+      "calibration_error": 0.155228
+    },
+    {
+      "key": "Season SoSe26|7",
+      "season": "Season SoSe26",
+      "matchday": "7",
+      "date": "29.04.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (7)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (7)",
+      "predictions": 125,
+      "accuracy": 0.64,
+      "log_loss": 0.68836,
+      "brier_score": 0.245498,
+      "calibration_error": 0.185246
+    },
+    {
+      "key": "Season SoSe26|8",
+      "season": "Season SoSe26",
+      "matchday": "8",
+      "date": "06.05.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (8)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (8)",
+      "predictions": 157,
+      "accuracy": 0.649682,
+      "log_loss": 0.649441,
+      "brier_score": 0.229645,
+      "calibration_error": 0.152884
+    },
+    {
+      "key": "Season SoSe26|9",
+      "season": "Season SoSe26",
+      "matchday": "9",
+      "date": "13.05.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (9)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (9)",
+      "predictions": 189,
+      "accuracy": 0.661376,
+      "log_loss": 0.618375,
+      "brier_score": 0.21714,
+      "calibration_error": 0.131736
+    },
+    {
+      "key": "Season SoSe26|10",
+      "season": "Season SoSe26",
+      "matchday": "10",
+      "date": "20.05.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (10)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (10)",
+      "predictions": 221,
+      "accuracy": 0.656109,
+      "log_loss": 0.606817,
+      "brier_score": 0.213013,
+      "calibration_error": 0.118346
+    },
+    {
+      "key": "Season SoSe26|11",
+      "season": "Season SoSe26",
+      "matchday": "11",
+      "date": "27.05.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (11)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (11)",
+      "predictions": 253,
+      "accuracy": 0.679842,
+      "log_loss": 0.592572,
+      "brier_score": 0.206662,
+      "calibration_error": 0.12201
+    },
+    {
+      "key": "Season SoSe26|12",
+      "season": "Season SoSe26",
+      "matchday": "12",
+      "date": "03.06.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (12)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (12)",
+      "predictions": 285,
+      "accuracy": 0.666667,
+      "log_loss": 0.592623,
+      "brier_score": 0.206548,
+      "calibration_error": 0.11313
+    },
+    {
+      "key": "Season SoSe26|13",
+      "season": "Season SoSe26",
+      "matchday": "13",
+      "date": "03.06.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (13)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (13)",
+      "predictions": 301,
+      "accuracy": 0.667774,
+      "log_loss": 0.6063,
+      "brier_score": 0.208519,
+      "calibration_error": 0.111244
+    },
+    {
+      "key": "Season SoSe26|14",
+      "season": "Season SoSe26",
+      "matchday": "14",
+      "date": "10.06.2026",
+      "phase": "Playoffs, Relegation, Showdown 4. Liga",
+      "phase_label": "Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (14)",
+      "label": "Season SoSe26 \u00b7 Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (14)",
+      "predictions": 327,
+      "accuracy": 0.669725,
+      "log_loss": 0.605306,
+      "brier_score": 0.208459,
+      "calibration_error": 0.105991
+    },
+    {
+      "key": "Season SoSe26|15",
+      "season": "Season SoSe26",
+      "matchday": "15",
+      "date": "17.06.2026",
+      "phase": "Playoffs, Relegation, Showdown 4. Liga",
+      "phase_label": "Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (15)",
+      "label": "Season SoSe26 \u00b7 Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (15)",
+      "predictions": 355,
+      "accuracy": 0.690141,
+      "log_loss": 0.59601,
+      "brier_score": 0.203974,
+      "calibration_error": 0.098244
+    },
+    {
+      "key": "Season SoSe26|16",
+      "season": "Season SoSe26",
+      "matchday": "16",
+      "date": "17.06.2026",
+      "phase": "Playoffs, Relegation",
+      "phase_label": "Playoffs, Relegation \u00b7 Tag (16)",
+      "label": "Season SoSe26 \u00b7 Playoffs, Relegation \u00b7 Tag (16)",
+      "predictions": 358,
+      "accuracy": 0.687151,
+      "log_loss": 0.596615,
+      "brier_score": 0.204265,
+      "calibration_error": 0.095323
+    },
+    {
+      "key": "Season SoSe26|17",
+      "season": "Season SoSe26",
+      "matchday": "17",
+      "date": "17.06.2026",
+      "phase": "Relegation",
+      "phase_label": "Relegation \u00b7 Tag (17)",
+      "label": "Season SoSe26 \u00b7 Relegation \u00b7 Tag (17)",
+      "predictions": 368,
+      "accuracy": 0.690217,
+      "log_loss": 0.596417,
+      "brier_score": 0.204133,
+      "calibration_error": 0.09527
+    },
+    {
+      "key": "Season WiSe26/27|0",
+      "season": "Season WiSe26/27",
+      "matchday": "0",
+      "date": "18.10.2026",
+      "phase": "Wildcard",
+      "phase_label": "Wildcard \u00b7 Tag (0)",
+      "label": "Season WiSe26/27 \u00b7 Wildcard \u00b7 Tag (0)",
+      "predictions": 401,
+      "accuracy": 0.683292,
+      "log_loss": 0.614154,
+      "brier_score": 0.209749,
+      "calibration_error": 0.098845
+    },
+    {
+      "key": "Season WiSe26/27|1",
+      "season": "Season WiSe26/27",
+      "matchday": "1",
+      "date": "23.10.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (1)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (1)",
+      "predictions": 434,
+      "accuracy": 0.672811,
+      "log_loss": 0.617824,
+      "brier_score": 0.21198,
+      "calibration_error": 0.098131
+    }
+  ],
+  "crosszones": [
+    {
+      "key": "Season SoSe26|0",
+      "season": "Season SoSe26",
+      "matchday": "0",
+      "date": "22.04.2026",
+      "phase": "wildcard",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (0)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2307.48,
+          "sigma": 112.6466
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1955.6,
+          "sigma": 184.7243
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1036.2556,
+          "sigma": 153.8478
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|1",
+      "season": "Season SoSe26",
+      "matchday": "1",
+      "date": "22.04.2026",
+      "phase": "wildcard",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (1)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2353.3444,
+          "sigma": 126.4907
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1894.0116,
+          "sigma": 142.4895
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 991.6802,
+          "sigma": 123.0041
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|2",
+      "season": "Season SoSe26",
+      "matchday": "2",
+      "date": "22.04.2026",
+      "phase": "wildcard",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (2)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2314.048,
+          "sigma": 152.8411
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1874.7085,
+          "sigma": 112.9502
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 998.4186,
+          "sigma": 97.1128
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|3",
+      "season": "Season SoSe26",
+      "matchday": "3",
+      "date": "22.04.2026",
+      "phase": "wildcard",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (3)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2337.3919,
+          "sigma": 130.2251
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1874.7085,
+          "sigma": 113.3328
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 998.4186,
+          "sigma": 97.1128
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|4",
+      "season": "Season SoSe26",
+      "matchday": "4",
+      "date": "22.04.2026",
+      "phase": "wildcard",
+      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (4)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2347.223,
+          "sigma": 95.6621
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1874.7085,
+          "sigma": 109.6779
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 998.4186,
+          "sigma": 97.1128
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|5",
+      "season": "Season SoSe26",
+      "matchday": "5",
+      "date": "22.04.2026",
+      "phase": "regular_season",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (5)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2352.8489,
+          "sigma": 108.8163
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1868.9865,
+          "sigma": 65.5236
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1034.3347,
+          "sigma": 68.3244
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|6",
+      "season": "Season SoSe26",
+      "matchday": "6",
+      "date": "22.04.2026",
+      "phase": "regular_season",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (6)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2309.4408,
+          "sigma": 102.2758
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1851.9139,
+          "sigma": 70.3422
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1039.0153,
+          "sigma": 73.8727
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|7",
+      "season": "Season SoSe26",
+      "matchday": "7",
+      "date": "29.04.2026",
+      "phase": "regular_season",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (7)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2342.3139,
+          "sigma": 109.4757
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1833.9355,
+          "sigma": 76.7161
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1055.3044,
+          "sigma": 75.1324
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|8",
+      "season": "Season SoSe26",
+      "matchday": "8",
+      "date": "06.05.2026",
+      "phase": "regular_season",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (8)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2364.5389,
+          "sigma": 115.139
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1813.6305,
+          "sigma": 82.2853
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1070.4542,
+          "sigma": 77.6437
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|9",
+      "season": "Season SoSe26",
+      "matchday": "9",
+      "date": "13.05.2026",
+      "phase": "regular_season",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (9)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2365.8502,
+          "sigma": 119.1105
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1738.5071,
+          "sigma": 84.4745
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1067.2814,
+          "sigma": 78.9988
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|10",
+      "season": "Season SoSe26",
+      "matchday": "10",
+      "date": "20.05.2026",
+      "phase": "regular_season",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (10)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2374.8826,
+          "sigma": 119.3691
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1739.6185,
+          "sigma": 87.8293
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1073.7554,
+          "sigma": 82.1479
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|11",
+      "season": "Season SoSe26",
+      "matchday": "11",
+      "date": "27.05.2026",
+      "phase": "regular_season",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (11)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2393.4425,
+          "sigma": 120.5743
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1738.5718,
+          "sigma": 91.0379
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1057.6749,
+          "sigma": 85.4275
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|12",
+      "season": "Season SoSe26",
+      "matchday": "12",
+      "date": "03.06.2026",
+      "phase": "regular_season",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (12)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2384.8961,
+          "sigma": 121.9745
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1735.0876,
+          "sigma": 92.8698
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1053.259,
+          "sigma": 87.4876
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|13",
+      "season": "Season SoSe26",
+      "matchday": "13",
+      "date": "03.06.2026",
+      "phase": "regular_season",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (13)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2457.5095,
+          "sigma": 118.6502
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1735.0876,
+          "sigma": 91.407
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1056.5409,
+          "sigma": 86.7844
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|14",
+      "season": "Season SoSe26",
+      "matchday": "14",
+      "date": "10.06.2026",
+      "phase": "relegation",
+      "label": "Season SoSe26 \u00b7 Relegation \u00b7 Tag (14)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2468.0608,
+          "sigma": 117.9345
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1734.4321,
+          "sigma": 96.7587
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1056.8178,
+          "sigma": 90.7728
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|15",
+      "season": "Season SoSe26",
+      "matchday": "15",
+      "date": "17.06.2026",
+      "phase": "relegation",
+      "label": "Season SoSe26 \u00b7 Relegation \u00b7 Tag (15)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2469.2206,
+          "sigma": 120.354
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1726.6232,
+          "sigma": 98.6784
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1056.2418,
+          "sigma": 91.0745
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|16",
+      "season": "Season SoSe26",
+      "matchday": "16",
+      "date": "17.06.2026",
+      "phase": "relegation",
+      "label": "Season SoSe26 \u00b7 Relegation \u00b7 Tag (16)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2480.5602,
+          "sigma": 120.643
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1726.6232,
+          "sigma": 99.0307
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1056.2418,
+          "sigma": 91.0745
+        }
+      ]
+    },
+    {
+      "key": "Season SoSe26|17",
+      "season": "Season SoSe26",
+      "matchday": "17",
+      "date": "17.06.2026",
+      "phase": "relegation",
+      "label": "Season SoSe26 \u00b7 Relegation \u00b7 Tag (17)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2486.7105,
+          "sigma": 119.2969
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1684.482,
+          "sigma": 101.0667
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1057.0072,
+          "sigma": 92.319
+        }
+      ]
+    },
+    {
+      "key": "Season WiSe26/27|0",
+      "season": "Season WiSe26/27",
+      "matchday": "0",
+      "date": "18.10.2026",
+      "phase": "wildcard",
+      "label": "Season WiSe26/27 \u00b7 Wildcard \u00b7 Tag (0)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2188.8536,
+          "sigma": 121.6451
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1535.7383,
+          "sigma": 154.0163
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 997.7397,
+          "sigma": 130.1197
+        }
+      ]
+    },
+    {
+      "key": "Season WiSe26/27|1",
+      "season": "Season WiSe26/27",
+      "matchday": "1",
+      "date": "23.10.2026",
+      "phase": "regular_season",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (1)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2252.2786,
+          "sigma": 149.7306
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1648.6163,
+          "sigma": 92.5641
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1160.0067,
+          "sigma": 71.8608
+        }
+      ]
+    }
+  ],
+  "runtime_seconds": 217.17,
+  "runtime_display": "3 Minuten 37,17 Sekunden",
+  "runtime_generated_at": "2026-10-25T14:16:24+00:00"
+}

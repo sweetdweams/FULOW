@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="application-version" content="0.0.3">
+  <meta name="engine-version" content="1.0.0-stable">
+  <meta name="dataset-updated" content="2026-10-25">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how Uniliga Match Predict calculates dynamic team ratings, matchup evidence, win probabilities, confidence and evaluation metrics.">
+  <script src="../js/site-metadata.js" data-source="../index.html" defer></script>
+  <title>Model Methodology & About | Uniliga Match Predict</title>
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme') || 'system';
+        if (t === 'system') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/main.css">
+  <script type="module" src="../js/app.js"></script>
+</head>
+<body data-page="about">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-brand-zone">
+      <a class="brand" href="../index.html">
+        <span class="brand-text-wrap">
+          <span><strong>FULOW</strong></span>
+          <small class="brand-tagline">by sweetdweams</small>
+        </span>
+      </a>
+    </div>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../predictions/index.html">Predictions</a>
+      <a href="../teams/index.html">Rankings</a>
+      <a href="../compare/index.html">Compare</a>
+      <a href="../performance/index.html">Analytics</a>
+      <a href="../about/index.html" class="active">Model</a>
+    </nav>
+    <div class="header-actions-zone" id="header-actions-zone">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-shell">
+    <section class="page-intro">
+      <p class="eyebrow">METHODOLOGY & TRANSPARENCY</p>
+      <h1>How the Model Works</h1>
+      <p>FULOW ist ein datenbasiertes Vorhersage-System für die Uniliga, das auf statistischen Modellen basiert, um Teamstärken und Matchergebnisse vorherzusagen.</p>
+    </section>
+
+    <article id="methodology" class="methodology-simple dashboard-card">
+      <section id="version-info" class="publication-metadata">
+        <h2>Version Information</h2>
+        <dl>
+          <div>
+            <dt>Web version</dt>
+            <dd id="publication-web-version">0.0.3</dd>
+          </div>
+          <div>
+            <dt>Engine version</dt>
+            <dd>1.0.0-stable</dd>
+          </div>
+          <div>
+            <dt>Latest dataset update</dt>
+            <dd>25.10.2026</dd>
+          </div>
+        </dl>
+        <p class="info-note">Das Datum des Datensatzes spiegelt den letzten erfolgreichen Engine-Veröffentlichung wider.</p>
+      </section>
+
+      <section class="methodology-summary">
+        <h2>How a prediction is made</h2>
+        <p class="methodology-lead">Kurz gesagt: Das Modell lernt Teamstärke aus der bisherigen Matchhistorie, ergänzt sie um matchup-spezifische Hinweise und prüft jede Wahrscheinlichkeit anschließend gegen zukünftige Ergebnisse.</p>
+        <ol class="methodology-steps" aria-label="Ablauf einer Modellvorhersage">
+          <li><span class="methodology-step-number">01</span><strong>Team strength</strong><span>Ratings und Unsicherheit werden chronologisch aktualisiert.</span></li>
+          <li><span class="methodology-step-number">02</span><strong>Matchup evidence</strong><span>Direkte Duelle, gemeinsame Gegner und Graphpfade werden kombiniert.</span></li>
+          <li><span class="methodology-step-number">03</span><strong>Context</strong><span>Form, Recency, Ligaunterschiede und Season-Übergänge liefern Kontext.</span></li>
+          <li><span class="methodology-step-number">04</span><strong>Probability</strong><span>Die Evidenz wird zu einer kalibrierten Gewinnwahrscheinlichkeit.</span></li>
+          <li><span class="methodology-step-number">05</span><strong>Evaluation</strong><span>Walk-forward-Vorhersagen werden mit späteren Ergebnissen verglichen.</span></li>
+        </ol>
+        <p class="info-note"><strong>Transparency:</strong>Die Website zeigt vorberechnete JSON-Snapshots an. Die detaillierten Berechnungen werden privat durchgeführt, bevor sie veröffentlicht werden.</p>
+      </section>
+
+      <section class="methodology-details" aria-labelledby="details-title">
+        <div class="methodology-details-heading">
+          <p class="eyebrow">DETAILS ZUM ABLAUF</p>
+          <h2 id="details-title">Erläuterung</h2>
+        </div>
+        <div class="methodology-detail-grid">
+          <article id="ratings" class="methodology-detail-card">
+            <span class="methodology-detail-label">01 · TEAM STRENGTH</span>
+            <h3>Stärke und Unsicherheit</h3>
+            <p>Glicko-basierte <strong>Ratings (R)</strong> schätzen die Teamstärke. Die <strong>Rating Deviation (RD)</strong> zeigt, wie unsicher diese Schätzung ist: Inaktive oder neue Teams sind unsicherer, neue Ergebnisse reduzieren die Unsicherheit.</p>
+          </article>
+          <article id="evidence" class="methodology-detail-card">
+            <span class="methodology-detail-label">02 · MATCHUP EVIDENCE</span>
+            <h3>Mehr als nur das Rating</h3>
+            <p>Die Ratingdifferenz wird durch direkte Duelle, gemeinsame Gegner, Graphpfade und die Qualität der bisherigen Gegner ergänzt. Die Gewichte können sich je nach Liga unterscheiden.</p>
+          </article>
+          <article id="recency" class="methodology-detail-card">
+            <span class="methodology-detail-label">03 · CONTEXT</span>
+            <h3>Aktueller Kontext</h3>
+            <p>Recency und Form geben jüngeren Spielen mehr Einfluss. Ligaunterschiede sowie Aufstieg, Abstieg und Wildcards werden als explizite Season-Übergänge verarbeitet. Verwendet wird nur Wissen, das vor dem Match verfügbar war.</p>
+          </article>
+          <article id="probability" class="methodology-detail-card">
+            <span class="methodology-detail-label">04 · PROBABILITY</span>
+            <h3>Wahrscheinlichkeit statt Gewissheit</h3>
+            <p>Aus Stärke, Evidenz und Unsicherheit entsteht eine Gewinnwahrscheinlichkeit. Kalibrierung wird ausschließlich auf chronologischen Trainingsvorhersagen gelernt; die Confidence berücksichtigt weiterhin die Unsicherheit der Teams.</p>
+          </article>
+          <article id="evaluation" class="methodology-detail-card">
+            <span class="methodology-detail-label">05 · EVALUATION</span>
+            <h3>Prüfung an echten Ergebnissen</h3>
+            <p>Walk-forward-Vorhersagen werden mit späteren Ergebnissen verglichen. Dafür nutzt das Projekt Accuracy, Log Loss, Brier Score und Calibration Error sowie einen getrennten Holdout für die Optimierung.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="overview" class="methodology-note-section">
+        <h2>Transparenz und Datenisolation</h2>
+        <p>Die private Engine verarbeitet die Matchhistorie chronologisch und veröffentlicht einen geprüften JSON-Snapshot. Die Website liest ausschließlich diese vorab berechneten Daten; Ratings, Graphberechnungen, Optimierung und Kalibrierung laufen nicht im Browser. Private CSV-Daten, Einstellungen und interne Modellgewichte werden nicht veröffentlicht.</p>
+      </section>
+
+      <section id="leagues" class="methodology-note-section">
+        <h2>Zusätzliche Liga-Prognose</h2>
+        <p>Aus Rating, RD und konfigurierten Liga-Schwellen wird außerdem eine nachhaltige Liga-Verteilung geschätzt. <strong>Predicted league</strong> ist eine Information über die erwartete Leistungsstufe und ersetzt nicht die offizielle Liga-Zuordnung.</p>
+      </section>
+
+      <!-- <section id="disclaimer" class="methodology-note-section">
+        <h2>Unabhängiges Projekt</h2>
+        <p><em>FULOW</em> ist ein unabhängiges, nicht-kommerzielles Esports-Analyseprojekt. Es ist nicht mit der Uniliga, Freaks 4U Gaming oder einem offiziellen Liga-Veranstalter verbunden, von ihnen bestätigt oder gesponsert.</p>
+      </section>-->
+    </article>
+  </main>
+
+  <footer class="site-footer-rich">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../predictions/index.html">All Predictions</a></li>
+          <li><a href="../teams/index.html">performance ranking</a></li>
+          <li><a href="../compare/index.html">Team Comparison</a></li>
+          <li><a href="../performance/index.html">Model Analytics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="../about/index.html">About Project</a></li>
+          <li><a href="../about/index.html#methodology">Model Methodology</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
