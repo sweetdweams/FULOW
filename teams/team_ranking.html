@@ -1,151 +1,212 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="application-version" content="1.0.3">
-  <meta name="engine-version" content="1.0.1-stable">
-  <meta name="dataset-updated" content="2026-10-26">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="../js/site-metadata.js" data-source="../index.html" defer></script>
-  <meta name="description" content="Performance-Rankings und Teamstärken für die Uniliga.">
-  <title>FULOW - Performance Ranking</title>
-  <script>
-    (function() {
-      try {
-        var t = localStorage.getItem('theme') || 'system';
-        if (t === 'system') {
-          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        document.documentElement.setAttribute('data-theme', t);
-      } catch(e) {}
-    })();
-  </script>
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="icon" href="/resources/icon.svg" sizes="32x32" type="image/svg+xml">
-  <script type="module" src="../js/app.js"></script>
-  
-</head>
-<body data-page="teams">
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="application-version" content="1.1.0" />
+    <meta name="engine-version" content="1.0.1-stable" />
+    <meta name="dataset-updated" content="2026-10-27" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="../js/site-metadata.js"
+      data-source="../index.html"
+      defer
+    ></script>
+    <meta
+      name="description"
+      content="Performance-Rankings und Teamstärken für die Uniliga."
+    />
+    <title>FULOW - Performance Ranking</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme") || "system";
+          if (t === "system") {
+            t = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          }
+          document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="icon"
+      href="/resources/icon.svg"
+      sizes="32x32"
+      type="image/svg+xml"
+    />
+    <script type="module" src="../js/app.js"></script>
+  </head>
+  <body data-page="teams">
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="site-header">
-    <div class="header-brand-zone">
-      <a class="brand" href="../index.html">
-        <span class="brand-text-wrap">
-          <span><img class="nav-brand-icon" src="../resources/icon.svg" alt=""><strong>ULOW</strong></span>
-          <small class="brand-tagline">Forecast für Uniliga Overwatch</small>
-        </span>
-      </a>
-    </div>
-    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-      <a href="../index.html">Startseite</a>
-      <a href="../predictions/predictions.html">Vorhersagen</a>
-      <a href="../teams/team_ranking.html" class="active">Rankings</a>
-      <a href="../compare/compare.html">Vergleich</a>
-      <a href="../performance/performance.html">Analytics</a>
-      <a href="../about/about.html">Modell</a>
-    </nav>
-    <div class="header-actions-zone" id="header-actions-zone">
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
-    </div>
-  </header>
+    <header class="site-header">
+      <div class="header-brand-zone">
+        <a class="brand" href="../index.html">
+          <span class="brand-text-wrap">
+            <span
+              ><img
+                class="nav-brand-icon"
+                src="../resources/icon.svg"
+                alt=""
+              /><strong>ULOW</strong></span
+            >
+            <small class="brand-tagline">Forecast für Uniliga Overwatch</small>
+          </span>
+        </a>
+      </div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Startseite</a>
+        <a href="../predictions/predictions.html">Vorhersagen</a>
+        <a href="../teams/team_ranking.html" class="active">Rankings</a>
+        <a href="../compare/compare.html">Vergleich</a>
+        <a href="../performance/performance.html">Analytics</a>
+        <a href="../about/about.html">Modell</a>
+      </nav>
+      <div class="header-actions-zone" id="header-actions-zone">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menü
+        </button>
+      </div>
+    </header>
 
-  <main id="main-content" class="page-shell">
-    <div id="1" class="data-stamp">
-      <span>Daten vom</span>
-      <strong id="home-updated">Wird geladen...</strong>
-      <small>Öffentlicher Snapshot</small>
-    </div>
-    <section class="page-intro">
-      <p class="eyebrow">ESTIMATED TEAM STRENGTH</p>
-      <h1>Performance Ranking</h1>
-      <p>Die aus dem Modell hervorgehenden Teamstärken über alle Divisionen der Uniliga.<br> 
-        <strong>Hinweis:</strong> Die "Predicted Crosszone" beschreibt die vom Modell erwarteten Cutoff zwischen den Ligen (siehe <a href="../about/about.html#crosszone">Glossar</a>).
-      </p>
-    </section>
+    <main id="main-content" class="page-shell">
+      <div id="1" class="data-stamp">
+        <span>Daten vom</span>
+        <strong id="home-updated">Wird geladen...</strong>
+        <small>Öffentlicher Snapshot</small>
+      </div>
+      <section class="page-intro">
+        <p class="eyebrow">ESTIMATED TEAM STRENGTH</p>
+        <h1>Performance Ranking</h1>
+        <p>
+          Die aus dem Modell hervorgehenden Teamstärken über alle Divisionen der
+          Uniliga.<br />
+          <strong>Hinweis:</strong> Die "Predicted Crosszone" beschreibt die vom
+          Modell erwarteten Cutoff zwischen den Ligen (siehe
+          <a href="../about/about.html#crosszone">Glossar</a>).
+        </p>
+      </section>
 
-    <section class="toolbar">
-      <label class="search-field">Search teams
-        <input id="team-search" type="search" placeholder="Search by team name...">
-      </label>
-      <label>League
-        <select id="team-league">
-          <option value="">All leagues</option>
-        </select>
-      </label>
-      <label>Sort by
-        <select id="team-sort">
-          <option value="rating">Rating</option>
-          <option value="name">Name</option>
-          <option value="matches">Matches played</option>
-        </select>
-      </label>
-    </section>
-
-    <div class="table-wrap">
-      <table>
-        <caption class="sr-only">Published team power rankings</caption>
-        <thead>
-          <tr>
-            <th scope="col">Rank</th>
-            <th scope="col">Trend</th>
-            <th scope="col">Team</th>
-            <th scope="col">League</th>
-            <th scope="col">Rating</th>
-            <th scope="col">Predicted level</th>
-            <th scope="col">Deviation</th>
-            <th scope="col">Matches</th>
-          </tr>
-        </thead>
-        <tbody id="team-table">
-          <tr>
-            <td colspan="8" class="loading">Loading public teams...</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <section class="histogram-panel" aria-labelledby="rating-distribution-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">RATING DISTRIBUTION</p>
-          <h2 id="rating-distribution-title">Team ratings by range</h2>
-        </div>
-        <label>Range
-          <select id="rating-range" aria-label="Rating range per histogram bar">
-            <option value="100">100 points</option>
-            <option value="500">500 points</option>
-            <option value="1000">1,000 points</option>
+      <section class="toolbar">
+        <label class="search-field"
+          >Search teams
+          <input
+            id="team-search"
+            type="search"
+            placeholder="Search by team name..."
+          />
+        </label>
+        <label
+          >League
+          <select id="team-league">
+            <option value="">All leagues</option>
           </select>
         </label>
-      </div>
-      <div id="rating-histogram"></div>
-    </section>
+        <label
+          >Sort by
+          <select id="team-sort">
+            <option value="rating">Rating</option>
+            <option value="name">Name</option>
+            <option value="matches">Matches played</option>
+          </select>
+        </label>
+      </section>
 
-    <div class="info-note note-spaced">
-      <strong>Note:</strong> Ratings represent the model's estimated team strength and are not equivalent to official league standings.
-    </div>
-  </main>
+      <div class="table-wrap">
+        <table>
+          <caption class="sr-only">
+            Published team power rankings
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Rank</th>
+              <th scope="col">Trend</th>
+              <th scope="col">Team</th>
+              <th scope="col">League</th>
+              <th scope="col">Rating</th>
+              <th scope="col">Predicted level</th>
+              <th scope="col">Deviation</th>
+              <th scope="col">Matches</th>
+            </tr>
+          </thead>
+          <tbody id="team-table">
+            <tr>
+              <td colspan="8" class="loading">Loading public teams...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-  <footer class="site-footer-rich">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="../predictions/predictions.html">Alle Vorhersagen</a></li>
-          <li><a href="../teams/team_ranking.html">Performance-Ranking</a></li>
-          <li><a href="../compare/compare.html">Teamvergleich</a></li>
-          <li><a href="../performance/performance.html">Modell-Analytics</a></li>
-        </ul>
+      <section
+        class="histogram-panel"
+        aria-labelledby="rating-distribution-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">RATING DISTRIBUTION</p>
+            <h2 id="rating-distribution-title">Team ratings by range</h2>
+          </div>
+          <label
+            >Range
+            <select
+              id="rating-range"
+              aria-label="Rating range per histogram bar"
+            >
+              <option value="100">100 points</option>
+              <option value="500">500 points</option>
+              <option value="1000">1,000 points</option>
+            </select>
+          </label>
+        </div>
+        <div id="rating-histogram"></div>
+      </section>
+
+      <div class="info-note note-spaced">
+        <strong>Note:</strong> Ratings represent the model's estimated team
+        strength and are not equivalent to official league standings.
       </div>
-      <div class="footer-col">
-        <h4>Project</h4>
-        <ul>
-          <li><a href="../about/about.html">Über das Projekt</a></li>
-          <li><a href="https://github.com/sweetdweams/FULOW" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-        </ul>
+    </main>
+
+    <footer class="site-footer-rich">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li>
+              <a href="../predictions/predictions.html">Alle Vorhersagen</a>
+            </li>
+            <li>
+              <a href="../teams/team_ranking.html">Performance-Ranking</a>
+            </li>
+            <li><a href="../compare/compare.html">Teamvergleich</a></li>
+            <li>
+              <a href="../performance/performance.html">Modell-Analytics</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="../about/about.html">Über das Projekt</a></li>
+            <li><a href="../about/changelog.html" aria-current="page">Changelog</a></li>
+            <li>
+              <a
+                href="https://github.com/sweetdweams/FULOW"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub Repository</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

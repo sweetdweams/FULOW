@@ -1,105 +1,150 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="application-version" content="1.0.3">
-  <meta name="engine-version" content="1.0.1-stable">
-  <meta name="dataset-updated" content="2026-10-26">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="../js/site-metadata.js" data-source="../index.html" defer></script>
-  <meta name="description" content="Direkter Vergleich der Teams.">
-  <title>Team Comparison | Uniliga Match Predict</title>
-  <script>
-    (function() {
-      try {
-        var t = localStorage.getItem('theme') || 'system';
-        if (t === 'system') {
-          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        document.documentElement.setAttribute('data-theme', t);
-      } catch(e) {}
-    })();
-  </script>
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="icon" href="/resources/icon.svg" sizes="32x32" type="image/svg+xml">
-  <script type="module" src="../js/app.js"></script>
-</head>
-<body data-page="compare">
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="application-version" content="1.1.0" />
+    <meta name="engine-version" content="1.0.1-stable" />
+    <meta name="dataset-updated" content="2026-10-27" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="../js/site-metadata.js"
+      data-source="../index.html"
+      defer
+    ></script>
+    <meta name="description" content="Direkter Vergleich der Teams." />
+    <title>Team Comparison | Uniliga Match Predict</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme") || "system";
+          if (t === "system") {
+            t = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          }
+          document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="icon"
+      href="/resources/icon.svg"
+      sizes="32x32"
+      type="image/svg+xml"
+    />
+    <script type="module" src="../js/app.js"></script>
+  </head>
+  <body data-page="compare">
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="site-header">
-    <div class="header-brand-zone">
-      <a class="brand" href="../index.html">
-        <span class="brand-text-wrap">
-          <span><img class="nav-brand-icon" src="../resources/icon.svg" alt=""><strong>ULOW</strong></span>
-          <small class="brand-tagline">Forecast für Uniliga Overwatch</small>
-        </span>
-      </a>
-    </div>
-    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-      <a href="../index.html">Startseite</a>
-      <a href="../predictions/predictions.html">Vorhersagen</a>
-      <a href="../teams/team_ranking.html">Rankings</a>
-      <a href="../compare/compare.html" class="active">Vergleich</a>
-      <a href="../performance/performance.html">Analytics</a>
-      <a href="../about/about.html">Modell</a>
-    </nav>
-    <div class="header-actions-zone" id="header-actions-zone">
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
-    </div>
-  </header>
-
-  <main id="main-content" class="page-shell">
-    <div id="1" class="data-stamp">
-      <span>Daten vom</span>
-      <strong id="home-updated">Wird geladen...</strong>
-      <small>Öffentlicher Snapshot</small>
-    </div>
-    <section class="page-intro">
-      <p class="eyebrow">HEAD TO HEAD</p>
-      <h1>Teams vergleichen</h1>
-      <p>Wähle zwei Teams um ihr Performance Ranking, historischen Ratingverlauf und die vorab berechneten Head-to-Head Matchup Wahrscheinlichkeiten zu vergleichen.
-      </p>
-    </section>
-
-    <section class="toolbar compare-controls">
-      <label>Team A
-        <select id="compare-a">
-          <option value="">Wähle ein Team</option>
-        </select>
-      </label>
-      <span class="versus" aria-hidden="true">VS</span>
-      <label>Team B
-        <select id="compare-b">
-          <option value="">Wähle ein Team</option>
-        </select>
-      </label>
-    </section>
-
-    <section id="compare-result" class="compare-result" aria-live="polite">
-      <p class="empty-state">Wähle zwei Teams um ihre Daten zu vergleichen.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer-rich">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="../predictions/predictions.html">Alle Vorhersagen</a></li>
-          <li><a href="../teams/team_ranking.html">Performance-Ranking</a></li>
-          <li><a href="../compare/compare.html">Teamvergleich</a></li>
-          <li><a href="../performance/performance.html">Modell-Analytics</a></li>
-        </ul>
+    <header class="site-header">
+      <div class="header-brand-zone">
+        <a class="brand" href="../index.html">
+          <span class="brand-text-wrap">
+            <span
+              ><img
+                class="nav-brand-icon"
+                src="../resources/icon.svg"
+                alt=""
+              /><strong>ULOW</strong></span
+            >
+            <small class="brand-tagline">Forecast für Uniliga Overwatch</small>
+          </span>
+        </a>
       </div>
-      <div class="footer-col">
-        <h4>Project</h4>
-        <ul>
-          <li><a href="../about/about.html">Über das Projekt</a></li>
-          <li><a href="https://github.com/sweetdweams/FULOW" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-        </ul>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Startseite</a>
+        <a href="../predictions/predictions.html">Vorhersagen</a>
+        <a href="../teams/team_ranking.html">Rankings</a>
+        <a href="../compare/compare.html" class="active">Vergleich</a>
+        <a href="../performance/performance.html">Analytics</a>
+        <a href="../about/about.html">Modell</a>
+      </nav>
+      <div class="header-actions-zone" id="header-actions-zone">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menü
+        </button>
       </div>
-    </div>
-  </footer>
-</body>
+    </header>
+
+    <main id="main-content" class="page-shell">
+      <div id="1" class="data-stamp">
+        <span>Daten vom</span>
+        <strong id="home-updated">Wird geladen...</strong>
+        <small>Öffentlicher Snapshot</small>
+      </div>
+      <section class="page-intro">
+        <p class="eyebrow">HEAD TO HEAD</p>
+        <h1>Teams vergleichen</h1>
+        <p>
+          Wähle zwei Teams um ihr Performance Ranking, historischen
+          Ratingverlauf und die vorab berechneten Head-to-Head Matchup
+          Wahrscheinlichkeiten zu vergleichen.
+        </p>
+      </section>
+
+      <section class="toolbar compare-controls">
+        <label
+          >Team A
+          <select id="compare-a">
+            <option value="">Wähle ein Team</option>
+          </select>
+        </label>
+        <span class="versus" aria-hidden="true">VS</span>
+        <label
+          >Team B
+          <select id="compare-b">
+            <option value="">Wähle ein Team</option>
+          </select>
+        </label>
+      </section>
+
+      <section id="compare-result" class="compare-result" aria-live="polite">
+        <p class="empty-state">
+          Wähle zwei Teams um ihre Daten zu vergleichen.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer-rich">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li>
+              <a href="../predictions/predictions.html">Alle Vorhersagen</a>
+            </li>
+            <li>
+              <a href="../teams/team_ranking.html">Performance-Ranking</a>
+            </li>
+            <li><a href="../compare/compare.html">Teamvergleich</a></li>
+            <li>
+              <a href="../performance/performance.html">Modell-Analytics</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="../about/about.html">Über das Projekt</a></li>
+            <li><a href="../about/changelog.html" aria-current="page">Changelog</a></li>
+            <li>
+              <a
+                href="https://github.com/sweetdweams/FULOW"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub Repository</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

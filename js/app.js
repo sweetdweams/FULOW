@@ -48,7 +48,7 @@ const phaseLabel = value => {
     .replace(/\b\w/g, character => character.toUpperCase());
 };
 const matchContextLabel = match => {
-  const matchday = match.matchday ? `ST ${match.matchday}` : 'ST -';
+  const matchday = match.matchday ? `Matchday ${match.matchday}` : 'Matchday -';
   return `${phaseLabel(match.phase)} · ${matchday}`;
 };
 const element = (tag, { className, text, attributes = {}, style = {} } = {}, children = []) => {
@@ -166,6 +166,72 @@ function renderTrendBadge(trend) {
   }
 }
 
+function parseChangelog(text) {
+  const releases = [];
+  let release;
+  text.split(/\r?\n/).forEach(line => {
+    const releaseMatch = line.match(/^(\S+)\s+--\s+(.+)$/);
+    if (releaseMatch) {
+      release = { version: releaseMatch[1], date: releaseMatch[2], changes: [] };
+      releases.push(release);
+      return;
+    }
+
+    const changeMatch = line.match(/^(\s*)-\s+(.+)$/);
+    if (release && changeMatch) {
+      release.changes.push({ indent: changeMatch[1].length, text: changeMatch[2] });
+    }
+  });
+  return releases;
+}
+
+async function changelogPage() {
+  const target = document.querySelector('#changelog-list');
+  if (!target) return;
+
+  const response = await fetch(`${ROOT}resources/change.log?v=${Date.now()}`);
+  if (!response.ok) throw new Error('change.log konnte nicht geladen werden');
+
+  const releases = parseChangelog(await response.text());
+  if (!releases.length) {
+    target.replaceChildren(emptyState('Noch keine Änderungen veröffentlicht.'));
+    return;
+  }
+
+  target.replaceChildren(...releases.map((release, index) => {
+    const list = element('ul', { className: 'changelog-changes' });
+    const listStack = [{ indent: -1, list }];
+    release.changes.forEach((change, changeIndex) => {
+      while (listStack.length > 1 && change.indent <= listStack[listStack.length - 1].indent) {
+        listStack.pop();
+      }
+
+      const item = element('li', { text: change.text });
+      listStack[listStack.length - 1].list.append(item);
+      const nextChange = release.changes[changeIndex + 1];
+      if (nextChange && nextChange.indent > change.indent) {
+        const nestedList = element('ul', { className: 'changelog-changes' });
+        item.append(nestedList);
+        listStack.push({ indent: change.indent, list: nestedList });
+      }
+    });
+
+    return element('article', {
+      className: `changelog-release${index === 0 ? ' is-latest' : ''}`,
+      attributes: { 'aria-labelledby': `release-${index}` }
+    }, [
+      element('header', { className: 'changelog-release-header' }, [
+        element('div', {}, [
+          element('p', { className: 'eyebrow', text: index === 0 ? 'LATEST RELEASE' : 'RELEASE' }),
+          element('h2', { attributes: { id: `release-${index}` }, text: release.version })
+        ]),
+        element('time', { className: 'changelog-release-date', text: release.date })
+      ]),
+      list
+    ]);
+  }));
+}
+
 function getConfidenceInfo(confVal) {
   const val = Number(confVal);
   const pct = formatPercentage(val);
@@ -190,7 +256,7 @@ function heroMatchCard(match) {
     element('div', { className: 'featured-card-top-title', text: 'HERVORGEHOBENES SPIEL' }),
     element('div', { className: 'featured-match-header' }, [
       element('span', { text: dateLabel(match.date) }),
-      element('span', { text: `${match.league || 'Liga'} · Spiel-ID ${match.id || match.match_id || '-'}` })
+      element('span', { text: `${match.league || 'Liga'} · Matchday ${match.id || match.matchday || '-'} · ${match.phase || 'Phase'}` })
     ]),
     element('div', { className: 'featured-match-teams' }, [
       element('div', { className: 'hero-team hero-team-a' }, [
@@ -431,7 +497,7 @@ function card(match) {
   return element('article', { className: 'prediction-card' }, [
     element('div', { className: 'prediction-meta' }, [
       element('span', { text: dateLabel(match.date) }),
-      element('span', { text: `${match.league || 'Liga'} · ST ${match.matchday || '-'}` })
+      element('span', { text: `${match.league || 'Liga'} · Matchday ${match.matchday || '-'}` })
     ]),
     element('div', { className: 'teams-line-striped' }, [
       element('div', { className: 'team-stripe team-stripe-a' }, [
@@ -474,20 +540,39 @@ async function home() {
   const trends = computeTeamTrends(teams.teams || [], ratingHistory);
   const teamsById = Object.fromEntries((teams.teams || []).map(team => [team.id, team]));
 
-  // Hero match selection: prioritize balanced matchups after excluding two new teams.
+  // Hero match selection: rank closeness by league, then use the tie-breakers.
   if (predictions.predictions?.length) {
-    const hasNoRecordedMatches = match => (
-      Number(teamsById[match.team_a?.id]?.matches_played) === 0
-      && Number(teamsById[match.team_b?.id]?.matches_played) === 0
+    const leagueModifier = match => {
+      const phase = String(match.phase || '').toLowerCase().replace(/[\s-]+/g, '_');
+      const leagueNumbers = String(match.league || '').match(/\d+(?:[.,]\d+)?/g) || [];
+      const numbers = leagueNumbers.map(value => Number(value.replace(',', '.'))).filter(Number.isFinite);
+      if (!numbers.length) return Number.MAX_SAFE_INTEGER;
+      if (phase.includes('relegation') && numbers.length > 1) {
+        return numbers.reduce((sum, value) => sum + value, 0) / numbers.length;
+      }
+      return numbers[0];
+    };
+    const matchScore = match => {
+      const modifier = leagueModifier(match);
+      const winChanceDifference = Math.abs(Number(match.probability_a) - Number(match.probability_b));
+      return modifier === Number.MAX_SAFE_INTEGER
+        ? Number.MAX_SAFE_INTEGER
+        : winChanceDifference / modifier;
+    };
+    const recordedMatches = match => (
+      Number(teamsById[match.team_a?.id]?.matches_played || 0)
+      + Number(teamsById[match.team_b?.id]?.matches_played || 0)
     );
-    const eligibleMatches = predictions.predictions.filter(match => !hasNoRecordedMatches(match));
-    const matchesToRank = eligibleMatches.length ? eligibleMatches : predictions.predictions;
-    const sortedBy5050 = [...matchesToRank].sort((a, b) => {
-      const diffA = Math.abs(Number(a.probability_a) - 0.5);
-      const diffB = Math.abs(Number(b.probability_a) - 0.5);
-      return diffA - diffB;
+    const sortedByScore = [...predictions.predictions].sort((a, b) => {
+      const scoreDifference = matchScore(a) - matchScore(b);
+      if (scoreDifference !== 0) return scoreDifference;
+      const leagueDifference = leagueModifier(a) - leagueModifier(b);
+      if (leagueDifference !== 0) return leagueDifference;
+      const recordedMatchDifference = recordedMatches(a) - recordedMatches(b);
+      if (recordedMatchDifference !== 0) return recordedMatchDifference;
+      return String(a.match_id || '').localeCompare(String(b.match_id || ''));
     });
-    const heroMatch = sortedBy5050[0];
+    const heroMatch = sortedByScore[0];
     const heroContainer = document.querySelector('#hero-match-card-container');
     if (heroContainer) replaceChildren(heroContainer, [heroMatchCard(heroMatch)]);
   }
@@ -1807,6 +1892,10 @@ async function performancePage() {
 
 async function run() {
   try {
+    if (page === 'changelog') {
+      await changelogPage();
+      return;
+    }
     const predictions = await load('predictions');
 
     if (page === 'home') await home();

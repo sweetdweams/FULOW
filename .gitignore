@@ -6,6 +6,5 @@ ToDo.md
 *psd
 legal/*
 legal/
-resources/*.log
-
+.code-workspace
 # Local server logs

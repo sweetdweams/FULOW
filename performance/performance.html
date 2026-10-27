@@ -1,125 +1,196 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="application-version" content="1.0.3">
-  <meta name="engine-version" content="1.0.1-stable">
-  <meta name="dataset-updated" content="2026-10-26">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="../js/site-metadata.js" data-source="../index.html" defer></script>
-  <meta name="description" content="Einblick in die Performance des Modells und die Analyse der Ergebnisse.">
-  <title>FULOW - Model Analytics & Performance</title>
-  <script>
-    (function() {
-      try {
-        var t = localStorage.getItem('theme') || 'system';
-        if (t === 'system') {
-          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        document.documentElement.setAttribute('data-theme', t);
-      } catch(e) {}
-    })();
-  </script>
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="icon" href="/resources/icon.svg" sizes="32x32" type="image/svg+xml">
-  <script type="module" src="../js/app.js"></script>
-</head>
-<body data-page="performance">
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="application-version" content="1.1.0" />
+    <meta name="engine-version" content="1.0.1-stable" />
+    <meta name="dataset-updated" content="2026-10-27" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="../js/site-metadata.js"
+      data-source="../index.html"
+      defer
+    ></script>
+    <meta
+      name="description"
+      content="Einblick in die Performance des Modells und die Analyse der Ergebnisse."
+    />
+    <title>FULOW - Model Analytics & Performance</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme") || "system";
+          if (t === "system") {
+            t = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          }
+          document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="icon"
+      href="/resources/icon.svg"
+      sizes="32x32"
+      type="image/svg+xml"
+    />
+    <script type="module" src="../js/app.js"></script>
+  </head>
+  <body data-page="performance">
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="site-header">
-    <div class="header-brand-zone">
-      <a class="brand" href="../index.html">
-        <span class="brand-text-wrap">
-          <span><img class="nav-brand-icon" src="../resources/icon.svg" alt=""><strong>ULOW</strong></span>
-          <small class="brand-tagline">Forecast für Uniliga Overwatch</small>
-        </span>
-      </a>
-    </div>
-    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-      <a href="../index.html">Startseite</a>
-      <a href="../predictions/predictions.html">Vorhersagen</a>
-      <a href="../teams/team_ranking.html">Rankings</a>
-      <a href="../compare/compare.html">Vergleich</a>
-      <a href="../performance/performance.html" class="active">Analytics</a>
-      <a href="../about/about.html">Modell</a>
-    </nav>
-    <div class="header-actions-zone" id="header-actions-zone">
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
-    </div>
-  </header>
+    <header class="site-header">
+      <div class="header-brand-zone">
+        <a class="brand" href="../index.html">
+          <span class="brand-text-wrap">
+            <span
+              ><img
+                class="nav-brand-icon"
+                src="../resources/icon.svg"
+                alt=""
+              /><strong>ULOW</strong></span
+            >
+            <small class="brand-tagline">Forecast für Uniliga Overwatch</small>
+          </span>
+        </a>
+      </div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Startseite</a>
+        <a href="../predictions/predictions.html">Vorhersagen</a>
+        <a href="../teams/team_ranking.html">Rankings</a>
+        <a href="../compare/compare.html">Vergleich</a>
+        <a href="../performance/performance.html" class="active">Analytics</a>
+        <a href="../about/about.html">Modell</a>
+      </nav>
+      <div class="header-actions-zone" id="header-actions-zone">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menü
+        </button>
+      </div>
+    </header>
 
-  <main id="main-content" class="page-shell">
-    <div id="1" class="data-stamp">
-      <span>Daten vom</span>
-      <strong id="home-updated">Wird geladen...</strong>
-      <small>Öffentlicher Snapshot</small>
-    </div>
-    <section class="page-intro">
-      <p class="eyebrow">MODEL TRANSPARENCY</p>
-      <h1>Analytics & Performance</h1>
-      <p>Alle Bewertungsmetriken werden rückwirkend gegenüber verifizierten tatsächlichen Match-Ergebnissen für den angegebenen Bewertungszeitraum berechnet.</p>
-    </section>
+    <main id="main-content" class="page-shell">
+      <div id="1" class="data-stamp">
+        <span>Daten vom</span>
+        <strong id="home-updated">Wird geladen...</strong>
+        <small>Öffentlicher Snapshot</small>
+      </div>
+      <section class="page-intro">
+        <p class="eyebrow">MODEL TRANSPARENCY</p>
+        <h1>Analytics & Performance</h1>
+        <p>
+          Alle Bewertungsmetriken werden rückwirkend gegenüber verifizierten
+          tatsächlichen Match-Ergebnissen für den angegebenen Bewertungszeitraum
+          berechnet.
+        </p>
+      </section>
 
-    <section class="toolbar">
-      <label>Evaluation period
-        <select id="performance-period"></select>
-      </label>
-    </section>
+      <section class="toolbar">
+        <label
+          >Evaluation period
+          <select id="performance-period"></select>
+        </label>
+      </section>
 
-    <section id="performance-summary" class="prediction-grid">
-      <p class="loading">Loading public performance...</p>
-    </section>
+      <section id="performance-summary" class="prediction-grid">
+        <p class="loading">Loading public performance...</p>
+      </section>
 
-    <section class="history-panel analytics-history-panel" aria-labelledby="history-chart-title">
-      <div class="section-heading">
+      <section
+        class="history-panel analytics-history-panel"
+        aria-labelledby="history-chart-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">HISTORICAL DEVELOPMENT</p>
+            <h2 id="history-chart-title">
+              Historical Performance & League Crossover Zones
+            </h2>
+          </div>
+        </div>
+        <p class="muted">
+          Jeder Punkt entspricht einem Matchday. Die Performance-Metriken sind
+          bis zu diesem Matchday; die Crossover-Zones zeigen die dynamischen
+          Rating-Grenzen zwischen den Ligen.
+        </p>
+        <div id="performance-history-chart">
+          <p class="loading">Loading historical analytics...</p>
+        </div>
+      </section>
+
+      <section id="performance-runtime" class="info-note">
         <div>
-          <p class="eyebrow">HISTORICAL DEVELOPMENT</p>
-          <h2 id="history-chart-title">Historical Performance & League Crossover Zones</h2>
+          <strong>Letzte Publish-Laufzeit (Engine + Sync):</strong>
+          <span class="loading">Wird geladen...</span>
+        </div>
+      </section>
+
+      <div class="info-note metric-note">
+        <div>
+          <strong>Understanding the Metrics:</strong>
+          <ul class="metric-list">
+            <li>
+              <strong>Accuracy:</strong> Prozentsatz der Spiele, bei denen der
+              vorhergesagte Gewinner tatsächlich gewonnen hat.
+            </li>
+            <li>
+              <strong>Log Loss:</strong> Bestraft sichere, falsche Vorhersagen
+              (niedriger ist besser, optimal ~0.500-0.600).
+            </li>
+            <li>
+              <strong>Brier Score:</strong> Mittlere quadratische Differenz
+              zwischen Wahrscheinlichkeit und tatsächlichem Ergebnis (0 =
+              perfekt, niedriger ist besser).
+            </li>
+            <li>
+              <strong>Calibration Error:</strong> Misst, ob eine 70%ige
+              Vorhersage in der Praxis 70% der Zeit gewinnt.
+            </li>
+          </ul>
         </div>
       </div>
-      <p class="muted">Jeder Punkt entspricht einem Matchday. Die Performance-Metriken sind bis zu diesem Matchday; die Crossover-Zones zeigen die dynamischen Rating-Grenzen zwischen den Ligen.</p>
-      <div id="performance-history-chart">
-        <p class="loading">Loading historical analytics...</p>
-      </div>
-    </section>
+    </main>
 
-    <section id="performance-runtime" class="info-note">
-      <div><strong>Letzte Publish-Laufzeit (Engine + Sync):</strong> <span class="loading">Wird geladen...</span></div>
-    </section>
-
-    <div class="info-note metric-note">
-      <div>
-        <strong>Understanding the Metrics:</strong>
-        <ul class="metric-list">
-          <li><strong>Accuracy:</strong> Prozentsatz der Spiele, bei denen der vorhergesagte Gewinner tatsächlich gewonnen hat.</li>
-          <li><strong>Log Loss:</strong> Bestraft sichere, falsche Vorhersagen (niedriger ist besser, optimal ~0.500-0.600).</li>
-          <li><strong>Brier Score:</strong> Mittlere quadratische Differenz zwischen Wahrscheinlichkeit und tatsächlichem Ergebnis (0 = perfekt, niedriger ist besser).</li>
-          <li><strong>Calibration Error:</strong> Misst, ob eine 70%ige Vorhersage in der Praxis 70% der Zeit gewinnt.</li>
-        </ul>
+    <footer class="site-footer-rich">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li>
+              <a href="../predictions/predictions.html">Alle Vorhersagen</a>
+            </li>
+            <li>
+              <a href="../teams/team_ranking.html">Performance-Ranking</a>
+            </li>
+            <li><a href="../compare/compare.html">Teamvergleich</a></li>
+            <li>
+              <a href="../performance/performance.html">Modell-Analytics</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="../about/about.html">Über das Projekt</a></li>
+            <li><a href="../about/changelog.html" aria-current="page">Changelog</a></li>
+            <li>
+              <a
+                href="https://github.com/sweetdweams/FULOW"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub Repository</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </main>
-
-  <footer class="site-footer-rich">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="../predictions/predictions.html">Alle Vorhersagen</a></li>
-          <li><a href="../teams/team_ranking.html">Performance-Ranking</a></li>
-          <li><a href="../compare/compare.html">Teamvergleich</a></li>
-          <li><a href="../performance/performance.html">Modell-Analytics</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Project</h4>
-        <ul>
-          <li><a href="../about/about.html">Über das Projekt</a></li>
-          <li><a href="https://github.com/sweetdweams/FULOW" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

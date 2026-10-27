@@ -1,0 +1,40 @@
+1.1.1 -- 27.10.2026
+- Datenaktualisierung
+- Verbesserung der Anzeige "Featured Match" auf der Startseite
+- "Changelog"-Page zugefügt, erreichbar über Footer auf allen Seiten
+
+1.1.0 -- 26.10.2026
+- Icon zugefügt (selber gemacht wohoo)
+- File readability changes (filerenaming & refrence linking)
+    - predictions/index.html renamed to predictions/overview.html
+    - compare/index.html renamed to compare/overview.html
+    - team/index.html renamed to team/team_ranking.html
+    - team/team.html renamed to team/team_detail.html
+    - about/index.html renamed to about/about.html
+- Einheitlicheres Design
+- Überarbeitung der about.html
+    - Modell Ablauf angepasst
+    - Erläuterungen auf Modellablauf angepasst
+    - Sektion "Begrifflichkeiten" hinzugefügt
+- Überarbeitung compare.html
+    - Glossar link "Confidence"
+- Überarbeitung team_ranking.html
+    - Glossar link "Crosszone"
+- GitHib Repository link angepasst
+- Kampf gegen das blöde "Daten vom" Fenster gewonnen
+    - Auf allen Seiten außer about.html
+    - reaktives Design auf Viewportgröße angepasst
+- Team Detailseite überarbeitet
+    - Ratingchart auf Team Detailseite vorrübergehend deaktiviert
+
+1.0.3 -- 25.10.2026
+- Rechschreibfeler in der index.html korrigiert
+
+1.0.2 -- 25.10.2026
+- Datenaktualisierung und MD2 Predctions
+
+1.0.1 -- 25.10.2026
+- Datenaktualisierung
+
+1.0.0 -- 25.10.2026
+- Initial Version der Forecast Seite
