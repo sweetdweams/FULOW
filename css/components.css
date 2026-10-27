@@ -110,6 +110,21 @@
   margin-top: .75rem;
 }
 
+.rating-chart-maintenance {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 280px;
+  padding: 1.5rem;
+  color: #DC2626;
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
 .sustainability-chart {
   position: absolute;
   z-index: 2;
@@ -202,8 +217,14 @@
 
 .historical-chart-stack {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
   margin-top: 1.25rem;
+}
+
+.historical-chart {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .historical-chart-title {
@@ -245,6 +266,13 @@
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+.historical-chart-target {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .historical-chart-line {
@@ -381,7 +409,7 @@
   margin: 1.25rem 0;
 }
 
-.team-detail > .history-panel {
+body[data-page='team-detail'] .team-detail > .history-panel {
   margin-top: 1.5rem;
 }
 

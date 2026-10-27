@@ -507,6 +507,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -555,6 +556,8 @@ button, select, input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  line-height: 1.65;
+  letter-spacing: 0.005em;
   padding: 0.85rem clamp(1.25rem, 4vw, 4.5rem);
   border-bottom: 1px solid var(--line);
   background: var(--header-bg);
@@ -597,6 +600,26 @@ button, select, input {
 
 .brand strong {
   font-weight: 800;
+}
+
+.brand-text-wrap > span:first-child {
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-brand-icon {
+  width: 0.95em;
+  height: 0.95em;
+  margin-right: 0.1em;
+  object-fit: contain;
+  transform: scale(1.4);
+}
+
+.brand-text-wrap > span:first-child > strong {
+  margin-top: 0.23em;
+  margin-left: -0.05em;
+  font-size: 0.9em;
+  font-weight: 700;
 }
 
 .brand-mark {
@@ -1706,6 +1729,10 @@ h2 {
   max-width: 48rem;
 }
 
+.methodology-details-heading:has(.methodology-glossar-card) {
+  max-width: none;
+}
+
 .methodology-details-heading h2 {
   margin: 0 0 0.65rem;
 }
@@ -1718,7 +1745,7 @@ h2 {
 
 .methodology-detail-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
 }
 
@@ -1730,7 +1757,7 @@ h2 {
 }
 
 .methodology-detail-card:last-child {
-  grid-column: 1 / -1;
+  grid-column: auto;
 }
 
 .methodology-detail-label {
@@ -2411,25 +2438,191 @@ body[data-page='home'] .page-shell {
 
 body[data-page='home'] .dashboard-intro {
   gap: clamp(1rem, 2vw, 1.75rem);
-  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: clamp(1.5rem, 3vw, 1.25rem)
 }
 
 body[data-page='home'] .dashboard-intro h1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.02em;
   max-width: 620px;
   margin-bottom: 0.85rem;
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1;
 }
 
+body[data-page='home'] .dashboard-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+}
+
+body[data-page='home'] .dashboard-welcome .hero-copy {
+  margin-inline: 0;
+}
+
+body[data-page='home'] .contact-name {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.45rem;
+}
+
+body[data-page='home'] .discord-label {
+  margin-right: 0.1rem;
+}
+
+body[data-page='home'] .contact-name sup {
+  position: relative;
+  top: -0.35em;
+  margin-left: -0.15rem;
+  font-size: 0.8em;
+  line-height: 0;
+}
+
+body[data-page='home'] .copy-name-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  padding: 0.15rem;
+  border: 0;
+  border-radius: 0.25rem;
+  color: currentColor;
+  background: transparent;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+body[data-page='home'] .copy-name-button:hover,
+body[data-page='home'] .copy-name-button:focus-visible {
+  color: var(--blue);
+  background: color-mix(in srgb, var(--blue) 14%, transparent);
+}
+
+body[data-page='home'] .copy-name-button svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+body[data-page='home'] .copy-name-status {
+  min-width: 0;
+  color: var(--color-teal);
+  font-size: 0.75em;
+  font-weight: 600;
+}
+
+body[data-page='home'] .page-title-icon {
+  width: 0.95em;
+  height: 0.95em;
+  object-fit: contain;
+  transform: scale(1.4);
+  margin-right: 0.1em;
+}
+
+.page-title-text {
+  display: inline-block;
+  margin-top: 0.23em;
+  margin-left: -0.2em;
+  font-size: 0.90em;
+  font-weight: 700;
+}
+
+/* .page-title-text {
+  display: inline-block;
+  margin-top: -0.05em;
+  font-size: 1.15em;
+  font-weight: 700;
+}*/
+
+body[data-page='home'] #home-season-overview {
+  font-size: 0.95rem;
+}
+
 body[data-page='home'] .dashboard-intro .hero-copy {
-  max-width: 34rem;
+  max-width: 38rem;
   font-size: 0.95rem;
 }
 
 body[data-page='home'] .data-stamp {
-  width: min(100%, 290px);
-  margin-bottom: clamp(1rem, 2vw, 1.75rem);
+  width: max-content;
+}
+
+body[data-page]:not([data-page='about']) .data-stamp {
+  position: fixed;
+  z-index: 20;
+  top: var(--data-stamp-top, 7.35rem);
+  left: var(--data-stamp-left, 2rem);
+  width: max-content;
+  white-space: nowrap;
+  min-width: 0;
+  margin: 0;
   padding: 0.8rem 0.95rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+body[data-page='home'].data-stamp-below-intro .dashboard-intro-copy {
+  align-items: center;
+}
+
+body[data-page='home'].data-stamp-below-intro .dashboard-welcome {
+  order: 1;
+}
+
+body[data-page='home'].data-stamp-below-intro .data-stamp {
+  position: static;
+  order: 2;
+  align-self: center;
+  width: max-content;
+  max-width: none;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+body[data-page]:not([data-page='home']):not([data-page='about']).data-stamp-below-intro .data-stamp {
+  position: static;
+  width: max-content;
+  max-width: none;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 1279px) {
+  body[data-page]:not([data-page='about']) .data-stamp {
+    width: max-content;
+    max-width: none;
+    white-space: nowrap;
+  }
+
+  body[data-page='home'] .dashboard-intro-copy {
+    align-items: center;
+  }
+
+  body[data-page='home'] .dashboard-welcome {
+    order: 1;
+  }
+
+  body[data-page='home'] .data-stamp {
+    position: static;
+    order: 2;
+    align-self: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    left: auto;
+    top: auto;
+  }
 }
 
 body[data-page='home'] .dashboard-grid {
@@ -2679,6 +2872,12 @@ body:not([data-page='home']) .page-intro h1 {
   line-height: 1;
 }
 
+body[data-page='teams'] .page-intro h1,
+body[data-page='performance'] .page-intro h1,
+body[data-page='about'] .page-intro h1 {
+  white-space: nowrap;
+}
+
 body:not([data-page='home']) .page-intro p {
   max-width: 34rem;
   font-size: 0.95rem;
@@ -2778,4 +2977,25 @@ body:not([data-page='home']) .site-footer-rich {
     justify-content: space-between;
     gap: 0.75rem;
   }
+}
+
+
+/* Glossar auf about-Seite */
+.methodology-glossar-card {
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  margin-top: 1rem;
+}
+
+.methodology-glossar-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.methodology-glossar-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
 }

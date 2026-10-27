@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T20:55:27+00:00",
+  "generated_at": "2026-10-26T15:45:00+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -1480,7 +1480,7 @@
       ]
     }
   ],
-  "runtime_seconds": 256.88,
-  "runtime_display": "4 Minuten 16,88 Sekunden",
-  "runtime_generated_at": "2026-10-25T20:55:27+00:00"
+  "runtime_seconds": 236.57,
+  "runtime_display": "3 Minuten 56,57 Sekunden",
+  "runtime_generated_at": "2026-10-26T15:45:00+00:00"
 }

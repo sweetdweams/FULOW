@@ -17,7 +17,7 @@ const cache = {};
 async function load(name) {
   if (!cache[name]) {
     const response = await fetch(`${DATA[name]}?v=${Date.now()}`);
-    if (!response.ok) throw new Error(`Could not load ${name}.json`);
+    if (!response.ok) throw new Error(`${name}.json konnte nicht geladen werden`);
     cache[name] = await response.json();
   }
   return cache[name];
@@ -31,20 +31,24 @@ const formatPercentage = value => {
   return `${percentage.toFixed(2)}%`;
 };
 const probabilityPercent = formatPercentage;
-const dateLabel = value => value || 'Date not published';
+const dateLabel = value => value || 'Datum nicht veröffentlicht';
 const technicalDateLabel = value => {
   if (typeof value !== 'string') return dateLabel(value);
-  const match = value.match(/^(\d{4})-(\d{2})-(\d{2})/);
-  return match ? `${match[3]}.${match[2]}.${match[1]}` : dateLabel(value);
+  const timestamp = new Date(value);
+  if (Number.isNaN(timestamp.getTime())) return dateLabel(value);
+  return new Intl.DateTimeFormat('de-DE', {
+    dateStyle: 'short',
+    timeStyle: 'short'
+  }).format(timestamp);
 };
 const phaseLabel = value => {
-  if (!value) return 'Phase not published';
+  if (!value) return 'Phase nicht veröffentlicht';
   return String(value)
     .replace(/[_-]+/g, ' ')
     .replace(/\b\w/g, character => character.toUpperCase());
 };
 const matchContextLabel = match => {
-  const matchday = match.matchday ? `MD ${match.matchday}` : 'MD -';
+  const matchday = match.matchday ? `ST ${match.matchday}` : 'ST -';
   return `${phaseLabel(match.phase)} · ${matchday}`;
 };
 const element = (tag, { className, text, attributes = {}, style = {} } = {}, children = []) => {
@@ -107,7 +111,7 @@ const MOON_SVG = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" st
 
 function teamLink(id, name, className = 'team-link') {
   if (!id) return element('span', { className, text: name });
-  return element('a', { className, text: name, attributes: { href: `${ROOT}teams/team.html?id=${encodeURIComponent(id)}` } });
+  return element('a', { className, text: name, attributes: { href: `${ROOT}teams/team_detail.html?id=${encodeURIComponent(id)}` } });
 }
 
 function computeTeamTrends(teams, ratingHistory) {
@@ -153,27 +157,27 @@ function renderTrendBadge(trend) {
   if (!trend) return element('span', { className: 'trend-same', text: '=' });
   const { rankDiff, ratingDiff } = trend;
   if (rankDiff > 0) {
-    return element('span', { className: 'trend-up', text: `↑ +${rankDiff}`, attributes: { title: `Rating gain: +${ratingDiff}` } });
+    return element('span', { className: 'trend-up', text: `↑ +${rankDiff}`, attributes: { title: `Rating-Zuwachs: +${ratingDiff}` } });
   } else if (rankDiff < 0) {
-    return element('span', { className: 'trend-down', text: `↓ ${rankDiff}`, attributes: { title: `Rating change: ${rankDiff}` } });
+    return element('span', { className: 'trend-down', text: `↓ ${rankDiff}`, attributes: { title: `Rating-Änderung: ${rankDiff}` } });
   } else {
     const sign = ratingDiff > 0 ? '+' : '';
-    return element('span', { className: 'trend-same', text: '=', attributes: { title: `Rating change: ${sign}${ratingDiff}` } });
+    return element('span', { className: 'trend-same', text: '=', attributes: { title: `Rating-Änderung: ${sign}${ratingDiff}` } });
   }
 }
 
 function getConfidenceInfo(confVal) {
   const val = Number(confVal);
   const pct = formatPercentage(val);
-  let level = 'Low';
+  let level = 'Niedrig';
   let className = 'low';
-  if (val >= 0.7) { level = 'High'; className = 'high'; }
-  else if (val >= 0.4) { level = 'Medium'; className = 'medium'; }
+  if (val >= 0.7) { level = 'Hoch'; className = 'high'; }
+  else if (val >= 0.4) { level = 'Mittel'; className = 'medium'; }
   return { label: `${level} (${pct})`, level, pct, className };
 }
 
 function heroMatchCard(match) {
-  if (!match) return emptyState('No upcoming match predictions published.');
+  if (!match) return emptyState('Keine Vorhersagen für kommende Spiele veröffentlicht.');
 
   const probA = probabilityPercent(match.probability_a);
   const probB = probabilityPercent(match.probability_b);
@@ -183,28 +187,28 @@ function heroMatchCard(match) {
   const conf = getConfidenceInfo(match.confidence);
 
   return element('article', { className: 'featured-match-card' }, [
-    element('div', { className: 'featured-card-top-title', text: 'FEATURED MATCHUP' }),
+    element('div', { className: 'featured-card-top-title', text: 'HERVORGEHOBENES SPIEL' }),
     element('div', { className: 'featured-match-header' }, [
       element('span', { text: dateLabel(match.date) }),
-      element('span', { text: `${match.league || 'League'} · Match-ID ${match.id || match.match_id || '-'}` })
+      element('span', { text: `${match.league || 'Liga'} · Spiel-ID ${match.id || match.match_id || '-'}` })
     ]),
     element('div', { className: 'featured-match-teams' }, [
       element('div', { className: 'hero-team hero-team-a' }, [
         teamLink(match.team_a.id, match.team_a.name, 'hero-team-name team-link team-link-a'),
         element('span', { className: 'hero-team-prob team-a-prob', text: probA })
       ]),
-      element('span', { className: 'hero-vs', text: 'VS' }),
+      element('span', { className: 'hero-vs', text: 'GEGEN' }),
       element('div', { className: 'hero-team hero-team-b' }, [
         teamLink(match.team_b.id, match.team_b.name, 'hero-team-name team-link team-link-b'),
         element('span', { className: 'hero-team-prob team-b-prob', text: probB })
       ])
     ]),
-    element('div', { className: 'prob-bar-track', attributes: { 'aria-label': `Win probabilities: ${match.team_a.name} ${probA}, ${match.team_b.name} ${probB}` } }, [
+    element('div', { className: 'prob-bar-track', attributes: { 'aria-label': `Siegwahrscheinlichkeiten: ${match.team_a.name} ${probA}, ${match.team_b.name} ${probB}` } }, [
       element('i', { className: 'prob-bar-fill-a', style: { width: boundedPercent(match.probability_a) } })
     ]),
     element('div', { className: 'featured-footer-single-line' }, [
       element('span', {}, [
-        element('span', { className: 'muted', text: 'Predicted winner: ' }),
+        element('span', { className: 'muted', text: 'Prognostizierter Sieger: ' }),
         teamLink(winnerObj.id, winnerObj.name, winnerClass)
       ]),
       element('span', { className: 'confidence-text', text: `Confidence: ${conf.label}` })
@@ -237,7 +241,7 @@ function performanceChart(periods) {
     attributes: { viewBox: `0 0 ${width} ${height}`, role: 'img', 'aria-labelledby': 'accuracy-chart-title' }
   });
 
-  svg.append(element('title', { attributes: { id: 'accuracy-chart-title' }, text: 'Accuracy nach Auswertungszeitraum' }));
+  svg.append(element('title', { attributes: { id: 'accuracy-chart-title' }, text: 'Trefferquote nach Auswertungszeitraum' }));
   [0, 0.5, 1].forEach(value => {
     const y = padding.top + (1 - value) * plotHeight;
     svg.append(element('line', { className: 'chart-gridline', attributes: { x1: padding.left, x2: width - padding.right, y1: y, y2: y } }));
@@ -427,7 +431,7 @@ function card(match) {
   return element('article', { className: 'prediction-card' }, [
     element('div', { className: 'prediction-meta' }, [
       element('span', { text: dateLabel(match.date) }),
-      element('span', { text: `${match.league || 'League'} · MD ${match.matchday || '-'}` })
+      element('span', { text: `${match.league || 'Liga'} · ST ${match.matchday || '-'}` })
     ]),
     element('div', { className: 'teams-line-striped' }, [
       element('div', { className: 'team-stripe team-stripe-a' }, [
@@ -445,7 +449,7 @@ function card(match) {
     ]),
     element('div', { className: 'prediction-meta-bottom' }, [
       element('span', {}, [
-        element('span', { className: 'muted', text: 'Predicted winner: ' }),
+        element('span', { className: 'muted', text: 'Prognostizierter Sieger: ' }),
         teamLink(winnerObj.id, winnerObj.name, winnerClass)
       ]),
       element('span', { className: 'confidence-text', text: `Confidence: ${conf.label}` })
@@ -453,7 +457,7 @@ function card(match) {
   ]);
 }
 
-function showError(target, error) { replaceChildren(target, [element('p', { className: 'error', text: `${error.message}. Please try again later.` })]); }
+function showError(target, error) { replaceChildren(target, [element('p', { className: 'error', text: `${error.message}. Bitte später erneut versuchen.` })]); }
 
 async function home() {
   const [predictions, teams, performance, predictionHistory, ratingHistory] = await Promise.all([
@@ -492,13 +496,13 @@ async function home() {
   const homePreds = document.querySelector('#home-predictions');
   if (homePreds) {
     const list = predictions.predictions.slice(0, 6);
-    replaceChildren(homePreds, list.length ? list.map(card) : [emptyState('No published predictions available.')]);
+    replaceChildren(homePreds, list.length ? list.map(card) : [emptyState('Keine veröffentlichten Vorhersagen verfügbar.')]);
   }
 
   // League Overview aggregation
   const leaguesMap = {};
   teams.teams.forEach(team => {
-    const l = team.league || 'Other';
+    const l = team.league || 'Andere';
     if (!leaguesMap[l]) leaguesMap[l] = { name: l, teamsCount: 0, totalMatches: 0 };
     leaguesMap[l].teamsCount++;
     leaguesMap[l].totalMatches += Number(team.matches_played || 0);
@@ -506,11 +510,11 @@ async function home() {
   const leaguesList = Object.values(leaguesMap).sort((a, b) => a.name.localeCompare(b.name));
   const homeLeagues = document.querySelector('#home-leagues');
   if (homeLeagues) {
-    replaceChildren(homeLeagues, leaguesList.map(l => element('a', { className: 'league-card', attributes: { href: `teams/index.html?league=${encodeURIComponent(l.name)}` } }, [
+    replaceChildren(homeLeagues, leaguesList.map(l => element('a', { className: 'league-card', attributes: { href: `teams/team_ranking.html?league=${encodeURIComponent(l.name)}` } }, [
       element('h3', { text: l.name }),
       element('div', { className: 'league-stats' }, [
         element('div', {}, [element('strong', { text: l.teamsCount }), element('span', { text: 'Teams' })]),
-        element('div', {}, [element('strong', { text: l.totalMatches }), element('span', { text: 'Matches' })])
+        element('div', {}, [element('strong', { text: l.totalMatches }), element('span', { text: 'Spiele' })])
       ])
     ])));
   }
@@ -529,7 +533,7 @@ async function home() {
           element('div', { className: 'rank-league-sub', text: `${team.league}${team.group ? ' · Group ' + team.group : ''}` })
         ]),
         element('div', { className: 'rank-extra-stats' }, [
-          element('span', { className: 'rank-stat-pill', text: `${team.matches_played || 0} Matches` }),
+          element('span', { className: 'rank-stat-pill', text: `${team.matches_played || 0} Spiele` }),
           element('span', { className: 'rank-stat-pill', text: `±${Math.round(team.rating_deviation)} RD` })
         ]),
         element('div', { className: 'rank-rating-box' }, [
@@ -542,18 +546,21 @@ async function home() {
   // Model Performance (with explicit evaluation period)
   const homePerf = document.querySelector('#home-performance');
   if (homePerf) {
+    const performanceSeason = String(performance.season || '2026')
+      .replace(/^Season\s+/i, '')
+      .trim();
     replaceChildren(homePerf, [
       element('div', { className: 'performance-overview' }, [
         element('div', { className: 'performance-period' }, [
-          element('span', { className: 'eyebrow', text: `SEASON ${performance.season || '2026'}` }),
+          element('span', { className: 'eyebrow', text: `SAISON ${performanceSeason}` }),
           element('strong', { text: `${dateLabel(performance.evaluation_start)} - ${dateLabel(performance.evaluation_end)}` }),
-          element('small', { className: 'muted', text: `${performance.predictions || 0} ausgewertete Matches` })
+          element('small', { className: 'muted', text: `${performance.predictions || 0} ausgewertete Spiele` })
         ]),
         element('div', { className: 'performance-metrics' }, [
-          element('article', { className: 'performance-card performance-card-primary' }, [element('div', { className: 'performance-value', text: percent(performance.accuracy) }), element('div', { className: 'performance-label', text: 'Accuracy', attributes: { title: 'Anteil der Vorhersagen, bei denen der Sieger korrekt vorhergesagt wurde.' } })]),
-          element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: Number(performance.log_loss).toFixed(3) }), element('div', { className: 'performance-label', text: 'Log Loss', attributes: { title: 'Bewertet die Qualität der vorhergesagten Wahrscheinlichkeiten und bestraft falsche, sehr sichere Vorhersagen besonders stark. Kleiner = besser.' } })]),
-          element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: Number(performance.brier_score).toFixed(3) }), element('div', { className: 'performance-label', text: 'Brier Score', attributes: { title: 'Misst den durchschnittlichen quadratischen Fehler zwischen vorhergesagter Wahrscheinlichkeit und tatsächlichem Ergebnis. Kleiner = besser.' } })]),
-          element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: Number(performance.calibration_error).toFixed(3) }), element('div', { className: 'performance-label', text: 'Calibration Error', attributes: { title: 'Zeigt, wie gut die vorhergesagten Wahrscheinlichkeiten mit den tatsächlich eingetretenen Häufigkeiten übereinstimmen. Kleiner = besser.' } })])
+          element('article', { className: 'performance-card performance-card-primary' }, [element('div', { className: 'performance-value', text: percent(performance.accuracy) }), element('div', { className: 'performance-label', text: 'Trefferquote', attributes: { title: 'Anteil der Vorhersagen, bei denen der Sieger korrekt vorhergesagt wurde.' } })]),
+          element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: Number(performance.log_loss).toFixed(3) }), element('div', { className: 'performance-label', text: 'Logarithmischer Verlust', attributes: { title: 'Bewertet die Qualität der vorhergesagten Wahrscheinlichkeiten und bestraft falsche, sehr sichere Vorhersagen besonders stark. Kleiner = besser.' } })]),
+          element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: Number(performance.brier_score).toFixed(3) }), element('div', { className: 'performance-label', text: 'Brier-Wert', attributes: { title: 'Misst den durchschnittlichen quadratischen Fehler zwischen vorhergesagter Wahrscheinlichkeit und tatsächlichem Ergebnis. Kleiner = besser.' } })]),
+          element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: Number(performance.calibration_error).toFixed(3) }), element('div', { className: 'performance-label', text: 'Kalibrierungsfehler', attributes: { title: 'Zeigt, wie gut die vorhergesagten Wahrscheinlichkeiten mit den tatsächlich eingetretenen Häufigkeiten übereinstimmen. Kleiner = besser.' } })])
         ])
       ])
     ]);
@@ -585,7 +592,7 @@ async function home() {
           element('strong', { text: `${predA} vs ${predB}` })
         ]),
         element('div', { className: 'result-predicted-winner' }, [
-          element('small', { className: 'muted', text: 'Predicted winner' }),
+          element('small', { className: 'muted', text: 'Prognostizierter Sieger' }),
           element('strong', { text: teamAbbreviation(predictedWinner) })
         ]),
         element('div', { className: 'result-score' }, [
@@ -615,7 +622,7 @@ async function predictionsPage() {
       const el = document.querySelector(`#${id}`);
       return !el || !el.value || el.value === item[key];
     }));
-    if (list) replaceChildren(list, filtered.length ? filtered.map(card) : [emptyState('No predictions match these filters.')]);
+    if (list)     replaceChildren(list, filtered.length ? filtered.map(card) : [emptyState('Keine Vorhersagen entsprechen diesen Filtern.')]);
   };
   fields.forEach(([id]) => document.querySelector(`#${id}`)?.addEventListener('change', render));
   render();
@@ -727,7 +734,7 @@ async function teamsPage() {
       });
       replaceChildren(table, rows.length ? rows : [
         element('tr', {}, [
-          element('td', { className: 'empty-state', text: 'No teams found.', attributes: { colspan: '8' } })
+          element('td', { className: 'empty-state', text: 'Keine Teams gefunden.', attributes: { colspan: '8' } })
         ])
       ]);
     }
@@ -743,7 +750,7 @@ async function teamsPage() {
 }
 
 function ratingHistogram(teams, bucketSize, leagueThresholds = {}) {
-  if (!teams.length) return emptyState('No ratings available for this selection.');
+  if (!teams.length) return emptyState('Für diese Auswahl sind keine Ratings verfügbar.');
 
   const width = 760;
   const height = 330;
@@ -771,10 +778,10 @@ function ratingHistogram(teams, bucketSize, leagueThresholds = {}) {
     class: 'rating-histogram',
     viewBox: `0 0 ${width} ${height}`,
     role: 'img',
-    'aria-label': `Histogram of ${teams.length} team ratings in ${bucketSize}-point ranges`
+    'aria-label': `Histogramm der Ratings von ${teams.length} Teams in Bereichen von ${bucketSize} Punkten`
   });
   const title = svgNode('title');
-  title.textContent = `Team rating distribution, ${bucketSize}-point ranges`;
+  title.textContent = `Verteilung der Team-Ratings, Bereiche von ${bucketSize} Punkten`;
   chart.append(title);
 
   const ratingX = rating => padding.left + (rating / (maxRating + bucketSize)) * plotWidth;
@@ -796,7 +803,7 @@ function ratingHistogram(teams, bucketSize, leagueThresholds = {}) {
       height: plotHeight
     });
     band.append(svgNode('title'));
-    band.lastChild.textContent = `${name} transition area: ${Math.round(start)}-${Math.round(end)} rating`;
+    band.lastChild.textContent = `${name} Übergangsbereich: Rating ${Math.round(start)}-${Math.round(end)}`;
     chart.append(band);
   });
 
@@ -870,11 +877,11 @@ function ratingHistogram(teams, bucketSize, leagueThresholds = {}) {
     svgNode('line', { class: 'histogram-axis', x1: padding.left, y1: padding.top + plotHeight, x2: width - padding.right, y2: padding.top + plotHeight }),
     svgNode('text', { class: 'histogram-axis-title', x: padding.left + plotWidth / 2, y: height - 14, 'text-anchor': 'middle' })
   );
-  chart.lastChild.textContent = 'Rating points (start of range)';
+  chart.lastChild.textContent = 'Ratingpunkte (Beginn des Bereichs)';
   chart.append(
     svgNode('text', { class: 'histogram-axis-title', x: 15, y: padding.top + plotHeight / 2, 'text-anchor': 'middle', transform: `rotate(-90 15 ${padding.top + plotHeight / 2})` })
   );
-  chart.lastChild.textContent = 'Number of teams';
+  chart.lastChild.textContent = 'Anzahl der Teams';
 
   return element('div', { className: 'histogram-chart-wrap' }, [chart]);
 }
@@ -918,8 +925,8 @@ function lineChart(series, label, chartInfo = {}) {
   const gameLabel = index => {
     const row = preparedSeries[0]?.rows[index];
     if (row?.event_type === 'wildcard_start') return row.label || 'Wildcard';
-    if (row?.event_type === 'season_start') return row.label || 'Season start';
-    return row?.label || (index === 0 ? 'Initial' : `Game ${index}`);
+    if (row?.event_type === 'season_start') return row.label || 'Saisonbeginn';
+    return row?.label || (index === 0 ? 'Startwert' : `Spiel ${index}`);
   };
   const svg = svgNode('svg', { viewBox: `0 0 ${width} ${height}`, role: 'img', 'aria-label': label, class: 'line-chart' });
   const clipId = `chart-plot-clip-${chartClipId++}`;
@@ -1021,12 +1028,12 @@ function lineChart(series, label, chartInfo = {}) {
     boundaryLabel.textContent = row.event_type === 'wildcard_start'
       ? `Wildcard ${seasonLabel}`
       : row.event_type === 'season_start'
-        ? `Season ${seasonLabel}`
-        : row.label || row.season || 'Season change';
+        ? `Saison ${seasonLabel}`
+        : row.label || row.season || 'Saisonwechsel';
     const title = svgNode('title');
     title.textContent = row.event_type === 'wildcard_start'
-      ? `Wildcard start · ${row.season || 'season'}`
-      : `Season start · ${row.season || 'season'}`;
+      ? `Wildcard-Start · ${row.season || 'Saison'}`
+      : `Saisonbeginn · ${row.season || 'Saison'}`;
     separator.append(title);
     svg.append(separator, boundaryLabel);
     if (
@@ -1083,7 +1090,7 @@ function lineChart(series, label, chartInfo = {}) {
           .trim();
         boundaryLabel.textContent = `Wildcard ${seasonLabel}`;
         const title = svgNode('title');
-        title.textContent = `Wildcard start · ${row.season || 'season'} · rating ${Math.round(row.wildcard_start_rating)}`;
+        title.textContent = `Wildcard-Start · ${row.season || 'Saison'} · Rating ${Math.round(row.wildcard_start_rating)}`;
         separator.append(title);
         svg.append(separator, boundaryLabel);
       });
@@ -1274,19 +1281,19 @@ function sustainabilityChart(team, sustainabilityData) {
     ),
     element('small', {
       className: 'sustainability-chart-meta',
-      text: `${current.predicted_league} · Matchday ${currentSnapshot.matchday}`
+      text: `${current.predicted_league} · Spieltag ${currentSnapshot.matchday}`
     })
   ]);
 }
 
 function positionSustainabilityChart(canvas) {
   const chart = canvas.querySelector('.sustainability-chart');
-  const svg = canvas.querySelector('.line-chart');
+  const chartSurface = canvas.querySelector('.line-chart, .rating-chart-maintenance');
   const points = [...canvas.querySelectorAll('.chart-point')];
-  if (!chart || !svg || !points.length) return;
+  if (!chart || !chartSurface) return;
 
   const canvasRect = canvas.getBoundingClientRect();
-  const svgRect = svg.getBoundingClientRect();
+  const svgRect = chartSurface.getBoundingClientRect();
   const chartWidth = chart.offsetWidth;
   const chartHeight = chart.offsetHeight;
   const gap = 10;
@@ -1408,7 +1415,7 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
         ? Number(seasonEntries[0].rating_before)
         : Number(seasonEntries[0]?.rating);
       rows.push({
-        date: 'Initial rating',
+        date: 'Ausgangsrating',
         rating: Number.isFinite(initial) ? initial : Number(team.initial_rating),
         label: 'Initial',
         season
@@ -1417,7 +1424,7 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
     if (transition && hasWildcard && !qualifiedWildcard) {
       rows.push({
         ...transition,
-        date: 'Wildcard start',
+        date: 'Wildcard-Start',
         event_type: 'wildcard_start',
         label: `Wildcard ${String(season || '').replace(/^Season\\s+/, '')}`,
         rating: Number(transition.wildcard_start_rating)
@@ -1427,7 +1434,7 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
     if (transition && (regularEntries.length || !hasWildcard)) {
       rows.push({
         ...transition,
-        date: 'Season start',
+        date: 'Saisonbeginn',
         event_type: 'season_start',
         label: `Season ${String(season || '').replace(/^Season\\s+/, '')}`,
         rating: Number(transition.season_start_rating ?? transition.rating_after_adjustment)
@@ -1438,13 +1445,13 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
 
   if (!rows.length) {
     rows.push({
-      date: 'Initial rating',
+      date: 'Ausgangsrating',
       rating: Number(team.initial_rating),
       label: 'Initial',
       season: team.season
     });
   }
-  if (!rows.length) return emptyState('No public rating history is available for this team.');
+  if (!rows.length) return emptyState('Für dieses Team ist kein öffentliches Rating-Protokoll verfügbar.');
   const zoneSnapshots = [];
   const seenZoneSnapshots = new Set();
   (predictionHistory.crosszone_history || []).forEach(snapshot => {
@@ -1521,7 +1528,7 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
     const selectedSeries = zoneSeries.filter(zone => zoneIds.includes(zone.id));
     return lineChart(
       [{ name: team.name, rows }],
-      `${team.name} public rating history`,
+      `${team.name} öffentliches Rating-Protokoll`,
       {
         thresholds: leagueThresholds,
         zoneSeries: selectedSeries,
@@ -1530,30 +1537,11 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
     );
   };
   const panel = element('section', { className: 'history-panel' }, [
-    element('h2', { text: `${team.name} rating history` }),
-    element('p', {
-      className: 'history-explanation',
-      text: 'Wildcard markers show the pre-wildcard state; season markers show the actual post-transition rating.'
-    }),
-    element('div', { className: 'history-legend', role: 'list', 'aria-label': 'Rating history legend' }, [
-      element('span', { className: 'history-legend-item', role: 'listitem' }, [
-        element('span', { className: 'history-legend-swatch history-legend-match', attributes: { 'aria-hidden': 'true' } }),
-          element('span', { text: 'Rating' })
-      ]),
-      element('span', { className: 'history-legend-item', role: 'listitem' }, [
-        element('span', { className: 'history-legend-swatch history-legend-decay', attributes: { 'aria-hidden': 'true' } }),
-        element('span', { text: 'Seasonal adjustment' })
-      ]),
-      element('span', { className: 'history-legend-item', role: 'listitem' }, [
-        element('span', { className: 'history-legend-swatch history-legend-wildcard', attributes: { 'aria-hidden': 'true' } }),
-        element('span', { text: 'Wildcard' })
-      ]),
-    ]),
+    element('h2', { text: `${team.name} Rating-Verlauf` }),
     element('div', { className: 'rating-history-canvas' }, [
-      renderChart(selectedZoneIds),
+      element('div', { className: 'rating-chart-maintenance', text: 'Rating chart vorrübergehend nicht verfügbar, wird nochmal überarbeitet.' }),
       sustainability
-    ]),
-    chartSummary(rows)
+    ])
   ]);
   const canvas = panel.querySelector('.rating-history-canvas');
   if (canvas && sustainability) {
@@ -1578,15 +1566,15 @@ function chartSummary(rows) {
   const trend = latestRating > initialRating ? 'up' : latestRating < initialRating ? 'down' : 'flat';
   const trendGlyph = trend === 'up' ? '↑' : trend === 'down' ? '↓' : '→';
   return element('div', { className: 'chart-summary' }, [
-    element('div', {}, [element('span', { className: 'summary-label', text: `Initial / ${dateLabel(rows[0]?.date)}` }), element('strong', { text: Math.round(initialRating) })]),
+    element('div', {}, [element('span', { className: 'summary-label', text: `Start / ${dateLabel(rows[0]?.date)}` }), element('strong', { text: Math.round(initialRating) })]),
     element('div', { className: `trend-arrow trend-arrow-${trend}`, attributes: { 'aria-hidden': 'true' }, text: trendGlyph }),
-    element('div', {}, [element('span', { className: 'summary-label', text: `Latest / ${dateLabel(rows[rows.length - 1].date)}` }), element('strong', { text: Math.round(rows[rows.length - 1].rating) })])
+    element('div', {}, [element('span', { className: 'summary-label', text: `Aktuell / ${dateLabel(rows[rows.length - 1].date)}` }), element('strong', { text: Math.round(rows[rows.length - 1].rating) })])
   ]);
 }
 
 function resultsPanel(team, predictionHistory) {
   const rows = predictionHistory.filter(row => row.team_a_id === team.id || row.team_b_id === team.id).slice(-10).reverse();
-  if (!rows.length) return emptyState('No public match results are available for this team.');
+  if (!rows.length) return emptyState('Für dieses Team sind keine öffentlichen Spielergebnisse verfügbar.');
   const items = rows.map(row => {
     const isTeamA = row.team_a_id === team.id;
     const opponentId = isTeamA ? row.team_b_id : row.team_a_id;
@@ -1595,7 +1583,7 @@ function resultsPanel(team, predictionHistory) {
     const won = row.actual_winner_id === team.id;
     const teamScore = isTeamA ? row.score_a : row.score_b;
     const opponentScore = isTeamA ? row.score_b : row.score_a;
-    const scoreText = (teamScore == null || opponentScore == null) ? 'Score unavailable' : `Score: ${teamScore} - ${opponentScore}`;
+    const scoreText = (teamScore == null || opponentScore == null) ? 'Ergebnis nicht verfügbar' : `Ergebnis: ${teamScore} - ${opponentScore}`;
 
     const teamProb = isTeamA ? row.probability_a : row.probability_b;
     const winrateText = teamProb != null ? probabilityPercent(teamProb) : '-';
@@ -1612,7 +1600,7 @@ function resultsPanel(team, predictionHistory) {
       ]),
       element('div', { className: 'result-score', text: scoreText }),
       element('div', { className: 'result-winrate-col' }, [
-        element('small', { className: 'muted', text: 'Win chance:' }),
+        element('small', { className: 'muted', text: 'Siegchance:' }),
         element('strong', { text: winrateText })
       ]),
       element('div', { className: 'result-conf-col' }, [
@@ -1623,8 +1611,8 @@ function resultsPanel(team, predictionHistory) {
   });
   return element('section', { className: 'results-panel' }, [
     element('div', { className: 'section-heading' }, [
-      element('h2', { text: 'Last 10 results' }),
-      element('span', { className: 'muted', text: 'Newest first' })
+      element('h2', { text: 'Letzte 10 Ergebnisse' }),
+      element('span', { className: 'muted', text: 'Neueste zuerst' })
     ]),
     element('ol', { className: 'results-list' }, items)
   ]);
@@ -1646,8 +1634,8 @@ async function comparePage() {
     const b = data.teams.find(team => team.id === document.querySelector('#compare-b')?.value);
     const target = document.querySelector('#compare-result');
     if (!target) return;
-    if (!a || !b) { replaceChildren(target, [emptyState('Choose two teams to compare their public records.')]); return; }
-    if (a.id === b.id) { replaceChildren(target, [emptyState('Choose two different teams.')]); return; }
+    if (!a || !b) { replaceChildren(target, [emptyState('Wähle zwei Teams um ihre Daten zu vergleichen.')]); return; }
+    if (a.id === b.id) { replaceChildren(target, [emptyState('Wähle zwei verschiedene Teams.')]); return; }
 
     const comparison = comparisons.comparisons.find(row => (row.team_a_id === a.id && row.team_b_id === b.id) || (row.team_a_id === b.id && row.team_b_id === a.id));
     const probabilityA = comparison ? (comparison.team_a_id === a.id ? comparison.probability_a : comparison.probability_b) : null;
@@ -1655,8 +1643,8 @@ async function comparePage() {
     const conf = comparison ? getConfidenceInfo(comparison.confidence) : null;
 
     const prediction = comparison ? element('section', { className: 'comparison-prediction' }, [
-      element('p', { className: 'eyebrow', text: 'HEAD TO HEAD COMPARISON' }),
-      element('h2', { text: 'Published Win Chances' }),
+      element('p', { className: 'eyebrow', text: 'DIREKTVERGLEICH' }),
+      element('h2', { text: 'Veröffentlichte Siegchancen' }),
       element('div', { className: 'comparison-probabilities' }, [
         element('div', {}, [
           teamLink(a.id, a.name, 'team-link team-link-a'),
@@ -1667,30 +1655,33 @@ async function comparePage() {
           element('strong', { text: probabilityPercent(probabilityB) })
         ])
       ]),
-      element('p', { className: 'muted', style: { marginTop: '1rem', marginBottom: '0' }, text: `Confidence: ${conf.label}. Generated privately prior to match.` })
-    ]) : emptyState('No published comparison prediction is available for this pair.');
+      element('p', { className: 'muted', style: { marginTop: '1rem', marginBottom: '0' } }, [
+        element('a', { attributes: { href: '../about/about.html#confidence' }, text: 'Confidence' }),
+        document.createTextNode(`: ${conf.label}. Vor dem Spiel privat erstellt.`)
+      ])
+    ]) : emptyState('Für dieses Paar ist keine veröffentlichte Vergleichsvorhersage verfügbar.');
 
     const compareCardsNode = element('div', { className: 'compare-cards' }, [
       element('article', { className: 'compare-card', style: { borderTop: '4px solid var(--blue)' } }, [
         element('p', { className: 'eyebrow', text: a.league }),
         element('h2', {}, [teamLink(a.id, a.name, 'team-link team-link-a')]),
         element('div', { className: 'compare-rating', text: Math.round(a.rating) }),
-        element('p', { className: 'muted', text: `Rating deviation: ${Math.round(a.rating_deviation)}` }),
+        element('p', { className: 'muted', text: `Rating-Abweichung: ${Math.round(a.rating_deviation)}` }),
         element('div', { className: 'team-extra' }, [
-          element('span', { text: `Season: ${a.season}` }),
-          element('span', { text: `Group: ${a.group ? 'Group ' + a.group : 'Not published'}` }),
-          element('a', { className: 'team-link team-link-a', text: 'View team details →', attributes: { href: `${ROOT}teams/team.html?id=${encodeURIComponent(a.id)}` } })
+          element('span', { text: `Saison: ${a.season}` }),
+          element('span', { text: `Gruppe: ${a.group ? 'Gruppe ' + a.group : 'Nicht veröffentlicht'}` }),
+          element('a', { className: 'team-link team-link-a', text: 'Teamdetails anzeigen →', attributes: { href: `${ROOT}teams/team_detail.html?id=${encodeURIComponent(a.id)}` } })
         ])
       ]),
       element('article', { className: 'compare-card', style: { borderTop: '4px solid #14B8A6' } }, [
         element('p', { className: 'eyebrow', text: b.league }),
         element('h2', {}, [teamLink(b.id, b.name, 'team-link team-link-b')]),
         element('div', { className: 'compare-rating', style: { color: '#14B8A6' }, text: Math.round(b.rating) }),
-        element('p', { className: 'muted', text: `Rating deviation: ${Math.round(b.rating_deviation)}` }),
+        element('p', { className: 'muted', text: `Rating-Abweichung: ${Math.round(b.rating_deviation)}` }),
         element('div', { className: 'team-extra' }, [
-          element('span', { text: `Season: ${b.season}` }),
-          element('span', { text: `Group: ${b.group ? 'Group ' + b.group : 'Not published'}` }),
-          element('a', { className: 'team-link team-link-b', text: 'View team details →', attributes: { href: `${ROOT}teams/team.html?id=${encodeURIComponent(b.id)}` } })
+          element('span', { text: `Saison: ${b.season}` }),
+          element('span', { text: `Gruppe: ${b.group ? 'Gruppe ' + b.group : 'Nicht veröffentlicht'}` }),
+          element('a', { className: 'team-link team-link-b', text: 'Teamdetails anzeigen →', attributes: { href: `${ROOT}teams/team_detail.html?id=${encodeURIComponent(b.id)}` } })
         ])
       ])
     ]);
@@ -1699,14 +1690,14 @@ async function comparePage() {
     const histB = ratingHistory.history?.filter(row => row.team_id === b.id) || [];
 
     const series = [
-      { name: a.name, rows: [{ date: 'Initial rating', rating: a.initial_rating }, ...histA.slice(-10)] },
-      { name: b.name, rows: [{ date: 'Initial rating', rating: b.initial_rating }, ...histB.slice(-10)] }
+      { name: a.name, rows: [{ date: 'Ausgangsrating', rating: a.initial_rating }, ...histA.slice(-10)] },
+      { name: b.name, rows: [{ date: 'Ausgangsrating', rating: b.initial_rating }, ...histB.slice(-10)] }
     ];
 
     let chartPanel = null;
     if (series.every(item => item.rows.length > 0)) {
       chartPanel = element('section', { className: 'history-panel comparison-history-panel' }, [
-        element('h2', { text: 'Comparable Rating History' }),
+        element('h2', { text: 'Vergleichbarer Rating-Verlauf' }),
         element('div', { className: 'chart-legend' }, series.map((item, index) => element('span', { className: `legend-item chart-line-${index}`, text: item.name }))),
         lineChart(series, `${a.name} and ${b.name} comparable rating history`)
       ]);
@@ -1735,6 +1726,21 @@ async function teamDetailPage() {
   if (!team) { if (target) replaceChildren(target, [emptyState('This team could not be found in the public snapshot.')]); return; }
 
   if (target) {
+    const statCards = [
+      ['Rating', Math.round(team.rating)],
+      ['Rating-Abweichung', Math.round(team.rating_deviation)],
+      ['Prognostiziertes nachhaltiges Niveau', predictedSustainableLevel(team)],
+      ['Liga-Confidence', team.league_confidence ? percent(team.league_confidence) : '—'],
+      ['Gespielte Spiele', team.matches_played]
+    ].map(([label, value]) => element('article', { className: 'performance-card' }, [
+      element('div', { className: 'performance-value', text: value }),
+      element('div', { className: 'performance-label', text: label })
+    ]));
+    statCards.push(element('article', { className: 'performance-card' }, [
+      element('div', { className: 'performance-label', text: 'Daten vom' }),
+      element('div', { className: 'performance-value', text: 'Wird geladen...', attributes: { id: 'home-updated' } }),
+      element('div', { className: 'performance-label', text: 'Öffentlicher Snapshot' })
+    ]));
     replaceChildren(target, [
       element('section', { className: 'team-hero' }, [
         element('p', { className: 'eyebrow', text: `${team.league}${team.group ? ' · Group ' + team.group : ''}` }),
@@ -1742,18 +1748,9 @@ async function teamDetailPage() {
           element('span', { text: team.name }),
           element('small', { className: 'team-abbreviation team-detail-abbreviation', text: teamAbbreviation(team) })
         ]),
-        element('p', { className: 'muted', text: `Season ${team.season}` })
+        element('p', { className: 'muted', text: `Saison ${team.season}` })
       ]),
-      element('section', { className: 'team-stats' }, [
-        ['Rating', Math.round(team.rating)],
-        ['Rating deviation', Math.round(team.rating_deviation)],
-        ['Predicted sustainable level', predictedSustainableLevel(team)],
-        ['League confidence', team.league_confidence ? percent(team.league_confidence) : '—'],
-        ['Matches played', team.matches_played]
-      ].map(([label, value]) => element('article', { className: 'performance-card' }, [
-        element('div', { className: 'performance-value', text: value }),
-        element('div', { className: 'performance-label', text: label })
-      ]))),
+      element('section', { className: 'team-stats' }, statCards),
       resultsPanel(team, predictionHistory.history),
       historyPanel(
         team,
@@ -1773,12 +1770,12 @@ async function performancePage() {
     load('performanceHistory')
   ]);
   const select = document.querySelector('#performance-period');
-  const periods = data.periods || [{ id: 'all_time', label: 'All Time', ...data }];
+  const periods = data.periods || [{ id: 'all_time', label: 'Gesamtzeitraum', ...data }];
   if (select) select.append(...periods.map(period => element('option', { text: period.label, attributes: { value: period.id } })));
   const render = () => {
     const period = periods.find(item => item.id === select?.value) || periods[0];
     const target = document.querySelector('#performance-summary');
-    if (target) replaceChildren(target, [['Accuracy', percent(period.accuracy)], ['Log loss', Number(period.log_loss).toFixed(3)], ['Brier score', Number(period.brier_score).toFixed(3)], ['Calibration error', Number(period.calibration_error).toFixed(3)], ['Predictions', period.predictions], ['Evaluation period', `${dateLabel(period.evaluation_start)} - ${dateLabel(period.evaluation_end)}`]].map(([label, value]) => element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: value }), element('div', { className: 'performance-label', text: label })])));
+    if (target) replaceChildren(target, [['Accuracy', percent(period.accuracy)], ['Log Loss', Number(period.log_loss).toFixed(3)], ['Brier Score', Number(period.brier_score).toFixed(3)], ['Calibration Error', Number(period.calibration_error).toFixed(3)], ['Vorhersagen', period.predictions], ['Auswertungszeitraum', `${dateLabel(period.evaluation_start)} - ${dateLabel(period.evaluation_end)}`]].map(([label, value]) => element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: value }), element('div', { className: 'performance-label', text: label })])));
     const chartTarget = document.querySelector('#performance-history-chart');
     if (chartTarget && !chartTarget.dataset.rendered) {
       replaceChildren(chartTarget, [
@@ -1810,12 +1807,17 @@ async function performancePage() {
 
 async function run() {
   try {
+    const predictions = await load('predictions');
+
     if (page === 'home') await home();
     if (page === 'predictions') await predictionsPage();
     if (page === 'teams') await teamsPage();
     if (page === 'team-detail') await teamDetailPage();
     if (page === 'compare') await comparePage();
     if (page === 'performance') await performancePage();
+
+    const homeUpdated = document.querySelector('#home-updated');
+    if (homeUpdated) homeUpdated.textContent = technicalDateLabel(predictions.generated_at);
   } catch (error) {
     document.querySelectorAll('.loading').forEach(target => showError(target, error));
   }
@@ -1954,153 +1956,117 @@ function initWelcomeModal() {
   });
 }
 
-function initGermanLocalization() {
-  document.documentElement.lang = 'de';
-  const pageTitles = {
-    home: 'Uniliga Match Predict | Esports-Matchvorhersagen & Analytics',
-    predictions: 'Vorhersagen | Uniliga Match Predict',
-    teams: 'performance ranking & Teams | Uniliga Match Predict',
-    'team-detail': 'Teamdetails | Uniliga Match Predict',
-    compare: 'Teamvergleich | Uniliga Match Predict',
-    performance: 'Modell-Analytics & Performance | Uniliga Match Predict',
-    about: 'Modellmethodik & Über das Projekt | Uniliga Match Predict',
-    legal: document.title
-  };
-  if (pageTitles[page]) document.title = pageTitles[page];
+function initCopyName() {
+  const copyButton = document.querySelector('.copy-name-button');
+  const status = document.querySelector('.copy-name-status');
+  if (!copyButton || !status) return;
 
-  const translations = [
-    ['Primary navigation', 'Hauptnavigation'], ['Skip to content', 'Zum Inhalt springen'],
-    ['Home', 'Startseite'], ['Predictions', 'Vorhersagen'], ['Compare', 'Vergleich'],
-    ['Analytics', 'Analytics'], ['Model', 'Modell'], ['Menu', 'Menü'],
-    ['About Project', 'Über das Projekt'], ['Model Methodology', 'Modellmethodik'],
-    ['All Predictions', 'Alle Vorhersagen'], ['Upcoming Matches', 'Nächste Matches'],
-    ['Team Comparison', 'Teamvergleich'], ['Model Analytics', 'Modell-Analytics'],
-    ['Legal Notice (Impressum)', 'Impressum'], ['Legal Notice', 'Impressum'],
-    ['Privacy Policy', 'Datenschutz'], ['Terms of Service', 'Nutzungsbedingungen'],
-    ['Cookie Policy', 'Cookie-Informationen'], ['Project', 'Projekt'], ['Explore', 'Entdecken'],
-    ['HEAD TO HEAD', 'HEAD-TO-HEAD'], ['Compare Teams', 'Teams vergleichen'],
-    ['Select two teams to compare their estimated ratings, historical rating trends, and precomputed head-to-head matchup probabilities.', 'Wähle zwei Teams, um ihre geschätzten Ratings, historischen Ratingverläufe und vorberechneten Head-to-Head-Wahrscheinlichkeiten zu vergleichen.'],
-    ['Choose a team', 'Team auswählen'], ['Choose two teams to compare their public records.', 'Wähle zwei Teams, um ihre öffentlichen Daten zu vergleichen.'],
-    ['PRE-MATCH MODEL OUTLOOK', 'MODELLPROGNOSE VOR DEM MATCH'], ['Match Predictions', 'Matchvorhersagen'],
-    ['Win probabilities are generated privately prior to scheduled matches and published as a read-only snapshot.', 'Gewinnwahrscheinlichkeiten werden vor den angesetzten Matches privat berechnet und als schreibgeschützter Snapshot veröffentlicht.'],
-    ['All leagues', 'Alle Ligen'], ['All matchdays', 'Alle Spieltage'], ['All seasons', 'Alle Seasons'],
-    ['ESTIMATED TEAM STRENGTH', 'GESCHÄTZTE TEAMSTÄRKE'], ['Search teams', 'Teams suchen'],
-    ['Search by team name...', 'Nach Teamnamen suchen ...'], ['Sort by', 'Sortieren nach'],
-    ['Matches played', 'Gespielte Matches'], ['Predicted level', 'Prognostiziertes Level'],
-    ['Published team power rankings', 'Veröffentlichte Team-Power-Rankings'],
-    ['RATING DISTRIBUTION', 'RATING-VERTEILUNG'], ['Team ratings by range', 'Team-Ratings nach Bereich'],
-    ['Rating range per histogram bar', 'Rating-Bereich pro Histogrammbalken'],
-    ['100 points', '100 Punkte'], ['500 points', '500 Punkte'], ['1,000 points', '1.000 Punkte'],
-    ['Loading public teams...', 'Öffentliche Teamdaten werden geladen ...'],
-    ['Loading public predictions...', 'Öffentliche Vorhersagen werden geladen ...'],
-    ['Loading public performance...', 'Öffentliche Performance wird geladen ...'],
-    ['Loading historical analytics...', 'Historische Analytics werden geladen ...'],
-    ['Loading team details...', 'Teamdetails werden geladen ...'],
-    ['Back to performance ranking', 'Zurück zu performance ranking'], ['Back to home', 'Zurück zur Startseite'],
-    ['Analytics & Performance', 'Analytics & Performance'], ['Evaluation period', 'Auswertungszeitraum'],
-    ['Understanding the Metrics:', 'Die Metriken verstehen:'],
-    ['Percentage of matches where the predicted winner won.', 'Anteil der Matches, in denen der vorhergesagte Sieger gewonnen hat.'],
-    ['Penalizes confident incorrect predictions (lower is better, optimal ~0.500-0.600).', 'Bestrafung sicherer falscher Vorhersagen (kleiner ist besser, optimal etwa 0,500–0,600).'],
-    ['Mean squared difference between probability and actual result (0 = perfect, lower is better).', 'Mittlere quadratische Abweichung zwischen Wahrscheinlichkeit und tatsächlichem Ergebnis (0 = perfekt, kleiner ist besser).'],
-    ['Measures if a 70% prediction wins 70% of the time in practice.', 'Misst, ob eine 70-%-Vorhersage in der Praxis in 70 % der Fälle gewinnt.'],
-    ['No upcoming match predictions published.', 'Keine Vorhersagen für bevorstehende Matches veröffentlicht.'],
-    ['No published predictions available.', 'Keine veröffentlichten Vorhersagen verfügbar.'],
-    ['No published comparison prediction is available for this pair.', 'Für dieses Paar ist keine veröffentlichte Vergleichsprognose verfügbar.'],
-    ['Choose two different teams.', 'Wähle zwei unterschiedliche Teams.'], ['Team Details', 'Teamdetails'],
-    ['View team details →', 'Teamdetails ansehen →'], ['Rating deviation', 'Rating-Abweichung'],
-    ['Predicted sustainable level', 'Prognostiziertes nachhaltiges Level'], ['League confidence', 'Liga-Confidence'],
-    ['Season:', 'Season:'], ['Group:', 'Gruppe:'], ['Not published', 'Nicht veröffentlicht'],
-    ['Comparable Rating History', 'Vergleichbarer Ratingverlauf'], ['Initial rating', 'Anfangs-Rating'],
-    ['No public rating history is available for this team.', 'Für dieses Team ist kein öffentlicher Ratingverlauf verfügbar.'],
-    ['Rating points (start of range)', 'Rating-Punkte (Beginn des Bereichs)'],
-    ['Number of teams', 'Anzahl der Teams'], ['Season start', 'Season-Start'],
-    ['Season change', 'Season-Wechsel'], ['Wildcard start', 'Wildcard-Start'],
-    ['Sustainable level', 'Nachhaltiges Level'], ['historical crossover rating', 'historischer Crossover-Rating'],
-    ['Could not load', 'Laden fehlgeschlagen'], ['Please try again later.', 'Bitte später erneut versuchen.']
-    ,['Predicted winner:', 'Vorhergesagter Sieger:'], ['Predicted winner', 'Vorhergesagter Sieger'], ['Confidence:', 'Confidence:'],
-    ['League', 'Liga'], ['Teams', 'Teams'], ['Matches', 'Matches'],
-    ['Group ', 'Gruppe '], ['Other', 'Sonstige'], ['Rating gain:', 'Rating-Gewinn:'],
-    ['Rating change:', 'Rating-Änderung:'], ['Low', 'Niedrig'], ['Medium', 'Mittel'], ['High', 'Hoch'],
-    ['No team matches are available in the public snapshot.', 'Im öffentlichen Snapshot sind keine Team-Matches verfügbar.'],
-    ['No public team data is available.', 'Keine öffentlichen Teamdaten verfügbar.'],
-    ['Published Win Chances', 'Veröffentlichte Gewinnchancen'],
-    ['HEAD TO HEAD COMPARISON', 'HEAD-TO-HEAD-VERGLEICH'],
-    ['Generated privately prior to match.', 'Privat vor dem Match berechnet.'],
-    ['Rating deviation:', 'Rating-Abweichung:'], ['View team details →', 'Teamdetails ansehen →'],
-    ['Evaluation period', 'Auswertungszeitraum'], ['Predictions', 'Vorhersagen'],
-    ['No match', 'Kein Match'], ['Wildcard start', 'Wildcard-Start'],
-    ['Wildcard ', 'Wildcard '], ['Season start', 'Season-Start'], ['Season change', 'Season-Wechsel'],
-    ['Initial', 'Anfang'], ['Game ', 'Spiel '],
-    ['Terms & Conditions', 'NUTZUNGSBEDINGUNGEN'], ['Terms of Service', 'Nutzungsbedingungen'],
-    ['Usage conditions for the public platform.', 'Nutzungsbedingungen für die öffentliche Plattform.'],
-    ['Non-Commercial & Informational Use', 'Nicht-kommerzielle und informative Nutzung'],
-    ['All match predictions, team power rankings, and performance metrics published on this platform are provided strictly for informational and analytical interest.', 'Alle auf dieser Plattform veröffentlichten Matchvorhersagen, Team-Power-Rankings und Performance-Metriken dienen ausschließlich Informations- und Analysezwecken.'],
-    ['No Gambling or Financial Guarantees', 'Kein Glücksspiel und keine finanziellen Garantien'],
-    ['Probabilities generated by the model are statistical estimates and do not guarantee match outcomes. This platform does not support betting, wagering, or financial services.', 'Die vom Modell erzeugten Wahrscheinlichkeiten sind statistische Schätzungen und garantieren keine Matchausgänge. Diese Plattform unterstützt kein Wetten, Glücksspiel oder Finanzdienstleistungen.'],
-    ['COOKIE INFORMATION', 'COOKIE-INFORMATIONEN'], ['Cookie Policy', 'Cookie-Informationen'],
-    ['Information regarding cookies and browser storage.', 'Informationen zu Cookies und Browserspeicher.'],
-    ['No Tracking Cookies', 'Keine Tracking-Cookies'],
-    ['This public website does not use tracking cookies, third-party analytics pixels, advertising cookies, or cross-site fingerprinting scripts.', 'Diese öffentliche Website verwendet keine Tracking-Cookies, Analyse-Pixel von Drittanbietern, Werbe-Cookies oder Cross-Site-Fingerprinting-Skripte.'],
-    ['Local Storage', 'Lokaler Speicher'],
-    ['The site uses standard browser ', 'Die Website verwendet den standardmäßigen Browser-'],
-    [' to store your Dark Mode / Light Mode theme preference locally.', ', um deine Dark-Mode-/Light-Mode-Auswahl lokal zu speichern.'],
-    ['PRIVACY & DATA PROTECTION', 'DATENSCHUTZ'],
-    ['Privacy Policy', 'Datenschutzerklärung'], ['Information on data processing and privacy practices.', 'Informationen zur Datenverarbeitung und zum Datenschutz.'],
-    ['No Personal Data Collection', 'Keine Erhebung personenbezogener Daten'],
-    ['This public website is a static, read-only data snapshot presentation.', 'Diese öffentliche Website präsentiert einen statischen, schreibgeschützten Datensnapshot.'],
-    ['We do not collect personal data, use tracking cookies, run user analytics, or store user accounts.', 'Wir erheben keine personenbezogenen Daten, verwenden keine Tracking-Cookies, führen keine Nutzeranalyse durch und speichern keine Benutzerkonten.'],
-    ['The website uses ', 'Die Website verwendet '],
-    ['solely to save your preferred visual theme setting (Dark Mode vs Light Mode). This setting remains stored locally on your device.', ' ausschließlich, um deine bevorzugte Darstellung (Dark Mode oder Light Mode) zu speichern. Diese Einstellung bleibt lokal auf deinem Gerät gespeichert.'],
-    ['LEGAL INFORMATION', 'RECHTLICHE INFORMATIONEN'], ['Legal Notice (Impressum)', 'Impressum'],
-    ['Information pursuant to legal disclosure obligations.', 'Informationen gemäß den gesetzlichen Offenlegungspflichten.'],
-    ['Project Details', 'Projektinformationen'], ['An independent, non-commercial esports statistical modeling project.', 'Ein unabhängiges, nicht-kommerzielles statistisches Esports-Modellierungsprojekt.'],
-    ['Non-Affiliation Statement', 'Hinweis zur Nichtzugehörigkeit'],
-    ['This website is an independent analytical project and is not affiliated with, endorsed by, or connected to Uniliga or Freaks 4U Gaming GmbH.', 'Diese Website ist ein unabhängiges Analyseprojekt und nicht mit der Uniliga oder der Freaks 4U Gaming GmbH verbunden, von ihnen unterstützt oder ihnen zugehörig.'],
-    ['METHODOLOGY & TRANSPARENCY', 'METHODIK & TRANSPARENZ'], ['How the Model Works', 'So funktioniert das Modell'],
-    ['Publication information', 'Veröffentlichungsinformationen'], ['Web version', 'Webversion'],
-    ['Engine version', 'Engine-Version'], ['Latest dataset update', 'Letztes Datenupdate'],
-    ['The dataset date reflects the latest successful engine publication.', 'Das Dataset-Datum entspricht der letzten erfolgreichen Engine-Veröffentlichung.'],
-    ['How a prediction is made', 'So entsteht eine Vorhersage'], ['Team strength', 'Teamstärke'],
-    ['Matchup evidence', 'Matchup-Evidenz'], ['Context', 'Kontext'], ['Probability', 'Wahrscheinlichkeit'],
-    ['Evaluation', 'Auswertung'], ['Transparency:', 'Transparenz:']
-  ];
+  copyButton.addEventListener('click', async () => {
+    const name = 'sweetdweams';
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(name);
+      } else {
+        const fallback = document.createElement('textarea');
+        fallback.value = name;
+        fallback.setAttribute('readonly', '');
+        fallback.style.position = 'fixed';
+        fallback.style.opacity = '0';
+        document.body.append(fallback);
+        fallback.select();
+        const copied = document.execCommand('copy');
+        fallback.remove();
+        if (!copied) throw new Error('Clipboard copy was rejected');
+      }
+      status.textContent = 'Kopiert!';
+      copyButton.setAttribute('aria-label', 'Namen sweetdweams kopiert');
+    } catch (error) {
+      status.textContent = 'Kopieren nicht möglich';
+      copyButton.setAttribute('aria-label', 'Namen sweetdweams kopieren, fehlgeschlagen');
+    }
 
-  const replaceTranslations = value => {
-    translations.forEach(([source, target]) => {
-      const escapedSource = source.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const pattern = /^\w+$/.test(source)
-        ? new RegExp(`\\b${escapedSource}\\b`, 'g')
-        : new RegExp(escapedSource, 'g');
-      value = value.replace(pattern, target);
-    });
-    return value;
-  };
-
-  const translate = root => {
-    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
-    const nodes = [];
-    while (walker.nextNode()) nodes.push(walker.currentNode);
-    nodes.forEach(node => {
-      node.nodeValue = replaceTranslations(node.nodeValue);
-    });
-    root.querySelectorAll?.('[aria-label], [title], input[placeholder]').forEach(node => {
-      ['aria-label', 'title', 'placeholder'].forEach(attribute => {
-        let value = node.getAttribute(attribute);
-        if (!value) return;
-        node.setAttribute(attribute, replaceTranslations(value));
-      });
-    });
-  };
-
-  translate(document.body);
-  new MutationObserver(mutations => mutations.forEach(mutation => {
-    mutation.addedNodes.forEach(node => {
-      if (node.nodeType === Node.ELEMENT_NODE) translate(node);
-    });
-  })).observe(document.body, { childList: true, subtree: true });
+    window.setTimeout(() => {
+      status.textContent = '';
+      copyButton.setAttribute('aria-label', 'Namen sweetdweams kopieren');
+    }, 2500);
+  });
 }
 
-initGermanLocalization();
+const dataStampPlaceholders = new WeakMap();
+
+function positionHomeDataStamp() {
+  const stamp = document.getElementById('1');
+  const main = document.getElementById('main-content');
+  const header = document.querySelector('.site-header');
+  const page = document.body?.dataset.page;
+  if (!stamp || !main || !header || page === 'about') return;
+
+  const anchorSelector = page === 'home'
+    ? '.dashboard-grid'
+    : page === 'compare'
+      ? '.toolbar.compare-controls'
+      : page === 'predictions' || page === 'performance' || page === 'teams'
+      ? '.toolbar'
+      : '.page-intro';
+  const anchor = main.querySelector(anchorSelector);
+  if (!anchor) return;
+
+  const anchorRect = anchor.getBoundingClientRect();
+  const headerRect = header.getBoundingClientRect();
+  const viewportGap = Math.max(16, Math.min(32, anchorRect.left / 6));
+  const mainGap = viewportGap;
+  const stampWidth = Math.ceil(stamp.scrollWidth);
+  const stampLeft = Math.max(viewportGap, anchorRect.left - mainGap - stampWidth);
+  const top = Math.max(headerRect.bottom + viewportGap, anchorRect.top);
+  const shouldStackStamp = page === 'home'
+    ? window.innerWidth < 1280 || anchorRect.left <= stampWidth + mainGap + viewportGap
+    : anchorRect.left <= stampWidth + mainGap + viewportGap;
+
+  document.body.classList.toggle('data-stamp-below-intro', shouldStackStamp);
+  if (shouldStackStamp) {
+    stamp.style.removeProperty('--data-stamp-left');
+    stamp.style.removeProperty('--data-stamp-top');
+    if (page !== 'home') {
+      if (!dataStampPlaceholders.has(stamp)) {
+        const placeholder = document.createComment('data-stamp-position');
+        stamp.before(placeholder);
+        dataStampPlaceholders.set(stamp, placeholder);
+      }
+      anchor.before(stamp);
+    }
+  }
+
+  if (!shouldStackStamp) {
+    if (page !== 'home') {
+      const placeholder = dataStampPlaceholders.get(stamp);
+      if (placeholder) placeholder.after(stamp);
+    }
+    stamp.style.setProperty('--data-stamp-left', `${stampLeft}px`);
+    stamp.style.setProperty('--data-stamp-top', `${top}px`);
+  }
+}
+
+function scheduleDataStampPosition() {
+  window.requestAnimationFrame(() => {
+    positionHomeDataStamp();
+    window.requestAnimationFrame(positionHomeDataStamp);
+  });
+}
+
 initTheme();
 initWelcomeModal();
+initCopyName();
+scheduleDataStampPosition();
+window.addEventListener('load', scheduleDataStampPosition, { once: true });
+window.addEventListener('resize', scheduleDataStampPosition);
+window.addEventListener('scroll', positionHomeDataStamp, { passive: true });
+if (typeof ResizeObserver !== 'undefined') {
+  const mainContent = document.getElementById('main-content');
+  if (mainContent) {
+    new ResizeObserver(scheduleDataStampPosition).observe(mainContent);
+  }
+}
+if (document.fonts?.ready) {
+  document.fonts.ready.then(scheduleDataStampPosition);
+}
 run();

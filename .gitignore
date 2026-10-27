@@ -2,6 +2,10 @@
 .DS_Store
 Thumbs.db
 .vscode/
+ToDo.md
+*psd
+legal/*
+legal/
+resources/*.log
 
 # Local server logs
-*.log

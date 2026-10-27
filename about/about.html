@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="application-version" content="1.0.3" />
+    <meta name="engine-version" content="1.0.1-stable" />
+    <meta name="dataset-updated" content="2026-10-26" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Erfahre mehr über die Methode und das Modell hinter FULOW."
+    />
+    <script
+      src="../js/site-metadata.js"
+      data-source="../index.html"
+      defer
+    ></script>
+    <title>FULOW - About the Model</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme") || "system";
+          if (t === "system") {
+            t = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          }
+          document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="../css/main.css" />
+  <link rel="icon" href="/resources/icon.svg" sizes="32x32" type="image/svg+xml">
+    <script type="module" src="../js/app.js"></script>
+  </head>
+  <body data-page="about">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-brand-zone">
+        <a class="brand" href="../index.html">
+          <span class="brand-text-wrap">
+            <span><img class="nav-brand-icon" src="../resources/icon.svg" alt=""><strong>ULOW</strong></span>
+            <small class="brand-tagline">Forecast für Uniliga Overwatch</small>
+          </span>
+        </a>
+      </div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Startseite</a>
+        <a href="../predictions/predictions.html">Vorhersagen</a>
+        <a href="../teams/team_ranking.html">Rankings</a>
+        <a href="../compare/compare.html">Vergleich</a>
+        <a href="../performance/performance.html">Analytics</a>
+        <a href="../about/about.html" class="active">Modell</a>
+      </nav>
+      <div class="header-actions-zone" id="header-actions-zone">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menü
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-shell">
+      <section class="page-intro">
+        <p class="eyebrow">METHODOLOGY & TRANSPARENCY</p>
+        <h1>How the Model Works</h1>
+        <p>
+          FULOW ist ein datenbasiertes Vorhersage-System für die Uniliga, das
+          auf statistischen Modellen basiert, um Teamstärken und Matchergebnisse
+          vorherzusagen.
+        </p>
+      </section>
+
+      <article id="methodology" class="methodology-simple dashboard-card">
+        <section id="version-info" class="publication-metadata">
+          <h2>Version Information</h2>
+          <dl>
+            <div>
+              <dt>Web version</dt>
+              <dd id="publication-web-version">1.0.3</dd>
+            </div>
+            <div>
+              <dt>Engine version</dt>
+              <dd>1.0.1-stable</dd>
+            </div>
+            <div>
+              <dt>Latest dataset update</dt>
+              <dd>26.10.2026</dd>
+            </div>
+          </dl>
+          <p class="info-note">
+            Das Datum des Datensatzes spiegelt den letzten erfolgreichen
+            Engine-Export wider.
+          </p>
+        </section>
+
+        <section class="methodology-summary">
+          <h2>Wie das Modell rechnet</h2>
+          <p class="methodology-lead">
+            Für jedes Match betrachtet das Modell zuerst den bisherigen
+            Saisonverlauf, erstellt daraus eine Einschätzung und aktualisiert
+            seine Werte erst, wenn das tatsächliche Ergebnis feststeht.
+          </p>
+          <ol
+            class="methodology-steps"
+            aria-label="Ablauf einer Modellvorhersage"
+          >
+            <li>
+              <span class="methodology-step-number">01</span
+              ><strong>Vorbereitung</strong
+              ><span
+                >Das Modell nimmt den aktuellen Stand beider Teams vor dem
+                Match.</span
+              >
+            </li>
+            <li>
+              <span class="methodology-step-number">02</span
+              ><strong>Vergleich</strong
+              ><span
+                >Stärke, Form und bisherige Begegnungen werden miteinander
+                verglichen.</span
+              >
+            </li>
+            <li>
+              <span class="methodology-step-number">03</span
+              ><strong>Vorhersage</strong
+              ><span
+                >Aus diesem Vergleich entsteht für beide Teams eine
+                Gewinnwahrscheinlichkeit.</span
+              >
+            </li>
+            <li>
+              <span class="methodology-step-number">04</span
+              ><strong>Match</strong
+              ><span
+                >Die Vorhersage wird mit dem späteren tatsächlichen Ergebnis
+                verglichen.</span
+              >
+            </li>
+            <li>
+              <span class="methodology-step-number">05</span
+              ><strong>Aktualisierung</strong
+              ><span
+                >Ratings, Form und die Modellgewichte werden für kommende
+                Matches angepasst.</span
+              >
+            </li>
+          </ol>
+          <p class="info-note">
+            <strong>Wichtig:</strong> Für die Vorhersage wird nur verwendet, was
+            vor dem jeweiligen Match bekannt war. Die Website zeigt die daraus
+            vorberechneten Ergebnisse.
+          </p>
+        </section>
+
+        <section class="methodology-details" aria-labelledby="details-title">
+          <div class="methodology-details-heading">
+            <p class="eyebrow">DETAILS ZUM ABLAUF</p>
+            <h2 id="details-title">Erläuterung</h2>
+          </div>
+          <div class="methodology-detail-grid">
+            <article id="ratings" class="methodology-detail-card">
+              <span class="methodology-detail-label">01 · VORBEREITUNG</span>
+              <h3>Der aktuelle Stand</h3>
+              <p>
+                Vor dem Match betrachtet das Modell den bisherigen Saisonverlauf
+                beider Teams. Dazu gehören ihre bisherige Stärke und wie sicher
+                diese Einschätzung bereits ist.
+              </p>
+            </article>
+            <article id="evidence" class="methodology-detail-card">
+              <span class="methodology-detail-label">02 · VERGLEICH</span>
+              <h3>Stärken im direkten Vergleich</h3>
+              <p>
+                Die Teams werden anhand ihrer Stärke, aktuellen Form und
+                bisherigen Begegnungen miteinander verglichen. Auch gemeinsame
+                Gegner helfen dabei, die Unterschiede zwischen beiden Teams
+                einzuordnen.
+              </p>
+            </article>
+            <article id="recency" class="methodology-detail-card">
+              <span class="methodology-detail-label">03 · VORHERSAGE</span>
+              <h3>Eine Wahrscheinlichkeit</h3>
+              <p>
+                Aus dem Vergleich entsteht eine Gewinnwahrscheinlichkeit für
+                jedes Team. Sie beschreibt, welches Ergebnis nach dem aktuellen
+                Wissensstand wahrscheinlicher ist, nicht welches Ergebnis
+                garantiert eintritt. Hier fließen bis zu 50 Parameter in die
+                Berechnung ein.
+              </p>
+            </article>
+            <article id="probability" class="methodology-detail-card">
+              <span class="methodology-detail-label">04 · MATCH</span>
+              <h3>Vorhersage überprüfen</h3>
+              <p>
+                Nach dem Match wird die Vorhersage mit dem tatsächlichen
+                Ergebnis verglichen. So wird sichtbar, wie gut die Einschätzung
+                war und wie sicher sie sich im Nachhinein bewährt hat. Dies
+                spiegelt sich dann in allen "confidence" Werten wider.
+              </p>
+            </article>
+            <article id="evaluation" class="methodology-detail-card">
+              <span class="methodology-detail-label">05 · AKTUALISIERUNG</span>
+              <h3>Next Match please...</h3>
+              <p>
+                Das Ergebnis fließt anschließend in die Teamwerte und die Form
+                ein. Dadurch startet die nächste Vorhersage mit einem
+                aktualisierten Stand beider Teams.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="methodology-details" aria-labelledby="details-title">
+          <div class="methodology-details-heading">
+            <p class="eyebrow">BEGRIFFLICHKEITEN</p>
+            <h2 id="details-title">Glossar</h2>
+            <article id="crosszone" class="methodology-glossar-card">
+              <h3>Crosszone</h3>
+              <p>
+                Die <strong>Crosszone</strong> ist ein statistische geschätzter Bereich, der die erwartete Grenze zwischen den Ligen darstellt.<br>
+                Sie wird aus den Ratings der Teams und deren Confidence-Werten berechnet. Daraus ergibt sich zum einen die vom Modell berechnete Ligazugehörigkeit.<br>
+                Das Modell predicted die Zone mit einer Margin von ±x Punkten.<br>
+                <small><i>Beispiel: Team A ist in Liga 1, aber unterhalb der Crosszone, somit denkt das Modell, dass es in Liga 2 besser aufgehoben wäre. Team B ist in Liga 2, aber oberhalb der Crosszone, somit denkt das Modell, dass es in Liga 1 besser aufgehoben wäre.</i></small>
+              </p>
+            </article>
+            <article id="confidence" class="methodology-glossar-card">
+              <h3>Confidence</h3>
+              <p>
+                Die <strong>Confidence</strong> ist die Sicherheit des Modells über den Sieger einer Partie.<br> 
+                Sie wird aus der Anzahl der bisherigen Matches, der Stärke der Gegner und der Stabilität der Teamwerteberechnet. <br>
+                Neben der Anzahl der Matches die ein Team gespielt hat, ist die Confidence für das nächste Match auch noch von der Vorhersage und dem tatsächlichen Ergebnis sowie der Confidence der vorherigen Matches abhängig.<br>
+                <small><i>Beispiel:</i>Team A Gewinnchancen betragen x%, Team B Gewinnchancen betragen y%. Das Modell ist sich zu z% sicher, dass Team A gewinnen wird.</small>
+              </p>
+            </article>
+          </div>
+        </section>
+
+        
+        <section id="overview" class="methodology-note-section">
+          <p class="eyebrow">MODELL ASPEKTE</p>
+          <h2>Transparenz und Datenisolation</h2>
+          <p>
+            Die private Engine verarbeitet die Matchhistorie chronologisch und
+            veröffentlicht einen geprüften JSON-Snapshot. Die Website liest
+            ausschließlich diese vorab berechneten Daten; Ratings,
+            Graphberechnungen, Optimierung und Kalibrierung laufen nicht im
+            Browser. Private CSV-Daten, Einstellungen und interne Modellgewichte
+            werden nicht veröffentlicht.
+          </p>
+        </section>
+
+        <section id="leagues" class="methodology-note-section">
+          <h2>Zusätzliche Liga-Prognose</h2>
+          <p>
+            Aus Rating, RD und konfigurierten Liga-Schwellen wird außerdem eine
+            nachhaltige Liga-Verteilung geschätzt.
+            <strong>Predicted league</strong> ist eine Information über die
+            erwartete Leistungsstufe und ersetzt nicht die offizielle
+            Liga-Zuordnung.
+          </p>
+        </section>
+
+        <!-- <section id="disclaimer" class="methodology-note-section">
+        <h2>Unabhängiges Projekt</h2>
+        <p><em>FULOW</em> ist ein unabhängiges, nicht-kommerzielles Esports-Analyseprojekt. Es ist nicht mit der Uniliga, Freaks 4U Gaming oder einem offiziellen Liga-Veranstalter verbunden, von ihnen bestätigt oder gesponsert.</p>
+      </section>-->
+      </article>
+    </main>
+
+    <footer class="site-footer-rich">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li>
+              <a href="../predictions/predictions.html">Alle Vorhersagen</a>
+            </li>
+            <li>
+              <a href="../teams/team_ranking.html">Performance-Ranking</a>
+            </li>
+            <li><a href="../compare/compare.html">Teamvergleich</a></li>
+            <li>
+              <a href="../performance/performance.html">Modell-Analytics</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="../about/about.html">Über das Projekt</a></li>
+            <li>
+              <a
+                href="https://github.com/sweetdweams/FULOW"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub Repository</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
