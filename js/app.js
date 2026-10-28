@@ -1783,8 +1783,9 @@ async function comparePage() {
     if (series.every(item => item.rows.length > 0)) {
       chartPanel = element('section', { className: 'history-panel comparison-history-panel' }, [
         element('h2', { text: 'Vergleichbarer Rating-Verlauf' }),
-        element('div', { className: 'chart-legend' }, series.map((item, index) => element('span', { className: `legend-item chart-line-${index}`, text: item.name }))),
-        lineChart(series, `${a.name} and ${b.name} comparable rating history`)
+        element('div', { className: 'rating-history-canvas' }, [
+          element('div', { className: 'rating-chart-maintenance', text: 'Rating chart vorrübergehend nicht verfügbar, wird nochmal überarbeitet.' })
+        ])
       ]);
     }
 
@@ -2087,7 +2088,7 @@ function positionHomeDataStamp() {
   const stamp = document.getElementById('1');
   const main = document.getElementById('main-content');
   const header = document.querySelector('.site-header');
-  const page = document.body?.dataset.page;
+  const { page } = document.body?.dataset ?? {};
   if (!stamp || !main || !header || page === 'about') return;
 
   const anchorSelector = page === 'home'
