@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T21:22:20+00:00",
+  "generated_at": "2026-11-01T21:40:56+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -166,17 +166,17 @@
       "league": "4. Liga",
       "group": "N",
       "initial_rating": 555.0,
-      "rating": 896.6576,
-      "rating_deviation": 154.0582,
-      "matches_played": 1,
+      "rating": 943.201,
+      "rating_deviation": 142.0189,
+      "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.682309,
-      "league_uncertainty": 236.926,
+      "league_confidence": 0.612937,
+      "league_uncertainty": 229.2801,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.000211,
-        "3. Liga": 0.317479,
-        "4. Liga": 0.682309
+        "2. Liga": 0.000291,
+        "3. Liga": 0.386773,
+        "4. Liga": 0.612937
       }
     },
     {
@@ -271,17 +271,17 @@
       "league": "4. Liga",
       "group": "N",
       "initial_rating": 555.0,
-      "rating": 845.7778,
-      "rating_deviation": 151.444,
-      "matches_played": 1,
+      "rating": 800.6689,
+      "rating_deviation": 140.0069,
+      "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.756118,
-      "league_uncertainty": 235.2345,
+      "league_confidence": 0.81953,
+      "league_uncertainty": 228.0393,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 8.2e-05,
-        "3. Liga": 0.243799,
-        "4. Liga": 0.756118
+        "2. Liga": 2.2e-05,
+        "3. Liga": 0.180448,
+        "4. Liga": 0.81953
       }
     },
     {

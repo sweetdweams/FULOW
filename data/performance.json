@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T21:22:20+00:00",
+  "generated_at": "2026-11-01T21:40:56+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -7,11 +7,11 @@
   ],
   "evaluation_start": "22.04.2026",
   "evaluation_end": "01.11.2026",
-  "predictions": 472,
-  "accuracy": 0.644068,
-  "log_loss": 0.711098,
-  "brier_score": 0.237212,
-  "calibration_error": 0.118798,
+  "predictions": 473,
+  "accuracy": 0.64482,
+  "log_loss": 0.710813,
+  "brier_score": 0.237116,
+  "calibration_error": 0.117621,
   "periods": [
     {
       "id": "all_time",
@@ -19,11 +19,11 @@
       "season": null,
       "evaluation_start": "22.04.2026",
       "evaluation_end": "01.11.2026",
-      "predictions": 472,
-      "accuracy": 0.644068,
-      "log_loss": 0.711098,
-      "brier_score": 0.237212,
-      "calibration_error": 0.118798
+      "predictions": 473,
+      "accuracy": 0.64482,
+      "log_loss": 0.710813,
+      "brier_score": 0.237116,
+      "calibration_error": 0.117621
     },
     {
       "id": "last_20",
@@ -45,9 +45,9 @@
       "evaluation_end": "01.11.2026",
       "predictions": 50,
       "accuracy": 0.58,
-      "log_loss": 0.833762,
-      "brier_score": 0.290943,
-      "calibration_error": 0.201755
+      "log_loss": 0.844607,
+      "brier_score": 0.294758,
+      "calibration_error": 0.205996
     },
     {
       "id": "season_Season SoSe26",
@@ -67,11 +67,11 @@
       "season": "Season WiSe26/27",
       "evaluation_start": "10.10.2026",
       "evaluation_end": "01.11.2026",
-      "predictions": 104,
-      "accuracy": 0.519231,
-      "log_loss": 0.912932,
-      "brier_score": 0.306594,
-      "calibration_error": 0.244405
+      "predictions": 105,
+      "accuracy": 0.52381,
+      "log_loss": 0.909726,
+      "brier_score": 0.305501,
+      "calibration_error": 0.237906
     }
   ],
   "matchday_history": [
@@ -643,11 +643,11 @@
       "phase": "Regular Season",
       "phase_label": "Regular Season \u00b7 Tag (2)",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (2)",
-      "predictions": 472,
-      "accuracy": 0.644068,
-      "log_loss": 0.711098,
-      "brier_score": 0.237212,
-      "calibration_error": 0.118798,
+      "predictions": 473,
+      "accuracy": 0.64482,
+      "log_loss": 0.710813,
+      "brier_score": 0.237116,
+      "calibration_error": 0.117621,
       "crossover_zones": {
         "1_2": {
           "rating": 2313.0637,
@@ -659,7 +659,7 @@
         },
         "3_4": {
           "rating": 1353.3585,
-          "sigma": 67.9305
+          "sigma": 68.0207
         }
       }
     }
@@ -953,11 +953,11 @@
       "phase": "Regular Season",
       "phase_label": "Regular Season \u00b7 Tag (2)",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (2)",
-      "predictions": 472,
-      "accuracy": 0.644068,
-      "log_loss": 0.711098,
-      "brier_score": 0.237212,
-      "calibration_error": 0.118798
+      "predictions": 473,
+      "accuracy": 0.64482,
+      "log_loss": 0.710813,
+      "brier_score": 0.237116,
+      "calibration_error": 0.117621
     }
   ],
   "crosszones": [
@@ -1545,12 +1545,12 @@
           "id": "3_4",
           "label": "3. Liga \u2194 4. Liga",
           "rating": 1353.3585,
-          "sigma": 67.9305
+          "sigma": 68.0207
         }
       ]
     }
   ],
-  "runtime_seconds": 12.03,
-  "runtime_display": "12,03 Sekunden",
-  "runtime_generated_at": "2026-11-01T21:22:20+00:00"
+  "runtime_seconds": 12.01,
+  "runtime_display": "12,01 Sekunden",
+  "runtime_generated_at": "2026-11-01T21:40:56+00:00"
 }
