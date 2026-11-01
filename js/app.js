@@ -581,7 +581,7 @@ async function home() {
   const homePreds = document.querySelector('#home-predictions');
   if (homePreds) {
     const list = predictions.predictions.slice(0, 6);
-    replaceChildren(homePreds, list.length ? list.map(card) : [emptyState('Keine veröffentlichten Vorhersagen verfügbar.')]);
+    replaceChildren(homePreds, list.length ? list.map(card) : [emptyState('Keine Vorhersagen verfügbar.')]);
   }
 
   // League Overview aggregation
@@ -1729,7 +1729,7 @@ async function comparePage() {
 
     const prediction = comparison ? element('section', { className: 'comparison-prediction' }, [
       element('p', { className: 'eyebrow', text: 'DIREKTVERGLEICH' }),
-      element('h2', { text: 'Veröffentlichte Siegchancen' }),
+      element('h2', { text: 'Theoretische Siegchancen' }),
       element('div', { className: 'comparison-probabilities' }, [
         element('div', {}, [
           teamLink(a.id, a.name, 'team-link team-link-a'),
@@ -1742,9 +1742,9 @@ async function comparePage() {
       ]),
       element('p', { className: 'muted', style: { marginTop: '1rem', marginBottom: '0' } }, [
         element('a', { attributes: { href: '../about/about.html#confidence' }, text: 'Confidence' }),
-        document.createTextNode(`: ${conf.label}. Vor dem Spiel privat erstellt.`)
+        document.createTextNode(`: ${conf.label}`)
       ])
-    ]) : emptyState('Für dieses Paar ist keine veröffentlichte Vergleichsvorhersage verfügbar.');
+    ]) : emptyState('Für dieses Paar ist keine Vergleichsvorhersage verfügbar.');
 
     const compareCardsNode = element('div', { className: 'compare-cards' }, [
       element('article', { className: 'compare-card', style: { borderTop: '4px solid var(--blue)' } }, [
@@ -1815,7 +1815,7 @@ async function teamDetailPage() {
     const statCards = [
       ['Rating', Math.round(team.rating)],
       ['Rating-Abweichung', Math.round(team.rating_deviation)],
-      ['Prognostiziertes nachhaltiges Niveau', predictedSustainableLevel(team)],
+      ['Prognostiziertes Liga-Niveau', predictedSustainableLevel(team)],
       ['Liga-Confidence', team.league_confidence ? percent(team.league_confidence) : '—'],
       ['Gespielte Spiele', team.matches_played]
     ].map(([label, value]) => element('article', { className: 'performance-card' }, [
@@ -1834,7 +1834,7 @@ async function teamDetailPage() {
           element('span', { text: team.name }),
           element('small', { className: 'team-abbreviation team-detail-abbreviation', text: teamAbbreviation(team) })
         ]),
-        element('p', { className: 'muted', text: `Saison ${team.season}` })
+        element('p', { className: 'muted', text: `${team.season}` })
       ]),
       element('section', { className: 'team-stats' }, statCards),
       resultsPanel(team, predictionHistory.history),
