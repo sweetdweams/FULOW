@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-04T10:20:44+00:00",
+  "generated_at": "2026-11-04T16:05:04+00:00",
   "source": "performance.json",
-  "description": "Historical cumulative performance metrics and dynamic crossover rating boundaries by season and matchday.",
+  "description": "Historical cumulative performance metrics, dynamic crossover rating boundaries, and model correction weights by season and matchday.",
   "history": [
     {
       "key": "Season SoSe26|0",
@@ -1470,6 +1470,12 @@
           "calibration_error": 0.126435
         }
       },
+      "weights": {
+        "direct": 0.25,
+        "common_opponent": 0.25,
+        "logic": 0.25,
+        "form": 0.25
+      },
       "crossover_zones": {
         "1_2": {
           "rating": 2163.5414,
@@ -1547,6 +1553,12 @@
           "brier_score": 0.196796,
           "calibration_error": 0.126313
         }
+      },
+      "weights": {
+        "direct": 0.267768,
+        "common_opponent": 0.2151,
+        "logic": 0.240374,
+        "form": 0.276758
       },
       "crossover_zones": {
         "1_2": {
@@ -1626,6 +1638,12 @@
           "calibration_error": 0.09021
         }
       },
+      "weights": {
+        "direct": 0.271851,
+        "common_opponent": 0.204017,
+        "logic": 0.240345,
+        "form": 0.283786
+      },
       "crossover_zones": {
         "1_2": {
           "rating": 2442.6022,
@@ -1703,6 +1721,12 @@
           "brier_score": 0.218079,
           "calibration_error": 0.087971
         }
+      },
+      "weights": {
+        "direct": 0.284003,
+        "common_opponent": 0.191199,
+        "logic": 0.237966,
+        "form": 0.286832
       },
       "crossover_zones": {
         "1_2": {

@@ -1247,3 +1247,61 @@ header, .site-header, .header-inner, .header-content {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Model Correction Weights Summary & Chart */
+.weight-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.weight-summary-card {
+  background: var(--surface-secondary, rgba(125, 125, 125, 0.06));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.weight-summary-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.weight-summary-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-top: 0.25rem;
+}
+
+.weight-summary-delta {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.weight-summary-delta.delta-positive {
+  color: #16a34a;
+}
+
+.weight-summary-delta.delta-negative {
+  color: #dc2626;
+}
+
+.weight-summary-delta.delta-neutral {
+  color: var(--muted);
+}
+
+.weight-summary-desc {
+  font-size: 0.76rem;
+  color: var(--muted);
+  margin: 0.35rem 0 0 0;
+  line-height: 1.35;
+}

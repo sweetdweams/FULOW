@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T10:20:44+00:00",
+  "generated_at": "2026-11-04T16:05:04+00:00",
   "predictions": [
     {
       "match_id": "M106",
@@ -16,9 +16,9 @@
         "id": "T040",
         "name": "DG Elysium"
       },
-      "probability_a": 0.835577,
-      "probability_b": 0.164423,
-      "confidence": 0.638577
+      "probability_a": 0.843319,
+      "probability_b": 0.156681,
+      "confidence": 0.753168
     },
     {
       "match_id": "M107",
@@ -35,9 +35,9 @@
         "id": "T061",
         "name": "404 Average Cake Enjoyer"
       },
-      "probability_a": 0.486439,
-      "probability_b": 0.513561,
-      "confidence": 0.193965
+      "probability_a": 0.556192,
+      "probability_b": 0.443808,
+      "confidence": 0.455197
     },
     {
       "match_id": "M108",
@@ -54,9 +54,9 @@
         "id": "T055",
         "name": "Hamburger Delfine"
       },
-      "probability_a": 0.236913,
-      "probability_b": 0.763087,
-      "confidence": 0.530094
+      "probability_a": 0.217512,
+      "probability_b": 0.782488,
+      "confidence": 0.719502
     },
     {
       "match_id": "M109",
@@ -73,9 +73,9 @@
         "id": "T049",
         "name": "HSK Centauri"
       },
-      "probability_a": 0.700564,
-      "probability_b": 0.299436,
-      "confidence": 0.487064
+      "probability_a": 0.755002,
+      "probability_b": 0.244998,
+      "confidence": 0.70981
     },
     {
       "match_id": "M110",
@@ -92,9 +92,9 @@
         "id": "T062",
         "name": "HGI Amber"
       },
-      "probability_a": 0.268119,
-      "probability_b": 0.731881,
-      "confidence": 0.508018
+      "probability_a": 0.265831,
+      "probability_b": 0.734169,
+      "confidence": 0.706865
     },
     {
       "match_id": "M111",
@@ -111,9 +111,9 @@
         "id": "T054",
         "name": "Mainhardt"
       },
-      "probability_a": 0.660989,
-      "probability_b": 0.339011,
-      "confidence": 0.404153
+      "probability_a": 0.622381,
+      "probability_b": 0.377619,
+      "confidence": 0.583566
     },
     {
       "match_id": "M112",
@@ -130,9 +130,9 @@
         "id": "T032",
         "name": "Mogontiacum"
       },
-      "probability_a": 0.908011,
-      "probability_b": 0.091989,
-      "confidence": 0.716663
+      "probability_a": 0.916319,
+      "probability_b": 0.083681,
+      "confidence": 0.738375
     },
     {
       "match_id": "M113",
@@ -149,9 +149,9 @@
         "id": "T024",
         "name": "UKG Fehler"
       },
-      "probability_a": 0.536665,
-      "probability_b": 0.463335,
-      "confidence": 0.191601
+      "probability_a": 0.51727,
+      "probability_b": 0.48273,
+      "confidence": 0.295191
     },
     {
       "match_id": "M115",
@@ -168,9 +168,9 @@
         "id": "T026",
         "name": "Bielefeld Sapphire"
       },
-      "probability_a": 0.831775,
-      "probability_b": 0.168225,
-      "confidence": 0.610582
+      "probability_a": 0.797531,
+      "probability_b": 0.202469,
+      "confidence": 0.689352
     },
     {
       "match_id": "M118",
@@ -187,9 +187,9 @@
         "id": "T025",
         "name": "HsGL Fennecs"
       },
-      "probability_a": 0.622607,
-      "probability_b": 0.377393,
-      "confidence": 0.373571
+      "probability_a": 0.621712,
+      "probability_b": 0.378288,
+      "confidence": 0.549699
     },
     {
       "match_id": "M120",
@@ -206,9 +206,9 @@
         "id": "T067",
         "name": "1. ECF SendHelpAgain"
       },
-      "probability_a": 0.233613,
-      "probability_b": 0.766387,
-      "confidence": 0.524983
+      "probability_a": 0.206821,
+      "probability_b": 0.793179,
+      "confidence": 0.632174
     },
     {
       "match_id": "M121",
@@ -225,9 +225,9 @@
         "id": "T006",
         "name": "PBE Mondhasen"
       },
-      "probability_a": 0.546184,
-      "probability_b": 0.453816,
-      "confidence": 0.244527
+      "probability_a": 0.521184,
+      "probability_b": 0.478816,
+      "confidence": 0.403681
     },
     {
       "match_id": "M122",
@@ -244,9 +244,9 @@
         "id": "T034",
         "name": "RUB Goats Aqua"
       },
-      "probability_a": 0.41232,
-      "probability_b": 0.58768,
-      "confidence": 0.206037
+      "probability_a": 0.429038,
+      "probability_b": 0.570962,
+      "confidence": 0.329285
     },
     {
       "match_id": "M123",
@@ -263,9 +263,9 @@
         "id": "T018",
         "name": "DG Strix"
       },
-      "probability_a": 0.42494,
-      "probability_b": 0.57506,
-      "confidence": 0.308422
+      "probability_a": 0.361593,
+      "probability_b": 0.638407,
+      "confidence": 0.54634
     },
     {
       "match_id": "M124",
@@ -282,9 +282,9 @@
         "id": "T076",
         "name": "UKG Runaway"
       },
-      "probability_a": 0.274049,
-      "probability_b": 0.725951,
-      "confidence": 0.529059
+      "probability_a": 0.215207,
+      "probability_b": 0.784793,
+      "confidence": 0.756045
     },
     {
       "match_id": "M125",
@@ -301,9 +301,9 @@
         "id": "T001",
         "name": "Berlin Makaken"
       },
-      "probability_a": 0.675736,
-      "probability_b": 0.324264,
-      "confidence": 0.515574
+      "probability_a": 0.646988,
+      "probability_b": 0.353012,
+      "confidence": 0.660003
     },
     {
       "match_id": "M126",
@@ -320,9 +320,9 @@
         "id": "T030",
         "name": "Haiground"
       },
-      "probability_a": 0.542469,
-      "probability_b": 0.457531,
-      "confidence": 0.244804
+      "probability_a": 0.518465,
+      "probability_b": 0.481535,
+      "confidence": 0.439662
     },
     {
       "match_id": "M127",
@@ -339,9 +339,9 @@
         "id": "T074",
         "name": "T\u00dc V\u00ed\u00f0\u00f3pnir"
       },
-      "probability_a": 0.497347,
-      "probability_b": 0.502653,
-      "confidence": 0.142017
+      "probability_a": 0.4861,
+      "probability_b": 0.5139,
+      "confidence": 0.304695
     },
     {
       "match_id": "M128",
@@ -358,9 +358,9 @@
         "id": "T083",
         "name": "OSGG Pink DinOS"
       },
-      "probability_a": 0.2499,
-      "probability_b": 0.7501,
-      "confidence": 0.416779
+      "probability_a": 0.252686,
+      "probability_b": 0.747314,
+      "confidence": 0.488814
     },
     {
       "match_id": "M129",
@@ -377,9 +377,9 @@
         "id": "T038",
         "name": "THM Knights"
       },
-      "probability_a": 0.334255,
-      "probability_b": 0.665745,
-      "confidence": 0.40793
+      "probability_a": 0.35174,
+      "probability_b": 0.64826,
+      "confidence": 0.600194
     },
     {
       "match_id": "M130",
@@ -396,9 +396,9 @@
         "id": "T010",
         "name": "KIT SC Bober"
       },
-      "probability_a": 0.728764,
-      "probability_b": 0.271236,
-      "confidence": 0.417657
+      "probability_a": 0.746834,
+      "probability_b": 0.253166,
+      "confidence": 0.559702
     },
     {
       "match_id": "M131",
@@ -415,9 +415,9 @@
         "id": "T027",
         "name": "KIT SC [k\u0153ri]werk addicted tryhards"
       },
-      "probability_a": 0.227628,
-      "probability_b": 0.772372,
-      "confidence": 0.569327
+      "probability_a": 0.247333,
+      "probability_b": 0.752667,
+      "confidence": 0.709754
     },
     {
       "match_id": "M132",
@@ -434,9 +434,9 @@
         "id": "T007",
         "name": "DG Lotus"
       },
-      "probability_a": 0.553082,
-      "probability_b": 0.446918,
-      "confidence": 0.233143
+      "probability_a": 0.554058,
+      "probability_b": 0.445942,
+      "confidence": 0.374749
     },
     {
       "match_id": "M133",
@@ -453,9 +453,9 @@
         "id": "T002",
         "name": "HsGL Pumas"
       },
-      "probability_a": 0.469872,
-      "probability_b": 0.530128,
-      "confidence": 0.241742
+      "probability_a": 0.485761,
+      "probability_b": 0.514239,
+      "confidence": 0.407615
     },
     {
       "match_id": "M134",
@@ -472,9 +472,9 @@
         "id": "T022",
         "name": "BUW Strays"
       },
-      "probability_a": 0.749454,
-      "probability_b": 0.250546,
-      "confidence": 0.394241
+      "probability_a": 0.740558,
+      "probability_b": 0.259442,
+      "confidence": 0.530438
     },
     {
       "match_id": "M135",
@@ -491,9 +491,9 @@
         "id": "T084",
         "name": "UKGarKeinPlan"
       },
-      "probability_a": 0.497882,
-      "probability_b": 0.502118,
-      "confidence": 0.18206
+      "probability_a": 0.498101,
+      "probability_b": 0.501899,
+      "confidence": 0.333648
     },
     {
       "match_id": "M136",
@@ -510,9 +510,9 @@
         "id": "T085",
         "name": "OVGU Esports"
       },
-      "probability_a": 0.56597,
-      "probability_b": 0.43403,
-      "confidence": 0.210835
+      "probability_a": 0.558571,
+      "probability_b": 0.441429,
+      "confidence": 0.323436
     },
     {
       "match_id": "M137",
@@ -529,9 +529,9 @@
         "id": "T009",
         "name": "Bremer Wasch Dienst"
       },
-      "probability_a": 0.467141,
-      "probability_b": 0.532859,
-      "confidence": 0.193023
+      "probability_a": 0.426897,
+      "probability_b": 0.573103,
+      "confidence": 0.385522
     },
     {
       "match_id": "M138",
@@ -548,9 +548,9 @@
         "id": "T015",
         "name": "LES Leutzscher Lappen"
       },
-      "probability_a": 0.511683,
-      "probability_b": 0.488317,
-      "confidence": 0.146719
+      "probability_a": 0.489715,
+      "probability_b": 0.510285,
+      "confidence": 0.27907
     },
     {
       "match_id": "M139",
@@ -567,9 +567,9 @@
         "id": "T008",
         "name": "Skill IssUEH"
       },
-      "probability_a": 0.37846,
-      "probability_b": 0.62154,
-      "confidence": 0.407795
+      "probability_a": 0.343007,
+      "probability_b": 0.656993,
+      "confidence": 0.66291
     },
     {
       "match_id": "M140",
@@ -586,9 +586,9 @@
         "id": "T013",
         "name": "UKGrrrS\u00fc\u00dfm\u00e4use"
       },
-      "probability_a": 0.597919,
-      "probability_b": 0.402081,
-      "confidence": 0.280116
+      "probability_a": 0.587245,
+      "probability_b": 0.412755,
+      "confidence": 0.430667
     },
     {
       "match_id": "M141",
@@ -605,9 +605,9 @@
         "id": "T017",
         "name": "LUNA Nova"
       },
-      "probability_a": 0.694643,
-      "probability_b": 0.305357,
-      "confidence": 0.4697
+      "probability_a": 0.710025,
+      "probability_b": 0.289975,
+      "confidence": 0.686539
     },
     {
       "match_id": "M119",
@@ -624,9 +624,9 @@
         "id": "T029",
         "name": "LES GOOO"
       },
-      "probability_a": 0.730538,
-      "probability_b": 0.269462,
-      "confidence": 0.510769
+      "probability_a": 0.682103,
+      "probability_b": 0.317897,
+      "confidence": 0.649225
     },
     {
       "match_id": "M114",
@@ -643,9 +643,9 @@
         "id": "T068",
         "name": "RUB Goats N\u00f6 LG"
       },
-      "probability_a": 0.658974,
-      "probability_b": 0.341026,
-      "confidence": 0.36291
+      "probability_a": 0.664489,
+      "probability_b": 0.335511,
+      "confidence": 0.541036
     },
     {
       "match_id": "M116",
@@ -662,9 +662,9 @@
         "id": "T051",
         "name": "BeK Flotten Sprotten"
       },
-      "probability_a": 0.658141,
-      "probability_b": 0.341859,
-      "confidence": 0.409541
+      "probability_a": 0.674156,
+      "probability_b": 0.325844,
+      "confidence": 0.635727
     }
   ]
 }

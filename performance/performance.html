@@ -2,8 +2,8 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <meta name="application-version" content="1.1.6" />
-    <meta name="engine-version" content="1.1.2-stable" />
+    <meta name="application-version" content="1.1.6.1" />
+    <meta name="engine-version" content="1.1.3-stable" />
     <meta name="dataset-updated" content="2026-11-04" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script
@@ -122,6 +122,26 @@
         </p>
         <div id="performance-history-chart">
           <p class="loading">Loading historical analytics...</p>
+        </div>
+      </section>
+
+      <section
+        class="history-panel analytics-history-panel"
+        aria-labelledby="weights-chart-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ONLINE LEARNING</p>
+            <h2 id="weights-chart-title">
+              Verlauf der Modell-Korrekturgewichte
+            </h2>
+          </div>
+        </div>
+        <p class="muted">
+          Dynamische Anpassung der vier Korrektur-Signale (Direkter Vergleich, Gemeinsame Gegner, Logische Kette und Form) seit Einführung des Online-Learnings ab Season WiSe26/27.
+        </p>
+        <div id="performance-weights-chart">
+          <p class="loading">Lade Verlaufsdaten der Modellgewichte...</p>
         </div>
       </section>
 

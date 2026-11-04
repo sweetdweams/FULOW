@@ -612,6 +612,211 @@ function historicalPerformanceCharts(history) {
   ]);
 }
 
+function weightsHistoryChart(history) {
+  const pointsWithWeights = (history || []).filter(
+    p => p && p.weights && typeof p.weights === 'object' && (!p.season || !p.season.includes('SoSe26'))
+  );
+  if (!pointsWithWeights.length) {
+    return emptyState('Keine Verlaufsdaten zu Modell-Gewichten ab WiSe26/27 vorhanden.');
+  }
+
+  const SERIES = [
+    { id: 'direct', label: 'Direkter Vergleich', color: '#2563EB', desc: 'Direkte H2H-Duelle früherer Begegnungen' },
+    { id: 'common_opponent', label: 'Gemeinsame Gegner', color: '#14B8A6', desc: 'Quervergleich über gemeinsame Kontrahenten' },
+    { id: 'logic', label: 'Logische Kette', color: '#A855F7', desc: 'Transitive Matchketten im Graphen' },
+    { id: 'form', label: 'Aktuelle Form', color: '#F97316', desc: 'Kurzzeit-Momentum und jüngste Formkurve' }
+  ];
+
+  // Latest weights summary cards
+  const latestPoint = pointsWithWeights[pointsWithWeights.length - 1];
+  const summaryGrid = element('div', { className: 'weight-summary-grid' });
+  SERIES.forEach(s => {
+    const rawVal = latestPoint.weights?.[s.id];
+    const val = Number(rawVal);
+    const percentStr = Number.isFinite(val) ? `${(val * 100).toFixed(1)}%` : '-';
+    const delta = Number.isFinite(val) ? (val - 0.25) * 100 : 0;
+    const deltaStr = delta >= 0.05
+      ? `+${delta.toFixed(1)}% vs. Start`
+      : delta <= -0.05
+        ? `${delta.toFixed(1)}% vs. Start`
+        : '±0.0% vs. Start';
+    const deltaClass = delta >= 0.05 ? 'delta-positive' : delta <= -0.05 ? 'delta-negative' : 'delta-neutral';
+
+    summaryGrid.append(element('div', { className: 'weight-summary-card' }, [
+      element('div', { className: 'weight-summary-header' }, [
+        element('span', { className: 'chart-toggle-swatch', style: { backgroundColor: s.color } }),
+        element('strong', { text: s.label })
+      ]),
+      element('div', { className: 'weight-summary-value', style: { color: s.color }, text: percentStr }),
+      element('div', { className: `weight-summary-delta ${deltaClass}`, text: deltaStr }),
+      element('p', { className: 'weight-summary-desc', text: s.desc })
+    ]));
+  });
+
+  // Static legend (all 4 series always displayed)
+  const legend = element('div', { className: 'chart-controls' });
+  SERIES.forEach(s => {
+    legend.append(element('div', { className: 'chart-toggle', style: { cursor: 'default' } }, [
+      element('span', { className: 'chart-toggle-swatch', style: { backgroundColor: s.color } }),
+      element('span', { text: s.label })
+    ]));
+  });
+
+  const chartTarget = element('div', { className: 'historical-chart-target' });
+  const dates = pointsWithWeights.map(p => p.key);
+
+  const width = 900;
+  const height = 360;
+  const padding = { top: 24, right: 80, bottom: 50, left: 54 };
+  const plotHeight = height - padding.top - padding.bottom;
+  const plotWidth = width - padding.left - padding.right;
+
+  const allSelectedValues = SERIES.flatMap(s =>
+    pointsWithWeights.map(p => Number(p.weights?.[s.id])).filter(Number.isFinite)
+  );
+  const maxVal = Math.max(...allSelectedValues, 0.35);
+  const maximum = Math.max(0.40, Math.ceil(maxVal * 20) / 20);
+  const minimum = 0;
+
+  const x = index => padding.left + (dates.length > 1 ? (index / (dates.length - 1)) * plotWidth : plotWidth / 2);
+  const y = value => padding.top + (1 - ((value - minimum) / (maximum - minimum))) * plotHeight;
+
+  const svg = svgElement('svg', {
+    className: 'historical-analytics-chart',
+    attributes: { viewBox: `0 0 ${width} ${height}`, role: 'img', 'aria-label': 'Verlauf der Modell-Gewichte' }
+  });
+  svg.append(svgElement('title', { text: 'Verlauf der Korrektur-Gewichte' }));
+
+  // Y Gridlines and Labels
+  const tickStep = 0.05;
+  const yTicks = [];
+  for (let v = 0; v <= maximum + 0.001; v += tickStep) {
+    yTicks.push(Number(v.toFixed(2)));
+  }
+  yTicks.forEach(tickVal => {
+    const yPos = y(tickVal);
+    svg.append(svgElement('line', {
+      className: 'chart-gridline',
+      attributes: { x1: padding.left, x2: width - padding.right, y1: yPos, y2: yPos }
+    }));
+    svg.append(svgElement('text', {
+      className: 'chart-axis-label',
+      attributes: { x: 4, y: yPos + 4 },
+      text: `${Math.round(tickVal * 100)}%`
+    }));
+  });
+
+  // 25% Baseline (neutral equal weight line)
+  const baselineY = y(0.25);
+  svg.append(svgElement('line', {
+    attributes: {
+      x1: padding.left,
+      x2: width - padding.right,
+      y1: baselineY,
+      y2: baselineY
+    },
+    style: {
+      stroke: 'var(--muted)',
+      strokeDasharray: '4 4',
+      strokeWidth: '1.2',
+      opacity: '0.6'
+    }
+  }));
+  svg.append(svgElement('text', {
+    className: 'chart-axis-label',
+    attributes: { x: width - padding.right + 6, y: baselineY + 4 },
+    style: { fill: 'var(--muted)', fontSize: '10px', opacity: '0.9' },
+    text: '25%'
+  }));
+
+  // Season boundaries (if multiple seasons present)
+  pointsWithWeights.forEach((point, index) => {
+    if (index > 0 && point.season !== pointsWithWeights[index - 1].season) {
+      const xPos = x(index);
+      svg.append(svgElement('line', {
+        attributes: { x1: xPos, x2: xPos, y1: padding.top, y2: height - padding.bottom },
+        style: { stroke: 'var(--line)', strokeDasharray: '4 4', strokeWidth: '1.5' }
+      }));
+      const seasonName = (point.season || '').replace('Season ', '');
+      svg.append(svgElement('text', {
+        className: 'chart-x-label',
+        attributes: { x: xPos + 4, y: padding.top + 14, 'text-anchor': 'start' },
+        style: { fill: 'var(--muted)', fontSize: '10px', fontWeight: '700' },
+        text: `${seasonName} Start`
+      }));
+    }
+  });
+
+  // X Axis Labels
+  const labelIndices = new Set();
+  if (pointsWithWeights.length <= 8) {
+    pointsWithWeights.forEach((_, idx) => labelIndices.add(idx));
+  } else {
+    labelIndices.add(0);
+    labelIndices.add(pointsWithWeights.length - 1);
+    pointsWithWeights.forEach((p, idx) => {
+      if (idx > 0 && p.season !== pointsWithWeights[idx - 1].season) {
+        labelIndices.add(idx - 1);
+        labelIndices.add(idx);
+      }
+    });
+    labelIndices.add(Math.floor(pointsWithWeights.length / 3));
+    labelIndices.add(Math.floor((pointsWithWeights.length * 2) / 3));
+  }
+
+  Array.from(labelIndices).sort((a, b) => a - b).forEach(index => {
+    const p = pointsWithWeights[index];
+    const seasonShort = (p.season || '').replace('Season ', '');
+    const text = p.matchday != null ? `${seasonShort} Tag ${p.matchday}` : (p.label || p.key);
+    svg.append(svgElement('text', {
+      className: 'chart-x-label',
+      attributes: { x: x(index), y: height - 14, 'text-anchor': 'middle' },
+      text
+    }));
+  });
+
+  // Draw series polylines and points (always all 4 series)
+  SERIES.forEach(s => {
+    const validPoints = pointsWithWeights
+      .map((p, idx) => ({ idx, val: Number(p.weights?.[s.id]), point: p }))
+      .filter(item => Number.isFinite(item.val));
+
+    if (!validPoints.length) return;
+
+    const polylinePoints = validPoints
+      .map(item => `${x(item.idx).toFixed(1)},${y(item.val).toFixed(1)}`)
+      .join(' ');
+
+    svg.append(svgElement('polyline', {
+      className: 'historical-chart-line',
+      attributes: { points: polylinePoints },
+      style: { stroke: s.color, fill: 'none' }
+    }));
+
+    validPoints.forEach(item => {
+      const circle = svgElement('circle', {
+        className: 'historical-chart-point',
+        attributes: { cx: x(item.idx), cy: y(item.val), r: 4 },
+        style: { fill: s.color, stroke: 'var(--panel)' }
+      });
+      const matchdayLabel = item.point.label || item.point.key;
+      circle.append(svgElement('title', {
+        text: `${matchdayLabel}\n${s.label}: ${(item.val * 100).toFixed(1)}%`
+      }));
+      svg.append(circle);
+    });
+  });
+
+  replaceChildren(chartTarget, [svg]);
+
+  return element('div', { className: 'historical-chart' }, [
+    summaryGrid,
+    element('h4', { style: { margin: '1rem 0 0.5rem', fontSize: '0.95rem', fontWeight: '700' }, text: 'Verlauf über Matchdays' }),
+    legend,
+    chartTarget
+  ]);
+}
+
 function card(match) {
   const probA = probabilityPercent(match.probability_a);
   const probB = probabilityPercent(match.probability_b);
@@ -1942,6 +2147,7 @@ async function teamDetailPage() {
   const team = teams.teams.find(item => item.id === teamId);
   const target = document.querySelector('#team-detail');
   if (!team) { if (target) replaceChildren(target, [emptyState('This team could not be found in the public snapshot.')]); return; }
+  document.title = `FULOW - ${teamAbbreviation(team)} Details`;
 
   if (target) {
     const statCards = [
@@ -2000,6 +2206,13 @@ async function performancePage() {
         historicalPerformanceCharts(performanceHistory.history)
       ]);
       chartTarget.dataset.rendered = 'true';
+    }
+    const weightsTarget = document.querySelector('#performance-weights-chart');
+    if (weightsTarget && !weightsTarget.dataset.rendered) {
+      replaceChildren(weightsTarget, [
+        weightsHistoryChart(performanceHistory.history)
+      ]);
+      weightsTarget.dataset.rendered = 'true';
     }
     const runtimeTarget = document.querySelector('#performance-runtime');
     if (runtimeTarget) {

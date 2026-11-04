@@ -1,10 +1,18 @@
+1.1.7 -- 04.11.2026
+- Engineversion geändert: 1.0.1-stable → 1.1.1-stable
+- Pagetitles geändert/angepasst
+- Glossar-Ankerziele unter dem Sticky-Menü sichtbar positioniert
+- Verbesserung in der Confidence-Berechnung
+- Neue Analytics mit Diagramm: Verlauf Modellgewichte
+
 1.1.6 -- 04.11.2026
-    - Datenaktualisierung
-    - Engineversion geändert: 1.0.1-stable → 1.1.1-stable
-        - Matches der Season WiSe26/27 wurden mit 1.1.1-stable neu berechnet
-    - Vorhersagen sortieren absteigend von 1. Liga zur 4. Liga
+- Datenaktualisierung
+- Engineversion geändert: 1.0.1-stable → 1.1.1-stable
+    - Matches der Season WiSe26/27 wurden mit 1.1.1-stable neu berechnet
+- Vorhersagen sortieren absteigend von 1. Liga zur 4. Liga
+- Diagramm für Historische Performance-Daten zugefügt: Kumuliert, Kumuliert pro Saison, Pro Spieltag und Moving Average(5)
     1.1.6.1
-    - Korrektur Spieldaten
+    - Nachtrag: Korrektur Spieldaten
 
 1.1.5 -- 01.11.2026
 - Datenaktualisierung und MD3 Predctions

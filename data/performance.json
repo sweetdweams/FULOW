@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T10:20:44+00:00",
+  "generated_at": "2026-11-04T16:05:04+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -12,6 +12,9 @@
   "log_loss": 0.606495,
   "brier_score": 0.207721,
   "calibration_error": 0.085664,
+  "runtime_seconds": 1.07,
+  "runtime_display": "1,07 Sekunden",
+  "runtime_generated_at": "2026-11-04T16:05:04+00:00",
   "periods": [
     {
       "id": "all_time",
@@ -1542,6 +1545,12 @@
           "calibration_error": 0.126435
         }
       },
+      "weights": {
+        "direct": 0.25,
+        "common_opponent": 0.25,
+        "logic": 0.25,
+        "form": 0.25
+      },
       "crossover_zones": {
         "1_2": {
           "rating": 2163.5414,
@@ -1619,6 +1628,12 @@
           "brier_score": 0.196796,
           "calibration_error": 0.126313
         }
+      },
+      "weights": {
+        "direct": 0.267768,
+        "common_opponent": 0.2151,
+        "logic": 0.240374,
+        "form": 0.276758
       },
       "crossover_zones": {
         "1_2": {
@@ -1698,6 +1713,12 @@
           "calibration_error": 0.09021
         }
       },
+      "weights": {
+        "direct": 0.271851,
+        "common_opponent": 0.204017,
+        "logic": 0.240345,
+        "form": 0.283786
+      },
       "crossover_zones": {
         "1_2": {
           "rating": 2442.6022,
@@ -1775,6 +1796,12 @@
           "brier_score": 0.218079,
           "calibration_error": 0.087971
         }
+      },
+      "weights": {
+        "direct": 0.284003,
+        "common_opponent": 0.191199,
+        "logic": 0.237966,
+        "form": 0.286832
       },
       "crossover_zones": {
         "1_2": {
@@ -3007,6 +3034,12 @@
           "brier_score": 0.200474,
           "calibration_error": 0.126435
         }
+      },
+      "weights": {
+        "direct": 0.25,
+        "common_opponent": 0.25,
+        "logic": 0.25,
+        "form": 0.25
       }
     },
     {
@@ -3071,6 +3104,12 @@
           "brier_score": 0.196796,
           "calibration_error": 0.126313
         }
+      },
+      "weights": {
+        "direct": 0.267768,
+        "common_opponent": 0.2151,
+        "logic": 0.240374,
+        "form": 0.276758
       }
     },
     {
@@ -3135,6 +3174,12 @@
           "brier_score": 0.218201,
           "calibration_error": 0.09021
         }
+      },
+      "weights": {
+        "direct": 0.271851,
+        "common_opponent": 0.204017,
+        "logic": 0.240345,
+        "form": 0.283786
       }
     },
     {
@@ -3199,6 +3244,12 @@
           "brier_score": 0.218079,
           "calibration_error": 0.087971
         }
+      },
+      "weights": {
+        "direct": 0.284003,
+        "common_opponent": 0.191199,
+        "logic": 0.237966,
+        "form": 0.286832
       }
     }
   ],

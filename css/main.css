@@ -1801,7 +1801,11 @@ h2 {
 }
 
 .methodology-simple section:not(.methodology-summary) {
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 4.5rem;
+}
+
+.methodology-simple article:target {
+  scroll-margin-top: 4.5rem;
 }
 
 .methodology-content {
