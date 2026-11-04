@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T16:05:04+00:00",
+  "generated_at": "2026-11-04T23:03:44+00:00",
   "crosszone_history": [
     {
       "key": "Season SoSe26|0",
@@ -593,27 +593,27 @@
       "key": "Season WiSe26/27|3",
       "season": "Season WiSe26/27",
       "matchday": "3",
-      "date": "11.11.2026",
+      "date": "04.11.2026",
       "phase": "regular_season",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (3)",
       "zones": [
         {
           "id": "1_2",
           "label": "1. Liga \u2194 2. Liga",
-          "rating": 2442.6022,
-          "sigma": 90.8556
+          "rating": 2481.3853,
+          "sigma": 85.918
         },
         {
           "id": "2_3",
           "label": "2. Liga \u2194 3. Liga",
-          "rating": 1646.0564,
-          "sigma": 73.2654
+          "rating": 1676.8638,
+          "sigma": 69.1257
         },
         {
           "id": "3_4",
           "label": "3. Liga \u2194 4. Liga",
-          "rating": 1062.8854,
-          "sigma": 60.0799
+          "rating": 1035.6429,
+          "sigma": 59.7185
         }
       ]
     }
@@ -12409,7 +12409,7 @@
       "team_b": "DA Purrgatory",
       "probability_a": 0.26156,
       "probability_b": 0.73844,
-      "confidence": 0.268662,
+      "confidence": 0.369833,
       "correct": true,
       "actual_winner_id": "T065",
       "crossover_zones": {
@@ -12441,7 +12441,7 @@
       "team_b": "DA Purrgatory",
       "probability_a": 0.864791,
       "probability_b": 0.135209,
-      "confidence": 0.336416,
+      "confidence": 0.433441,
       "correct": false,
       "actual_winner_id": "T065",
       "crossover_zones": {
@@ -12471,9 +12471,9 @@
       "score_b": 0,
       "team_a": "HSK Centauri",
       "team_b": "DG Elysium",
-      "probability_a": 0.578707,
-      "probability_b": 0.421293,
-      "confidence": 0.27328,
+      "probability_a": 0.578459,
+      "probability_b": 0.421541,
+      "confidence": 0.566052,
       "correct": true,
       "actual_winner_id": "T049",
       "crossover_zones": {
@@ -12503,9 +12503,9 @@
       "score_b": 0,
       "team_a": "DG Elysium",
       "team_b": "Mogontiacum",
-      "probability_a": 0.771477,
-      "probability_b": 0.228523,
-      "confidence": 0.432898,
+      "probability_a": 0.713487,
+      "probability_b": 0.286513,
+      "confidence": 0.567121,
       "correct": true,
       "actual_winner_id": "T040",
       "crossover_zones": {
@@ -12535,9 +12535,9 @@
       "score_b": 1,
       "team_a": "DG Elysium",
       "team_b": "LES Connewitz Crusaders",
-      "probability_a": 0.316194,
-      "probability_b": 0.683806,
-      "confidence": 0.405845,
+      "probability_a": 0.305403,
+      "probability_b": 0.694597,
+      "confidence": 0.697272,
       "correct": false,
       "actual_winner_id": "T040",
       "crossover_zones": {
@@ -12569,7 +12569,7 @@
       "team_b": "HSK Centauri",
       "probability_a": 0.201416,
       "probability_b": 0.798584,
-      "confidence": 0.301897,
+      "confidence": 0.400671,
       "correct": true,
       "actual_winner_id": "T049",
       "crossover_zones": {
@@ -12601,7 +12601,7 @@
       "team_b": "DG Elysium",
       "probability_a": 0.272061,
       "probability_b": 0.727939,
-      "confidence": 0.262132,
+      "confidence": 0.363978,
       "correct": true,
       "actual_winner_id": "T040",
       "crossover_zones": {
@@ -12633,7 +12633,7 @@
       "team_b": "DA Meowntain Dew",
       "probability_a": 0.5,
       "probability_b": 0.5,
-      "confidence": 0.07885,
+      "confidence": 0.134044,
       "correct": true,
       "actual_winner_id": "T066",
       "crossover_zones": {
@@ -12665,7 +12665,7 @@
       "team_b": "clUEHless",
       "probability_a": 0.5,
       "probability_b": 0.5,
-      "confidence": 0.07885,
+      "confidence": 0.134044,
       "correct": true,
       "actual_winner_id": "T065",
       "crossover_zones": {
@@ -12697,7 +12697,7 @@
       "team_b": "HsGL Fennecs",
       "probability_a": 0.146176,
       "probability_b": 0.853824,
-      "confidence": 0.328857,
+      "confidence": 0.427095,
       "correct": true,
       "actual_winner_id": "T025",
       "crossover_zones": {
@@ -12729,7 +12729,7 @@
       "team_b": "Berlin Makaken",
       "probability_a": 0.604227,
       "probability_b": 0.395773,
-      "confidence": 0.198763,
+      "confidence": 0.303659,
       "correct": true,
       "actual_winner_id": "T068",
       "crossover_zones": {
@@ -12761,7 +12761,7 @@
       "team_b": "HSMW Esports Medics",
       "probability_a": 0.430625,
       "probability_b": 0.569375,
-      "confidence": 0.177897,
+      "confidence": 0.284118,
       "correct": false,
       "actual_winner_id": "T069",
       "crossover_zones": {
@@ -12793,7 +12793,7 @@
       "team_b": "DA Meowntain Dew",
       "probability_a": 0.395773,
       "probability_b": 0.604227,
-      "confidence": 0.198763,
+      "confidence": 0.303659,
       "correct": false,
       "actual_winner_id": "T001",
       "crossover_zones": {
@@ -12825,7 +12825,7 @@
       "team_b": "clUEHless",
       "probability_a": 0.5,
       "probability_b": 0.5,
-      "confidence": 0.07885,
+      "confidence": 0.134044,
       "correct": false,
       "actual_winner_id": "T066",
       "crossover_zones": {
@@ -12855,9 +12855,9 @@
       "score_b": 0,
       "team_a": "HSMW Esports Medics",
       "team_b": "Berlin Makaken",
-      "probability_a": 0.625578,
-      "probability_b": 0.374422,
-      "confidence": 0.292767,
+      "probability_a": 0.608153,
+      "probability_b": 0.391847,
+      "confidence": 0.488646,
       "correct": true,
       "actual_winner_id": "T028",
       "crossover_zones": {
@@ -12889,7 +12889,7 @@
       "team_b": "DA Meowntain Dew",
       "probability_a": 0.632316,
       "probability_b": 0.367684,
-      "confidence": 0.214313,
+      "confidence": 0.318166,
       "correct": true,
       "actual_winner_id": "T003",
       "crossover_zones": {
@@ -12921,7 +12921,7 @@
       "team_b": "Mia san Meta",
       "probability_a": 0.693324,
       "probability_b": 0.306676,
-      "confidence": 0.245869,
+      "confidence": 0.347998,
       "correct": true,
       "actual_winner_id": "T029",
       "crossover_zones": {
@@ -12951,9 +12951,9 @@
       "score_b": 0,
       "team_a": "DG Strix",
       "team_b": "RUB Goats Venom",
-      "probability_a": 0.04337,
-      "probability_b": 0.95663,
-      "confidence": 0.607555,
+      "probability_a": 0.078567,
+      "probability_b": 0.921433,
+      "confidence": 0.714526,
       "correct": false,
       "actual_winner_id": "T018",
       "crossover_zones": {
@@ -12985,7 +12985,7 @@
       "team_b": "AIX Super C9",
       "probability_a": 0.5,
       "probability_b": 0.5,
-      "confidence": 0.07885,
+      "confidence": 0.134044,
       "correct": true,
       "actual_winner_id": "T067",
       "crossover_zones": {
@@ -13015,9 +13015,9 @@
       "score_b": 0,
       "team_a": "Purrfect Aim",
       "team_b": "KIT SC [k\u0153ri]werk addicted tryhards",
-      "probability_a": 0.105494,
-      "probability_b": 0.894506,
-      "confidence": 0.591036,
+      "probability_a": 0.138423,
+      "probability_b": 0.861577,
+      "confidence": 0.673636,
       "correct": false,
       "actual_winner_id": "T020",
       "crossover_zones": {
@@ -13049,7 +13049,7 @@
       "team_b": "Skill IssUEH",
       "probability_a": 0.745871,
       "probability_b": 0.254129,
-      "confidence": 0.272515,
+      "confidence": 0.373501,
       "correct": true,
       "actual_winner_id": "T074",
       "crossover_zones": {
@@ -13081,7 +13081,7 @@
       "team_b": "DA Wasted Pawtential",
       "probability_a": 0.657718,
       "probability_b": 0.342282,
-      "confidence": 0.227749,
+      "confidence": 0.330779,
       "correct": true,
       "actual_winner_id": "T036",
       "crossover_zones": {
@@ -13113,7 +13113,7 @@
       "team_b": "Skill IssUEH",
       "probability_a": 0.745871,
       "probability_b": 0.254129,
-      "confidence": 0.272515,
+      "confidence": 0.373501,
       "correct": true,
       "actual_winner_id": "T075",
       "crossover_zones": {
@@ -13145,7 +13145,7 @@
       "team_b": "AIX Super C9",
       "probability_a": 0.852259,
       "probability_b": 0.147741,
-      "confidence": 0.327675,
+      "confidence": 0.426135,
       "correct": true,
       "actual_winner_id": "T027",
       "crossover_zones": {
@@ -13177,7 +13177,7 @@
       "team_b": "Mia san Meta",
       "probability_a": 0.979296,
       "probability_b": 0.020704,
-      "confidence": 0.397766,
+      "confidence": 0.490939,
       "correct": true,
       "actual_winner_id": "T023",
       "crossover_zones": {
@@ -13209,7 +13209,7 @@
       "team_b": "HSK Satyrus",
       "probability_a": 0.367684,
       "probability_b": 0.632316,
-      "confidence": 0.214313,
+      "confidence": 0.318166,
       "correct": false,
       "actual_winner_id": "T076",
       "crossover_zones": {
@@ -13239,9 +13239,9 @@
       "score_b": 2,
       "team_a": "LES GOOO",
       "team_b": "DG Strix",
-      "probability_a": 0.779657,
-      "probability_b": 0.220343,
-      "confidence": 0.411822,
+      "probability_a": 0.726464,
+      "probability_b": 0.273536,
+      "confidence": 0.506087,
       "correct": false,
       "actual_winner_id": "T018",
       "crossover_zones": {
@@ -13273,7 +13273,7 @@
       "team_b": "Purrfect Aim",
       "probability_a": 0.812411,
       "probability_b": 0.187589,
-      "confidence": 0.306794,
+      "confidence": 0.40628,
       "correct": true,
       "actual_winner_id": "T067",
       "crossover_zones": {
@@ -13305,7 +13305,7 @@
       "team_b": "AIX Au Huur",
       "probability_a": 0.342282,
       "probability_b": 0.657718,
-      "confidence": 0.227749,
+      "confidence": 0.330779,
       "correct": true,
       "actual_winner_id": "T036",
       "crossover_zones": {
@@ -13337,7 +13337,7 @@
       "team_b": "DA Wasted Pawtential",
       "probability_a": 0.693324,
       "probability_b": 0.306676,
-      "confidence": 0.245869,
+      "confidence": 0.347998,
       "correct": true,
       "actual_winner_id": "T029",
       "crossover_zones": {
@@ -13367,9 +13367,9 @@
       "score_b": 1,
       "team_a": "HSK Satyrus",
       "team_b": "KIT SC [k\u0153ri]werk addicted tryhards",
-      "probability_a": 0.258388,
-      "probability_b": 0.741612,
-      "confidence": 0.460397,
+      "probability_a": 0.24943,
+      "probability_b": 0.75057,
+      "confidence": 0.726934,
       "correct": false,
       "actual_winner_id": "T003",
       "crossover_zones": {
@@ -13401,7 +13401,7 @@
       "team_b": "RUB Goats Venom",
       "probability_a": 0.020704,
       "probability_b": 0.979296,
-      "confidence": 0.397766,
+      "confidence": 0.490939,
       "correct": true,
       "actual_winner_id": "T023",
       "crossover_zones": {
@@ -13433,7 +13433,7 @@
       "team_b": "DA Meowntain Dew",
       "probability_a": 0.187589,
       "probability_b": 0.812411,
-      "confidence": 0.306794,
+      "confidence": 0.40628,
       "correct": true,
       "actual_winner_id": "T071",
       "crossover_zones": {
@@ -13465,7 +13465,7 @@
       "team_b": "DA Katerstrophe",
       "probability_a": 0.376857,
       "probability_b": 0.623143,
-      "confidence": 0.213839,
+      "confidence": 0.310366,
       "correct": true,
       "actual_winner_id": "T081",
       "crossover_zones": {
@@ -13495,9 +13495,9 @@
       "score_b": 2,
       "team_a": "KIT SC Bober",
       "team_b": "BeK F\u00f6rdeschwimmer",
-      "probability_a": 0.398828,
-      "probability_b": 0.601172,
-      "confidence": 0.32268,
+      "probability_a": 0.353283,
+      "probability_b": 0.646717,
+      "confidence": 0.658851,
       "correct": false,
       "actual_winner_id": "T010",
       "crossover_zones": {
@@ -13529,7 +13529,7 @@
       "team_b": "HsGL Pumas",
       "probability_a": 0.486652,
       "probability_b": 0.513348,
-      "confidence": 0.148668,
+      "confidence": 0.25633,
       "correct": true,
       "actual_winner_id": "T002",
       "crossover_zones": {
@@ -13561,7 +13561,7 @@
       "team_b": "DG Orion",
       "probability_a": 0.5,
       "probability_b": 0.5,
-      "confidence": 0.07885,
+      "confidence": 0.134044,
       "correct": false,
       "actual_winner_id": "T082",
       "crossover_zones": {
@@ -13591,9 +13591,9 @@
       "score_b": 1,
       "team_a": "ESUG PlatParty",
       "team_b": "KIT SC Spezi auf 1",
-      "probability_a": 0.460311,
-      "probability_b": 0.539689,
-      "confidence": 0.225833,
+      "probability_a": 0.456376,
+      "probability_b": 0.543624,
+      "confidence": 0.472386,
       "correct": false,
       "actual_winner_id": "T012",
       "crossover_zones": {
@@ -13623,9 +13623,9 @@
       "score_b": 0,
       "team_a": "THM Knights",
       "team_b": "LUNA Nova",
-      "probability_a": 0.843034,
-      "probability_b": 0.156966,
-      "confidence": 0.535883,
+      "probability_a": 0.826068,
+      "probability_b": 0.173932,
+      "confidence": 0.660407,
       "correct": true,
       "actual_winner_id": "T038",
       "crossover_zones": {
@@ -13657,7 +13657,7 @@
       "team_b": "OSGG Pink DinOS",
       "probability_a": 0.308748,
       "probability_b": 0.691252,
-      "confidence": 0.240485,
+      "confidence": 0.344087,
       "correct": true,
       "actual_winner_id": "T083",
       "crossover_zones": {
@@ -13687,9 +13687,9 @@
       "score_b": 3,
       "team_a": "Hai Noon",
       "team_b": "BUW Strays",
-      "probability_a": 0.771983,
-      "probability_b": 0.228017,
-      "confidence": 0.473186,
+      "probability_a": 0.807883,
+      "probability_b": 0.192117,
+      "confidence": 0.740406,
       "correct": false,
       "actual_winner_id": "T022",
       "crossover_zones": {
@@ -13721,7 +13721,7 @@
       "team_b": "UKGarKeinPlan",
       "probability_a": 0.5,
       "probability_b": 0.5,
-      "confidence": 0.07885,
+      "confidence": 0.134044,
       "correct": true,
       "actual_winner_id": "T072",
       "crossover_zones": {
@@ -13753,7 +13753,7 @@
       "team_b": "Bremer Wasch Dienst",
       "probability_a": 0.635567,
       "probability_b": 0.364433,
-      "confidence": 0.210995,
+      "confidence": 0.315933,
       "correct": true,
       "actual_winner_id": "T080",
       "crossover_zones": {
@@ -13785,7 +13785,7 @@
       "team_b": "OVGU Esports",
       "probability_a": 0.311538,
       "probability_b": 0.688462,
-      "confidence": 0.253768,
+      "confidence": 0.342601,
       "correct": false,
       "actual_winner_id": "T020",
       "crossover_zones": {
@@ -13817,7 +13817,7 @@
       "team_b": "HSMW Esports Quacksalber",
       "probability_a": 0.5,
       "probability_b": 0.5,
-      "confidence": 0.07885,
+      "confidence": 0.134044,
       "correct": false,
       "actual_winner_id": "T086",
       "crossover_zones": {
@@ -13847,9 +13847,9 @@
       "score_b": 1,
       "team_a": "DG Chronos",
       "team_b": "DA Meowntain Dew",
-      "probability_a": 0.791223,
-      "probability_b": 0.208777,
-      "confidence": 0.36133,
+      "probability_a": 0.770121,
+      "probability_b": 0.229879,
+      "confidence": 0.530185,
       "correct": true,
       "actual_winner_id": "T046",
       "crossover_zones": {
@@ -13881,7 +13881,7 @@
       "team_b": "AIX Au Huur",
       "probability_a": 0.47464,
       "probability_b": 0.52536,
-      "confidence": 0.161778,
+      "confidence": 0.262764,
       "correct": false,
       "actual_winner_id": "T077",
       "crossover_zones": {
@@ -13911,9 +13911,9 @@
       "score_b": 3,
       "team_a": "PBE Mondhasen",
       "team_b": "1. ECF SendHelpAgain",
-      "probability_a": 0.293974,
-      "probability_b": 0.706026,
-      "confidence": 0.238478,
+      "probability_a": 0.328685,
+      "probability_b": 0.671315,
+      "confidence": 0.419048,
       "correct": true,
       "actual_winner_id": "T067",
       "crossover_zones": {
@@ -13943,9 +13943,9 @@
       "score_b": 1,
       "team_a": "bUDSweiser",
       "team_b": "RUB Goats Venom",
-      "probability_a": 0.365916,
-      "probability_b": 0.634084,
-      "confidence": 0.365732,
+      "probability_a": 0.335572,
+      "probability_b": 0.664428,
+      "confidence": 0.673782,
       "correct": false,
       "actual_winner_id": "T053",
       "crossover_zones": {
@@ -13975,9 +13975,9 @@
       "score_b": 3,
       "team_a": "ESUG L\u00fcckenf\u00fcller",
       "team_b": "HSK Satyrus",
-      "probability_a": 0.464048,
-      "probability_b": 0.535952,
-      "confidence": 0.224919,
+      "probability_a": 0.438958,
+      "probability_b": 0.561042,
+      "confidence": 0.526696,
       "correct": true,
       "actual_winner_id": "T003",
       "crossover_zones": {
@@ -14007,9 +14007,9 @@
       "score_b": 3,
       "team_a": "Haiground",
       "team_b": "DG Strix",
-      "probability_a": 0.358392,
-      "probability_b": 0.641608,
-      "confidence": 0.351581,
+      "probability_a": 0.365108,
+      "probability_b": 0.634892,
+      "confidence": 0.626261,
       "correct": true,
       "actual_winner_id": "T018",
       "crossover_zones": {
@@ -14039,9 +14039,9 @@
       "score_b": 2,
       "team_a": "LUnatics Ludwigshafen",
       "team_b": "clUEHless",
-      "probability_a": 0.74985,
-      "probability_b": 0.25015,
-      "confidence": 0.3609,
+      "probability_a": 0.724564,
+      "probability_b": 0.275436,
+      "confidence": 0.510475,
       "correct": true,
       "actual_winner_id": "T041",
       "crossover_zones": {
@@ -14071,9 +14071,9 @@
       "score_b": 3,
       "team_a": "DG Athena",
       "team_b": "KIT SC Holy Inting Gamblers",
-      "probability_a": 0.568646,
-      "probability_b": 0.431354,
-      "confidence": 0.142272,
+      "probability_a": 0.558435,
+      "probability_b": 0.441565,
+      "confidence": 0.246168,
       "correct": false,
       "actual_winner_id": "T069",
       "crossover_zones": {
@@ -14103,9 +14103,9 @@
       "score_b": 2,
       "team_a": "UKG Fehler",
       "team_b": "Mogontiacum",
-      "probability_a": 0.557101,
-      "probability_b": 0.442899,
-      "confidence": 0.270343,
+      "probability_a": 0.565838,
+      "probability_b": 0.434162,
+      "confidence": 0.511173,
       "correct": true,
       "actual_winner_id": "T024",
       "crossover_zones": {
@@ -14135,9 +14135,9 @@
       "score_b": 0,
       "team_a": "RUB Goats",
       "team_b": "HSMW Esports Medics",
-      "probability_a": 0.740114,
-      "probability_b": 0.259886,
-      "confidence": 0.447766,
+      "probability_a": 0.705896,
+      "probability_b": 0.294104,
+      "confidence": 0.588301,
       "correct": true,
       "actual_winner_id": "T039",
       "crossover_zones": {
@@ -14167,10 +14167,10 @@
       "score_b": 3,
       "team_a": "LES Connewitz Crusaders",
       "team_b": "DA Purrgatory",
-      "probability_a": 0.547488,
-      "probability_b": 0.452512,
-      "confidence": 0.189461,
-      "correct": false,
+      "probability_a": 0.49108,
+      "probability_b": 0.50892,
+      "confidence": 0.462168,
+      "correct": true,
       "actual_winner_id": "T065",
       "crossover_zones": {
         "1_2": {
@@ -14199,9 +14199,9 @@
       "score_b": 1,
       "team_a": "HsGL Fennecs",
       "team_b": "Bielefeld Sapphire",
-      "probability_a": 0.586705,
-      "probability_b": 0.413295,
-      "confidence": 0.252717,
+      "probability_a": 0.540461,
+      "probability_b": 0.459539,
+      "confidence": 0.487375,
       "correct": true,
       "actual_winner_id": "T025",
       "crossover_zones": {
@@ -14231,9 +14231,9 @@
       "score_b": 0,
       "team_a": "KIT SC White Lotus",
       "team_b": "BeK Flotten Sprotten",
-      "probability_a": 0.53172,
-      "probability_b": 0.46828,
-      "confidence": 0.216907,
+      "probability_a": 0.533378,
+      "probability_b": 0.466622,
+      "confidence": 0.50165,
       "correct": true,
       "actual_winner_id": "T043",
       "crossover_zones": {
@@ -14263,9 +14263,9 @@
       "score_b": 1,
       "team_a": "WUE X-Rays",
       "team_b": "404 Average Cake Enjoyer",
-      "probability_a": 0.664681,
-      "probability_b": 0.335319,
-      "confidence": 0.369171,
+      "probability_a": 0.693811,
+      "probability_b": 0.306189,
+      "confidence": 0.682918,
       "correct": true,
       "actual_winner_id": "T059",
       "crossover_zones": {
@@ -14295,9 +14295,9 @@
       "score_b": 1,
       "team_a": "UEBertrieben gutaussehend",
       "team_b": "T\u00dc Wyvern",
-      "probability_a": 0.648226,
-      "probability_b": 0.351774,
-      "confidence": 0.351847,
+      "probability_a": 0.637757,
+      "probability_b": 0.362243,
+      "confidence": 0.642775,
       "correct": true,
       "actual_winner_id": "T064",
       "crossover_zones": {
@@ -14327,9 +14327,9 @@
       "score_b": 0,
       "team_a": "DG Infinite",
       "team_b": "HSK Centauri",
-      "probability_a": 0.789269,
-      "probability_b": 0.210731,
-      "confidence": 0.494155,
+      "probability_a": 0.776693,
+      "probability_b": 0.223307,
+      "confidence": 0.673832,
       "correct": true,
       "actual_winner_id": "T056",
       "crossover_zones": {
@@ -14359,9 +14359,9 @@
       "score_b": 0,
       "team_a": "DG Lotus",
       "team_b": "UKGrrrS\u00fc\u00dfm\u00e4use",
-      "probability_a": 0.75801,
-      "probability_b": 0.24199,
-      "confidence": 0.458123,
+      "probability_a": 0.797479,
+      "probability_b": 0.202521,
+      "confidence": 0.733536,
       "correct": true,
       "actual_winner_id": "T007",
       "crossover_zones": {
@@ -14391,9 +14391,9 @@
       "score_b": 3,
       "team_a": "Ilmenauer T.E.E.",
       "team_b": "T\u00dc V\u00ed\u00f0\u00f3pnir",
-      "probability_a": 0.486055,
-      "probability_b": 0.513945,
-      "confidence": 0.106739,
+      "probability_a": 0.491318,
+      "probability_b": 0.508682,
+      "confidence": 0.270788,
       "correct": true,
       "actual_winner_id": "T074",
       "crossover_zones": {
@@ -14423,9 +14423,9 @@
       "score_b": 1,
       "team_a": "RUB Goats Aqua",
       "team_b": "LES GOOO",
-      "probability_a": 0.713609,
-      "probability_b": 0.286391,
-      "confidence": 0.437691,
+      "probability_a": 0.757624,
+      "probability_b": 0.242376,
+      "confidence": 0.71518,
       "correct": true,
       "actual_winner_id": "T034",
       "crossover_zones": {
@@ -14455,9 +14455,9 @@
       "score_b": 3,
       "team_a": "KIT SC Eclipse",
       "team_b": "Hamburger Delfine",
-      "probability_a": 0.130333,
-      "probability_b": 0.869667,
-      "confidence": 0.544801,
+      "probability_a": 0.14626,
+      "probability_b": 0.85374,
+      "confidence": 0.759154,
       "correct": true,
       "actual_winner_id": "T055",
       "crossover_zones": {
@@ -14487,9 +14487,9 @@
       "score_b": 3,
       "team_a": "Berlin Makaken",
       "team_b": "UKG Runaway",
-      "probability_a": 0.303797,
-      "probability_b": 0.696203,
-      "confidence": 0.325985,
+      "probability_a": 0.307738,
+      "probability_b": 0.692262,
+      "confidence": 0.440385,
       "correct": true,
       "actual_winner_id": "T076",
       "crossover_zones": {
@@ -14519,9 +14519,9 @@
       "score_b": 3,
       "team_a": "RUB Goats N\u00f6 LG",
       "team_b": "Mainhardt",
-      "probability_a": 0.599637,
-      "probability_b": 0.400363,
-      "confidence": 0.203082,
+      "probability_a": 0.602577,
+      "probability_b": 0.397423,
+      "confidence": 0.345242,
       "correct": false,
       "actual_winner_id": "T054",
       "crossover_zones": {
@@ -14553,7 +14553,7 @@
       "team_b": "KIT SC [k\u0153ri]werk addicted tryhards",
       "probability_a": 0.168248,
       "probability_b": 0.831752,
-      "confidence": 0.333113,
+      "confidence": 0.414194,
       "correct": true,
       "actual_winner_id": "T027",
       "crossover_zones": {
@@ -14583,9 +14583,9 @@
       "score_b": 3,
       "team_a": "DG Elysium",
       "team_b": "HGI Amber",
-      "probability_a": 0.516465,
-      "probability_b": 0.483535,
-      "confidence": 0.185165,
+      "probability_a": 0.513701,
+      "probability_b": 0.486299,
+      "confidence": 0.386857,
       "correct": false,
       "actual_winner_id": "T062",
       "crossover_zones": {
@@ -14615,9 +14615,9 @@
       "score_b": 3,
       "team_a": "404 Average Cake Enjoyer",
       "team_b": "DG Infinite",
-      "probability_a": 0.197436,
-      "probability_b": 0.802564,
-      "confidence": 0.532061,
+      "probability_a": 0.181066,
+      "probability_b": 0.818934,
+      "confidence": 0.745351,
       "correct": true,
       "actual_winner_id": "T056",
       "crossover_zones": {
@@ -14647,9 +14647,9 @@
       "score_b": 3,
       "team_a": "DG Lotus",
       "team_b": "T\u00dc V\u00ed\u00f0\u00f3pnir",
-      "probability_a": 0.342132,
-      "probability_b": 0.657868,
-      "confidence": 0.364012,
+      "probability_a": 0.314483,
+      "probability_b": 0.685517,
+      "confidence": 0.614306,
       "correct": true,
       "actual_winner_id": "T074",
       "crossover_zones": {
@@ -14679,10 +14679,10 @@
       "score_b": 0,
       "team_a": "Mia san Meta",
       "team_b": "HsGL Pumas",
-      "probability_a": 0.517672,
-      "probability_b": 0.482328,
-      "confidence": 0.102609,
-      "correct": true,
+      "probability_a": 0.493441,
+      "probability_b": 0.506559,
+      "confidence": 0.210533,
+      "correct": false,
       "actual_winner_id": "T072",
       "crossover_zones": {
         "1_2": {
@@ -14711,9 +14711,9 @@
       "score_b": 3,
       "team_a": "DA Meowfia",
       "team_b": "OSGG Pink DinOS",
-      "probability_a": 0.511883,
-      "probability_b": 0.488117,
-      "confidence": 0.161114,
+      "probability_a": 0.51137,
+      "probability_b": 0.48863,
+      "confidence": 0.2905,
       "correct": false,
       "actual_winner_id": "T083",
       "crossover_zones": {
@@ -14743,9 +14743,9 @@
       "score_b": 0,
       "team_a": "Purrfect Aim",
       "team_b": "BUW Strays",
-      "probability_a": 0.688693,
-      "probability_b": 0.311307,
-      "confidence": 0.448606,
+      "probability_a": 0.709938,
+      "probability_b": 0.290062,
+      "confidence": 0.693857,
       "correct": true,
       "actual_winner_id": "T020",
       "crossover_zones": {
@@ -14775,9 +14775,9 @@
       "score_b": 1,
       "team_a": "DA Katerstrophe",
       "team_b": "HSMW Esports Quacksalber",
-      "probability_a": 0.478548,
-      "probability_b": 0.521452,
-      "confidence": 0.166292,
+      "probability_a": 0.479474,
+      "probability_b": 0.520526,
+      "confidence": 0.294753,
       "correct": false,
       "actual_winner_id": "T081",
       "crossover_zones": {
@@ -14807,9 +14807,9 @@
       "score_b": 0,
       "team_a": "ESUG PlatParty",
       "team_b": "DG Orion",
-      "probability_a": 0.277823,
-      "probability_b": 0.722177,
-      "confidence": 0.303065,
+      "probability_a": 0.281813,
+      "probability_b": 0.718187,
+      "confidence": 0.407384,
       "correct": false,
       "actual_winner_id": "T012",
       "crossover_zones": {
@@ -14839,9 +14839,9 @@
       "score_b": 0,
       "team_a": "KIT SC Bober",
       "team_b": "AIX Super C9",
-      "probability_a": 0.579537,
-      "probability_b": 0.420463,
-      "confidence": 0.226117,
+      "probability_a": 0.597718,
+      "probability_b": 0.402282,
+      "confidence": 0.435995,
       "correct": true,
       "actual_winner_id": "T010",
       "crossover_zones": {
@@ -14871,9 +14871,9 @@
       "score_b": 0,
       "team_a": "BeK F\u00f6rdeschwimmer",
       "team_b": "KIT SC Spezi auf 1",
-      "probability_a": 0.583668,
-      "probability_b": 0.416332,
-      "confidence": 0.335071,
+      "probability_a": 0.598378,
+      "probability_b": 0.401622,
+      "confidence": 0.641948,
       "correct": true,
       "actual_winner_id": "T016",
       "crossover_zones": {
@@ -14903,9 +14903,9 @@
       "score_b": 3,
       "team_a": "Skill IssUEH",
       "team_b": "DA Wasted Pawtential",
-      "probability_a": 0.394838,
-      "probability_b": 0.605162,
-      "confidence": 0.289248,
+      "probability_a": 0.354845,
+      "probability_b": 0.645155,
+      "confidence": 0.516413,
       "correct": true,
       "actual_winner_id": "T075",
       "crossover_zones": {
@@ -14935,9 +14935,9 @@
       "score_b": 0,
       "team_a": "Ilmenauer T.E.E.",
       "team_b": "UKGrrrS\u00fc\u00dfm\u00e4use",
-      "probability_a": 0.732744,
-      "probability_b": 0.267256,
-      "confidence": 0.471407,
+      "probability_a": 0.758556,
+      "probability_b": 0.241444,
+      "confidence": 0.713637,
       "correct": true,
       "actual_winner_id": "T005",
       "crossover_zones": {
@@ -14967,9 +14967,9 @@
       "score_b": 0,
       "team_a": "KIT SC Ragebait Raudis",
       "team_b": "LUNA Nova",
-      "probability_a": 0.825066,
-      "probability_b": 0.174934,
-      "confidence": 0.359146,
+      "probability_a": 0.814823,
+      "probability_b": 0.185177,
+      "confidence": 0.450878,
       "correct": true,
       "actual_winner_id": "T078",
       "crossover_zones": {
@@ -14999,9 +14999,9 @@
       "score_b": 3,
       "team_a": "LES Leutzscher Lappen",
       "team_b": "Bremer Wasch Dienst",
-      "probability_a": 0.422465,
-      "probability_b": 0.577535,
-      "confidence": 0.324734,
+      "probability_a": 0.405597,
+      "probability_b": 0.594403,
+      "confidence": 0.6327,
       "correct": true,
       "actual_winner_id": "T009",
       "crossover_zones": {
@@ -15031,9 +15031,9 @@
       "score_b": 3,
       "team_a": "Hai Noon",
       "team_b": "OVGU Esports",
-      "probability_a": 0.517502,
-      "probability_b": 0.482498,
-      "confidence": 0.199537,
+      "probability_a": 0.520322,
+      "probability_b": 0.479678,
+      "confidence": 0.327031,
       "correct": false,
       "actual_winner_id": "T085",
       "crossover_zones": {
@@ -15063,9 +15063,9 @@
       "score_b": 1,
       "team_a": "DG Chronos",
       "team_b": "AIX Au Huur",
-      "probability_a": 0.788711,
-      "probability_b": 0.211289,
-      "confidence": 0.544096,
+      "probability_a": 0.773742,
+      "probability_b": 0.226258,
+      "confidence": 0.640604,
       "correct": true,
       "actual_winner_id": "T046",
       "crossover_zones": {
@@ -15095,9 +15095,9 @@
       "score_b": 3,
       "team_a": "LUNA Void Veterans",
       "team_b": "1. ECF SendHelpAgain",
-      "probability_a": 0.522369,
-      "probability_b": 0.477631,
-      "confidence": 0.177183,
+      "probability_a": 0.526609,
+      "probability_b": 0.473391,
+      "confidence": 0.302085,
       "correct": false,
       "actual_winner_id": "T067",
       "crossover_zones": {
@@ -15127,9 +15127,9 @@
       "score_b": 3,
       "team_a": "bUDSweiser",
       "team_b": "HSK Satyrus",
-      "probability_a": 0.646818,
-      "probability_b": 0.353182,
-      "confidence": 0.380541,
+      "probability_a": 0.601888,
+      "probability_b": 0.398112,
+      "confidence": 0.49429,
       "correct": false,
       "actual_winner_id": "T003",
       "crossover_zones": {
@@ -15159,9 +15159,9 @@
       "score_b": 3,
       "team_a": "RUB Goats Venom",
       "team_b": "DG Strix",
-      "probability_a": 0.476852,
-      "probability_b": 0.523148,
-      "confidence": 0.233223,
+      "probability_a": 0.391769,
+      "probability_b": 0.608231,
+      "confidence": 0.568556,
       "correct": true,
       "actual_winner_id": "T018",
       "crossover_zones": {
@@ -15191,9 +15191,9 @@
       "score_b": 3,
       "team_a": "ESUG L\u00fcckenf\u00fcller",
       "team_b": "UKG Runaway",
-      "probability_a": 0.236152,
-      "probability_b": 0.763848,
-      "confidence": 0.410173,
+      "probability_a": 0.203908,
+      "probability_b": 0.796092,
+      "confidence": 0.58966,
       "correct": true,
       "actual_winner_id": "T076",
       "crossover_zones": {
@@ -15223,9 +15223,9 @@
       "score_b": 3,
       "team_a": "Haiground",
       "team_b": "Berlin Makaken",
-      "probability_a": 0.466208,
-      "probability_b": 0.533792,
-      "confidence": 0.231941,
+      "probability_a": 0.459132,
+      "probability_b": 0.540868,
+      "confidence": 0.476465,
       "correct": true,
       "actual_winner_id": "T001",
       "crossover_zones": {
@@ -15255,9 +15255,9 @@
       "score_b": 3,
       "team_a": "LUnatics Ludwigshafen",
       "team_b": "KIT SC Holy Inting Gamblers",
-      "probability_a": 0.592732,
-      "probability_b": 0.407268,
-      "confidence": 0.204941,
+      "probability_a": 0.573449,
+      "probability_b": 0.426551,
+      "confidence": 0.330099,
       "correct": false,
       "actual_winner_id": "T069",
       "crossover_zones": {
@@ -15287,9 +15287,9 @@
       "score_b": 0,
       "team_a": "RUB Goats N\u00f6 LG",
       "team_b": "UKG Fehler",
-      "probability_a": 0.489394,
-      "probability_b": 0.510606,
-      "confidence": 0.187587,
+      "probability_a": 0.482783,
+      "probability_b": 0.517217,
+      "confidence": 0.354705,
       "correct": false,
       "actual_winner_id": "T068",
       "crossover_zones": {
@@ -15319,9 +15319,9 @@
       "score_b": 0,
       "team_a": "RUB Goats",
       "team_b": "DA Purrgatory",
-      "probability_a": 0.63599,
-      "probability_b": 0.36401,
-      "confidence": 0.364231,
+      "probability_a": 0.686348,
+      "probability_b": 0.313652,
+      "confidence": 0.661742,
       "correct": true,
       "actual_winner_id": "T039",
       "crossover_zones": {
@@ -15351,9 +15351,9 @@
       "score_b": 3,
       "team_a": "HSMW Esports Medics",
       "team_b": "Bielefeld Sapphire",
-      "probability_a": 0.594556,
-      "probability_b": 0.405444,
-      "confidence": 0.310808,
+      "probability_a": 0.555023,
+      "probability_b": 0.444977,
+      "confidence": 0.534305,
       "correct": false,
       "actual_winner_id": "T026",
       "crossover_zones": {
@@ -15383,9 +15383,9 @@
       "score_b": 3,
       "team_a": "LES Connewitz Crusaders",
       "team_b": "BeK Flotten Sprotten",
-      "probability_a": 0.658095,
-      "probability_b": 0.341905,
-      "confidence": 0.379388,
+      "probability_a": 0.645308,
+      "probability_b": 0.354692,
+      "confidence": 0.605244,
       "correct": false,
       "actual_winner_id": "T051",
       "crossover_zones": {
@@ -15415,9 +15415,9 @@
       "score_b": 2,
       "team_a": "HsGL Fennecs",
       "team_b": "KIT SC White Lotus",
-      "probability_a": 0.357846,
-      "probability_b": 0.642154,
-      "confidence": 0.390915,
+      "probability_a": 0.326855,
+      "probability_b": 0.673145,
+      "confidence": 0.671026,
       "correct": false,
       "actual_winner_id": "T025",
       "crossover_zones": {
@@ -15447,9 +15447,9 @@
       "score_b": 0,
       "team_a": "Hamburger Delfine",
       "team_b": "UEBertrieben gutaussehend",
-      "probability_a": 0.745003,
-      "probability_b": 0.254997,
-      "confidence": 0.475794,
+      "probability_a": 0.732308,
+      "probability_b": 0.267692,
+      "confidence": 0.699129,
       "correct": true,
       "actual_winner_id": "T055",
       "crossover_zones": {
@@ -15479,9 +15479,9 @@
       "score_b": 1,
       "team_a": "KIT SC Eclipse",
       "team_b": "WUE X-Rays",
-      "probability_a": 0.181303,
-      "probability_b": 0.818697,
-      "confidence": 0.544605,
+      "probability_a": 0.193974,
+      "probability_b": 0.806026,
+      "confidence": 0.736675,
       "correct": false,
       "actual_winner_id": "T063",
       "crossover_zones": {
@@ -15511,9 +15511,9 @@
       "score_b": 1,
       "team_a": "THM Knights",
       "team_b": "KIT SC [k\u0153ri]werk addicted tryhards",
-      "probability_a": 0.24653,
-      "probability_b": 0.75347,
-      "confidence": 0.510727,
+      "probability_a": 0.227781,
+      "probability_b": 0.772219,
+      "confidence": 0.722164,
       "correct": false,
       "actual_winner_id": "T038",
       "crossover_zones": {
@@ -15543,9 +15543,9 @@
       "score_b": 1,
       "team_a": "RUB Goats Aqua",
       "team_b": "PBE Mondhasen",
-      "probability_a": 0.799844,
-      "probability_b": 0.200156,
-      "confidence": 0.535145,
+      "probability_a": 0.801604,
+      "probability_b": 0.198396,
+      "confidence": 0.693014,
       "correct": true,
       "actual_winner_id": "T034",
       "crossover_zones": {
@@ -15575,9 +15575,9 @@
       "score_b": 2,
       "team_a": "DG Elysium",
       "team_b": "T\u00dc Wyvern",
-      "probability_a": 0.499666,
-      "probability_b": 0.500334,
-      "confidence": 0.183738,
+      "probability_a": 0.438093,
+      "probability_b": 0.561907,
+      "confidence": 0.450419,
       "correct": false,
       "actual_winner_id": "T040",
       "crossover_zones": {
@@ -15607,9 +15607,9 @@
       "score_b": 3,
       "team_a": "HSK Centauri",
       "team_b": "HGI Amber",
-      "probability_a": 0.451061,
-      "probability_b": 0.548939,
-      "confidence": 0.258262,
+      "probability_a": 0.448503,
+      "probability_b": 0.551497,
+      "confidence": 0.51078,
       "correct": true,
       "actual_winner_id": "T062",
       "crossover_zones": {
@@ -15639,9 +15639,9 @@
       "score_b": 3,
       "team_a": "UKG GutGuterAmGutesten",
       "team_b": "UKGarKeinPlan",
-      "probability_a": 0.495471,
-      "probability_b": 0.504529,
-      "confidence": 0.157177,
+      "probability_a": 0.495667,
+      "probability_b": 0.504333,
+      "confidence": 0.287296,
       "correct": true,
       "actual_winner_id": "T084",
       "crossover_zones": {
@@ -15671,9 +15671,9 @@
       "score_b": 0,
       "team_a": "DG Athena",
       "team_b": "Mogontiacum",
-      "probability_a": 0.773508,
-      "probability_b": 0.226492,
-      "confidence": 0.521069,
+      "probability_a": 0.769796,
+      "probability_b": 0.230204,
+      "confidence": 0.674171,
       "correct": true,
       "actual_winner_id": "T050",
       "crossover_zones": {
@@ -15703,9 +15703,9 @@
       "score_b": 3,
       "team_a": "DA Meowntain Dew",
       "team_b": "LES GOOO",
-      "probability_a": 0.427569,
-      "probability_b": 0.572431,
-      "confidence": 0.307912,
+      "probability_a": 0.387086,
+      "probability_b": 0.612914,
+      "confidence": 0.531028,
       "correct": true,
       "actual_winner_id": "T029",
       "crossover_zones": {
@@ -15735,9 +15735,9 @@
       "score_b": 3,
       "team_a": "clUEHless",
       "team_b": "Mainhardt",
-      "probability_a": 0.475189,
-      "probability_b": 0.524811,
-      "confidence": 0.199268,
+      "probability_a": 0.468753,
+      "probability_b": 0.531247,
+      "confidence": 0.404144,
       "correct": true,
       "actual_winner_id": "T054",
       "crossover_zones": {
@@ -15757,33 +15757,737 @@
     },
     {
       "match_id": "M117",
-      "date": "11.11.2026",
+      "date": "03.11.2026",
       "season": "Season WiSe26/27",
       "matchday": "3",
       "phase": "Regular Season",
       "team_a_id": "T028",
       "team_b_id": "T043",
-      "score_a": 1,
+      "score_a": 0,
       "score_b": 3,
       "team_a": "HSMW Esports Medics",
       "team_b": "KIT SC White Lotus",
-      "probability_a": 0.511031,
-      "probability_b": 0.488969,
-      "confidence": 0.145863,
-      "correct": false,
+      "probability_a": 0.259696,
+      "probability_b": 0.740304,
+      "confidence": 0.702106,
+      "correct": true,
       "actual_winner_id": "T043",
       "crossover_zones": {
         "1_2": {
-          "rating": 2442.6022,
-          "sigma": 90.8556
+          "rating": 2481.3853,
+          "sigma": 85.918
         },
         "2_3": {
-          "rating": 1646.0564,
-          "sigma": 73.2654
+          "rating": 1676.8638,
+          "sigma": 69.1257
         },
         "3_4": {
-          "rating": 1062.8854,
-          "sigma": 60.0799
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M106",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T056",
+      "team_b_id": "T040",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "DG Infinite",
+      "team_b": "DG Elysium",
+      "probability_a": 0.837775,
+      "probability_b": 0.162225,
+      "confidence": 0.750573,
+      "correct": true,
+      "actual_winner_id": "T056",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M107",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T063",
+      "team_b_id": "T061",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "KIT SC Eclipse",
+      "team_b": "404 Average Cake Enjoyer",
+      "probability_a": 0.555275,
+      "probability_b": 0.444725,
+      "confidence": 0.454281,
+      "correct": true,
+      "actual_winner_id": "T063",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M108",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T059",
+      "team_b_id": "T055",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "WUE X-Rays",
+      "team_b": "Hamburger Delfine",
+      "probability_a": 0.22023,
+      "probability_b": 0.77977,
+      "confidence": 0.718328,
+      "correct": true,
+      "actual_winner_id": "T055",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M109",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T064",
+      "team_b_id": "T049",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "UEBertrieben gutaussehend",
+      "team_b": "HSK Centauri",
+      "probability_a": 0.75368,
+      "probability_b": 0.24632,
+      "confidence": 0.709335,
+      "correct": true,
+      "actual_winner_id": "T064",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M110",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T057",
+      "team_b_id": "T062",
+      "score_a": 3,
+      "score_b": 1,
+      "team_a": "T\u00dc Wyvern",
+      "team_b": "HGI Amber",
+      "probability_a": 0.266823,
+      "probability_b": 0.733177,
+      "confidence": 0.706545,
+      "correct": false,
+      "actual_winner_id": "T057",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M111",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T041",
+      "team_b_id": "T054",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "LUnatics Ludwigshafen",
+      "team_b": "Mainhardt",
+      "probability_a": 0.619345,
+      "probability_b": 0.380655,
+      "confidence": 0.579544,
+      "correct": true,
+      "actual_winner_id": "T041",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M112",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T069",
+      "team_b_id": "T032",
+      "score_a": 2,
+      "score_b": 3,
+      "team_a": "KIT SC Holy Inting Gamblers",
+      "team_b": "Mogontiacum",
+      "probability_a": 0.916597,
+      "probability_b": 0.083403,
+      "confidence": 0.740862,
+      "correct": false,
+      "actual_winner_id": "T032",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M113",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T066",
+      "team_b_id": "T024",
+      "score_a": 3,
+      "score_b": 2,
+      "team_a": "clUEHless",
+      "team_b": "UKG Fehler",
+      "probability_a": 0.514908,
+      "probability_b": 0.485092,
+      "confidence": 0.295198,
+      "correct": true,
+      "actual_winner_id": "T066",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M115",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T039",
+      "team_b_id": "T026",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "RUB Goats",
+      "team_b": "Bielefeld Sapphire",
+      "probability_a": 0.796196,
+      "probability_b": 0.203804,
+      "confidence": 0.690987,
+      "correct": true,
+      "actual_winner_id": "T039",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M118",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T047",
+      "team_b_id": "T025",
+      "score_a": 1,
+      "score_b": 3,
+      "team_a": "LES Connewitz Crusaders",
+      "team_b": "HsGL Fennecs",
+      "probability_a": 0.61278,
+      "probability_b": 0.38722,
+      "confidence": 0.540394,
+      "correct": false,
+      "actual_winner_id": "T025",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M127",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T072",
+      "team_b_id": "T074",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "Mia san Meta",
+      "team_b": "T\u00dc V\u00ed\u00f0\u00f3pnir",
+      "probability_a": 0.484842,
+      "probability_b": 0.515158,
+      "confidence": 0.311674,
+      "correct": true,
+      "actual_winner_id": "T074",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M128",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T020",
+      "team_b_id": "T083",
+      "score_a": 2,
+      "score_b": 3,
+      "team_a": "Purrfect Aim",
+      "team_b": "OSGG Pink DinOS",
+      "probability_a": 0.253012,
+      "probability_b": 0.746988,
+      "confidence": 0.492099,
+      "correct": true,
+      "actual_winner_id": "T083",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M129",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T012",
+      "team_b_id": "T038",
+      "score_a": 2,
+      "score_b": 3,
+      "team_a": "ESUG PlatParty",
+      "team_b": "THM Knights",
+      "probability_a": 0.357171,
+      "probability_b": 0.642829,
+      "confidence": 0.594615,
+      "correct": true,
+      "actual_winner_id": "T038",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M130",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T081",
+      "team_b_id": "T010",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "DA Katerstrophe",
+      "team_b": "KIT SC Bober",
+      "probability_a": 0.745869,
+      "probability_b": 0.254131,
+      "confidence": 0.560222,
+      "correct": false,
+      "actual_winner_id": "T010",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M131",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T016",
+      "team_b_id": "T027",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "BeK F\u00f6rdeschwimmer",
+      "team_b": "KIT SC [k\u0153ri]werk addicted tryhards",
+      "probability_a": 0.251649,
+      "probability_b": 0.748351,
+      "confidence": 0.707778,
+      "correct": false,
+      "actual_winner_id": "T016",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M132",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T086",
+      "team_b_id": "T007",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "HSMW Esports Quacksalber",
+      "team_b": "DG Lotus",
+      "probability_a": 0.554247,
+      "probability_b": 0.445753,
+      "confidence": 0.378481,
+      "correct": true,
+      "actual_winner_id": "T086",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M133",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T005",
+      "team_b_id": "T002",
+      "score_a": 2,
+      "score_b": 3,
+      "team_a": "Ilmenauer T.E.E.",
+      "team_b": "HsGL Pumas",
+      "probability_a": 0.485413,
+      "probability_b": 0.514587,
+      "confidence": 0.410133,
+      "correct": true,
+      "actual_winner_id": "T002",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M134",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T078",
+      "team_b_id": "T022",
+      "score_a": 2,
+      "score_b": 3,
+      "team_a": "KIT SC Ragebait Raudis",
+      "team_b": "BUW Strays",
+      "probability_a": 0.739121,
+      "probability_b": 0.260879,
+      "confidence": 0.530959,
+      "correct": false,
+      "actual_winner_id": "T022",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M137",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T082",
+      "team_b_id": "T009",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "DG Orion",
+      "team_b": "Bremer Wasch Dienst",
+      "probability_a": 0.427563,
+      "probability_b": 0.572437,
+      "confidence": 0.385655,
+      "correct": false,
+      "actual_winner_id": "T082",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M138",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T073",
+      "team_b_id": "T015",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "AIX Super C9",
+      "team_b": "LES Leutzscher Lappen",
+      "probability_a": 0.487183,
+      "probability_b": 0.512817,
+      "confidence": 0.287538,
+      "correct": true,
+      "actual_winner_id": "T015",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M139",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T019",
+      "team_b_id": "T008",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "KIT SC Spezi auf 1",
+      "team_b": "Skill IssUEH",
+      "probability_a": 0.347141,
+      "probability_b": 0.652859,
+      "confidence": 0.66101,
+      "correct": false,
+      "actual_winner_id": "T019",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
+        }
+      }
+    },
+    {
+      "match_id": "M141",
+      "date": "04.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "3",
+      "phase": "Regular Season",
+      "team_a_id": "T014",
+      "team_b_id": "T017",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "Hai Noon",
+      "team_b": "LUNA Nova",
+      "probability_a": 0.708876,
+      "probability_b": 0.291124,
+      "confidence": 0.686141,
+      "correct": true,
+      "actual_winner_id": "T014",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2481.3853,
+          "sigma": 85.918
+        },
+        "2_3": {
+          "rating": 1676.8638,
+          "sigma": 69.1257
+        },
+        "3_4": {
+          "rating": 1035.6429,
+          "sigma": 59.7185
         }
       }
     }
