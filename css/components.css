@@ -232,6 +232,45 @@
   font-size: 1rem;
 }
 
+
+.chart-mode-selector {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem;
+  background: var(--surface-secondary, rgba(125, 125, 125, 0.08));
+  padding: .25rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: .85rem;
+}
+
+.chart-mode-btn {
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: .35rem .75rem;
+  font: 600 .75rem 'Nunito Sans', sans-serif;
+  line-height: 1.25;
+  white-space: nowrap;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.chart-mode-btn:hover {
+  color: var(--text);
+  background: rgba(125, 125, 125, 0.12);
+}
+
+.chart-mode-btn.is-active {
+  background: var(--blue, #2563EB);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
 .chart-controls {
   display: flex;
   flex-wrap: wrap;

@@ -115,46 +115,102 @@ function teamLink(id, name, className = 'team-link') {
 }
 
 function computeTeamTrends(teams, ratingHistory) {
-  const historyByTeam = {};
-  if (ratingHistory?.history) {
-    ratingHistory.history.forEach(entry => {
-      if (!historyByTeam[entry.team_id]) historyByTeam[entry.team_id] = [];
-      historyByTeam[entry.team_id].push(entry);
-    });
-  }
+  const activeSeason = teams.find(t => t.season)?.season || (ratingHistory?.history?.[ratingHistory.history.length - 1]?.season);
+  const seasonHistory = (ratingHistory?.history || []).filter(entry => entry.season === activeSeason);
 
-  const sortedCurrent = [...teams].sort((a, b) => b.rating - a.rating);
-  const currentRankMap = {};
-  sortedCurrent.forEach((t, i) => { currentRankMap[t.id] = i + 1; });
-
-  const previousTeams = teams.map(t => {
-    const hist = historyByTeam[t.id] || [];
-    const prevRating = hist.length >= 2 ? hist[hist.length - 2].rating : (t.initial_rating || t.rating);
-    return { id: t.id, rating: prevRating };
+  // Extract matchdays in chronological order
+  const matchdays = [];
+  seasonHistory.forEach(entry => {
+    const md = entry.matchday !== undefined && entry.matchday !== null ? String(entry.matchday) : '';
+    if (md && !matchdays.includes(md)) {
+      matchdays.push(md);
+    }
   });
 
-  const sortedPrevious = [...previousTeams].sort((a, b) => b.rating - a.rating);
-  const previousRankMap = {};
-  sortedPrevious.forEach((t, i) => { previousRankMap[t.id] = i + 1; });
+  if (matchdays.length && matchdays.every(md => /^\d+$/.test(md))) {
+    matchdays.sort((a, b) => Number(a) - Number(b));
+  }
+
+  const currMd = matchdays.length > 0 ? matchdays[matchdays.length - 1] : null;
+  const prevMd = matchdays.length > 1 ? matchdays[matchdays.length - 2] : null;
+  const prevMdIndex = prevMd !== null ? matchdays.indexOf(prevMd) : -1;
+
+  const teamStats = {};
+  teams.forEach(t => {
+    teamStats[t.id] = {
+      team: t,
+      ratingCurr: Number(t.rating) || 0,
+      matchesCurr: Number(t.matches_played) || 0,
+      ratingPrev: Number(t.initial_rating || t.rating) || 0,
+      matchesPrev: 0
+    };
+  });
+
+  seasonHistory.forEach(entry => {
+    const tid = entry.team_id;
+    if (!teamStats[tid]) return;
+    const md = String(entry.matchday ?? '');
+    const mdIndex = matchdays.indexOf(md);
+    if (prevMdIndex >= 0 && mdIndex >= 0 && mdIndex <= prevMdIndex) {
+      teamStats[tid].ratingPrev = Number(entry.rating) || teamStats[tid].ratingPrev;
+      teamStats[tid].matchesPrev += 1;
+    }
+  });
+
+  // Overall ranks at end of prev matchday (only placed teams with matchesPrev > 0)
+  const placedPrev = Object.values(teamStats)
+    .filter(s => s.matchesPrev > 0)
+    .sort((a, b) => b.ratingPrev - a.ratingPrev || (a.team.rating_deviation - b.team.rating_deviation) || a.team.name.localeCompare(b.team.name));
+  const prevRankMap = {};
+  placedPrev.forEach((s, idx) => {
+    prevRankMap[s.team.id] = idx + 1;
+  });
+
+  // Overall ranks at end of curr matchday (only placed teams with matchesCurr > 0)
+  const placedCurr = Object.values(teamStats)
+    .filter(s => s.matchesCurr > 0)
+    .sort((a, b) => b.ratingCurr - a.ratingCurr || (a.team.rating_deviation - b.team.rating_deviation) || a.team.name.localeCompare(b.team.name));
+  const currRankMap = {};
+  placedCurr.forEach((s, idx) => {
+    currRankMap[s.team.id] = idx + 1;
+  });
 
   const trends = {};
   teams.forEach(t => {
-    const cRank = currentRankMap[t.id];
-    const pRank = previousRankMap[t.id];
-    const rankDiff = pRank - cRank;
+    const stats = teamStats[t.id];
+    const cRank = currRankMap[t.id] ?? null;
+    const pRank = prevRankMap[t.id] ?? null;
+    const isUnranked = cRank === null;
+    const isNewlyPlaced = cRank !== null && pRank === null;
+    const rankDiff = (cRank !== null && pRank !== null) ? (pRank - cRank) : null;
+    const ratingDiff = Math.round(stats.ratingCurr - stats.ratingPrev);
 
-    const hist = historyByTeam[t.id] || [];
-    const pRating = hist.length >= 2 ? hist[hist.length - 2].rating : (t.initial_rating || t.rating);
-    const ratingDiff = Math.round(t.rating - pRating);
-
-    trends[t.id] = { rankDiff, ratingDiff, cRank, pRank };
+    trends[t.id] = {
+      cRank,
+      pRank,
+      rankDiff,
+      ratingDiff,
+      isUnranked,
+      isNewlyPlaced
+    };
   });
 
   return trends;
 }
 
 function renderTrendBadge(trend) {
-  if (!trend) return element('span', { className: 'trend-same', text: '=' });
+  if (!trend || trend.isUnranked) {
+    return element('span', { className: 'trend-same', text: '-' });
+  }
+  if (trend.isNewlyPlaced) {
+    const sign = trend.ratingDiff > 0 ? '+' : '';
+    const ratingText = trend.ratingDiff !== 0 ? ` Rating-Änderung: ${sign}${trend.ratingDiff}` : '';
+    return element('span', {
+      className: 'trend-new',
+      text: 'newly placed',
+      attributes: { title: `Neu im Ranking.${ratingText}` }
+    });
+  }
   const { rankDiff, ratingDiff } = trend;
   if (rankDiff > 0) {
     return element('span', { className: 'trend-up', text: `↑ +${rankDiff}`, attributes: { title: `Rating-Zuwachs: +${ratingDiff}` } });
@@ -263,7 +319,7 @@ function heroMatchCard(match) {
         teamLink(match.team_a.id, match.team_a.name, 'hero-team-name team-link team-link-a'),
         element('span', { className: 'hero-team-prob team-a-prob', text: probA })
       ]),
-      element('span', { className: 'hero-vs', text: 'GEGEN' }),
+      element('span', { className: 'hero-vs', text: 'vs' }),
       element('div', { className: 'hero-team hero-team-b' }, [
         teamLink(match.team_b.id, match.team_b.name, 'hero-team-name team-link team-link-b'),
         element('span', { className: 'hero-team-prob team-b-prob', text: probB })
@@ -388,26 +444,47 @@ function historicalPerformanceCharts(history) {
     '2_3': '2 ↔ 3 Liga (Rating)',
     '3_4': '3 ↔ 4 Liga (Rating)'
   };
-  const createSeries = ids => ids.map(id => ({
-    id,
-    values: history.map(point => ({
-      date: point.key,
-      label: point.label || point.date,
-      value: id in point
-        ? Number(point[id])
-        : point.crossover_zones?.[id]?.rating == null
-          ? NaN
-          : Number(point.crossover_zones[id].rating)
-    }))
-  })).filter(item => item.values.some(point => Number.isFinite(point.value)));
+  const MODES = [
+    { id: 'cumulative', label: 'Kumuliert' },
+    { id: 'season_cumulative', label: 'Kumuliert pro Season' },
+    { id: 'discrete', label: 'Pro Spieltag' },
+    { id: 'moving_average', label: 'Moving Average (5 Spieltage)' }
+  ];
 
   const createChart = (title, ids, ratingAxis) => {
-    const series = createSeries(ids);
+    let currentMode = 'cumulative';
+    const getSeries = () => ids.map(id => ({
+      id,
+      values: history.map(point => {
+        let value = NaN;
+        if (ratingAxis) {
+          value = point.crossover_zones?.[id]?.rating == null
+            ? NaN
+            : Number(point.crossover_zones[id].rating);
+        } else {
+          const modeData = point.modes?.[currentMode];
+          if (modeData && id in modeData) {
+            value = Number(modeData[id]);
+          } else if (id in point) {
+            value = Number(point[id]);
+          }
+        }
+        return {
+          date: point.key,
+          season: point.season,
+          label: point.label || point.date,
+          value
+        };
+      })
+    })).filter(item => item.values.some(point => Number.isFinite(point.value)));
+
     const controls = element('div', { className: 'chart-controls' });
-    const active = new Set(series.map(item => item.id));
+    const active = new Set(ids);
     const chartTarget = element('div', { className: 'historical-chart-target' });
     const dates = history.map(point => point.key);
+
     const render = () => {
+      const series = getSeries();
       const selected = series.filter(item => active.has(item.id));
       if (!selected.length) {
         replaceChildren(chartTarget, [emptyState('Mindestens eine Datenreihe auswählen.')]);
@@ -444,33 +521,86 @@ function historicalPerformanceCharts(history) {
       });
       selected.forEach(item => {
         const validValues = item.values.filter(point => Number.isFinite(point.value));
-        const points = validValues.map(point => `${x(dates.indexOf(point.date)).toFixed(1)},${y(point.value).toFixed(1)}`).join(' ');
-        svg.append(svgElement('polyline', { className: 'historical-chart-line', attributes: { points }, style: { stroke: colors[item.id], fill: 'none' } }));
-        validValues.forEach(point => svg.append(svgElement('circle', {
-          className: 'historical-chart-point',
-          attributes: { cx: x(dates.indexOf(point.date)), cy: y(point.value), r: 2.8 },
-          style: { fill: colors[item.id], stroke: 'var(--panel)' }
-        })));
+        const segments = [];
+        if (!ratingAxis && currentMode === 'season_cumulative') {
+          let currentSeason = null;
+          let currentSegment = [];
+          validValues.forEach(point => {
+            if (point.season !== currentSeason) {
+              if (currentSegment.length) segments.push(currentSegment);
+              currentSegment = [];
+              currentSeason = point.season;
+            }
+            currentSegment.push(point);
+          });
+          if (currentSegment.length) segments.push(currentSegment);
+        } else {
+          segments.push(validValues);
+        }
+
+        segments.forEach(segment => {
+          const points = segment.map(point => `${x(dates.indexOf(point.date)).toFixed(1)},${y(point.value).toFixed(1)}`).join(' ');
+          svg.append(svgElement('polyline', { className: 'historical-chart-line', attributes: { points }, style: { stroke: colors[item.id], fill: 'none' } }));
+        });
+
+        validValues.forEach(point => {
+          const circle = svgElement('circle', {
+            className: 'historical-chart-point',
+            attributes: { cx: x(dates.indexOf(point.date)), cy: y(point.value), r: 3 },
+            style: { fill: colors[item.id], stroke: 'var(--panel)' }
+          });
+          const valStr = ratingAxis
+            ? Math.round(point.value)
+            : (item.id === 'accuracy' ? `${(point.value * 100).toFixed(1)}%` : point.value.toFixed(3));
+          circle.append(svgElement('title', { text: `${point.label || point.date}: ${labels[item.id]} ${valStr}` }));
+          svg.append(circle);
+        });
       });
       replaceChildren(chartTarget, [svg]);
     };
-    series.forEach(item => {
-      const id = `history-series-${item.id}`;
-      const input = element('input', { attributes: { id, type: 'checkbox', checked: 'checked' } });
+
+    let modeSelector = null;
+    if (!ratingAxis) {
+      modeSelector = element('div', { className: 'chart-mode-selector', attributes: { role: 'tablist', 'aria-label': 'Darstellungsmodus' } });
+      MODES.forEach(mode => {
+        const btn = element('button', {
+          className: `chart-mode-btn${mode.id === currentMode ? ' is-active' : ''}`,
+          text: mode.label,
+          attributes: { type: 'button', role: 'tab', 'aria-selected': String(mode.id === currentMode) }
+        });
+        btn.addEventListener('click', () => {
+          if (currentMode === mode.id) return;
+          currentMode = mode.id;
+          modeSelector.querySelectorAll('.chart-mode-btn').forEach(b => {
+            const isActive = b === btn;
+            b.classList.toggle('is-active', isActive);
+            b.setAttribute('aria-selected', String(isActive));
+          });
+          render();
+        });
+        modeSelector.append(btn);
+      });
+    }
+
+    ids.forEach(id => {
+      const inputId = `history-series-${id}`;
+      const input = element('input', { attributes: { id: inputId, type: 'checkbox', checked: 'checked' } });
       input.addEventListener('change', () => {
-        if (input.checked) active.add(item.id);
-        else active.delete(item.id);
+        if (input.checked) active.add(id);
+        else active.delete(id);
         render();
       });
-      controls.append(element('label', { className: 'chart-toggle', attributes: { for: id } }, [
+      controls.append(element('label', { className: 'chart-toggle', attributes: { for: inputId } }, [
         input,
-        element('span', { className: 'chart-toggle-swatch', style: { backgroundColor: colors[item.id] } }),
-        element('span', { text: labels[item.id] })
+        element('span', { className: 'chart-toggle-swatch', style: { backgroundColor: colors[id] } }),
+        element('span', { text: labels[id] })
       ]));
     });
+
     render();
     return element('div', { className: 'historical-chart' }, [
       element('h3', { className: 'historical-chart-title', text: title }),
+      modeSelector,
       controls,
       chartTarget
     ]);
@@ -605,13 +735,14 @@ async function home() {
   }
 
   // performance ranking Top 5
-  const ranked = [...teams.teams].sort((a, b) => b.rating - a.rating).slice(0, 5);
+  const ranked = [...teams.teams].filter(team => (team.matches_played || 0) > 0).sort((a, b) => b.rating - a.rating).slice(0, 5);
   const homeTeams = document.querySelector('#home-teams');
   if (homeTeams) {
     replaceChildren(homeTeams, ranked.map((team, index) => {
       const trend = trends[team.id];
+      const rankNum = trend?.cRank ? String(trend.cRank).padStart(2, '0') : String(index + 1).padStart(2, '0');
       return element('div', { className: 'rank-item' }, [
-        element('span', { className: 'rank-number', text: `0${index + 1}` }),
+        element('span', { className: 'rank-number', text: rankNum }),
         renderTrendBadge(trend),
         element('div', { className: 'rank-team-info' }, [
           teamLink(team.id, team.name, 'team-link rank-team-name'),
@@ -799,10 +930,11 @@ async function teamsPage() {
         if (highlightedTeamIds.has(team.id)) rowClasses.push('ranking-crosszone-team');
         if (highlightedTopTeamIds.has(team.id)) rowClasses.push('ranking-crosszone-top');
         if (highlightedBottomTeamIds.has(team.id)) rowClasses.push('ranking-crosszone-bottom');
+        const rankText = trend?.cRank !== null && trend?.cRank !== undefined ? String(trend.cRank) : '-';
         rows.push(element('tr', {
           className: rowClasses.join(' ')
         }, [
-          element('td', { text: index + 1 }),
+          element('td', { text: rankText }),
           element('td', {}, [renderTrendBadge(trend)]),
           element('td', {}, [
             teamLink(team.id, team.name, 'team-link'),

@@ -12,6 +12,9 @@ python -m http.server 8000
 
 Then open `http://localhost:8000/`.
 
+Alternatively, double-click `start_server.bat` to start the server and open the
+page in the default browser automatically.
+
 The site only reads JSON files from `data/`. It does not contain the private prediction engine, settings, training data, feature calculations, model weights or calibration internals. The JSON snapshot is generated separately by the private project with `python publish.py` and then copied into this repository's `data/` directory.
 
 ## How the current model works
@@ -75,10 +78,10 @@ and show the regular summary cards without the historical chart.
 The same payload also contains the latest successful publish runtime, including
 the engine run and public data synchronization.
 
-During `python publish.py`, the private project also synchronizes the HTML
-metadata for the web version, engine version and latest dataset update across
-all public pages. The visible values on the Model page are updated in the same
-step.
+During `python engine.py` (and therefore also during `python publish.py`), the
+private project synchronizes the HTML metadata for the web version, engine
+version and latest dataset update across all public pages. The visible values
+on the Model page are updated in the same step.
 
 The canonical historical chart data is `performance.json.matchday_history`.
 Each entry represents one season/matchday and contains cumulative performance

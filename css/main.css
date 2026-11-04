@@ -793,6 +793,16 @@ a.team-link-b:focus-visible,
   font: 700 0.85rem 'Courier New', monospace;
 }
 
+.trend-new {
+  color: #3B82F6;
+  font-weight: 700;
+  font: 700 0.76rem 'Courier New', monospace;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
 .menu-toggle {
   display: none;
   border: 1.5px solid var(--blue);

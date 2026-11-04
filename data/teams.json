@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T22:08:22+00:00",
+  "generated_at": "2026-11-04T09:53:20+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -18,18 +18,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "B",
-      "initial_rating": 1464.0,
-      "rating": 1508.1176,
-      "rating_deviation": 126.8296,
+      "initial_rating": 1250.0,
+      "rating": 1200.4162,
+      "rating_deviation": 105.9154,
       "matches_played": 5,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.833659,
-      "league_uncertainty": 220.1948,
+      "league_confidence": 0.814846,
+      "league_uncertainty": 208.8494,
       "league_probabilities": {
-        "1. Liga": 1e-06,
-        "2. Liga": 0.154636,
-        "3. Liga": 0.833659,
-        "4. Liga": 0.011704
+        "1. Liga": 0.0,
+        "2. Liga": 0.005459,
+        "3. Liga": 0.814846,
+        "4. Liga": 0.179695
       }
     },
     {
@@ -39,18 +39,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 1124.3641,
-      "rating_deviation": 140.977,
+      "initial_rating": 810.0,
+      "rating": 826.7201,
+      "rating_deviation": 109.7221,
       "matches_played": 2,
-      "predicted_league": "3. Liga",
-      "league_confidence": 0.689137,
-      "league_uncertainty": 228.6362,
+      "predicted_league": "4. Liga",
+      "league_confidence": 0.806394,
+      "league_uncertainty": 210.8055,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.003934,
-        "3. Liga": 0.689137,
-        "4. Liga": 0.306929
+        "2. Liga": 9e-06,
+        "3. Liga": 0.193598,
+        "4. Liga": 0.806394
       }
     },
     {
@@ -60,18 +60,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "B",
-      "initial_rating": 1464.0,
-      "rating": 1624.7093,
-      "rating_deviation": 125.6448,
+      "initial_rating": 1250.0,
+      "rating": 1368.938,
+      "rating_deviation": 104.6671,
       "matches_played": 5,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.684979,
-      "league_uncertainty": 219.5145,
+      "league_confidence": 0.917454,
+      "league_uncertainty": 208.2191,
       "league_probabilities": {
-        "1. Liga": 1e-05,
-        "2. Liga": 0.312494,
-        "3. Liga": 0.684979,
-        "4. Liga": 0.002517
+        "1. Liga": 0.0,
+        "2. Liga": 0.04061,
+        "3. Liga": 0.917454,
+        "4. Liga": 0.041936
       }
     },
     {
@@ -81,18 +81,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 1051.8144,
-      "rating_deviation": 148.4519,
+      "initial_rating": 810.0,
+      "rating": 766.2209,
+      "rating_deviation": 121.9742,
       "matches_played": 2,
-      "predicted_league": "3. Liga",
-      "league_confidence": 0.571021,
-      "league_uncertainty": 233.3195,
+      "predicted_league": "4. Liga",
+      "league_confidence": 0.867909,
+      "league_uncertainty": 217.4344,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.001777,
-        "3. Liga": 0.571021,
-        "4. Liga": 0.427202
+        "2. Liga": 4e-06,
+        "3. Liga": 0.132086,
+        "4. Liga": 0.867909
       }
     },
     {
@@ -102,18 +102,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "A",
-      "initial_rating": 1464.0,
-      "rating": 1291.5423,
-      "rating_deviation": 142.5516,
+      "initial_rating": 1250.0,
+      "rating": 1012.1675,
+      "rating_deviation": 121.6355,
       "matches_played": 2,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.863213,
-      "league_uncertainty": 229.6105,
+      "league_confidence": 0.505356,
+      "league_uncertainty": 217.2446,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.027538,
-        "3. Liga": 0.863213,
-        "4. Liga": 0.10925
+        "2. Liga": 0.000461,
+        "3. Liga": 0.505356,
+        "4. Liga": 0.494184
       }
     },
     {
@@ -123,18 +123,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 1053.4127,
-      "rating_deviation": 141.2583,
+      "initial_rating": 810.0,
+      "rating": 756.7567,
+      "rating_deviation": 117.4948,
       "matches_played": 2,
-      "predicted_league": "3. Liga",
-      "league_confidence": 0.575443,
-      "league_uncertainty": 228.8098,
+      "predicted_league": "4. Liga",
+      "league_confidence": 0.879698,
+      "league_uncertainty": 214.9535,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.00151,
-        "3. Liga": 0.575443,
-        "4. Liga": 0.423048
+        "2. Liga": 3e-06,
+        "3. Liga": 0.120299,
+        "4. Liga": 0.879698
       }
     },
     {
@@ -144,18 +144,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 799.0546,
-      "rating_deviation": 145.0901,
+      "initial_rating": 810.0,
+      "rating": 637.8974,
+      "rating_deviation": 115.0008,
       "matches_played": 4,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.818084,
-      "league_uncertainty": 231.195,
+      "league_confidence": 0.958839,
+      "league_uncertainty": 213.6005,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 2.7e-05,
-        "3. Liga": 0.181889,
-        "4. Liga": 0.818084
+        "2. Liga": 0.0,
+        "3. Liga": 0.041161,
+        "4. Liga": 0.958839
       }
     },
     {
@@ -165,18 +165,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 943.201,
-      "rating_deviation": 142.0189,
+      "initial_rating": 810.0,
+      "rating": 687.3525,
+      "rating_deviation": 117.5689,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.612937,
-      "league_uncertainty": 229.2801,
+      "league_confidence": 0.932683,
+      "league_uncertainty": 214.9941,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.000291,
-        "3. Liga": 0.386773,
-        "4. Liga": 0.612937
+        "2. Liga": 1e-06,
+        "3. Liga": 0.067316,
+        "4. Liga": 0.932683
       }
     },
     {
@@ -186,18 +186,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 1128.9478,
-      "rating_deviation": 145.4109,
+      "initial_rating": 810.0,
+      "rating": 783.5531,
+      "rating_deviation": 118.949,
       "matches_played": 2,
-      "predicted_league": "3. Liga",
-      "league_confidence": 0.69332,
-      "league_uncertainty": 231.3965,
+      "predicted_league": "4. Liga",
+      "league_confidence": 0.851974,
+      "league_uncertainty": 215.7519,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.004578,
-        "3. Liga": 0.69332,
-        "4. Liga": 0.302102
+        "2. Liga": 6e-06,
+        "3. Liga": 0.148021,
+        "4. Liga": 0.851974
       }
     },
     {
@@ -207,18 +207,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 1058.5747,
-      "rating_deviation": 147.6143,
+      "initial_rating": 810.0,
+      "rating": 746.2229,
+      "rating_deviation": 122.6244,
       "matches_played": 2,
-      "predicted_league": "3. Liga",
-      "league_confidence": 0.582413,
-      "league_uncertainty": 232.7874,
+      "predicted_league": "4. Liga",
+      "league_confidence": 0.886189,
+      "league_uncertainty": 217.7998,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.001909,
-        "3. Liga": 0.582413,
-        "4. Liga": 0.415679
+        "2. Liga": 3e-06,
+        "3. Liga": 0.113808,
+        "4. Liga": 0.886189
       }
     },
     {
@@ -228,18 +228,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 818.9333,
-      "rating_deviation": 142.7108,
+      "initial_rating": 810.0,
+      "rating": 497.7796,
+      "rating_deviation": 122.3423,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.796001,
-      "league_uncertainty": 229.7093,
+      "league_confidence": 0.990586,
+      "league_uncertainty": 217.6411,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 3.5e-05,
-        "3. Liga": 0.203964,
-        "4. Liga": 0.796001
+        "2. Liga": 0.0,
+        "3. Liga": 0.009414,
+        "4. Liga": 0.990586
       }
     },
     {
@@ -249,18 +249,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 821.9941,
-      "rating_deviation": 143.4307,
+      "initial_rating": 810.0,
+      "rating": 561.6288,
+      "rating_deviation": 118.9717,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.791752,
-      "league_uncertainty": 230.1573,
+      "league_confidence": 0.980934,
+      "league_uncertainty": 215.7644,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 3.8e-05,
-        "3. Liga": 0.20821,
-        "4. Liga": 0.791752
+        "2. Liga": 0.0,
+        "3. Liga": 0.019066,
+        "4. Liga": 0.980934
       }
     },
     {
@@ -270,18 +270,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 800.6689,
-      "rating_deviation": 140.0069,
+      "initial_rating": 810.0,
+      "rating": 568.7907,
+      "rating_deviation": 116.1976,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.81953,
-      "league_uncertainty": 228.0393,
+      "league_confidence": 0.980045,
+      "league_uncertainty": 214.2473,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 2.2e-05,
-        "3. Liga": 0.180448,
-        "4. Liga": 0.81953
+        "2. Liga": 0.0,
+        "3. Liga": 0.019955,
+        "4. Liga": 0.980045
       }
     },
     {
@@ -291,18 +291,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 1039.6049,
-      "rating_deviation": 132.0766,
+      "initial_rating": 810.0,
+      "rating": 697.1655,
+      "rating_deviation": 113.2354,
       "matches_played": 2,
-      "predicted_league": "3. Liga",
-      "league_confidence": 0.553554,
-      "league_uncertainty": 223.2582,
+      "predicted_league": "4. Liga",
+      "league_confidence": 0.928728,
+      "league_uncertainty": 212.6553,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.000963,
-        "3. Liga": 0.553554,
-        "4. Liga": 0.445483
+        "2. Liga": 1e-06,
+        "3. Liga": 0.071271,
+        "4. Liga": 0.928728
       }
     },
     {
@@ -312,18 +312,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 613.2747,
-      "rating_deviation": 144.8826,
+      "initial_rating": 810.0,
+      "rating": 356.2534,
+      "rating_deviation": 124.4896,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.956608,
-      "league_uncertainty": 231.0648,
+      "league_confidence": 0.998571,
+      "league_uncertainty": 218.8554,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 1e-06,
-        "3. Liga": 0.043391,
-        "4. Liga": 0.956608
+        "2. Liga": 0.0,
+        "3. Liga": 0.001429,
+        "4. Liga": 0.998571
       }
     },
     {
@@ -333,18 +333,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "B",
-      "initial_rating": 1464.0,
-      "rating": 1414.249,
-      "rating_deviation": 144.6575,
+      "initial_rating": 1250.0,
+      "rating": 1446.54,
+      "rating_deviation": 115.4383,
       "matches_played": 4,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.875951,
-      "league_uncertainty": 230.9238,
+      "league_confidence": 0.888682,
+      "league_uncertainty": 213.8364,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.084411,
-        "3. Liga": 0.875951,
-        "4. Liga": 0.039638
+        "2. Liga": 0.090947,
+        "3. Liga": 0.888682,
+        "4. Liga": 0.020371
       }
     },
     {
@@ -354,18 +354,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 897.2305,
-      "rating_deviation": 133.1969,
+      "initial_rating": 810.0,
+      "rating": 572.5997,
+      "rating_deviation": 114.1946,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.691161,
-      "league_uncertainty": 223.9228,
+      "league_confidence": 0.979682,
+      "league_uncertainty": 213.1676,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 9.7e-05,
-        "3. Liga": 0.308743,
-        "4. Liga": 0.691161
+        "2. Liga": 0.0,
+        "3. Liga": 0.020318,
+        "4. Liga": 0.979682
       }
     },
     {
@@ -375,18 +375,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 1022.3845,
-      "rating_deviation": 144.4878,
+      "initial_rating": 810.0,
+      "rating": 707.6976,
+      "rating_deviation": 117.8118,
       "matches_played": 5,
-      "predicted_league": "3. Liga",
-      "league_confidence": 0.522066,
-      "league_uncertainty": 230.8175,
+      "predicted_league": "4. Liga",
+      "league_confidence": 0.91933,
+      "league_uncertainty": 215.127,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.001055,
-        "3. Liga": 0.522066,
-        "4. Liga": 0.476879
+        "2. Liga": 1e-06,
+        "3. Liga": 0.080669,
+        "4. Liga": 0.91933
       }
     },
     {
@@ -396,18 +396,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 852.4352,
-      "rating_deviation": 134.8185,
+      "initial_rating": 810.0,
+      "rating": 492.4333,
+      "rating_deviation": 114.5381,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.756842,
-      "league_uncertainty": 224.8912,
+      "league_confidence": 0.992265,
+      "league_uncertainty": 213.3517,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 4.6e-05,
-        "3. Liga": 0.243112,
-        "4. Liga": 0.756842
+        "2. Liga": 0.0,
+        "3. Liga": 0.007735,
+        "4. Liga": 0.992265
       }
     },
     {
@@ -417,18 +417,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "A",
-      "initial_rating": 1464.0,
-      "rating": 1617.1346,
-      "rating_deviation": 124.0918,
+      "initial_rating": 1250.0,
+      "rating": 1479.9148,
+      "rating_deviation": 112.773,
       "matches_played": 5,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.697639,
-      "league_uncertainty": 218.6293,
+      "league_confidence": 0.869034,
+      "league_uncertainty": 212.4094,
       "league_probabilities": {
-        "1. Liga": 8e-06,
-        "2. Liga": 0.299648,
-        "3. Liga": 0.697639,
-        "4. Liga": 0.002705
+        "1. Liga": 0.0,
+        "2. Liga": 0.117655,
+        "3. Liga": 0.869034,
+        "4. Liga": 0.013311
       }
     },
     {
@@ -438,18 +438,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "A",
-      "initial_rating": 2000.0,
-      "rating": 1786.976,
-      "rating_deviation": 131.5001,
+      "initial_rating": 1850.0,
+      "rating": 1726.2758,
+      "rating_deviation": 120.6711,
       "matches_played": 2,
-      "predicted_league": "2. Liga",
-      "league_confidence": 0.597136,
-      "league_uncertainty": 222.9176,
+      "predicted_league": "3. Liga",
+      "league_confidence": 0.51007,
+      "league_uncertainty": 216.706,
       "league_probabilities": {
-        "1. Liga": 0.000262,
-        "2. Liga": 0.597136,
-        "3. Liga": 0.40236,
-        "4. Liga": 0.000242
+        "1. Liga": 6e-05,
+        "2. Liga": 0.489404,
+        "3. Liga": 0.51007,
+        "4. Liga": 0.000467
       }
     },
     {
@@ -459,18 +459,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "B",
-      "initial_rating": 2000.0,
-      "rating": 1873.8108,
-      "rating_deviation": 128.3026,
+      "initial_rating": 1850.0,
+      "rating": 1938.8268,
+      "rating_deviation": 119.0208,
       "matches_played": 3,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.738461,
-      "league_uncertainty": 221.0465,
+      "league_confidence": 0.829086,
+      "league_uncertainty": 215.7915,
       "league_probabilities": {
-        "1. Liga": 0.000954,
-        "2. Liga": 0.738461,
-        "3. Liga": 0.260539,
-        "4. Liga": 4.6e-05
+        "1. Liga": 0.001997,
+        "2. Liga": 0.829086,
+        "3. Liga": 0.168908,
+        "4. Liga": 8e-06
       }
     },
     {
@@ -480,18 +480,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "B",
-      "initial_rating": 2000.0,
-      "rating": 1721.3986,
-      "rating_deviation": 129.6138,
+      "initial_rating": 1850.0,
+      "rating": 1706.7862,
+      "rating_deviation": 119.7453,
       "matches_played": 2,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.518401,
-      "league_uncertainty": 221.8102,
+      "league_confidence": 0.545798,
+      "league_uncertainty": 216.1919,
       "league_probabilities": {
-        "1. Liga": 7.8e-05,
-        "2. Liga": 0.480862,
-        "3. Liga": 0.518401,
-        "4. Liga": 0.00066
+        "1. Liga": 4e-05,
+        "2. Liga": 0.453538,
+        "3. Liga": 0.545798,
+        "4. Liga": 0.000624
       }
     },
     {
@@ -501,18 +501,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 1478.5303,
-      "rating_deviation": 131.7642,
+      "initial_rating": 810.0,
+      "rating": 1113.6033,
+      "rating_deviation": 120.7657,
       "matches_played": 5,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.854423,
-      "league_uncertainty": 223.0735,
+      "league_confidence": 0.683137,
+      "league_uncertainty": 216.7588,
       "league_probabilities": {
-        "1. Liga": 1e-06,
-        "2. Liga": 0.127923,
-        "3. Liga": 0.854423,
-        "4. Liga": 0.017653
+        "1. Liga": 0.0,
+        "2. Liga": 0.002166,
+        "3. Liga": 0.683137,
+        "4. Liga": 0.314697
       }
     },
     {
@@ -522,18 +522,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "B",
-      "initial_rating": 2000.0,
-      "rating": 1551.4573,
-      "rating_deviation": 135.3696,
-      "matches_played": 4,
-      "predicted_league": "3. Liga",
-      "league_confidence": 0.780606,
-      "league_uncertainty": 225.2219,
+      "initial_rating": 1850.0,
+      "rating": 1732.5123,
+      "rating_deviation": 115.3448,
+      "matches_played": 5,
+      "predicted_league": "2. Liga",
+      "league_confidence": 0.500902,
+      "league_uncertainty": 213.7859,
       "league_probabilities": {
-        "1. Liga": 4e-06,
-        "2. Liga": 0.211382,
-        "3. Liga": 0.780606,
-        "4. Liga": 0.008008
+        "1. Liga": 5.4e-05,
+        "2. Liga": 0.500902,
+        "3. Liga": 0.498687,
+        "4. Liga": 0.000357
       }
     },
     {
@@ -543,18 +543,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "A",
-      "initial_rating": 1464.0,
-      "rating": 1448.3325,
-      "rating_deviation": 122.3404,
+      "initial_rating": 1250.0,
+      "rating": 1241.9356,
+      "rating_deviation": 108.5676,
       "matches_played": 5,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.882014,
-      "league_uncertainty": 217.64,
+      "league_confidence": 0.856229,
+      "league_uncertainty": 210.2069,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.096223,
-        "3. Liga": 0.882014,
-        "4. Liga": 0.021763
+        "2. Liga": 0.009868,
+        "3. Liga": 0.856229,
+        "4. Liga": 0.133904
       }
     },
     {
@@ -564,18 +564,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "B",
-      "initial_rating": 1464.0,
-      "rating": 1317.1497,
-      "rating_deviation": 137.1507,
+      "initial_rating": 1250.0,
+      "rating": 1107.1445,
+      "rating_deviation": 121.0355,
       "matches_played": 2,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.879969,
-      "league_uncertainty": 226.297,
+      "league_confidence": 0.67255,
+      "league_uncertainty": 216.9092,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.033386,
-        "3. Liga": 0.879969,
-        "4. Liga": 0.086646
+        "2. Liga": 0.001984,
+        "3. Liga": 0.67255,
+        "4. Liga": 0.325466
       }
     },
     {
@@ -585,18 +585,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "A",
-      "initial_rating": 2000.0,
-      "rating": 1737.6177,
-      "rating_deviation": 128.3007,
+      "initial_rating": 1850.0,
+      "rating": 1635.7575,
+      "rating_deviation": 116.3513,
       "matches_played": 4,
-      "predicted_league": "2. Liga",
-      "league_confidence": 0.510038,
-      "league_uncertainty": 221.0454,
+      "predicted_league": "3. Liga",
+      "league_confidence": 0.671571,
+      "league_uncertainty": 214.3307,
       "league_probabilities": {
-        "1. Liga": 9.9e-05,
-        "2. Liga": 0.510038,
-        "3. Liga": 0.489372,
-        "4. Liga": 0.00049
+        "1. Liga": 8e-06,
+        "2. Liga": 0.326694,
+        "3. Liga": 0.671571,
+        "4. Liga": 0.001726
       }
     },
     {
@@ -606,18 +606,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "B",
-      "initial_rating": 1464.0,
-      "rating": 1476.3784,
-      "rating_deviation": 131.0626,
+      "initial_rating": 1250.0,
+      "rating": 1208.7642,
+      "rating_deviation": 119.9416,
       "matches_played": 2,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.856618,
-      "league_uncertainty": 222.6599,
+      "league_confidence": 0.814358,
+      "league_uncertainty": 216.3007,
       "league_probabilities": {
-        "1. Liga": 1e-06,
-        "2. Liga": 0.125476,
-        "3. Liga": 0.856618,
-        "4. Liga": 0.017905
+        "1. Liga": 0.0,
+        "2. Liga": 0.007781,
+        "3. Liga": 0.814358,
+        "4. Liga": 0.177861
       }
     },
     {
@@ -627,18 +627,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "A",
-      "initial_rating": 1464.0,
-      "rating": 1716.3385,
-      "rating_deviation": 142.0794,
+      "initial_rating": 1250.0,
+      "rating": 1418.3434,
+      "rating_deviation": 125.084,
       "matches_played": 2,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.526206,
-      "league_uncertainty": 229.3176,
+      "league_confidence": 0.892862,
+      "league_uncertainty": 219.194,
       "league_probabilities": {
-        "1. Liga": 0.000117,
-        "2. Liga": 0.472658,
-        "3. Liga": 0.526206,
-        "4. Liga": 0.001019
+        "1. Liga": 0.0,
+        "2. Liga": 0.076222,
+        "3. Liga": 0.892862,
+        "4. Liga": 0.030916
       }
     },
     {
@@ -648,18 +648,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "B",
-      "initial_rating": 1464.0,
-      "rating": 1419.2212,
-      "rating_deviation": 123.6973,
+      "initial_rating": 1250.0,
+      "rating": 1230.1725,
+      "rating_deviation": 109.0252,
       "matches_played": 4,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.893769,
-      "league_uncertainty": 218.4057,
+      "league_confidence": 0.844818,
+      "league_uncertainty": 210.4436,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.076057,
-        "3. Liga": 0.893769,
-        "4. Liga": 0.030173
+        "2. Liga": 0.008548,
+        "3. Liga": 0.844818,
+        "4. Liga": 0.146633
       }
     },
     {
@@ -669,18 +669,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 1458.4055,
-      "rating_deviation": 135.9458,
+      "initial_rating": 810.0,
+      "rating": 991.2879,
+      "rating_deviation": 117.5882,
       "matches_played": 2,
-      "predicted_league": "3. Liga",
-      "league_confidence": 0.86425,
-      "league_uncertainty": 225.5688,
+      "predicted_league": "4. Liga",
+      "league_confidence": 0.532828,
+      "league_uncertainty": 215.0046,
       "league_probabilities": {
-        "1. Liga": 1e-06,
-        "2. Liga": 0.112582,
-        "3. Liga": 0.86425,
-        "4. Liga": 0.023168
+        "1. Liga": 0.0,
+        "2. Liga": 0.000285,
+        "3. Liga": 0.466887,
+        "4. Liga": 0.532828
       }
     },
     {
@@ -690,17 +690,17 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "B",
-      "initial_rating": 2000.0,
-      "rating": 2372.8405,
-      "rating_deviation": 141.4432,
+      "initial_rating": 1850.0,
+      "rating": 2263.1046,
+      "rating_deviation": 118.5996,
       "matches_played": 2,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.790636,
-      "league_uncertainty": 228.9239,
+      "league_confidence": 0.908921,
+      "league_uncertainty": 215.5594,
       "league_probabilities": {
-        "1. Liga": 0.206804,
-        "2. Liga": 0.790636,
-        "3. Liga": 0.00256,
+        "1. Liga": 0.084206,
+        "2. Liga": 0.908921,
+        "3. Liga": 0.006873,
         "4. Liga": 0.0
       }
     },
@@ -711,17 +711,17 @@
       "season": "Season WiSe26/27",
       "league": "1. Liga",
       "group": "N",
-      "initial_rating": 3120.0,
-      "rating": 2253.2869,
-      "rating_deviation": 144.8122,
+      "initial_rating": 2783.1555,
+      "rating": 2800.8097,
+      "rating_deviation": 109.7132,
       "matches_played": 6,
-      "predicted_league": "2. Liga",
-      "league_confidence": 0.895831,
-      "league_uncertainty": 231.0207,
+      "predicted_league": "1. Liga",
+      "league_confidence": 0.873347,
+      "league_uncertainty": 210.8008,
       "league_probabilities": {
-        "1. Liga": 0.092148,
-        "2. Liga": 0.895831,
-        "3. Liga": 0.012021,
+        "1. Liga": 0.873347,
+        "2. Liga": 0.126653,
+        "3. Liga": 0.0,
         "4. Liga": 0.0
       }
     },
@@ -732,17 +732,17 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "A",
-      "initial_rating": 2000.0,
-      "rating": 2303.3663,
-      "rating_deviation": 147.1107,
+      "initial_rating": 1850.0,
+      "rating": 2200.2047,
+      "rating_deviation": 112.9063,
       "matches_played": 2,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.858204,
-      "league_uncertainty": 232.4684,
+      "league_confidence": 0.941023,
+      "league_uncertainty": 212.4802,
       "league_probabilities": {
-        "1. Liga": 0.134807,
-        "2. Liga": 0.858204,
-        "3. Liga": 0.006989,
+        "1. Liga": 0.045198,
+        "2. Liga": 0.941023,
+        "3. Liga": 0.013779,
         "4. Liga": 0.0
       }
     },
@@ -753,18 +753,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "B",
-      "initial_rating": 2000.0,
-      "rating": 1930.026,
-      "rating_deviation": 143.8836,
-      "matches_played": 2,
+      "initial_rating": 1850.0,
+      "rating": 1940.4304,
+      "rating_deviation": 116.4979,
+      "matches_played": 3,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.801793,
-      "league_uncertainty": 230.4398,
+      "league_confidence": 0.832574,
+      "league_uncertainty": 214.4102,
       "league_probabilities": {
-        "1. Liga": 0.00313,
-        "2. Liga": 0.801793,
-        "3. Liga": 0.195045,
-        "4. Liga": 3.2e-05
+        "1. Liga": 0.001928,
+        "2. Liga": 0.832574,
+        "3. Liga": 0.165491,
+        "4. Liga": 7e-06
       }
     },
     {
@@ -774,18 +774,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "A",
-      "initial_rating": 1464.0,
-      "rating": 1807.5847,
-      "rating_deviation": 143.721,
+      "initial_rating": 1250.0,
+      "rating": 1656.3553,
+      "rating_deviation": 119.5559,
       "matches_played": 2,
-      "predicted_league": "2. Liga",
-      "league_confidence": 0.628055,
-      "league_uncertainty": 230.3383,
+      "predicted_league": "3. Liga",
+      "league_confidence": 0.635487,
+      "league_uncertainty": 216.0871,
       "league_probabilities": {
-        "1. Liga": 0.000544,
-        "2. Liga": 0.628055,
-        "3. Liga": 0.371137,
-        "4. Liga": 0.000263
+        "1. Liga": 1.4e-05,
+        "2. Liga": 0.36313,
+        "3. Liga": 0.635487,
+        "4. Liga": 0.001369
       }
     },
     {
@@ -795,18 +795,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "B",
-      "initial_rating": 2000.0,
-      "rating": 2105.3755,
-      "rating_deviation": 135.5139,
+      "initial_rating": 1850.0,
+      "rating": 2088.1748,
+      "rating_deviation": 113.0168,
       "matches_played": 4,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.929451,
-      "league_uncertainty": 225.3087,
+      "league_confidence": 0.939901,
+      "league_uncertainty": 212.5389,
       "league_probabilities": {
-        "1. Liga": 0.021807,
-        "2. Liga": 0.929451,
-        "3. Liga": 0.048742,
-        "4. Liga": 1e-06
+        "1. Liga": 0.013211,
+        "2. Liga": 0.939901,
+        "3. Liga": 0.046888,
+        "4. Liga": 0.0
       }
     },
     {
@@ -816,17 +816,17 @@
       "season": "Season WiSe26/27",
       "league": "1. Liga",
       "group": "N",
-      "initial_rating": 3120.0,
-      "rating": 2254.8227,
-      "rating_deviation": 145.6945,
+      "initial_rating": 2783.1555,
+      "rating": 2779.0765,
+      "rating_deviation": 109.7518,
       "matches_played": 4,
-      "predicted_league": "2. Liga",
-      "league_confidence": 0.894238,
-      "league_uncertainty": 231.5748,
+      "predicted_league": "1. Liga",
+      "league_confidence": 0.850635,
+      "league_uncertainty": 210.8209,
       "league_probabilities": {
-        "1. Liga": 0.093779,
-        "2. Liga": 0.894238,
-        "3. Liga": 0.011983,
+        "1. Liga": 0.850635,
+        "2. Liga": 0.149365,
+        "3. Liga": 0.0,
         "4. Liga": 0.0
       }
     },
@@ -837,18 +837,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "A",
-      "initial_rating": 2000.0,
-      "rating": 2026.4503,
-      "rating_deviation": 146.9521,
+      "initial_rating": 1850.0,
+      "rating": 2013.5487,
+      "rating_deviation": 124.0135,
       "matches_played": 2,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.886619,
-      "league_uncertainty": 232.368,
+      "league_confidence": 0.894926,
+      "league_uncertainty": 218.5849,
       "league_probabilities": {
-        "1. Liga": 0.010834,
-        "2. Liga": 0.886619,
-        "3. Liga": 0.102541,
-        "4. Liga": 6e-06
+        "1. Liga": 0.006211,
+        "2. Liga": 0.894926,
+        "3. Liga": 0.098862,
+        "4. Liga": 2e-06
       }
     },
     {
@@ -858,18 +858,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "B",
-      "initial_rating": 2000.0,
-      "rating": 1993.0106,
-      "rating_deviation": 135.8229,
+      "initial_rating": 1850.0,
+      "rating": 1942.9623,
+      "rating_deviation": 112.6576,
       "matches_played": 2,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.870505,
-      "league_uncertainty": 225.4947,
+      "league_confidence": 0.837929,
+      "league_uncertainty": 212.3481,
       "league_probabilities": {
-        "1. Liga": 0.005961,
-        "2. Liga": 0.870505,
-        "3. Liga": 0.123527,
-        "4. Liga": 6e-06
+        "1. Liga": 0.001832,
+        "2. Liga": 0.837929,
+        "3. Liga": 0.160234,
+        "4. Liga": 5e-06
       }
     },
     {
@@ -879,18 +879,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "B",
-      "initial_rating": 1464.0,
-      "rating": 1682.3134,
-      "rating_deviation": 135.1893,
+      "initial_rating": 1250.0,
+      "rating": 1493.3472,
+      "rating_deviation": 118.2151,
       "matches_played": 2,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.585954,
-      "league_uncertainty": 225.1137,
+      "league_confidence": 0.853864,
+      "league_uncertainty": 215.3481,
       "league_probabilities": {
-        "1. Liga": 4.8e-05,
-        "2. Liga": 0.412608,
-        "3. Liga": 0.585954,
-        "4. Liga": 0.00139
+        "1. Liga": 0.0,
+        "2. Liga": 0.133883,
+        "3. Liga": 0.853864,
+        "4. Liga": 0.012252
       }
     },
     {
@@ -900,18 +900,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "A",
-      "initial_rating": 2000.0,
-      "rating": 1947.433,
-      "rating_deviation": 140.4132,
+      "initial_rating": 1850.0,
+      "rating": 1915.4734,
+      "rating_deviation": 119.7893,
       "matches_played": 2,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.82369,
-      "league_uncertainty": 228.289,
+      "league_confidence": 0.800501,
+      "league_uncertainty": 216.2163,
       "league_probabilities": {
-        "1. Liga": 0.003645,
-        "2. Liga": 0.82369,
-        "3. Liga": 0.172645,
-        "4. Liga": 2e-05
+        "1. Liga": 0.001437,
+        "2. Liga": 0.800501,
+        "3. Liga": 0.198048,
+        "4. Liga": 1.4e-05
       }
     },
     {
@@ -921,16 +921,16 @@
       "season": "Season WiSe26/27",
       "league": "1. Liga",
       "group": "N",
-      "initial_rating": 3120.0,
-      "rating": 3096.0709,
-      "rating_deviation": 152.1635,
+      "initial_rating": 2783.1555,
+      "rating": 3257.9747,
+      "rating_deviation": 137.127,
       "matches_played": 2,
       "predicted_league": "1. Liga",
-      "league_confidence": 0.988529,
-      "league_uncertainty": 235.6984,
+      "league_confidence": 0.998981,
+      "league_uncertainty": 226.2826,
       "league_probabilities": {
-        "1. Liga": 0.988529,
-        "2. Liga": 0.011471,
+        "1. Liga": 0.998981,
+        "2. Liga": 0.001019,
         "3. Liga": 0.0,
         "4. Liga": 0.0
       }
@@ -942,16 +942,16 @@
       "season": "Season WiSe26/27",
       "league": "1. Liga",
       "group": "N",
-      "initial_rating": 3120.0,
-      "rating": 3070.2653,
-      "rating_deviation": 152.3572,
+      "initial_rating": 2783.1555,
+      "rating": 3253.1539,
+      "rating_deviation": 132.8033,
       "matches_played": 2,
       "predicted_league": "1. Liga",
-      "league_confidence": 0.984759,
-      "league_uncertainty": 235.8235,
+      "league_confidence": 0.999028,
+      "league_uncertainty": 223.6889,
       "league_probabilities": {
-        "1. Liga": 0.984759,
-        "2. Liga": 0.015241,
+        "1. Liga": 0.999028,
+        "2. Liga": 0.000972,
         "3. Liga": 0.0,
         "4. Liga": 0.0
       }
@@ -963,17 +963,17 @@
       "season": "Season WiSe26/27",
       "league": "1. Liga",
       "group": "N",
-      "initial_rating": 3120.0,
-      "rating": 2503.2639,
-      "rating_deviation": 131.6263,
+      "initial_rating": 2783.1555,
+      "rating": 2622.0998,
+      "rating_deviation": 120.0076,
       "matches_played": 2,
-      "predicted_league": "2. Liga",
-      "league_confidence": 0.600147,
-      "league_uncertainty": 222.9921,
+      "predicted_league": "1. Liga",
+      "league_confidence": 0.612963,
+      "league_uncertainty": 216.3373,
       "league_probabilities": {
-        "1. Liga": 0.399581,
-        "2. Liga": 0.600147,
-        "3. Liga": 0.000271,
+        "1. Liga": 0.612963,
+        "2. Liga": 0.387017,
+        "3. Liga": 1.9e-05,
         "4. Liga": 0.0
       }
     },
@@ -984,17 +984,17 @@
       "season": "Season WiSe26/27",
       "league": "1. Liga",
       "group": "N",
-      "initial_rating": 3120.0,
-      "rating": 2820.3335,
-      "rating_deviation": 145.8332,
+      "initial_rating": 2783.1555,
+      "rating": 2980.3929,
+      "rating_deviation": 132.0234,
       "matches_played": 2,
       "predicted_league": "1. Liga",
-      "league_confidence": 0.869443,
-      "league_uncertainty": 231.6621,
+      "league_confidence": 0.970167,
+      "league_uncertainty": 223.2268,
       "league_probabilities": {
-        "1. Liga": 0.869443,
-        "2. Liga": 0.130555,
-        "3. Liga": 1e-06,
+        "1. Liga": 0.970167,
+        "2. Liga": 0.029833,
+        "3. Liga": 0.0,
         "4. Liga": 0.0
       }
     },
@@ -1005,17 +1005,17 @@
       "season": "Season WiSe26/27",
       "league": "1. Liga",
       "group": "N",
-      "initial_rating": 3120.0,
-      "rating": 2727.8133,
-      "rating_deviation": 138.6819,
+      "initial_rating": 2783.1555,
+      "rating": 2878.6135,
+      "rating_deviation": 126.3956,
       "matches_played": 2,
       "predicted_league": "1. Liga",
-      "league_confidence": 0.769902,
-      "league_uncertainty": 227.2282,
+      "league_confidence": 0.926276,
+      "league_uncertainty": 219.9451,
       "league_probabilities": {
-        "1. Liga": 0.769902,
-        "2. Liga": 0.230092,
-        "3. Liga": 6e-06,
+        "1. Liga": 0.926276,
+        "2. Liga": 0.073724,
+        "3. Liga": 0.0,
         "4. Liga": 0.0
       }
     },
@@ -1026,17 +1026,17 @@
       "season": "Season WiSe26/27",
       "league": "1. Liga",
       "group": "N",
-      "initial_rating": 3120.0,
-      "rating": 2685.4345,
-      "rating_deviation": 145.9179,
+      "initial_rating": 2783.1555,
+      "rating": 2896.9438,
+      "rating_deviation": 121.6361,
       "matches_played": 2,
       "predicted_league": "1. Liga",
-      "league_confidence": 0.70586,
-      "league_uncertainty": 231.7154,
+      "league_confidence": 0.939547,
+      "league_uncertainty": 217.2449,
       "league_probabilities": {
-        "1. Liga": 0.70586,
-        "2. Liga": 0.294121,
-        "3. Liga": 1.9e-05,
+        "1. Liga": 0.939547,
+        "2. Liga": 0.060452,
+        "3. Liga": 0.0,
         "4. Liga": 0.0
       }
     },
@@ -1047,17 +1047,17 @@
       "season": "Season WiSe26/27",
       "league": "1. Liga",
       "group": "N",
-      "initial_rating": 3120.0,
-      "rating": 2697.3852,
-      "rating_deviation": 142.7362,
+      "initial_rating": 2783.1555,
+      "rating": 2722.0642,
+      "rating_deviation": 136.532,
       "matches_played": 2,
       "predicted_league": "1. Liga",
-      "league_confidence": 0.725094,
-      "league_uncertainty": 229.7251,
+      "league_confidence": 0.763419,
+      "league_uncertainty": 225.9225,
       "league_probabilities": {
-        "1. Liga": 0.725094,
-        "2. Liga": 0.274893,
-        "3. Liga": 1.3e-05,
+        "1. Liga": 0.763419,
+        "2. Liga": 0.236575,
+        "3. Liga": 6e-06,
         "4. Liga": 0.0
       }
     },
@@ -1068,17 +1068,17 @@
       "season": "Season WiSe26/27",
       "league": "1. Liga",
       "group": "N",
-      "initial_rating": 3120.0,
-      "rating": 2767.3613,
-      "rating_deviation": 138.545,
+      "initial_rating": 2783.1555,
+      "rating": 2885.6502,
+      "rating_deviation": 129.1042,
       "matches_played": 2,
       "predicted_league": "1. Liga",
-      "league_confidence": 0.819353,
-      "league_uncertainty": 227.1447,
+      "league_confidence": 0.929235,
+      "league_uncertainty": 221.5127,
       "league_probabilities": {
-        "1. Liga": 0.819353,
-        "2. Liga": 0.180644,
-        "3. Liga": 3e-06,
+        "1. Liga": 0.929235,
+        "2. Liga": 0.070765,
+        "3. Liga": 0.0,
         "4. Liga": 0.0
       }
     },
@@ -1089,18 +1089,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "B",
-      "initial_rating": 2000.0,
-      "rating": 2270.1394,
-      "rating_deviation": 149.0546,
-      "matches_played": 7,
+      "initial_rating": 1850.0,
+      "rating": 2107.2167,
+      "rating_deviation": 174.0284,
+      "matches_played": 3,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.881917,
-      "league_uncertainty": 233.7034,
+      "league_confidence": 0.897748,
+      "league_uncertainty": 250.3715,
       "league_probabilities": {
-        "1. Liga": 0.107434,
-        "2. Liga": 0.881917,
-        "3. Liga": 0.010649,
-        "4. Liga": 0.0
+        "1. Liga": 0.035269,
+        "2. Liga": 0.897748,
+        "3. Liga": 0.066978,
+        "4. Liga": 6e-06
       }
     },
     {
@@ -1110,18 +1110,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "A",
-      "initial_rating": 2000.0,
-      "rating": 1776.7194,
-      "rating_deviation": 161.8523,
+      "initial_rating": 1850.0,
+      "rating": 1798.4327,
+      "rating_deviation": 157.2902,
       "matches_played": 5,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.572677,
-      "league_uncertainty": 242.0664,
+      "league_confidence": 0.60874,
+      "league_uncertainty": 239.0402,
       "league_probabilities": {
-        "1. Liga": 0.000606,
-        "2. Liga": 0.572677,
-        "3. Liga": 0.425958,
-        "4. Liga": 0.000758
+        "1. Liga": 0.000721,
+        "2. Liga": 0.60874,
+        "3. Liga": 0.39006,
+        "4. Liga": 0.000479
       }
     },
     {
@@ -1131,18 +1131,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "A",
-      "initial_rating": 1464.0,
-      "rating": 1647.3433,
-      "rating_deviation": 146.4683,
-      "matches_played": 6,
+      "initial_rating": 1250.0,
+      "rating": 1478.9422,
+      "rating_deviation": 173.6155,
+      "matches_played": 4,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.639397,
-      "league_uncertainty": 232.0624,
+      "league_confidence": 0.814091,
+      "league_uncertainty": 250.0847,
       "league_probabilities": {
-        "1. Liga": 4.2e-05,
-        "2. Liga": 0.357588,
-        "3. Liga": 0.639397,
-        "4. Liga": 0.002973
+        "1. Liga": 8e-06,
+        "2. Liga": 0.155788,
+        "3. Liga": 0.814091,
+        "4. Liga": 0.030113
       }
     },
     {
@@ -1152,18 +1152,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "A",
-      "initial_rating": 2000.0,
-      "rating": 1834.9586,
-      "rating_deviation": 173.9115,
+      "initial_rating": 1850.0,
+      "rating": 1842.0316,
+      "rating_deviation": 167.1264,
       "matches_played": 3,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.65771,
-      "league_uncertainty": 250.2903,
+      "league_confidence": 0.671178,
+      "league_uncertainty": 245.6242,
       "league_probabilities": {
-        "1. Liga": 0.001885,
-        "2. Liga": 0.65771,
-        "3. Liga": 0.339922,
-        "4. Liga": 0.000483
+        "1. Liga": 0.001733,
+        "2. Liga": 0.671178,
+        "3. Liga": 0.326741,
+        "4. Liga": 0.000348
       }
     },
     {
@@ -1173,18 +1173,18 @@
       "season": "Season WiSe26/27",
       "league": "2. Liga",
       "group": "A",
-      "initial_rating": 2000.0,
-      "rating": 2221.5484,
-      "rating_deviation": 193.7673,
+      "initial_rating": 1850.0,
+      "rating": 2251.1726,
+      "rating_deviation": 168.7078,
       "matches_played": 3,
       "predicted_league": "2. Liga",
-      "league_confidence": 0.867596,
-      "league_uncertainty": 264.4726,
+      "league_confidence": 0.877012,
+      "league_uncertainty": 246.7029,
       "league_probabilities": {
-        "1. Liga": 0.100321,
-        "2. Liga": 0.867596,
-        "3. Liga": 0.03208,
-        "4. Liga": 2e-06
+        "1. Liga": 0.105318,
+        "2. Liga": 0.877012,
+        "3. Liga": 0.01767,
+        "4. Liga": 0.0
       }
     },
     {
@@ -1194,18 +1194,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "A",
-      "initial_rating": 1464.0,
-      "rating": 1228.1867,
-      "rating_deviation": 148.8226,
-      "matches_played": 6,
+      "initial_rating": 1250.0,
+      "rating": 1114.6917,
+      "rating_deviation": 164.5453,
+      "matches_played": 4,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.810503,
-      "league_uncertainty": 233.5555,
+      "league_confidence": 0.661949,
+      "league_uncertainty": 243.8753,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.015497,
-        "3. Liga": 0.810503,
-        "4. Liga": 0.173999
+        "2. Liga": 0.005683,
+        "3. Liga": 0.661949,
+        "4. Liga": 0.332368
       }
     },
     {
@@ -1215,18 +1215,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 936.4509,
-      "rating_deviation": 208.5477,
+      "initial_rating": 810.0,
+      "rating": 994.1343,
+      "rating_deviation": 182.0748,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.60386,
-      "league_uncertainty": 275.4853,
+      "league_confidence": 0.523151,
+      "league_uncertainty": 256.0297,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.00194,
-        "3. Liga": 0.394201,
-        "4. Liga": 0.60386
+        "2. Liga": 0.001976,
+        "3. Liga": 0.474873,
+        "4. Liga": 0.523151
       }
     },
     {
@@ -1236,18 +1236,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 441.3041,
-      "rating_deviation": 209.4574,
+      "initial_rating": 810.0,
+      "rating": 622.6526,
+      "rating_deviation": 182.2854,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.980088,
-      "league_uncertainty": 276.1746,
+      "league_confidence": 0.934237,
+      "league_uncertainty": 256.1795,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 1e-06,
-        "3. Liga": 0.019911,
-        "4. Liga": 0.980088
+        "2. Liga": 7e-06,
+        "3. Liga": 0.065756,
+        "4. Liga": 0.934237
       }
     },
     {
@@ -1257,18 +1257,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 1136.8454,
-      "rating_deviation": 210.8031,
+      "initial_rating": 810.0,
+      "rating": 974.9523,
+      "rating_deviation": 178.5368,
       "matches_played": 2,
-      "predicted_league": "3. Liga",
-      "league_confidence": 0.661781,
-      "league_uncertainty": 277.1966,
+      "predicted_league": "4. Liga",
+      "league_confidence": 0.553416,
+      "league_uncertainty": 253.5259,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.015895,
-        "3. Liga": 0.661781,
-        "4. Liga": 0.322325
+        "2. Liga": 0.001413,
+        "3. Liga": 0.445171,
+        "4. Liga": 0.553416
       }
     },
     {
@@ -1278,18 +1278,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 701.85,
-      "rating_deviation": 204.914,
+      "initial_rating": 810.0,
+      "rating": 786.887,
+      "rating_deviation": 181.8732,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.869948,
-      "league_uncertainty": 272.7448,
+      "league_confidence": 0.807307,
+      "league_uncertainty": 255.8864,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 7.9e-05,
-        "3. Liga": 0.129973,
-        "4. Liga": 0.869948
+        "2. Liga": 0.000111,
+        "3. Liga": 0.192583,
+        "4. Liga": 0.807307
       }
     },
     {
@@ -1299,18 +1299,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "B",
-      "initial_rating": 1464.0,
-      "rating": 1629.8804,
-      "rating_deviation": 162.0157,
+      "initial_rating": 1250.0,
+      "rating": 1493.5577,
+      "rating_deviation": 176.9881,
       "matches_played": 3,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.658192,
-      "league_uncertainty": 242.1757,
+      "league_confidence": 0.800098,
+      "league_uncertainty": 252.4377,
       "league_probabilities": {
-        "1. Liga": 6.1e-05,
-        "2. Liga": 0.33657,
-        "3. Liga": 0.658192,
-        "4. Liga": 0.005177
+        "1. Liga": 1.2e-05,
+        "2. Liga": 0.17243,
+        "3. Liga": 0.800098,
+        "4. Liga": 0.02746
       }
     },
     {
@@ -1320,18 +1320,18 @@
       "season": "Season WiSe26/27",
       "league": "3. Liga",
       "group": "A",
-      "initial_rating": 1464.0,
-      "rating": 1495.6937,
-      "rating_deviation": 180.4611,
+      "initial_rating": 1250.0,
+      "rating": 1297.4937,
+      "rating_deviation": 178.6049,
       "matches_played": 2,
       "predicted_league": "3. Liga",
-      "league_confidence": 0.794964,
-      "league_uncertainty": 254.8847,
+      "league_confidence": 0.829072,
+      "league_uncertainty": 253.5739,
       "league_probabilities": {
-        "1. Liga": 1.5e-05,
-        "2. Liga": 0.17692,
-        "3. Liga": 0.794964,
-        "4. Liga": 0.028101
+        "1. Liga": 0.0,
+        "2. Liga": 0.043307,
+        "3. Liga": 0.829072,
+        "4. Liga": 0.127621
       }
     },
     {
@@ -1341,18 +1341,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 747.7331,
-      "rating_deviation": 209.3772,
+      "initial_rating": 810.0,
+      "rating": 800.1694,
+      "rating_deviation": 207.3703,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.827984,
-      "league_uncertainty": 276.1137,
+      "league_confidence": 0.776523,
+      "league_uncertainty": 274.5951,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.000182,
-        "3. Liga": 0.171834,
-        "4. Liga": 0.827984
+        "2. Liga": 0.000345,
+        "3. Liga": 0.223132,
+        "4. Liga": 0.776523
       }
     },
     {
@@ -1362,18 +1362,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 383.4338,
-      "rating_deviation": 208.6691,
+      "initial_rating": 810.0,
+      "rating": 618.8766,
+      "rating_deviation": 179.6315,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.988397,
-      "league_uncertainty": 275.5772,
+      "league_confidence": 0.9375,
+      "league_uncertainty": 254.298,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.0,
-        "3. Liga": 0.011603,
-        "4. Liga": 0.988397
+        "2. Liga": 6e-06,
+        "3. Liga": 0.062494,
+        "4. Liga": 0.9375
       }
     },
     {
@@ -1383,18 +1383,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 752.6832,
-      "rating_deviation": 203.3289,
+      "initial_rating": 810.0,
+      "rating": 786.4916,
+      "rating_deviation": 182.5152,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.827385,
-      "league_uncertainty": 271.5559,
+      "league_confidence": 0.807306,
+      "league_uncertainty": 256.3431,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.000155,
-        "3. Liga": 0.17246,
-        "4. Liga": 0.827385
+        "2. Liga": 0.000113,
+        "3. Liga": 0.192582,
+        "4. Liga": 0.807306
       }
     },
     {
@@ -1404,18 +1404,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 940.9656,
-      "rating_deviation": 208.6551,
+      "initial_rating": 810.0,
+      "rating": 997.7943,
+      "rating_deviation": 182.0303,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.597503,
-      "league_uncertainty": 275.5666,
+      "league_confidence": 0.517457,
+      "league_uncertainty": 255.9981,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.002049,
-        "3. Liga": 0.400448,
-        "4. Liga": 0.597503
+        "2. Liga": 0.002065,
+        "3. Liga": 0.480477,
+        "4. Liga": 0.517457
       }
     },
     {
@@ -1425,18 +1425,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 636.1132,
-      "rating_deviation": 200.1769,
+      "initial_rating": 810.0,
+      "rating": 728.7946,
+      "rating_deviation": 189.5502,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.916996,
-      "league_uncertainty": 269.204,
+      "league_confidence": 0.858128,
+      "league_uncertainty": 261.3987,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 2.3e-05,
-        "3. Liga": 0.082981,
-        "4. Liga": 0.916996
+        "2. Liga": 6.2e-05,
+        "3. Liga": 0.14181,
+        "4. Liga": 0.858128
       }
     },
     {
@@ -1446,18 +1446,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 987.4134,
-      "rating_deviation": 201.1892,
+      "initial_rating": 810.0,
+      "rating": 982.698,
+      "rating_deviation": 184.6753,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.531867,
-      "league_uncertainty": 269.9576,
+      "league_confidence": 0.540618,
+      "league_uncertainty": 257.8855,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.002906,
-        "3. Liga": 0.465227,
-        "4. Liga": 0.531867
+        "2. Liga": 0.001833,
+        "3. Liga": 0.457549,
+        "4. Liga": 0.540618
       }
     },
     {
@@ -1467,18 +1467,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 579.7533,
-      "rating_deviation": 192.4669,
+      "initial_rating": 810.0,
+      "rating": 789.1913,
+      "rating_deviation": 186.1942,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.948332,
-      "league_uncertainty": 263.5214,
+      "league_confidence": 0.801993,
+      "league_uncertainty": 258.9755,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 6e-06,
-        "3. Liga": 0.051662,
-        "4. Liga": 0.948332
+        "2. Liga": 0.000136,
+        "3. Liga": 0.197871,
+        "4. Liga": 0.801993
       }
     },
     {
@@ -1488,18 +1488,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 793.4425,
-      "rating_deviation": 213.8617,
+      "initial_rating": 810.0,
+      "rating": 706.0761,
+      "rating_deviation": 180.2041,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.779689,
-      "league_uncertainty": 279.5297,
+      "league_confidence": 0.882844,
+      "league_uncertainty": 254.7028,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 0.000393,
-        "3. Liga": 0.219918,
-        "4. Liga": 0.779689
+        "2. Liga": 2.8e-05,
+        "3. Liga": 0.117128,
+        "4. Liga": 0.882844
       }
     },
     {
@@ -1509,18 +1509,18 @@
       "season": "Season WiSe26/27",
       "league": "4. Liga",
       "group": "N",
-      "initial_rating": 555.0,
-      "rating": 614.8504,
-      "rating_deviation": 195.2231,
+      "initial_rating": 810.0,
+      "rating": 805.8904,
+      "rating_deviation": 186.4014,
       "matches_played": 2,
       "predicted_league": "4. Liga",
-      "league_confidence": 0.931139,
-      "league_uncertainty": 265.5411,
+      "league_confidence": 0.78343,
+      "league_uncertainty": 259.1244,
       "league_probabilities": {
         "1. Liga": 0.0,
-        "2. Liga": 1.3e-05,
-        "3. Liga": 0.068848,
-        "4. Liga": 0.931139
+        "2. Liga": 0.000176,
+        "3. Liga": 0.216394,
+        "4. Liga": 0.78343
       }
     }
   ]

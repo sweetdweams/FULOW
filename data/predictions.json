@@ -1,597 +1,8 @@
 {
-  "generated_at": "2026-11-01T22:08:22+00:00",
+  "generated_at": "2026-11-04T09:53:20+00:00",
   "predictions": [
     {
       "match_id": "M106",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T072",
-        "name": "Mia san Meta"
-      },
-      "team_b": {
-        "id": "T074",
-        "name": "T\u00dc V\u00ed\u00f0\u00f3pnir"
-      },
-      "probability_a": 0.286928,
-      "probability_b": 0.713072,
-      "confidence": 0.426144
-    },
-    {
-      "match_id": "M107",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T020",
-        "name": "Purrfect Aim"
-      },
-      "team_b": {
-        "id": "T083",
-        "name": "OSGG Pink DinOS"
-      },
-      "probability_a": 0.5409,
-      "probability_b": 0.4591,
-      "confidence": 0.081801
-    },
-    {
-      "match_id": "M108",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T012",
-        "name": "ESUG PlatParty"
-      },
-      "team_b": {
-        "id": "T038",
-        "name": "THM Knights"
-      },
-      "probability_a": 0.120189,
-      "probability_b": 0.879811,
-      "confidence": 0.759622
-    },
-    {
-      "match_id": "M109",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T081",
-        "name": "DA Katerstrophe"
-      },
-      "team_b": {
-        "id": "T010",
-        "name": "KIT SC Bober"
-      },
-      "probability_a": 0.305894,
-      "probability_b": 0.694106,
-      "confidence": 0.388213
-    },
-    {
-      "match_id": "M110",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T016",
-        "name": "BeK F\u00f6rdeschwimmer"
-      },
-      "team_b": {
-        "id": "T027",
-        "name": "KIT SC [k\u0153ri]werk addicted tryhards"
-      },
-      "probability_a": 0.106369,
-      "probability_b": 0.893631,
-      "confidence": 0.787262
-    },
-    {
-      "match_id": "M111",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T086",
-        "name": "HSMW Esports Quacksalber"
-      },
-      "team_b": {
-        "id": "T007",
-        "name": "DG Lotus"
-      },
-      "probability_a": 0.116574,
-      "probability_b": 0.883426,
-      "confidence": 0.766851
-    },
-    {
-      "match_id": "M112",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T005",
-        "name": "Ilmenauer T.E.E."
-      },
-      "team_b": {
-        "id": "T002",
-        "name": "HsGL Pumas"
-      },
-      "probability_a": 0.407206,
-      "probability_b": 0.592794,
-      "confidence": 0.185589
-    },
-    {
-      "match_id": "M113",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T078",
-        "name": "KIT SC Ragebait Raudis"
-      },
-      "team_b": {
-        "id": "T022",
-        "name": "BUW Strays"
-      },
-      "probability_a": 0.37829,
-      "probability_b": 0.62171,
-      "confidence": 0.24342
-    },
-    {
-      "match_id": "M114",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T080",
-        "name": "DA Meowfia"
-      },
-      "team_b": {
-        "id": "T084",
-        "name": "UKGarKeinPlan"
-      },
-      "probability_a": 0.696273,
-      "probability_b": 0.303727,
-      "confidence": 0.392546
-    },
-    {
-      "match_id": "M115",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T075",
-        "name": "DA Wasted Pawtential"
-      },
-      "team_b": {
-        "id": "T085",
-        "name": "OVGU Esports"
-      },
-      "probability_a": 0.397558,
-      "probability_b": 0.602442,
-      "confidence": 0.204884
-    },
-    {
-      "match_id": "M116",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T082",
-        "name": "DG Orion"
-      },
-      "team_b": {
-        "id": "T009",
-        "name": "Bremer Wasch Dienst"
-      },
-      "probability_a": 0.186599,
-      "probability_b": 0.813401,
-      "confidence": 0.626803
-    },
-    {
-      "match_id": "M117",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T073",
-        "name": "AIX Super C9"
-      },
-      "team_b": {
-        "id": "T015",
-        "name": "LES Leutzscher Lappen"
-      },
-      "probability_a": 0.153014,
-      "probability_b": 0.846986,
-      "confidence": 0.693972
-    },
-    {
-      "match_id": "M118",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T019",
-        "name": "KIT SC Spezi auf 1"
-      },
-      "team_b": {
-        "id": "T008",
-        "name": "Skill IssUEH"
-      },
-      "probability_a": 0.637256,
-      "probability_b": 0.362744,
-      "confidence": 0.274512
-    },
-    {
-      "match_id": "M119",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T079",
-        "name": "UKG GutGuterAmGutesten"
-      },
-      "team_b": {
-        "id": "T013",
-        "name": "UKGrrrS\u00fc\u00dfm\u00e4use"
-      },
-      "probability_a": 0.113099,
-      "probability_b": 0.886901,
-      "confidence": 0.773802
-    },
-    {
-      "match_id": "M120",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T014",
-        "name": "Hai Noon"
-      },
-      "team_b": {
-        "id": "T017",
-        "name": "LUNA Nova"
-      },
-      "probability_a": 0.73182,
-      "probability_b": 0.26818,
-      "confidence": 0.46364
-    },
-    {
-      "match_id": "M121",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T046",
-        "name": "DG Chronos"
-      },
-      "team_b": {
-        "id": "T029",
-        "name": "LES GOOO"
-      },
-      "probability_a": 0.883724,
-      "probability_b": 0.116276,
-      "confidence": 0.767448
-    },
-    {
-      "match_id": "M122",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T036",
-        "name": "AIX Au Huur"
-      },
-      "team_b": {
-        "id": "T067",
-        "name": "1. ECF SendHelpAgain"
-      },
-      "probability_a": 0.166869,
-      "probability_b": 0.833131,
-      "confidence": 0.666262
-    },
-    {
-      "match_id": "M123",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T071",
-        "name": "DA Meowntain Dew"
-      },
-      "team_b": {
-        "id": "T006",
-        "name": "PBE Mondhasen"
-      },
-      "probability_a": 0.482943,
-      "probability_b": 0.517057,
-      "confidence": 0.034113
-    },
-    {
-      "match_id": "M124",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T077",
-        "name": "LUNA Void Veterans"
-      },
-      "team_b": {
-        "id": "T034",
-        "name": "RUB Goats Aqua"
-      },
-      "probability_a": 0.189293,
-      "probability_b": 0.810707,
-      "confidence": 0.621414
-    },
-    {
-      "match_id": "M125",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T053",
-        "name": "bUDSweiser"
-      },
-      "team_b": {
-        "id": "T018",
-        "name": "DG Strix"
-      },
-      "probability_a": 0.75034,
-      "probability_b": 0.24966,
-      "confidence": 0.50068
-    },
-    {
-      "match_id": "M126",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T003",
-        "name": "HSK Satyrus"
-      },
-      "team_b": {
-        "id": "T076",
-        "name": "UKG Runaway"
-      },
-      "probability_a": 0.443878,
-      "probability_b": 0.556122,
-      "confidence": 0.112244
-    },
-    {
-      "match_id": "M127",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T023",
-        "name": "RUB Goats Venom"
-      },
-      "team_b": {
-        "id": "T001",
-        "name": "Berlin Makaken"
-      },
-      "probability_a": 0.597924,
-      "probability_b": 0.402076,
-      "confidence": 0.195848
-    },
-    {
-      "match_id": "M128",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T033",
-        "name": "ESUG L\u00fcckenf\u00fcller"
-      },
-      "team_b": {
-        "id": "T030",
-        "name": "Haiground"
-      },
-      "probability_a": 0.689593,
-      "probability_b": 0.310407,
-      "confidence": 0.379185
-    },
-    {
-      "match_id": "M129",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "2. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T041",
-        "name": "LUnatics Ludwigshafen"
-      },
-      "team_b": {
-        "id": "T054",
-        "name": "Mainhardt"
-      },
-      "probability_a": 0.821849,
-      "probability_b": 0.178151,
-      "confidence": 0.643698
-    },
-    {
-      "match_id": "M130",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "2. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T069",
-        "name": "KIT SC Holy Inting Gamblers"
-      },
-      "team_b": {
-        "id": "T032",
-        "name": "Mogontiacum"
-      },
-      "probability_a": 0.943067,
-      "probability_b": 0.056933,
-      "confidence": 0.886133
-    },
-    {
-      "match_id": "M131",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "2. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T066",
-        "name": "clUEHless"
-      },
-      "team_b": {
-        "id": "T024",
-        "name": "UKG Fehler"
-      },
-      "probability_a": 0.513542,
-      "probability_b": 0.486458,
-      "confidence": 0.027083
-    },
-    {
-      "match_id": "M132",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "2. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T050",
-        "name": "DG Athena"
-      },
-      "team_b": {
-        "id": "T068",
-        "name": "RUB Goats N\u00f6 LG"
-      },
-      "probability_a": 0.69328,
-      "probability_b": 0.30672,
-      "confidence": 0.38656
-    },
-    {
-      "match_id": "M133",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "2. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T039",
-        "name": "RUB Goats"
-      },
-      "team_b": {
-        "id": "T026",
-        "name": "Bielefeld Sapphire"
-      },
-      "probability_a": 0.974492,
-      "probability_b": 0.025508,
-      "confidence": 0.948985
-    },
-    {
-      "match_id": "M134",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "2. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T065",
-        "name": "DA Purrgatory"
-      },
-      "team_b": {
-        "id": "T051",
-        "name": "BeK Flotten Sprotten"
-      },
-      "probability_a": 0.788384,
-      "probability_b": 0.211616,
-      "confidence": 0.576768
-    },
-    {
-      "match_id": "M135",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "2. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T028",
-        "name": "HSMW Esports Medics"
-      },
-      "team_b": {
-        "id": "T043",
-        "name": "KIT SC White Lotus"
-      },
-      "probability_a": 0.087208,
-      "probability_b": 0.912792,
-      "confidence": 0.825584
-    },
-    {
-      "match_id": "M136",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "2. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T047",
-        "name": "LES Connewitz Crusaders"
-      },
-      "team_b": {
-        "id": "T025",
-        "name": "HsGL Fennecs"
-      },
-      "probability_a": 0.667727,
-      "probability_b": 0.332273,
-      "confidence": 0.335453
-    },
-    {
-      "match_id": "M137",
       "date": "11.11.2026",
       "season": "Season WiSe26/27",
       "league": "1. Liga",
@@ -605,12 +16,12 @@
         "id": "T040",
         "name": "DG Elysium"
       },
-      "probability_a": 0.988007,
-      "probability_b": 0.011993,
-      "confidence": 0.976014
+      "probability_a": 0.834627,
+      "probability_b": 0.165373,
+      "confidence": 0.637574
     },
     {
-      "match_id": "M138",
+      "match_id": "M107",
       "date": "11.11.2026",
       "season": "Season WiSe26/27",
       "league": "1. Liga",
@@ -624,12 +35,12 @@
         "id": "T061",
         "name": "404 Average Cake Enjoyer"
       },
-      "probability_a": 0.520477,
-      "probability_b": 0.479523,
-      "confidence": 0.040955
+      "probability_a": 0.486253,
+      "probability_b": 0.513747,
+      "confidence": 0.194055
     },
     {
-      "match_id": "M139",
+      "match_id": "M108",
       "date": "11.11.2026",
       "season": "Season WiSe26/27",
       "league": "1. Liga",
@@ -643,12 +54,12 @@
         "id": "T055",
         "name": "Hamburger Delfine"
       },
-      "probability_a": 0.137806,
-      "probability_b": 0.862194,
-      "confidence": 0.724388
+      "probability_a": 0.23798,
+      "probability_b": 0.76202,
+      "confidence": 0.529032
     },
     {
-      "match_id": "M140",
+      "match_id": "M109",
       "date": "11.11.2026",
       "season": "Season WiSe26/27",
       "league": "1. Liga",
@@ -662,12 +73,12 @@
         "id": "T049",
         "name": "HSK Centauri"
       },
-      "probability_a": 0.945072,
-      "probability_b": 0.054928,
-      "confidence": 0.890145
+      "probability_a": 0.699812,
+      "probability_b": 0.300188,
+      "confidence": 0.486284
     },
     {
-      "match_id": "M141",
+      "match_id": "M110",
       "date": "11.11.2026",
       "season": "Season WiSe26/27",
       "league": "1. Liga",
@@ -681,9 +92,579 @@
         "id": "T062",
         "name": "HGI Amber"
       },
-      "probability_a": 0.202917,
-      "probability_b": 0.797083,
-      "confidence": 0.594166
+      "probability_a": 0.268471,
+      "probability_b": 0.731529,
+      "confidence": 0.507661
+    },
+    {
+      "match_id": "M111",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "2. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T041",
+        "name": "LUnatics Ludwigshafen"
+      },
+      "team_b": {
+        "id": "T054",
+        "name": "Mainhardt"
+      },
+      "probability_a": 0.660654,
+      "probability_b": 0.339346,
+      "confidence": 0.403771
+    },
+    {
+      "match_id": "M112",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "2. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T069",
+        "name": "KIT SC Holy Inting Gamblers"
+      },
+      "team_b": {
+        "id": "T032",
+        "name": "Mogontiacum"
+      },
+      "probability_a": 0.906905,
+      "probability_b": 0.093095,
+      "confidence": 0.715494
+    },
+    {
+      "match_id": "M113",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "2. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T066",
+        "name": "clUEHless"
+      },
+      "team_b": {
+        "id": "T024",
+        "name": "UKG Fehler"
+      },
+      "probability_a": 0.536807,
+      "probability_b": 0.463193,
+      "confidence": 0.192003
+    },
+    {
+      "match_id": "M114",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "2. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T050",
+        "name": "DG Athena"
+      },
+      "team_b": {
+        "id": "T068",
+        "name": "RUB Goats N\u00f6 LG"
+      },
+      "probability_a": 0.658499,
+      "probability_b": 0.341501,
+      "confidence": 0.362429
+    },
+    {
+      "match_id": "M115",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "2. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T039",
+        "name": "RUB Goats"
+      },
+      "team_b": {
+        "id": "T026",
+        "name": "Bielefeld Sapphire"
+      },
+      "probability_a": 0.831411,
+      "probability_b": 0.168589,
+      "confidence": 0.610212
+    },
+    {
+      "match_id": "M116",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "2. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T065",
+        "name": "DA Purrgatory"
+      },
+      "team_b": {
+        "id": "T051",
+        "name": "BeK Flotten Sprotten"
+      },
+      "probability_a": 0.658249,
+      "probability_b": 0.341751,
+      "confidence": 0.409648
+    },
+    {
+      "match_id": "M118",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "2. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T047",
+        "name": "LES Connewitz Crusaders"
+      },
+      "team_b": {
+        "id": "T025",
+        "name": "HsGL Fennecs"
+      },
+      "probability_a": 0.622127,
+      "probability_b": 0.377873,
+      "confidence": 0.372983
+    },
+    {
+      "match_id": "M119",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "3. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T046",
+        "name": "DG Chronos"
+      },
+      "team_b": {
+        "id": "T029",
+        "name": "LES GOOO"
+      },
+      "probability_a": 0.730091,
+      "probability_b": 0.269909,
+      "confidence": 0.510269
+    },
+    {
+      "match_id": "M120",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "3. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T036",
+        "name": "AIX Au Huur"
+      },
+      "team_b": {
+        "id": "T067",
+        "name": "1. ECF SendHelpAgain"
+      },
+      "probability_a": 0.235187,
+      "probability_b": 0.764813,
+      "confidence": 0.52344
+    },
+    {
+      "match_id": "M121",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "3. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T071",
+        "name": "DA Meowntain Dew"
+      },
+      "team_b": {
+        "id": "T006",
+        "name": "PBE Mondhasen"
+      },
+      "probability_a": 0.546232,
+      "probability_b": 0.453768,
+      "confidence": 0.244676
+    },
+    {
+      "match_id": "M122",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "3. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T077",
+        "name": "LUNA Void Veterans"
+      },
+      "team_b": {
+        "id": "T034",
+        "name": "RUB Goats Aqua"
+      },
+      "probability_a": 0.411969,
+      "probability_b": 0.588031,
+      "confidence": 0.206714
+    },
+    {
+      "match_id": "M123",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "3. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T053",
+        "name": "bUDSweiser"
+      },
+      "team_b": {
+        "id": "T018",
+        "name": "DG Strix"
+      },
+      "probability_a": 0.425086,
+      "probability_b": 0.574914,
+      "confidence": 0.308236
+    },
+    {
+      "match_id": "M124",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "3. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T003",
+        "name": "HSK Satyrus"
+      },
+      "team_b": {
+        "id": "T076",
+        "name": "UKG Runaway"
+      },
+      "probability_a": 0.28407,
+      "probability_b": 0.71593,
+      "confidence": 0.518353
+    },
+    {
+      "match_id": "M125",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "3. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T023",
+        "name": "RUB Goats Venom"
+      },
+      "team_b": {
+        "id": "T001",
+        "name": "Berlin Makaken"
+      },
+      "probability_a": 0.675404,
+      "probability_b": 0.324596,
+      "confidence": 0.515189
+    },
+    {
+      "match_id": "M126",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "3. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T033",
+        "name": "ESUG L\u00fcckenf\u00fcller"
+      },
+      "team_b": {
+        "id": "T030",
+        "name": "Haiground"
+      },
+      "probability_a": 0.541943,
+      "probability_b": 0.458057,
+      "confidence": 0.244168
+    },
+    {
+      "match_id": "M127",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T072",
+        "name": "Mia san Meta"
+      },
+      "team_b": {
+        "id": "T074",
+        "name": "T\u00dc V\u00ed\u00f0\u00f3pnir"
+      },
+      "probability_a": 0.497367,
+      "probability_b": 0.502633,
+      "confidence": 0.141942
+    },
+    {
+      "match_id": "M128",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T020",
+        "name": "Purrfect Aim"
+      },
+      "team_b": {
+        "id": "T083",
+        "name": "OSGG Pink DinOS"
+      },
+      "probability_a": 0.250014,
+      "probability_b": 0.749986,
+      "confidence": 0.416687
+    },
+    {
+      "match_id": "M129",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T012",
+        "name": "ESUG PlatParty"
+      },
+      "team_b": {
+        "id": "T038",
+        "name": "THM Knights"
+      },
+      "probability_a": 0.334679,
+      "probability_b": 0.665321,
+      "confidence": 0.407455
+    },
+    {
+      "match_id": "M130",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T081",
+        "name": "DA Katerstrophe"
+      },
+      "team_b": {
+        "id": "T010",
+        "name": "KIT SC Bober"
+      },
+      "probability_a": 0.728248,
+      "probability_b": 0.271752,
+      "confidence": 0.417224
+    },
+    {
+      "match_id": "M131",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T016",
+        "name": "BeK F\u00f6rdeschwimmer"
+      },
+      "team_b": {
+        "id": "T027",
+        "name": "KIT SC [k\u0153ri]werk addicted tryhards"
+      },
+      "probability_a": 0.227655,
+      "probability_b": 0.772345,
+      "confidence": 0.569298
+    },
+    {
+      "match_id": "M132",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T086",
+        "name": "HSMW Esports Quacksalber"
+      },
+      "team_b": {
+        "id": "T007",
+        "name": "DG Lotus"
+      },
+      "probability_a": 0.553081,
+      "probability_b": 0.446919,
+      "confidence": 0.233142
+    },
+    {
+      "match_id": "M133",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T005",
+        "name": "Ilmenauer T.E.E."
+      },
+      "team_b": {
+        "id": "T002",
+        "name": "HsGL Pumas"
+      },
+      "probability_a": 0.470049,
+      "probability_b": 0.529951,
+      "confidence": 0.24147
+    },
+    {
+      "match_id": "M134",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T078",
+        "name": "KIT SC Ragebait Raudis"
+      },
+      "team_b": {
+        "id": "T022",
+        "name": "BUW Strays"
+      },
+      "probability_a": 0.749109,
+      "probability_b": 0.250891,
+      "confidence": 0.393979
+    },
+    {
+      "match_id": "M135",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T080",
+        "name": "DA Meowfia"
+      },
+      "team_b": {
+        "id": "T084",
+        "name": "UKGarKeinPlan"
+      },
+      "probability_a": 0.497882,
+      "probability_b": 0.502118,
+      "confidence": 0.182059
+    },
+    {
+      "match_id": "M136",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T075",
+        "name": "DA Wasted Pawtential"
+      },
+      "team_b": {
+        "id": "T085",
+        "name": "OVGU Esports"
+      },
+      "probability_a": 0.56597,
+      "probability_b": 0.43403,
+      "confidence": 0.210882
+    },
+    {
+      "match_id": "M137",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T082",
+        "name": "DG Orion"
+      },
+      "team_b": {
+        "id": "T009",
+        "name": "Bremer Wasch Dienst"
+      },
+      "probability_a": 0.467893,
+      "probability_b": 0.532107,
+      "confidence": 0.192106
+    },
+    {
+      "match_id": "M138",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T073",
+        "name": "AIX Super C9"
+      },
+      "team_b": {
+        "id": "T015",
+        "name": "LES Leutzscher Lappen"
+      },
+      "probability_a": 0.512039,
+      "probability_b": 0.487961,
+      "confidence": 0.147495
+    },
+    {
+      "match_id": "M139",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T019",
+        "name": "KIT SC Spezi auf 1"
+      },
+      "team_b": {
+        "id": "T008",
+        "name": "Skill IssUEH"
+      },
+      "probability_a": 0.378982,
+      "probability_b": 0.621018,
+      "confidence": 0.40725
+    },
+    {
+      "match_id": "M140",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T079",
+        "name": "UKG GutGuterAmGutesten"
+      },
+      "team_b": {
+        "id": "T013",
+        "name": "UKGrrrS\u00fc\u00dfm\u00e4use"
+      },
+      "probability_a": 0.597912,
+      "probability_b": 0.402088,
+      "confidence": 0.28011
+    },
+    {
+      "match_id": "M141",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "4. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T014",
+        "name": "Hai Noon"
+      },
+      "team_b": {
+        "id": "T017",
+        "name": "LUNA Nova"
+      },
+      "probability_a": 0.694465,
+      "probability_b": 0.305535,
+      "confidence": 0.46952
     }
   ]
 }

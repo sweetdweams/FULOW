@@ -2,28 +2,26 @@
 .DS_Store
 Thumbs.db
 .vscode/
+.idea/
+FULOW.code-workspace
+*.code-workspace
 ToDo.md
-*psd
-legal/*
-legal/
-.code-workspace
-# Local server logs
-resources/*.svg
-# Secrets and local configuration
+*.psd
+
+# Local documentation and test files
+Transistion_To_New_engineVersion.md
+next_steps.md
 test_wildcard_regression.py
 testenhance.py
-next_steps.md
+*.bat
+
+# Local archives and secrets
 *.zip
 .env
 .env.*
 *.secret
 *.key
 credentials.json
-test_wildcard_regression.py
-testenhance.py
-next_steps.md
-*.zip
-resources/*.svg
 
 # Python runtime files
 __pycache__/
@@ -34,11 +32,8 @@ __pycache__/
 output/
 public/
 
-# Local editor and OS files
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
+# Generated resource files
+resources/*.svg
 
-#crosscheck
-crosscheck_engine/*
+# Local cross-check workspace
+crosscheck_engine/

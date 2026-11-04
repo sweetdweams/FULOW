@@ -1,5 +1,17 @@
-1.1.3 bis 1.1.5 -- 01.11.2026
+1.1.6 -- 04.11.2026
+    - Datenaktualisierung
+    - Engineversion geändert: 1.0.1-stable → 1.1.1-stable
+        - Matches der Season WiSe26/27 wurden mit 1.1.1-stable neu berechnet
+    - Vorhersagen sortieren absteigend von 1. Liga zur 4. Liga
+
+1.1.5 -- 01.11.2026
 - Datenaktualisierung und MD3 Predctions
+
+1.1.4 -- 01.11.2026
+- Datenaktualisierung
+
+1.1.3 -- 01.11.2026
+- Datenaktualisierung
 
 1.1.2 -- 29.10.2026
 - Datenaktualisierung
