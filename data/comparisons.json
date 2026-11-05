@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T23:03:44+00:00",
+  "generated_at": "2026-11-05T00:32:25+00:00",
   "comparisons": [
     {
       "team_a_id": "T001",
@@ -6614,7 +6614,7 @@
       "team_b_id": "T086",
       "probability_a": 0.897499,
       "probability_b": 0.102501,
-      "confidence": 0.566738
+      "confidence": 0.566737
     },
     {
       "team_a_id": "T019",
@@ -11507,7 +11507,7 @@
       "team_b_id": "T064",
       "probability_a": 0.024617,
       "probability_b": 0.975383,
-      "confidence": 0.743308
+      "confidence": 0.743307
     },
     {
       "team_a_id": "T036",
@@ -15700,7 +15700,7 @@
       "team_b_id": "T075",
       "probability_a": 0.997481,
       "probability_b": 0.002519,
-      "confidence": 0.641439
+      "confidence": 0.641438
     },
     {
       "team_a_id": "T063",

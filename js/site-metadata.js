@@ -1,3 +1,5 @@
+/* Webseite version = 1.1.8.1 */
+
 (async function syncSiteMetadata() {
   const sourcePath = document.currentScript?.dataset.source;
   if (!sourcePath) return;

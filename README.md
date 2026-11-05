@@ -80,8 +80,9 @@ the engine run and public data synchronization.
 
 During `python engine.py` (and therefore also during `python publish.py`), the
 private project synchronizes the HTML metadata for the web version, engine
-version and latest dataset update across all public pages. The visible values
-on the Model page are updated in the same step.
+version and latest dataset update across all public pages. It also updates the
+web version comment at the top of the shared JavaScript files. The visible
+values on the Model page are updated in the same step.
 
 The canonical historical chart data is `performance.json.matchday_history`.
 Each entry represents one season/matchday and contains cumulative performance
