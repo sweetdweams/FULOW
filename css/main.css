@@ -780,10 +780,14 @@ a.team-link-b:focus-visible,
 
 .trend-column {
   text-align: right;
+  min-width: 5.6rem;
+  width: 5.6rem;
 }
 
 .trend-column-heading {
   text-align: right;
+  min-width: 5.6rem;
+  width: 5.6rem;
 }
 
 .trend-badge-wrap {
@@ -794,6 +798,8 @@ a.team-link-b:focus-visible,
   gap: 0.15rem;
   line-height: 1.15;
   text-align: right;
+  width: 100%;
+  min-width: 5.6rem;
 }
 
 .trend-performance {
@@ -1157,7 +1163,7 @@ h2 {
 
 .rank-item {
   display: grid;
-  grid-template-columns: 2.2rem auto minmax(0, 1fr) auto auto;
+  grid-template-columns: 2.2rem 5.6rem minmax(0, 1fr) auto auto;
   align-items: center;
   padding: 0.9rem 1.25rem;
   background: var(--panel);
@@ -1172,6 +1178,7 @@ h2 {
   flex-direction: column;
   gap: 0.2rem;
   overflow: hidden;
+  margin-left: 1.25rem;
 }
 
 .rank-team-name {
@@ -2794,7 +2801,7 @@ body[data-page='home'] .rank-list {
 }
 
 body[data-page='home'] .rank-item {
-  grid-template-columns: 2rem auto minmax(120px, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: 2rem 5.6rem minmax(120px, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   padding: 0.65rem 0.8rem;
   gap: 0.75rem;
 }
@@ -3141,7 +3148,7 @@ body:not([data-page='home']) .site-footer-rich {
   }
 
   body[data-page='home'] .rank-item {
-    grid-template-columns: 2rem auto minmax(0, 1fr) auto;
+    grid-template-columns: 2rem 5.6rem minmax(0, 1fr) auto;
   }
 
   body[data-page='home'] .rank-team-info {

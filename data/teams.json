@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T16:08:48+00:00",
+  "generated_at": "2026-11-06T17:02:59+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -503,7 +503,7 @@
       "group": "B",
       "initial_rating": 1850.0,
       "rating": 2087.5219,
-      "power_rating": 2120.8772,
+      "power_rating": 2120.8771,
       "form": 0.7778,
       "rating_deviation": 142.9512,
       "matches_played": 4,
@@ -1469,7 +1469,7 @@
       "group": "N",
       "initial_rating": 810.0,
       "rating": 479.8273,
-      "power_rating": 464.3883,
+      "power_rating": 464.3882,
       "form": -0.2222,
       "rating_deviation": 231.5863,
       "matches_played": 3,

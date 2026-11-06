@@ -5,6 +5,8 @@
 - Datenaktualisierung
 - Rating-Verlauf diagramm auf Team Detailseite wieder hinzugefügt (in-Dev Version)
 - Changelog überarbeitet
+## 1.2.0.1 
+- Fehlerhafte Anzeige in der Performance Tabelle auf der Startseite behoben
 
 # 1.1.8 -- 05.11.2026
 - Datenaktualisierung

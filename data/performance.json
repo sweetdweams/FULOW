@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T16:08:48+00:00",
+  "generated_at": "2026-11-06T17:02:59+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -12,9 +12,9 @@
   "log_loss": 0.613457,
   "brier_score": 0.210619,
   "calibration_error": 0.077052,
-  "runtime_seconds": 1.19,
-  "runtime_display": "1,19 Sekunden",
-  "runtime_generated_at": "2026-11-06T16:08:48+00:00",
+  "runtime_seconds": 1.24,
+  "runtime_display": "1,24 Sekunden",
+  "runtime_generated_at": "2026-11-06T17:02:59+00:00",
   "periods": [
     {
       "id": "all_time",

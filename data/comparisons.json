@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T16:08:48+00:00",
+  "generated_at": "2026-11-06T17:02:59+00:00",
   "comparisons": [
     {
       "team_a_id": "T001",
@@ -13243,7 +13243,7 @@
       "team_b_id": "T050",
       "probability_a": 0.447861,
       "probability_b": 0.552139,
-      "confidence": 0.488049
+      "confidence": 0.48805
     },
     {
       "team_a_id": "T047",

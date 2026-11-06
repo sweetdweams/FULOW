@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.0 */
+/* Webseite version = 1.2.0.1 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -226,7 +226,9 @@ function computeTeamTrends(teams, ratingHistory) {
 
 function renderTrendBadge(trend) {
   if (!trend || trend.isUnranked) {
-    return element('span', { className: 'trend-same', text: '-' });
+    return element('div', { className: 'trend-badge-wrap' }, [
+      element('span', { className: 'trend-same', text: '-' })
+    ]);
   }
 
   let badgeNode;
