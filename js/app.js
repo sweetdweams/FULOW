@@ -1,4 +1,4 @@
-/* Webseite version = 1.1.8.1 */
+/* Webseite version = 1.2.0 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -53,21 +53,27 @@ const matchContextLabel = match => {
   const matchday = match.matchday ? `Matchday ${match.matchday}` : 'Matchday -';
   return `${phaseLabel(match.phase)} · ${matchday}`;
 };
-const element = (tag, { className, text, attributes = {}, style = {} } = {}, children = []) => {
+const element = (tag, { className, text, attributes = {}, style = {}, events = {} } = {}, children = []) => {
   const node = document.createElement(tag);
   if (className) node.className = className;
   if (text !== undefined) node.textContent = String(text);
   Object.entries(attributes).forEach(([name, value]) => node.setAttribute(name, String(value)));
+  Object.entries(events).forEach(([name, handler]) => {
+    if (typeof handler === 'function') node.addEventListener(name, handler);
+  });
   Object.assign(node.style, style);
   node.append(...children.filter(Boolean));
   return node;
 };
 const svgElement = (tag, options = {}, children = []) => {
   const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
-  const { className, text, attributes = {}, style = {} } = options;
+  const { className, text, attributes = {}, style = {}, events = {} } = options;
   if (className) node.setAttribute('class', className);
   if (text !== undefined) node.textContent = String(text);
   Object.entries(attributes).forEach(([name, value]) => node.setAttribute(name, String(value)));
+  Object.entries(events).forEach(([name, handler]) => {
+    if (typeof handler === 'function') node.addEventListener(name, handler);
+  });
   Object.assign(node.style, style);
   node.append(...children.filter(Boolean));
   return node;
@@ -142,6 +148,7 @@ function computeTeamTrends(teams, ratingHistory) {
     teamStats[t.id] = {
       team: t,
       ratingCurr: Number(t.rating) || 0,
+      powerRatingCurr: Number(t.power_rating ?? t.rating) || 0,
       matchesCurr: Number(t.matches_played) || 0,
       ratingPrev: Number(t.initial_rating || t.rating) || 0,
       matchesPrev: 0
@@ -168,10 +175,19 @@ function computeTeamTrends(teams, ratingHistory) {
     prevRankMap[s.team.id] = idx + 1;
   });
 
-  // Overall ranks at end of curr matchday (only placed teams with matchesCurr > 0)
-  const placedCurr = Object.values(teamStats)
+  // Base ranks at end of curr matchday using pure base rating (counterfactual)
+  const placedCurrBase = Object.values(teamStats)
     .filter(s => s.matchesCurr > 0)
     .sort((a, b) => b.ratingCurr - a.ratingCurr || (a.team.rating_deviation - b.team.rating_deviation) || a.team.name.localeCompare(b.team.name));
+  const currBaseRankMap = {};
+  placedCurrBase.forEach((s, idx) => {
+    currBaseRankMap[s.team.id] = idx + 1;
+  });
+
+  // Actual ranks at end of curr matchday using power rating (form-modified)
+  const placedCurr = Object.values(teamStats)
+    .filter(s => s.matchesCurr > 0)
+    .sort((a, b) => b.powerRatingCurr - a.powerRatingCurr || (a.team.rating_deviation - b.team.rating_deviation) || a.team.name.localeCompare(b.team.name));
   const currRankMap = {};
   placedCurr.forEach((s, idx) => {
     currRankMap[s.team.id] = idx + 1;
@@ -181,19 +197,27 @@ function computeTeamTrends(teams, ratingHistory) {
   teams.forEach(t => {
     const stats = teamStats[t.id];
     const cRank = currRankMap[t.id] ?? null;
+    const cBaseRank = currBaseRankMap[t.id] ?? null;
     const pRank = prevRankMap[t.id] ?? null;
     const isUnranked = cRank === null;
     const isNewlyPlaced = cRank !== null && pRank === null;
     const rankDiff = (cRank !== null && pRank !== null) ? (pRank - cRank) : null;
-    const ratingDiff = Math.round(stats.ratingCurr - stats.ratingPrev);
+    const ratingDiff = Math.round(stats.powerRatingCurr - stats.ratingPrev);
+
+    // Form-Effekt: Differenz zwischen Rang ohne Form (cBaseRank) und Rang mit Form (cRank)
+    const formRankDiff = (cRank !== null && cBaseRank !== null) ? (cBaseRank - cRank) : 0;
+    const isFormDriven = !isNewlyPlaced && (cRank !== null) && (cRank !== cBaseRank) && (cRank !== pRank);
 
     trends[t.id] = {
       cRank,
+      cBaseRank,
       pRank,
       rankDiff,
       ratingDiff,
+      formRankDiff,
       isUnranked,
-      isNewlyPlaced
+      isNewlyPlaced,
+      isFormDriven
     };
   });
 
@@ -204,51 +228,138 @@ function renderTrendBadge(trend) {
   if (!trend || trend.isUnranked) {
     return element('span', { className: 'trend-same', text: '-' });
   }
+
+  let badgeNode;
+  let isSame = false;
   if (trend.isNewlyPlaced) {
     const sign = trend.ratingDiff > 0 ? '+' : '';
     const ratingText = trend.ratingDiff !== 0 ? ` Rating-Änderung: ${sign}${trend.ratingDiff}` : '';
-    return element('span', {
+    badgeNode = element('span', {
       className: 'trend-new',
       text: 'newly placed',
       attributes: { title: `Neu im Ranking.${ratingText}` }
     });
-  }
-  const { rankDiff, ratingDiff } = trend;
-  if (rankDiff > 0) {
-    return element('span', { className: 'trend-up', text: `↑ +${rankDiff}`, attributes: { title: `Rating-Zuwachs: +${ratingDiff}` } });
-  } else if (rankDiff < 0) {
-    return element('span', { className: 'trend-down', text: `↓ ${rankDiff}`, attributes: { title: `Rating-Änderung: ${rankDiff}` } });
   } else {
-    const sign = ratingDiff > 0 ? '+' : '';
-    return element('span', { className: 'trend-same', text: '=', attributes: { title: `Rating-Änderung: ${sign}${ratingDiff}` } });
+    const { rankDiff, ratingDiff } = trend;
+    if (rankDiff > 0) {
+      badgeNode = element('span', {
+        className: 'trend-up',
+        text: `↑ +${rankDiff}`,
+        attributes: { title: `Rating-Zuwachs: +${ratingDiff}` }
+      });
+    } else if (rankDiff < 0) {
+      badgeNode = element('span', {
+        className: 'trend-down',
+        text: `↓ ${rankDiff}`,
+        attributes: { title: `Rating-Änderung: ${rankDiff}` }
+      });
+    } else {
+      isSame = true;
+      const sign = ratingDiff > 0 ? '+' : '';
+      badgeNode = element('span', {
+        className: 'trend-same',
+        text: '=',
+        attributes: { title: `Rating-Änderung: ${sign}${ratingDiff}` }
+      });
+    }
   }
+
+  const formDiff = trend.formRankDiff || 0;
+  if (formDiff === 0 || isSame) {
+    return element('div', { className: 'trend-badge-wrap' }, [badgeNode]);
+  }
+
+  const formSign = formDiff > 0 ? '+' : '';
+  const perfNode = element('small', {
+    className: 'trend-performance',
+    text: `performance: ${formSign}${formDiff}`,
+    attributes: {
+      title: `Form-Einfluss: ${formSign}${formDiff} Plätze (Rang ${trend.cRank} statt Basis-Rang ${trend.cBaseRank})`
+    }
+  });
+
+  return element('div', { className: 'trend-badge-wrap' }, [badgeNode, perfNode]);
 }
 
 function parseChangelog(text) {
   const releases = [];
   let release;
+  let activeChanges;
   text.split(/\r?\n/).forEach(line => {
-    const releaseMatch = line.match(/^(\S+)\s+--\s+(.+)$/);
+    const releaseMatch = line.match(/^\s*(?:#{1,6}\s+)?(\S+)\s+--\s+(.+)$/);
     if (releaseMatch) {
-      release = { version: releaseMatch[1], date: releaseMatch[2], changes: [] };
+      release = { version: releaseMatch[1], date: releaseMatch[2], changes: [], subreleases: [] };
       releases.push(release);
+      activeChanges = release.changes;
+      return;
+    }
+
+    const subreleaseMatch = line.match(/^\s*(?:#{1,6}\s+)?(\d+(?:\.\d+)+)\s*$/);
+    if (release && subreleaseMatch) {
+      const subrelease = { version: subreleaseMatch[1], changes: [] };
+      release.subreleases.push(subrelease);
+      activeChanges = subrelease.changes;
       return;
     }
 
     const changeMatch = line.match(/^(\s*)-\s+(.+)$/);
-    if (release && changeMatch) {
-      release.changes.push({ indent: changeMatch[1].length, text: changeMatch[2] });
+    if (release && changeMatch && activeChanges) {
+      activeChanges.push({ indent: changeMatch[1].length, text: changeMatch[2] });
     }
   });
   return releases;
+}
+
+function changelogChangesList(changes) {
+  const list = element('ul', { className: 'changelog-changes' });
+  const listStack = [{ indent: -1, list }];
+  changes.forEach((change, changeIndex) => {
+    while (listStack.length > 1 && change.indent <= listStack[listStack.length - 1].indent) {
+      listStack.pop();
+    }
+
+    const item = element('li', {}, changelogInlineMarkdown(change.text));
+    listStack[listStack.length - 1].list.append(item);
+    const nextChange = changes[changeIndex + 1];
+    if (nextChange && nextChange.indent > change.indent) {
+      const nestedList = element('ul', { className: 'changelog-changes' });
+      item.append(nestedList);
+      listStack.push({ indent: change.indent, list: nestedList });
+    }
+  });
+  return list;
+}
+
+function changelogInlineMarkdown(text) {
+  const nodes = [];
+  const markdownPattern = /(\*\*[^*]+\*\*|__[^_]+__|\*[^*]+\*|_[^_]+_)/g;
+  let lastIndex = 0;
+  let match;
+
+  while ((match = markdownPattern.exec(text))) {
+    if (match.index > lastIndex) {
+      nodes.push(document.createTextNode(text.slice(lastIndex, match.index)));
+    }
+
+    const token = match[0];
+    const isBold = token.startsWith('**') || token.startsWith('__');
+    const content = token.slice(isBold ? 2 : 1, isBold ? -2 : -1);
+    nodes.push(element(isBold ? 'strong' : 'em', { text: content }));
+    lastIndex = markdownPattern.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    nodes.push(document.createTextNode(text.slice(lastIndex)));
+  }
+  return nodes;
 }
 
 async function changelogPage() {
   const target = document.querySelector('#changelog-list');
   if (!target) return;
 
-  const response = await fetch(`${ROOT}resources/change.log?v=${Date.now()}`);
-  if (!response.ok) throw new Error('change.log konnte nicht geladen werden');
+  const response = await fetch(`${ROOT}resources/change.md?v=${Date.now()}`);
+  if (!response.ok) throw new Error('change.md konnte nicht geladen werden');
 
   const releases = parseChangelog(await response.text());
   if (!releases.length) {
@@ -257,21 +368,23 @@ async function changelogPage() {
   }
 
   target.replaceChildren(...releases.map((release, index) => {
-    const list = element('ul', { className: 'changelog-changes' });
-    const listStack = [{ indent: -1, list }];
-    release.changes.forEach((change, changeIndex) => {
-      while (listStack.length > 1 && change.indent <= listStack[listStack.length - 1].indent) {
-        listStack.pop();
-      }
-
-      const item = element('li', { text: change.text });
-      listStack[listStack.length - 1].list.append(item);
-      const nextChange = release.changes[changeIndex + 1];
-      if (nextChange && nextChange.indent > change.indent) {
-        const nestedList = element('ul', { className: 'changelog-changes' });
-        item.append(nestedList);
-        listStack.push({ indent: change.indent, list: nestedList });
-      }
+    const content = [];
+    if (release.changes.length) content.push(changelogChangesList(release.changes));
+    release.subreleases.forEach(subrelease => {
+      content.push(element('section', { className: 'changelog-subrelease' }, [
+        element('small', {
+          className: 'changelog-subrelease-version',
+          text: `${subrelease.version}`,
+          style: {
+            display: 'block',
+            fontSize: '1.125rem',
+            fontWeight: '700',
+            lineHeight: '1.2',
+            textTransform: 'none'
+          }
+        }),
+        changelogChangesList(subrelease.changes)
+      ]));
     });
 
     return element('article', {
@@ -285,7 +398,7 @@ async function changelogPage() {
         ]),
         element('time', { className: 'changelog-release-date', text: release.date })
       ]),
-      list
+      ...content
     ]);
   }));
 }
@@ -616,207 +729,406 @@ function historicalPerformanceCharts(history) {
 
 function weightsHistoryChart(history) {
   const pointsWithWeights = (history || []).filter(
-    p => p && p.weights && typeof p.weights === 'object' && (!p.season || !p.season.includes('SoSe26'))
+    p => p && (p.weights || p.weights_by_system) && (!p.season || !p.season.includes('SoSe26'))
   );
   if (!pointsWithWeights.length) {
     return emptyState('Keine Verlaufsdaten zu Modell-Gewichten ab WiSe26/27 vorhanden.');
   }
 
-  const SERIES = [
+  const SIGNALS = [
     { id: 'direct', label: 'Direkter Vergleich', color: '#2563EB', desc: 'Direkte H2H-Duelle früherer Begegnungen' },
     { id: 'common_opponent', label: 'Gemeinsame Gegner', color: '#14B8A6', desc: 'Quervergleich über gemeinsame Kontrahenten' },
     { id: 'logic', label: 'Logische Kette', color: '#A855F7', desc: 'Transitive Matchketten im Graphen' },
     { id: 'form', label: 'Aktuelle Form', color: '#F97316', desc: 'Kurzzeit-Momentum und jüngste Formkurve' }
   ];
 
-  // Latest weights summary cards
-  const latestPoint = pointsWithWeights[pointsWithWeights.length - 1];
-  const summaryGrid = element('div', { className: 'weight-summary-grid' });
-  SERIES.forEach(s => {
-    const rawVal = latestPoint.weights?.[s.id];
-    const val = Number(rawVal);
-    const percentStr = Number.isFinite(val) ? `${(val * 100).toFixed(1)}%` : '-';
-    const delta = Number.isFinite(val) ? (val - 0.25) * 100 : 0;
-    const deltaStr = delta >= 0.05
-      ? `+${delta.toFixed(1)}% vs. Start`
-      : delta <= -0.05
-        ? `${delta.toFixed(1)}% vs. Start`
-        : '±0.0% vs. Start';
-    const deltaClass = delta >= 0.05 ? 'delta-positive' : delta <= -0.05 ? 'delta-negative' : 'delta-neutral';
+  const SYSTEMS = [
+    { id: '1. Liga', label: '1. Liga', color: '#2563EB', desc: 'Isolierte Gewichte für 1. Liga' },
+    { id: '2. Liga', label: '2. Liga', color: '#14B8A6', desc: 'Isolierte Gewichte für 2. Liga' },
+    { id: '3. Liga', label: '3. Liga', color: '#A855F7', desc: 'Isolierte Gewichte für 3. Liga' },
+    { id: '4. Liga', label: '4. Liga', color: '#F97316', desc: 'Aktives System für 4. Liga (Swiss Format)' },
+    { id: 'Ligen 1–3', label: 'Ligen 1–3', color: '#6366F1', desc: 'Aktives Verbund-System für 1., 2. und 3. Liga (Round Robin)' }
+  ];
 
-    summaryGrid.append(element('div', { className: 'weight-summary-card' }, [
-      element('div', { className: 'weight-summary-header' }, [
-        element('span', { className: 'chart-toggle-swatch', style: { backgroundColor: s.color } }),
-        element('strong', { text: s.label })
-      ]),
-      element('div', { className: 'weight-summary-value', style: { color: s.color }, text: percentStr }),
-      element('div', { className: `weight-summary-delta ${deltaClass}`, text: deltaStr }),
-      element('p', { className: 'weight-summary-desc', text: s.desc })
-    ]));
-  });
+  const COMPARISON_SYSTEMS = SYSTEMS.filter(s => s.id !== 'Ligen 1–3');
 
-  // Static legend (all 4 series always displayed)
-  const legend = element('div', { className: 'chart-controls' });
-  SERIES.forEach(s => {
-    legend.append(element('div', { className: 'chart-toggle', style: { cursor: 'default' } }, [
-      element('span', { className: 'chart-toggle-swatch', style: { backgroundColor: s.color } }),
-      element('span', { text: s.label })
-    ]));
-  });
-
-  const chartTarget = element('div', { className: 'historical-chart-target' });
-  const dates = pointsWithWeights.map(p => p.key);
-
-  const width = 900;
-  const height = 360;
-  const padding = { top: 24, right: 80, bottom: 50, left: 54 };
-  const plotHeight = height - padding.top - padding.bottom;
-  const plotWidth = width - padding.left - padding.right;
-
-  const allSelectedValues = SERIES.flatMap(s =>
-    pointsWithWeights.map(p => Number(p.weights?.[s.id])).filter(Number.isFinite)
-  );
-  const maxVal = Math.max(...allSelectedValues, 0.35);
-  const maximum = Math.max(0.40, Math.ceil(maxVal * 20) / 20);
-  const minimum = 0;
-
-  const x = index => padding.left + (dates.length > 1 ? (index / (dates.length - 1)) * plotWidth : plotWidth / 2);
-  const y = value => padding.top + (1 - ((value - minimum) / (maximum - minimum))) * plotHeight;
-
-  const svg = svgElement('svg', {
-    className: 'historical-analytics-chart',
-    attributes: { viewBox: `0 0 ${width} ${height}`, role: 'img', 'aria-label': 'Verlauf der Modell-Gewichte' }
-  });
-  svg.append(svgElement('title', { text: 'Verlauf der Korrektur-Gewichte' }));
-
-  // Y Gridlines and Labels
-  const tickStep = 0.05;
-  const yTicks = [];
-  for (let v = 0; v <= maximum + 0.001; v += tickStep) {
-    yTicks.push(Number(v.toFixed(2)));
+  function getSystemWeights(point, sysId) {
+    if (point && point.weights_by_system) {
+      if (point.weights_by_system[sysId]) return point.weights_by_system[sysId];
+      const normalizedSys = sysId.replace(/[\u2013\u2014-]/g, '-');
+      for (const [k, v] of Object.entries(point.weights_by_system)) {
+        if (k.replace(/[\u2013\u2014-]/g, '-') === normalizedSys) return v;
+      }
+    }
+    return point ? (point.weights || {}) : {};
   }
-  yTicks.forEach(tickVal => {
-    const yPos = y(tickVal);
+
+  let currentMode = 'system'; // 'system' | 'signal'
+  let currentSystemId = '1. Liga';
+  let currentSignalId = 'common_opponent';
+
+  const container = element('div', { className: 'historical-chart' });
+
+  function render() {
+    replaceChildren(container, []);
+
+    // 1. Mode Selector (System-Ansicht vs. Signal-Vergleich)
+    const modeSelector = element('div', { className: 'chart-mode-selector' }, [
+      element('button', {
+        className: `chart-mode-btn ${currentMode === 'system' ? 'is-active' : ''}`,
+        attributes: { type: 'button' },
+        text: 'System-Ansicht',
+        events: {
+          click: () => {
+            currentMode = 'system';
+            render();
+          }
+        }
+      }),
+      element('button', {
+        className: `chart-mode-btn ${currentMode === 'signal' ? 'is-active' : ''}`,
+        attributes: { type: 'button' },
+        text: 'Signal-Vergleich',
+        events: {
+          click: () => {
+            currentMode = 'signal';
+            render();
+          }
+        }
+      })
+    ]);
+
+    // 2. Sub-Selector (System or Signal)
+    let subSelector;
+    if (currentMode === 'system') {
+      subSelector = element('div', { className: 'chart-mode-selector' },
+        SYSTEMS.map(sys =>
+          element('button', {
+            className: `chart-mode-btn ${currentSystemId === sys.id ? 'is-active' : ''}`,
+            attributes: { type: 'button' },
+            text: sys.label,
+            events: {
+              click: () => {
+                currentSystemId = sys.id;
+                render();
+              }
+            }
+          })
+        )
+      );
+    } else {
+      subSelector = element('div', { className: 'chart-mode-selector' },
+        SIGNALS.map(sig =>
+          element('button', {
+            className: `chart-mode-btn ${currentSignalId === sig.id ? 'is-active' : ''}`,
+            attributes: { type: 'button' },
+            text: sig.label,
+            events: {
+              click: () => {
+                currentSignalId = sig.id;
+                render();
+              }
+            }
+          })
+        )
+      );
+    }
+
+    const controlsBar = element('div', { style: { display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.65rem', marginBottom: '1rem' } }, [
+      modeSelector,
+      subSelector
+    ]);
+
+    // 3. Summary Cards
+    const latestPoint = pointsWithWeights[pointsWithWeights.length - 1];
+    const summaryGrid = element('div', { className: 'weight-summary-grid' });
+
+    if (currentMode === 'system') {
+      const activeSysObj = SYSTEMS.find(s => s.id === currentSystemId) || SYSTEMS[0];
+      const weightsObj = getSystemWeights(latestPoint, activeSysObj.id);
+
+      SIGNALS.forEach(s => {
+        const val = Number(weightsObj[s.id]);
+        const percentStr = Number.isFinite(val) ? `${(val * 100).toFixed(1)}%` : '-';
+        const delta = Number.isFinite(val) ? (val - 0.25) * 100 : 0;
+        const deltaStr = delta >= 0.05
+          ? `+${delta.toFixed(1)}% vs. Start`
+          : delta <= -0.05
+            ? `${delta.toFixed(1)}% vs. Start`
+            : '±0.0% vs. Start';
+        const deltaClass = delta >= 0.05 ? 'delta-positive' : delta <= -0.05 ? 'delta-negative' : 'delta-neutral';
+
+        summaryGrid.append(element('div', { className: 'weight-summary-card' }, [
+          element('div', { className: 'weight-summary-header' }, [
+            element('span', { className: 'chart-toggle-swatch', style: { backgroundColor: s.color } }),
+            element('strong', { text: s.label })
+          ]),
+          element('div', { className: 'weight-summary-value', style: { color: s.color }, text: percentStr }),
+          element('div', { className: `weight-summary-delta ${deltaClass}`, text: deltaStr }),
+          element('p', { className: 'weight-summary-desc', text: s.desc })
+        ]));
+      });
+    } else {
+      const activeSigObj = SIGNALS.find(s => s.id === currentSignalId) || SIGNALS[0];
+
+      COMPARISON_SYSTEMS.forEach(sys => {
+        const weightsObj = getSystemWeights(latestPoint, sys.id);
+        const val = Number(weightsObj[activeSigObj.id]);
+        const percentStr = Number.isFinite(val) ? `${(val * 100).toFixed(1)}%` : '-';
+        const delta = Number.isFinite(val) ? (val - 0.25) * 100 : 0;
+        const deltaStr = delta >= 0.05
+          ? `+${delta.toFixed(1)}% vs. Start`
+          : delta <= -0.05
+            ? `${delta.toFixed(1)}% vs. Start`
+            : '±0.0% vs. Start';
+        const deltaClass = delta >= 0.05 ? 'delta-positive' : delta <= -0.05 ? 'delta-negative' : 'delta-neutral';
+
+        summaryGrid.append(element('div', { className: 'weight-summary-card' }, [
+          element('div', { className: 'weight-summary-header' }, [
+            element('span', { className: 'chart-toggle-swatch', style: { backgroundColor: sys.color } }),
+            element('strong', { text: sys.label })
+          ]),
+          element('div', { className: 'weight-summary-value', style: { color: sys.color }, text: percentStr }),
+          element('div', { className: `weight-summary-delta ${deltaClass}`, text: deltaStr }),
+          element('p', { className: 'weight-summary-desc', text: sys.desc })
+        ]));
+      });
+    }
+
+    // 4. Legend
+    const legend = element('div', { className: 'chart-controls' });
+    if (currentMode === 'system') {
+      SIGNALS.forEach(s => {
+        legend.append(element('div', { className: 'chart-toggle', style: { cursor: 'default' } }, [
+          element('span', { className: 'chart-toggle-swatch', style: { backgroundColor: s.color } }),
+          element('span', { text: s.label })
+        ]));
+      });
+    } else {
+      COMPARISON_SYSTEMS.forEach(sys => {
+        legend.append(element('div', { className: 'chart-toggle', style: { cursor: 'default' } }, [
+          element('span', {
+            className: 'chart-toggle-swatch',
+            style: { backgroundColor: sys.color }
+          }),
+          element('span', {
+            text: sys.label
+          })
+        ]));
+      });
+    }
+
+    // 5. SVG Chart
+    const chartTarget = element('div', { className: 'historical-chart-target' });
+    const dates = pointsWithWeights.map(p => p.key);
+
+    const width = 900;
+    const height = 360;
+    const padding = { top: 24, right: 80, bottom: 50, left: 54 };
+    const plotHeight = height - padding.top - padding.bottom;
+    const plotWidth = width - padding.left - padding.right;
+
+    let allSelectedValues = [];
+    if (currentMode === 'system') {
+      allSelectedValues = SIGNALS.flatMap(s =>
+        pointsWithWeights.map(p => Number(getSystemWeights(p, currentSystemId)[s.id])).filter(Number.isFinite)
+      );
+    } else {
+      allSelectedValues = COMPARISON_SYSTEMS.flatMap(sys =>
+        pointsWithWeights.map(p => Number(getSystemWeights(p, sys.id)[currentSignalId])).filter(Number.isFinite)
+      );
+    }
+
+    const maxVal = Math.max(...allSelectedValues, 0.35);
+    const maximum = Math.max(0.40, Math.ceil(maxVal * 20) / 20);
+    const minimum = 0;
+
+    const x = index => padding.left + (dates.length > 1 ? (index / (dates.length - 1)) * plotWidth : plotWidth / 2);
+    const y = value => padding.top + (1 - ((value - minimum) / (maximum - minimum))) * plotHeight;
+
+    const svg = svgElement('svg', {
+      className: 'historical-analytics-chart',
+      attributes: { viewBox: `0 0 ${width} ${height}`, role: 'img', 'aria-label': 'Verlauf der Modell-Gewichte' }
+    });
+    svg.append(svgElement('title', { text: 'Verlauf der Korrektur-Gewichte' }));
+
+    // Y Gridlines and Labels
+    const tickStep = 0.05;
+    const yTicks = [];
+    for (let v = 0; v <= maximum + 0.001; v += tickStep) {
+      yTicks.push(Number(v.toFixed(2)));
+    }
+    yTicks.forEach(tickVal => {
+      const yPos = y(tickVal);
+      svg.append(svgElement('line', {
+        className: 'chart-gridline',
+        attributes: { x1: padding.left, x2: width - padding.right, y1: yPos, y2: yPos }
+      }));
+      svg.append(svgElement('text', {
+        className: 'chart-axis-label',
+        attributes: { x: 4, y: yPos + 4 },
+        text: `${Math.round(tickVal * 100)}%`
+      }));
+    });
+
+    // 25% Baseline
+    const baselineY = y(0.25);
     svg.append(svgElement('line', {
-      className: 'chart-gridline',
-      attributes: { x1: padding.left, x2: width - padding.right, y1: yPos, y2: yPos }
+      attributes: {
+        x1: padding.left,
+        x2: width - padding.right,
+        y1: baselineY,
+        y2: baselineY
+      },
+      style: {
+        stroke: 'var(--muted)',
+        strokeDasharray: '4 4',
+        strokeWidth: '1.2',
+        opacity: '0.6'
+      }
     }));
     svg.append(svgElement('text', {
       className: 'chart-axis-label',
-      attributes: { x: 4, y: yPos + 4 },
-      text: `${Math.round(tickVal * 100)}%`
+      attributes: { x: width - padding.right + 6, y: baselineY + 4 },
+      style: { fill: 'var(--muted)', fontSize: '10px', opacity: '0.9' },
+      text: '25%'
     }));
-  });
 
-  // 25% Baseline (neutral equal weight line)
-  const baselineY = y(0.25);
-  svg.append(svgElement('line', {
-    attributes: {
-      x1: padding.left,
-      x2: width - padding.right,
-      y1: baselineY,
-      y2: baselineY
-    },
-    style: {
-      stroke: 'var(--muted)',
-      strokeDasharray: '4 4',
-      strokeWidth: '1.2',
-      opacity: '0.6'
-    }
-  }));
-  svg.append(svgElement('text', {
-    className: 'chart-axis-label',
-    attributes: { x: width - padding.right + 6, y: baselineY + 4 },
-    style: { fill: 'var(--muted)', fontSize: '10px', opacity: '0.9' },
-    text: '25%'
-  }));
-
-  // Season boundaries (if multiple seasons present)
-  pointsWithWeights.forEach((point, index) => {
-    if (index > 0 && point.season !== pointsWithWeights[index - 1].season) {
-      const xPos = x(index);
-      svg.append(svgElement('line', {
-        attributes: { x1: xPos, x2: xPos, y1: padding.top, y2: height - padding.bottom },
-        style: { stroke: 'var(--line)', strokeDasharray: '4 4', strokeWidth: '1.5' }
-      }));
-      const seasonName = (point.season || '').replace('Season ', '');
-      svg.append(svgElement('text', {
-        className: 'chart-x-label',
-        attributes: { x: xPos + 4, y: padding.top + 14, 'text-anchor': 'start' },
-        style: { fill: 'var(--muted)', fontSize: '10px', fontWeight: '700' },
-        text: `${seasonName} Start`
-      }));
-    }
-  });
-
-  // X Axis Labels
-  const labelIndices = new Set();
-  if (pointsWithWeights.length <= 8) {
-    pointsWithWeights.forEach((_, idx) => labelIndices.add(idx));
-  } else {
-    labelIndices.add(0);
-    labelIndices.add(pointsWithWeights.length - 1);
-    pointsWithWeights.forEach((p, idx) => {
-      if (idx > 0 && p.season !== pointsWithWeights[idx - 1].season) {
-        labelIndices.add(idx - 1);
-        labelIndices.add(idx);
+    // Season boundaries
+    pointsWithWeights.forEach((point, index) => {
+      if (index > 0 && point.season !== pointsWithWeights[index - 1].season) {
+        const xPos = x(index);
+        svg.append(svgElement('line', {
+          attributes: { x1: xPos, x2: xPos, y1: padding.top, y2: height - padding.bottom },
+          style: { stroke: 'var(--line)', strokeDasharray: '4 4', strokeWidth: '1.5' }
+        }));
+        const seasonName = (point.season || '').replace('Season ', '');
+        svg.append(svgElement('text', {
+          className: 'chart-x-label',
+          attributes: { x: xPos + 4, y: padding.top + 14, 'text-anchor': 'start' },
+          style: { fill: 'var(--muted)', fontSize: '10px', fontWeight: '700' },
+          text: `${seasonName} Start`
+        }));
       }
     });
-    labelIndices.add(Math.floor(pointsWithWeights.length / 3));
-    labelIndices.add(Math.floor((pointsWithWeights.length * 2) / 3));
+
+    // X Axis Labels
+    const labelIndices = new Set();
+    if (pointsWithWeights.length <= 8) {
+      pointsWithWeights.forEach((_, idx) => labelIndices.add(idx));
+    } else {
+      labelIndices.add(0);
+      labelIndices.add(pointsWithWeights.length - 1);
+      pointsWithWeights.forEach((p, idx) => {
+        if (idx > 0 && p.season !== pointsWithWeights[idx - 1].season) {
+          labelIndices.add(idx - 1);
+          labelIndices.add(idx);
+        }
+      });
+      labelIndices.add(Math.floor(pointsWithWeights.length / 3));
+      labelIndices.add(Math.floor((pointsWithWeights.length * 2) / 3));
+    }
+
+    Array.from(labelIndices).sort((a, b) => a - b).forEach(index => {
+      const p = pointsWithWeights[index];
+      const seasonShort = (p.season || '').replace('Season ', '');
+      const text = p.matchday != null ? `${seasonShort} Tag ${p.matchday}` : (p.label || p.key);
+      svg.append(svgElement('text', {
+        className: 'chart-x-label',
+        attributes: { x: x(index), y: height - 14, 'text-anchor': 'middle' },
+        text
+      }));
+    });
+
+    // Draw lines & points
+    if (currentMode === 'system') {
+      SIGNALS.forEach(s => {
+        const validPoints = pointsWithWeights
+          .map((p, idx) => ({ idx, val: Number(getSystemWeights(p, currentSystemId)[s.id]), point: p }))
+          .filter(item => Number.isFinite(item.val));
+
+        if (!validPoints.length) return;
+
+        const polylinePoints = validPoints
+          .map(item => `${x(item.idx).toFixed(1)},${y(item.val).toFixed(1)}`)
+          .join(' ');
+
+        svg.append(svgElement('polyline', {
+          className: 'historical-chart-line',
+          attributes: { points: polylinePoints },
+          style: { stroke: s.color, fill: 'none', strokeWidth: '2.5' }
+        }));
+
+        validPoints.forEach(item => {
+          const circle = svgElement('circle', {
+            className: 'historical-chart-point',
+            attributes: { cx: x(item.idx), cy: y(item.val), r: 4 },
+            style: { fill: s.color, stroke: 'var(--panel)' }
+          });
+          const matchdayLabel = item.point.label || item.point.key;
+          circle.append(svgElement('title', {
+            text: `${matchdayLabel} [${currentSystemId}]\n${s.label}: ${(item.val * 100).toFixed(1)}%`
+          }));
+          svg.append(circle);
+        });
+      });
+    } else {
+      const activeSigObj = SIGNALS.find(s => s.id === currentSignalId) || SIGNALS[0];
+      COMPARISON_SYSTEMS.forEach(sys => {
+        const validPoints = pointsWithWeights
+          .map((p, idx) => ({ idx, val: Number(getSystemWeights(p, sys.id)[currentSignalId]), point: p }))
+          .filter(item => Number.isFinite(item.val));
+
+        if (!validPoints.length) return;
+
+        const polylinePoints = validPoints
+          .map(item => `${x(item.idx).toFixed(1)},${y(item.val).toFixed(1)}`)
+          .join(' ');
+
+        const lineStyle = {
+          stroke: sys.color,
+          fill: 'none',
+          strokeWidth: '2.5'
+        };
+
+        svg.append(svgElement('polyline', {
+          className: 'historical-chart-line',
+          attributes: { points: polylinePoints },
+          style: lineStyle
+        }));
+
+        validPoints.forEach(item => {
+          const circle = svgElement('circle', {
+            className: 'historical-chart-point',
+            attributes: { cx: x(item.idx), cy: y(item.val), r: 4 },
+            style: { fill: sys.color, stroke: 'var(--panel)' }
+          });
+          const matchdayLabel = item.point.label || item.point.key;
+          circle.append(svgElement('title', {
+            text: `${matchdayLabel}\n${sys.label} · ${activeSigObj.label}: ${(item.val * 100).toFixed(1)}%`
+          }));
+          svg.append(circle);
+        });
+      });
+    }
+
+    replaceChildren(chartTarget, [svg]);
+
+    const titleText = currentMode === 'system'
+      ? `Signal-Verlauf für System: ${currentSystemId}`
+      : `System-Vergleich für Signal: ${SIGNALS.find(s => s.id === currentSignalId)?.label || currentSignalId}`;
+
+    container.append(
+      controlsBar,
+      summaryGrid,
+      element('h4', { style: { margin: '1rem 0 0.5rem', fontSize: '0.95rem', fontWeight: '700' }, text: titleText }),
+      legend,
+      chartTarget
+    );
   }
 
-  Array.from(labelIndices).sort((a, b) => a - b).forEach(index => {
-    const p = pointsWithWeights[index];
-    const seasonShort = (p.season || '').replace('Season ', '');
-    const text = p.matchday != null ? `${seasonShort} Tag ${p.matchday}` : (p.label || p.key);
-    svg.append(svgElement('text', {
-      className: 'chart-x-label',
-      attributes: { x: x(index), y: height - 14, 'text-anchor': 'middle' },
-      text
-    }));
-  });
-
-  // Draw series polylines and points (always all 4 series)
-  SERIES.forEach(s => {
-    const validPoints = pointsWithWeights
-      .map((p, idx) => ({ idx, val: Number(p.weights?.[s.id]), point: p }))
-      .filter(item => Number.isFinite(item.val));
-
-    if (!validPoints.length) return;
-
-    const polylinePoints = validPoints
-      .map(item => `${x(item.idx).toFixed(1)},${y(item.val).toFixed(1)}`)
-      .join(' ');
-
-    svg.append(svgElement('polyline', {
-      className: 'historical-chart-line',
-      attributes: { points: polylinePoints },
-      style: { stroke: s.color, fill: 'none' }
-    }));
-
-    validPoints.forEach(item => {
-      const circle = svgElement('circle', {
-        className: 'historical-chart-point',
-        attributes: { cx: x(item.idx), cy: y(item.val), r: 4 },
-        style: { fill: s.color, stroke: 'var(--panel)' }
-      });
-      const matchdayLabel = item.point.label || item.point.key;
-      circle.append(svgElement('title', {
-        text: `${matchdayLabel}\n${s.label}: ${(item.val * 100).toFixed(1)}%`
-      }));
-      svg.append(circle);
-    });
-  });
-
-  replaceChildren(chartTarget, [svg]);
-
-  return element('div', { className: 'historical-chart' }, [
-    summaryGrid,
-    element('h4', { style: { margin: '1rem 0 0.5rem', fontSize: '0.95rem', fontWeight: '700' }, text: 'Verlauf über Matchdays' }),
-    legend,
-    chartTarget
-  ]);
+  render();
+  return container;
 }
 
 function card(match) {
@@ -942,12 +1254,19 @@ async function home() {
   }
 
   // performance ranking Top 5
-  const ranked = [...teams.teams].filter(team => (team.matches_played || 0) > 0).sort((a, b) => b.rating - a.rating).slice(0, 5);
+  const ranked = [...teams.teams]
+    .filter(team => (team.matches_played || 0) > 0)
+    .sort((a, b) => Number(b.power_rating ?? b.rating) - Number(a.power_rating ?? a.rating))
+    .slice(0, 5);
   const homeTeams = document.querySelector('#home-teams');
   if (homeTeams) {
     replaceChildren(homeTeams, ranked.map((team, index) => {
       const trend = trends[team.id];
       const rankNum = trend?.cRank ? String(trend.cRank).padStart(2, '0') : String(index + 1).padStart(2, '0');
+      const displayRating = Math.round(team.power_rating ?? team.rating);
+      const ratingTitle = team.power_rating !== undefined && Math.round(team.power_rating) !== Math.round(team.rating)
+        ? `Power-Rating: ${Math.round(team.power_rating)} (Glicko: ${Math.round(team.rating)})`
+        : `Rating: ${Math.round(team.rating)}`;
       return element('div', { className: 'rank-item' }, [
         element('span', { className: 'rank-number', text: rankNum }),
         renderTrendBadge(trend),
@@ -960,7 +1279,7 @@ async function home() {
           element('span', { className: 'rank-stat-pill', text: `±${Math.round(team.rating_deviation)} RD` })
         ]),
         element('div', { className: 'rank-rating-box' }, [
-          element('span', { className: 'rank-rating-val', text: Math.round(team.rating) })
+          element('span', { className: 'rank-rating-val', text: displayRating, attributes: { title: ratingTitle } })
         ])
       ]);
     }));
@@ -1061,6 +1380,7 @@ async function teamsPage() {
   const trends = computeTeamTrends(data.teams || [], ratingHistory);
   const leagueThresholds = currentLeagueThresholds(data, performanceHistory);
   const leagueSigmas = currentLeagueSigmas(data, performanceHistory);
+  const currentSeason = data.season || data.teams.find(team => team.season)?.season;
   const table = document.querySelector('#team-table');
   const leagueSelect = document.querySelector('#team-league');
   const histogram = document.querySelector('#rating-histogram');
@@ -1083,7 +1403,7 @@ async function teamsPage() {
     const teams = data.teams
       .filter(team => team.name.toLowerCase().includes(query))
       .filter(team => !selectedLeague || team.league === selectedLeague)
-      .sort((a,b) => sort === 'name' ? a.name.localeCompare(b.name) : sort === 'matches' ? b.matches_played - a.matches_played : b.rating - a.rating);
+      .sort((a,b) => sort === 'name' ? a.name.localeCompare(b.name) : sort === 'matches' ? b.matches_played - a.matches_played : (Number(b.power_rating ?? b.rating) - Number(a.power_rating ?? a.rating)));
 
     if (table) {
       const rows = [];
@@ -1095,13 +1415,14 @@ async function teamsPage() {
       const highlightedTeamIds = new Set();
       const highlightedTopTeamIds = new Set();
       const highlightedBottomTeamIds = new Set();
+      const getTeamRating = team => Number(team.power_rating ?? team.rating);
       thresholds.forEach(([zone, threshold]) => {
         const sigma = leagueSigmas[zone.replace('/', '_')] || 200;
-        const boundary = teams.findIndex(team => Number(team.rating) <= threshold);
+        const boundary = teams.findIndex(team => getTeamRating(team) <= threshold);
         const boundaryIndex = boundary < 0 ? teams.length : boundary;
         if (boundaryIndex === 0 || boundaryIndex === teams.length) return;
         const candidates = teams.filter(team =>
-          Math.abs(Number(team.rating) - threshold) <= sigma
+          Math.abs(getTeamRating(team) - threshold) <= sigma
         );
         const thresholdTeamIds = new Set();
         [teams[boundaryIndex - 1], teams[boundaryIndex], ...candidates]
@@ -1121,12 +1442,12 @@ async function teamsPage() {
 
       teams.forEach((team, index) => {
         thresholds.forEach(([zone, threshold]) => {
-          const boundaryIndex = teams.findIndex(item => Number(item.rating) <= threshold);
+          const boundaryIndex = teams.findIndex(item => getTeamRating(item) <= threshold);
           if (boundaryIndex > 0 && boundaryIndex < teams.length && boundaryIndex === index) {
             rows.push(element('tr', { className: 'ranking-crosszone-row' }, [
               element('td', {
                 className: 'ranking-crosszone-label',
-                text: `predicted crosszone league ${zone} → ${Math.round(threshold)} ±${Math.round(leagueSigmas[zone.replace('/', '_')] || 200)}`,
+                text: `predicted league crosszone ${zone} → ${Math.round(threshold)} ±${Math.round(leagueSigmas[zone.replace('/', '_')] || 200)}`,
                 attributes: { colspan: '8' }
               })
             ]));
@@ -1142,7 +1463,7 @@ async function teamsPage() {
           className: rowClasses.join(' ')
         }, [
           element('td', { text: rankText }),
-          element('td', {}, [renderTrendBadge(trend)]),
+          element('td', { className: 'trend-column' }, [renderTrendBadge(trend)]),
           element('td', {}, [
             teamLink(team.id, team.name, 'team-link'),
             element('small', { className: 'team-abbreviation', text: ` (${teamAbbreviation(team)})` }),
@@ -1150,7 +1471,14 @@ async function teamsPage() {
             element('small', { className: 'muted', text: team.group ? `Group ${team.group}` : '' })
           ]),
           element('td', { text: team.league }),
-          element('td', { text: Math.round(team.rating) }),
+          element('td', {
+            text: Math.round(team.power_rating ?? team.rating),
+            attributes: {
+              title: team.power_rating !== undefined && Math.round(team.power_rating) !== Math.round(team.rating)
+                ? `Power-Rating: ${Math.round(team.power_rating)} (Glicko: ${Math.round(team.rating)})`
+                : `Rating: ${Math.round(team.rating)}`
+            }
+          }),
           element('td', { text: predictedSustainableLevel(team) }),
           element('td', { text: Math.round(team.rating_deviation) }),
           element('td', { text: team.matches_played })
@@ -1163,7 +1491,8 @@ async function teamsPage() {
       ]);
     }
 
-    if (histogram) replaceChildren(histogram, [ratingHistogram(teams, Number(rangeSelect?.value) || 100, leagueThresholds)]);
+    const histogramTeams = teams.filter(team => !currentSeason || team.season === currentSeason);
+    if (histogram) replaceChildren(histogram, [ratingHistogram(histogramTeams, Number(rangeSelect?.value) || 100, leagueThresholds)]);
   };
 
   document.querySelector('#team-search')?.addEventListener('input', render);
@@ -1181,7 +1510,7 @@ function ratingHistogram(teams, bucketSize, leagueThresholds = {}) {
   const padding = { top: 24, right: 24, bottom: 72, left: 52 };
   const plotWidth = width - padding.left - padding.right;
   const plotHeight = height - padding.top - padding.bottom;
-  const ratings = teams.map(team => Number(team.rating)).filter(Number.isFinite);
+  const ratings = teams.map(team => Number(team.power_rating ?? team.rating)).filter(Number.isFinite);
   const minRating = 0;
   const maxRating = Math.floor(Math.max(...ratings) / bucketSize) * bucketSize;
   const buckets = [];
@@ -1778,222 +2107,403 @@ function positionSustainabilityChart(canvas) {
   chart.style.top = `${Math.max(0, selected.top)}px`;
 };
 
-function positionHistoricalZoneLabels(canvas) {
-  const svg = canvas.querySelector('.line-chart');
-  const groups = [...canvas.querySelectorAll('.chart-historical-zone-label-group')];
-  if (!svg || !groups.length) return;
+function teamRatingChart(team, points, leagueThresholds = {}) {
+  const width = 740;
+  const height = 300;
+  const padding = { top: 32, right: 62, bottom: 42, left: 58 };
+  const plotWidth = width - padding.left - padding.right;
+  const plotHeight = height - padding.top - padding.bottom;
 
-  groups.forEach(group => {
-    const labels = [...group.querySelectorAll('.chart-historical-zone-label')];
-    if (labels.length < 2) return;
-    const lineX = Number(group.dataset.labelX);
-    if (!Number.isFinite(lineX)) return;
-    const anchor = group.dataset.labelAnchor || 'middle';
-    labels.forEach(label => {
-      label.setAttribute('x', String(lineX));
-      label.setAttribute('text-anchor', anchor);
-    });
+  const allRatingVals = points.flatMap(p => [
+    p.rating,
+    p.rating + p.rating_deviation,
+    p.rating - p.rating_deviation
+  ]).filter(Number.isFinite);
+  const rawMinRating = Math.min(...allRatingVals);
+  const rawMaxRating = Math.max(...allRatingVals);
+  const ratingMin = Math.floor((rawMinRating - 20) / 50) * 50;
+  const ratingMax = Math.ceil((rawMaxRating + 20) / 50) * 50;
+  const ratingRange = Math.max(ratingMax - ratingMin, 50);
+  const yRating = val => padding.top + (1 - (val - ratingMin) / ratingRange) * plotHeight;
+
+  const allRDVals = points.map(p => p.rating_deviation).filter(Number.isFinite);
+  const rawMinRD = Math.min(...allRDVals);
+  const rawMaxRD = Math.max(...allRDVals);
+  const rdMin = Math.max(0, Math.floor((rawMinRD - 10) / 25) * 25);
+  const rdMax = Math.ceil((rawMaxRD + 10) / 25) * 25;
+  const rdRange = Math.max(rdMax - rdMin, 25);
+  const yRD = val => padding.top + (1 - (val - rdMin) / rdRange) * plotHeight;
+
+  const x = idx => padding.left + (points.length > 1 ? (idx / (points.length - 1)) * plotWidth : plotWidth / 2);
+
+  const svg = svgNode('svg', {
+    viewBox: `0 0 ${width} ${height}`,
+    role: 'img',
+    class: 'line-chart',
+    'aria-label': `${team.name} Rating-Verlauf und Rating-Abweichung`
   });
+
+  const clipId = `chart-plot-clip-${chartClipId++}`;
+  const gradientId = `chart-rd-gradient-${chartClipId++}`;
+
+  const defs = svgNode('defs');
+  const clipPath = svgNode('clipPath', { id: clipId });
+  clipPath.append(svgNode('rect', {
+    x: padding.left,
+    y: padding.top,
+    width: plotWidth,
+    height: plotHeight
+  }));
+
+  const gradient = svgNode('linearGradient', {
+    id: gradientId,
+    x1: '0',
+    y1: '0',
+    x2: '0',
+    y2: '1'
+  });
+  const stop1 = svgNode('stop', { offset: '0%', 'stop-color': '#2563EB', 'stop-opacity': '0.22' });
+  const stop2 = svgNode('stop', { offset: '100%', 'stop-color': '#2563EB', 'stop-opacity': '0.06' });
+  gradient.append(stop1, stop2);
+  defs.append(clipPath, gradient);
+  svg.append(defs);
+
+  // Rating Grid & Left Axis (Rating)
+  const ratingStep = Math.max(25, Math.round((ratingRange / 5) / 25) * 25);
+  for (let val = ratingMin; val <= ratingMax; val += ratingStep) {
+    const yPos = yRating(val);
+    svg.append(svgNode('line', {
+      x1: padding.left,
+      x2: width - padding.right,
+      y1: yPos,
+      y2: yPos,
+      class: 'chart-guide'
+    }));
+    const lbl = svgNode('text', {
+      x: padding.left - 8,
+      y: yPos + 4,
+      'text-anchor': 'end',
+      class: 'chart-label'
+    });
+    lbl.textContent = String(Math.round(val));
+    svg.append(lbl);
+  }
+
+  // Left Axis Title
+  const leftAxisTitle = svgNode('text', {
+    x: padding.left,
+    y: padding.top - 12,
+    'text-anchor': 'middle',
+    class: 'chart-label',
+    style: 'font-weight: 700; fill: var(--blue, #2563EB);'
+  });
+  leftAxisTitle.textContent = 'Rating';
+  svg.append(leftAxisTitle);
+
+  // Right Axis Ticks (Rating Deviation)
+  const rdStep = Math.max(25, Math.round((rdRange / 3) / 25) * 25);
+  for (let val = rdMin; val <= rdMax; val += rdStep) {
+    const yPos = yRD(val);
+    const lbl = svgNode('text', {
+      x: width - padding.right + 8,
+      y: yPos + 4,
+      'text-anchor': 'start',
+      class: 'chart-label',
+      style: 'fill: #14B8A6;'
+    });
+    lbl.textContent = `±${Math.round(val)}`;
+    svg.append(lbl);
+  }
+
+  // Right Axis Title
+  const rightAxisTitle = svgNode('text', {
+    x: width - padding.right,
+    y: padding.top - 12,
+    'text-anchor': 'middle',
+    class: 'chart-label',
+    style: 'font-weight: 700; fill: #14B8A6;'
+  });
+  rightAxisTitle.textContent = '± RD';
+  svg.append(rightAxisTitle);
+
+  // League Thresholds
+  const thresholds = [
+    ['1. Liga / 2. Liga', Number(leagueThresholds?.['1_2'])],
+    ['2. Liga / 3. Liga', Number(leagueThresholds?.['2_3'])],
+    ['3. Liga / 4. Liga', Number(leagueThresholds?.['3_4'])]
+  ].filter(([, val]) => Number.isFinite(val) && val >= ratingMin && val <= ratingMax);
+  thresholds.forEach(([label, val]) => {
+    const yPos = yRating(val);
+    svg.append(svgNode('line', {
+      x1: padding.left,
+      x2: width - padding.right,
+      y1: yPos,
+      y2: yPos,
+      class: 'chart-league-threshold',
+      style: 'stroke-dasharray: 4 4; opacity: 0.55;'
+    }));
+    const threshLabel = svgNode('text', {
+      x: padding.left + 8,
+      y: yPos - 5,
+      class: 'chart-league-threshold-label'
+    });
+    threshLabel.textContent = `${label} (${Math.round(val)})`;
+    svg.append(threshLabel);
+  });
+
+  // Vertical Axes lines
+  svg.append(svgNode('line', {
+    x1: padding.left,
+    y1: padding.top,
+    x2: padding.left,
+    y2: height - padding.bottom,
+    class: 'chart-axis'
+  }));
+  svg.append(svgNode('line', {
+    x1: width - padding.right,
+    y1: padding.top,
+    x2: width - padding.right,
+    y2: height - padding.bottom,
+    class: 'chart-axis',
+    style: 'stroke: color-mix(in srgb, #14B8A6 60%, var(--ink));'
+  }));
+  svg.append(svgNode('line', {
+    x1: padding.left,
+    y1: height - padding.bottom,
+    x2: width - padding.right,
+    y2: height - padding.bottom,
+    class: 'chart-axis'
+  }));
+
+  // X Ticks & Labels
+  const xStep = Math.max(1, Math.ceil(points.length / 8));
+  const labelIndices = new Set();
+  labelIndices.add(0);
+  for (let i = xStep; i < points.length - 1; i += xStep) {
+    labelIndices.add(i);
+  }
+  labelIndices.add(points.length - 1);
+
+  points.forEach((p, idx) => {
+    const xPos = x(idx);
+    svg.append(svgNode('line', {
+      x1: xPos,
+      y1: padding.top,
+      x2: xPos,
+      y2: height - padding.bottom,
+      class: 'chart-grid'
+    }));
+    if (labelIndices.has(idx)) {
+      const txt = svgNode('text', {
+        x: xPos,
+        y: height - 12,
+        'text-anchor': 'middle',
+        class: 'chart-label'
+      });
+      txt.textContent = p.label;
+      svg.append(txt);
+    }
+  });
+
+  // Confidence Band (Rating ± RD)
+  if (points.length > 1) {
+    const upperCoords = points.map((p, i) => `${x(i).toFixed(1)},${yRating(p.rating + p.rating_deviation).toFixed(1)}`);
+    const lowerCoords = points.slice().reverse().map((p, i) => {
+      const origIdx = points.length - 1 - i;
+      return `${x(origIdx).toFixed(1)},${yRating(p.rating - p.rating_deviation).toFixed(1)}`;
+    });
+    const bandPath = svgNode('path', {
+      d: `M ${upperCoords[0]} L ${upperCoords.slice(1).join(' L ')} L ${lowerCoords.join(' L ')} Z`,
+      fill: `url(#${gradientId})`,
+      stroke: 'rgba(37, 99, 235, 0.28)',
+      'stroke-width': '1',
+      'stroke-dasharray': '3 3',
+      'clip-path': `url(#${clipId})`
+    });
+    const bandTitle = svgNode('title');
+    bandTitle.textContent = 'Konfidenzband: Rating ± Rating-Abweichung (RD)';
+    bandPath.append(bandTitle);
+    svg.append(bandPath);
+  }
+
+  // RD Polyline
+  if (points.length > 1) {
+    const rdPoints = points.map((p, i) => `${x(i).toFixed(1)},${yRD(p.rating_deviation).toFixed(1)}`).join(' ');
+    const rdLine = svgNode('polyline', {
+      points: rdPoints,
+      fill: 'none',
+      stroke: '#14B8A6',
+      'stroke-width': '2.2',
+      'stroke-dasharray': '5 3',
+      'clip-path': `url(#${clipId})`
+    });
+    svg.append(rdLine);
+  }
+
+  // RD Data Circles
+  points.forEach((p, idx) => {
+    const rdCircle = svgNode('circle', {
+      cx: x(idx),
+      cy: yRD(p.rating_deviation),
+      r: 3,
+      fill: '#14B8A6'
+    });
+    const rdTitle = svgNode('title');
+    rdTitle.textContent = `${p.label} (${dateLabel(p.date)})\nRating-Abweichung: ±${Math.round(p.rating_deviation)} RD`;
+    rdCircle.append(rdTitle);
+    svg.append(rdCircle);
+  });
+
+  // Rating Polyline
+  if (points.length > 1) {
+    const ratingPoints = points.map((p, i) => `${x(i).toFixed(1)},${yRating(p.rating).toFixed(1)}`).join(' ');
+    const ratingLine = svgNode('polyline', {
+      points: ratingPoints,
+      fill: 'none',
+      stroke: 'var(--blue, #2563EB)',
+      'stroke-width': '3',
+      'clip-path': `url(#${clipId})`
+    });
+    svg.append(ratingLine);
+  }
+
+  // Rating Data Circles
+  points.forEach((p, idx) => {
+    const circle = svgNode('circle', {
+      cx: x(idx),
+      cy: yRating(p.rating),
+      r: 4.5,
+      class: 'chart-point',
+      fill: 'var(--blue, #2563EB)',
+      stroke: 'var(--panel, #ffffff)',
+      'stroke-width': '2'
+    });
+    const circleTitle = svgNode('title');
+    circleTitle.textContent = `${p.label} (${dateLabel(p.date)})\nRating: ${Math.round(p.rating)}\nRating-Abweichung: ±${Math.round(p.rating_deviation)} RD\nKonfidenzbereich: ${Math.round(p.rating - p.rating_deviation)} – ${Math.round(p.rating + p.rating_deviation)}`;
+    circle.append(circleTitle);
+    svg.append(circle);
+  });
+
+  return svg;
+}
+
+function chartSummary(points) {
+  const first = points[0];
+  const latest = points[points.length - 1];
+  const diff = latest.rating - first.rating;
+  const trend = diff > 5 ? 'up' : diff < -5 ? 'down' : 'flat';
+  const trendGlyph = trend === 'up' ? '↑' : trend === 'down' ? '↓' : '→';
+  const diffSign = diff >= 0 ? '+' : '';
+  const rdDiff = latest.rating_deviation - first.rating_deviation;
+  const rdDiffSign = rdDiff >= 0 ? '+' : '';
+
+  return element('div', { className: 'chart-summary' }, [
+    element('div', {}, [
+      element('span', { className: 'summary-label', text: `Start / ${first.label || dateLabel(first.date)}` }),
+      element('strong', {}, [
+        document.createTextNode(String(Math.round(first.rating))),
+        element('small', { className: 'muted', style: { marginLeft: '0.45rem', fontSize: '0.85rem', fontWeight: '600' }, text: `±${Math.round(first.rating_deviation)} RD` })
+      ])
+    ]),
+    element('div', {
+      className: `trend-arrow trend-arrow-${trend}`,
+      attributes: {
+        'aria-hidden': 'true',
+        title: `Rating: ${diffSign}${Math.round(diff)} · RD: ${rdDiffSign}${Math.round(rdDiff)}`
+      },
+      text: trendGlyph
+    }),
+    element('div', {}, [
+      element('span', { className: 'summary-label', text: `Aktuell / ${latest.label || dateLabel(latest.date)}` }),
+      element('strong', {}, [
+        document.createTextNode(String(Math.round(latest.rating))),
+        element('small', { className: 'muted', style: { marginLeft: '0.45rem', fontSize: '0.85rem', fontWeight: '600' }, text: `±${Math.round(latest.rating_deviation)} RD` })
+      ])
+    ])
+  ]);
 }
 
 function historyPanel(team, history, leagueThresholds, sustainabilityData, seasonTransitions = [], predictionHistory = {}) {
-  const entries = history.filter(row => row.team_id === team.id);
-  const transitions = seasonTransitions.filter(row => row.team_id === team.id);
-  const rows = [];
-  let pointIndex = 0;
-  const seasonNames = [...new Set(entries.map(entry => entry.season))];
-  seasonNames.forEach(season => {
-    const seasonEntries = entries.filter(entry => entry.season === season);
-    const rawTransition = transitions.find(item => item.season === season);
-    const transition = rawTransition?.event_type === 'season_decay'
-      ? {
-        ...rawTransition,
-        source: 'carryover',
-        rating_after_adjustment: rawTransition.rating_after,
-        season_start_rating: rawTransition.rating_after,
-        rating_before_adjustment: rawTransition.rating_before,
-        wildcard_attempts: []
-      }
-      : rawTransition;
-    const wildcardEntries = seasonEntries.filter(entry => entry.rating_source === 'wildcard');
-    const regularEntries = seasonEntries.filter(entry => entry.rating_source !== 'wildcard');
-    const qualifiedWildcard = transition?.wildcard_status === 'qualified';
-    const appendMatch = entry => {
-      pointIndex += 1;
-      rows.push({
-        ...entry,
-        wildcard_transition_start: qualifiedWildcard
-          && entry === wildcardEntries[0],
-        wildcard_qualified: qualifiedWildcard && entry.rating_source === 'wildcard',
-        wildcard_start_rating: qualifiedWildcard && entry === wildcardEntries[0]
-          ? Number(transition.wildcard_start_rating)
-          : undefined,
-        label: `Game ${pointIndex}`,
-        rating: Number(entry.rating)
-      });
+  const transitions = (seasonTransitions || []).filter(item => item.team_id === team.id);
+
+  const isFailedWildcard = snap => {
+    const isWildcard = String(snap.matchday) === '0' || String(snap.label || '').toLowerCase().includes('wildcard');
+    if (!isWildcard) return false;
+    const trans = transitions.find(item => item.season?.trim() === snap.season?.trim());
+    if (trans && (trans.wildcard_status === 'eliminated' || (trans.wildcard_status && trans.wildcard_status !== 'qualified'))) {
+      return true;
+    }
+    return false;
+  };
+
+  const rawSnapshots = (sustainabilityData?.history || [])
+    .filter(snap => snap.teams && snap.teams[team.id] && !isFailedWildcard(snap));
+
+  const seasons = [...new Set(rawSnapshots.map(snap => snap.season).filter(Boolean))];
+  const hasMultipleSeasons = seasons.length > 1;
+
+  const teamSnapshots = rawSnapshots.map(snap => {
+    const entry = snap.teams[team.id];
+    const matchdayStr = String(snap.matchday ?? '');
+    const seasonShort = String(snap.season || '').replace(/^Season\s+/i, '').trim();
+    const label = matchdayStr === '0'
+      ? (hasMultipleSeasons && seasonShort ? `${seasonShort} WC` : 'Wildcard')
+      : (hasMultipleSeasons && seasonShort ? `${seasonShort} ST ${matchdayStr}` : `ST ${matchdayStr}`);
+    return {
+      date: snap.date,
+      matchday: snap.matchday,
+      season: snap.season,
+      label,
+      rating: Number(entry.rating),
+      rating_deviation: Number(entry.rating_deviation)
     };
-    const hasWildcard = wildcardEntries.length > 0
-      || (transition?.wildcard_attempts || []).length > 0;
-    if (!rows.length) {
-      const initial = Number.isFinite(Number(seasonEntries[0]?.rating_before))
-        ? Number(seasonEntries[0].rating_before)
-        : Number(seasonEntries[0]?.rating);
-      rows.push({
-        date: 'Ausgangsrating',
-        rating: Number.isFinite(initial) ? initial : Number(team.initial_rating),
-        label: 'Initial',
-        season
-      });
-    }
-    if (transition && hasWildcard && !qualifiedWildcard) {
-      rows.push({
-        ...transition,
-        date: 'Wildcard-Start',
-        event_type: 'wildcard_start',
-        label: `Wildcard ${String(season || '').replace(/^Season\\s+/, '')}`,
-        rating: Number(transition.wildcard_start_rating)
-      });
-    }
-    wildcardEntries.forEach(appendMatch);
-    if (transition && (regularEntries.length || !hasWildcard)) {
-      rows.push({
-        ...transition,
-        date: 'Saisonbeginn',
-        event_type: 'season_start',
-        label: `Season ${String(season || '').replace(/^Season\\s+/, '')}`,
-        rating: Number(transition.season_start_rating ?? transition.rating_after_adjustment)
-      });
-    }
-    regularEntries.forEach(appendMatch);
   });
 
-  if (!rows.length) {
-    rows.push({
-      date: 'Ausgangsrating',
-      rating: Number(team.initial_rating),
-      label: 'Initial',
-      season: team.season
-    });
-  }
-  if (!rows.length) return emptyState('Für dieses Team ist kein öffentliches Rating-Protokoll verfügbar.');
-  const zoneSnapshots = [];
-  const seenZoneSnapshots = new Set();
-  (predictionHistory.crosszone_history || []).forEach(snapshot => {
-    const key = `${snapshot.season || ''}|${snapshot.matchday || snapshot.date || ''}`;
-    if (seenZoneSnapshots.has(key)) return;
-    const matchingRows = rows
-      .map((row, index) => ({ row, index }))
-      .filter(({ row }) => row.season === snapshot.season && String(row.matchday || '') === String(snapshot.matchday || ''));
-    if (!matchingRows.length) return;
-    seenZoneSnapshots.add(key);
-    zoneSnapshots.push({
-      key,
-      chartIndex: matchingRows[matchingRows.length - 1].index,
-      zones: Object.fromEntries((snapshot.zones || []).map(zone => [zone.id, zone]))
-    });
-  });
-  const chartMinimum = Math.min(...rows.map(row => Number(row.rating)));
-  const chartMaximum = Math.max(...rows.map(row => Number(row.rating)));
-  const zoneDefinitions = [
-    ['1_2', '1. Liga / 2. Liga'],
-    ['2_3', '2. Liga / 3. Liga'],
-    ['3_4', '3. Liga / 4. Liga']
+  const points = teamSnapshots.length ? teamSnapshots : [
+    {
+      date: 'Aktuell',
+      matchday: '0',
+      label: 'Aktuell',
+      rating: Number(team.rating),
+      rating_deviation: Number(team.rating_deviation)
+    }
   ];
-  const availableZones = zoneDefinitions.map(([id, label]) => ({
-    id,
-    label,
-    ratings: zoneSnapshots
-      .map(snapshot => snapshot.zones?.[id]?.rating)
-      .filter(rating => Number.isFinite(Number(rating)))
-      .map(Number)
-  })).filter(zone => zone.ratings.length);
-  const visibleZones = availableZones.filter(zone =>
-    zone.ratings.some(rating => rating >= chartMinimum && rating <= chartMaximum)
-  );
-  const belowZones = availableZones
-    .filter(zone => Math.max(...zone.ratings) < chartMinimum)
-    .sort((a, b) => Math.max(...b.ratings) - Math.max(...a.ratings));
-  const aboveZones = availableZones
-    .filter(zone => Math.min(...zone.ratings) > chartMaximum)
-    .sort((a, b) => Math.min(...a.ratings) - Math.min(...b.ratings));
-  const fallbackZones = [
-    belowZones[0],
-    aboveZones[0]
-  ].filter(Boolean);
-  const selectedZoneIds = visibleZones.length
-    ? [visibleZones[0].id]
-    : fallbackZones.map(zone => zone.id);
-  const buildZoneSeries = zoneIds => zoneIds.map(zoneId => {
-    const definition = availableZones.find(zone => zone.id === zoneId);
-    const [upperLeague, lowerLeague] = (definition?.label || zoneId).split(' / ');
-    return {
-      id: zoneId,
-      label: definition?.label || zoneId,
-      upperLeague,
-      lowerLeague,
-      points: zoneSnapshots
-        .map(snapshot => ({
-          chartIndex: snapshot.chartIndex,
-          rating: Number(snapshot.zones?.[zoneId]?.rating)
-        }))
-        .filter(point => Number.isFinite(point.rating))
-        .reduce((unique, point) => {
-          unique.set(point.chartIndex, point);
-          return unique;
-        }, new Map())
-    };
-  }).map(zone => ({
-    ...zone,
-    points: [...zone.points.values()].sort((a, b) => a.chartIndex - b.chartIndex)
-  }));
-  const zoneSeries = buildZoneSeries(zoneDefinitions.map(([id]) => id));
+
   const sustainability = sustainabilityChart(team, sustainabilityData);
-  const renderChart = zoneIds => {
-    const selectedSeries = zoneSeries.filter(zone => zoneIds.includes(zone.id));
-    return lineChart(
-      [{ name: team.name, rows }],
-      `${team.name} öffentliches Rating-Protokoll`,
-      {
-        thresholds: leagueThresholds,
-        zoneSeries: selectedSeries,
-        extraValues: selectedSeries.flatMap(zone => zone.points.map(point => point.rating))
-      }
-    );
-  };
-  const panel = element('section', { className: 'history-panel' }, [
-    element('h2', { text: `${team.name} Rating-Verlauf` }),
-    element('div', { className: 'rating-history-canvas' }, [
-      element('div', { className: 'rating-chart-maintenance', text: 'Rating chart vorrübergehend nicht verfügbar, wird nochmal überarbeitet.' }),
-      sustainability
-    ])
+  const chartSvg = teamRatingChart(team, points, leagueThresholds);
+  const summary = chartSummary(points);
+
+  const legend = element('div', { className: 'chart-legend', attributes: { role: 'list', 'aria-label': 'Diagramm-Legende' } }, [
+    element('span', { className: 'legend-item', style: { color: 'var(--blue, #2563EB)' }, text: 'Rating' }),
+    element('span', { className: 'legend-item', style: { color: 'rgba(37, 99, 235, 0.7)' }, text: 'Rating ± RD (Konfidenzbereich)' }),
+    element('span', { className: 'legend-item', style: { color: '#14B8A6' }, text: 'Rating-Abweichung (RD)' })
   ]);
+
+  const panel = element('section', { className: 'history-panel' }, [
+    element('h2', { className: 'history-panel-title', text: `${team.name} Rating-Verlauf` }, [
+      element('span', { className: 'in-dev-label', text: '(in-Dev Version)' })
+    ]),
+    legend,
+    element('div', { className: 'rating-history-canvas' }, [
+      chartSvg,
+      sustainability
+    ]),
+    summary
+  ]);
+
   const canvas = panel.querySelector('.rating-history-canvas');
   if (canvas && sustainability) {
     requestAnimationFrame(() => {
-      positionHistoricalZoneLabels(canvas);
       positionSustainabilityChart(canvas);
     });
     if (typeof ResizeObserver !== 'undefined') {
       const resizeObserver = new ResizeObserver(() => {
-        positionHistoricalZoneLabels(canvas);
         positionSustainabilityChart(canvas);
       });
       resizeObserver.observe(canvas);
     }
   }
   return panel;
-}
-
-function chartSummary(rows) {
-  const initialRating = rows[0].rating;
-  const latestRating = rows[rows.length - 1].rating;
-  const trend = latestRating > initialRating ? 'up' : latestRating < initialRating ? 'down' : 'flat';
-  const trendGlyph = trend === 'up' ? '↑' : trend === 'down' ? '↓' : '→';
-  return element('div', { className: 'chart-summary' }, [
-    element('div', {}, [element('span', { className: 'summary-label', text: `Start / ${dateLabel(rows[0]?.date)}` }), element('strong', { text: Math.round(initialRating) })]),
-    element('div', { className: `trend-arrow trend-arrow-${trend}`, attributes: { 'aria-hidden': 'true' }, text: trendGlyph }),
-    element('div', {}, [element('span', { className: 'summary-label', text: `Aktuell / ${dateLabel(rows[rows.length - 1].date)}` }), element('strong', { text: Math.round(rows[rows.length - 1].rating) })])
-  ]);
 }
 
 function resultsPanel(team, predictionHistory) {
@@ -2152,12 +2662,13 @@ async function teamDetailPage() {
   document.title = `FULOW - ${teamAbbreviation(team)} Details`;
 
   if (target) {
+    const displayRating = Math.round(team.power_rating ?? team.rating);
     const statCards = [
-      ['Rating', Math.round(team.rating)],
+      ['Rating', displayRating],
       ['Rating-Abweichung', Math.round(team.rating_deviation)],
       ['Prognostiziertes Liga-Niveau', predictedSustainableLevel(team)],
       ['Liga-Confidence', team.league_confidence ? percent(team.league_confidence) : '—'],
-      ['Gespielte Spiele', team.matches_played]
+      ['Matches in dieser Season', team.matches_played]
     ].map(([label, value]) => element('article', { className: 'performance-card' }, [
       element('div', { className: 'performance-value', text: value }),
       element('div', { className: 'performance-label', text: label })
@@ -2490,12 +3001,29 @@ function scheduleDataStampPosition() {
   });
 }
 
+function updateStickyHeaderHeight() {
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const h = header.getBoundingClientRect().height;
+    if (h > 0) {
+      document.documentElement.style.setProperty('--site-header-height', `${Math.round(h)}px`);
+    }
+  }
+}
+
 initTheme();
 initWelcomeModal();
 initCopyName();
+updateStickyHeaderHeight();
 scheduleDataStampPosition();
-window.addEventListener('load', scheduleDataStampPosition, { once: true });
-window.addEventListener('resize', scheduleDataStampPosition);
+window.addEventListener('load', () => {
+  updateStickyHeaderHeight();
+  scheduleDataStampPosition();
+}, { once: true });
+window.addEventListener('resize', () => {
+  updateStickyHeaderHeight();
+  scheduleDataStampPosition();
+});
 window.addEventListener('scroll', positionHomeDataStamp, { passive: true });
 if (typeof ResizeObserver !== 'undefined') {
   const mainContent = document.getElementById('main-content');

@@ -1,179 +1,8 @@
 {
-  "generated_at": "2026-11-05T00:32:25+00:00",
+  "generated_at": "2026-11-06T16:08:48+00:00",
   "predictions": [
     {
-      "match_id": "M120",
-      "date": "04.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T036",
-        "name": "AIX Au Huur"
-      },
-      "team_b": {
-        "id": "T067",
-        "name": "1. ECF SendHelpAgain"
-      },
-      "probability_a": 0.204749,
-      "probability_b": 0.795251,
-      "confidence": 0.639061
-    },
-    {
       "match_id": "M121",
-      "date": "04.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T071",
-        "name": "DA Meowntain Dew"
-      },
-      "team_b": {
-        "id": "T006",
-        "name": "PBE Mondhasen"
-      },
-      "probability_a": 0.514926,
-      "probability_b": 0.485074,
-      "confidence": 0.388712
-    },
-    {
-      "match_id": "M122",
-      "date": "04.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T077",
-        "name": "LUNA Void Veterans"
-      },
-      "team_b": {
-        "id": "T034",
-        "name": "RUB Goats Aqua"
-      },
-      "probability_a": 0.422209,
-      "probability_b": 0.577791,
-      "confidence": 0.3407
-    },
-    {
-      "match_id": "M123",
-      "date": "04.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T053",
-        "name": "bUDSweiser"
-      },
-      "team_b": {
-        "id": "T018",
-        "name": "DG Strix"
-      },
-      "probability_a": 0.348686,
-      "probability_b": 0.651314,
-      "confidence": 0.560454
-    },
-    {
-      "match_id": "M124",
-      "date": "04.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T003",
-        "name": "HSK Satyrus"
-      },
-      "team_b": {
-        "id": "T076",
-        "name": "UKG Runaway"
-      },
-      "probability_a": 0.214039,
-      "probability_b": 0.785961,
-      "confidence": 0.755317
-    },
-    {
-      "match_id": "M125",
-      "date": "04.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T023",
-        "name": "RUB Goats Venom"
-      },
-      "team_b": {
-        "id": "T001",
-        "name": "Berlin Makaken"
-      },
-      "probability_a": 0.63811,
-      "probability_b": 0.36189,
-      "confidence": 0.653577
-    },
-    {
-      "match_id": "M126",
-      "date": "04.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T033",
-        "name": "ESUG L\u00fcckenf\u00fcller"
-      },
-      "team_b": {
-        "id": "T030",
-        "name": "Haiground"
-      },
-      "probability_a": 0.510149,
-      "probability_b": 0.489851,
-      "confidence": 0.426794
-    },
-    {
-      "match_id": "M135",
-      "date": "04.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T080",
-        "name": "DA Meowfia"
-      },
-      "team_b": {
-        "id": "T084",
-        "name": "UKGarKeinPlan"
-      },
-      "probability_a": 0.498116,
-      "probability_b": 0.501884,
-      "confidence": 0.337873
-    },
-    {
-      "match_id": "M140",
-      "date": "04.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T079",
-        "name": "UKG GutGuterAmGutesten"
-      },
-      "team_b": {
-        "id": "T013",
-        "name": "UKGrrrS\u00fc\u00dfm\u00e4use"
-      },
-      "probability_a": 0.586961,
-      "probability_b": 0.413039,
-      "confidence": 0.429735
-    },
-    {
-      "match_id": "M119",
       "date": "06.11.2026",
       "season": "Season WiSe26/27",
       "league": "3. Liga",
@@ -187,12 +16,12 @@
         "id": "T029",
         "name": "LES GOOO"
       },
-      "probability_a": 0.683954,
-      "probability_b": 0.316046,
-      "confidence": 0.648453
+      "probability_a": 0.68828,
+      "probability_b": 0.31172,
+      "confidence": 0.635135
     },
     {
-      "match_id": "M114",
+      "match_id": "M132",
       "date": "07.11.2026",
       "season": "Season WiSe26/27",
       "league": "2. Liga",
@@ -206,31 +35,12 @@
         "id": "T068",
         "name": "RUB Goats N\u00f6 LG"
       },
-      "probability_a": 0.649136,
-      "probability_b": 0.350864,
-      "confidence": 0.537717
+      "probability_a": 0.639978,
+      "probability_b": 0.360022,
+      "confidence": 0.511199
     },
     {
-      "match_id": "M116",
-      "date": "08.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "2. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T065",
-        "name": "DA Purrgatory"
-      },
-      "team_b": {
-        "id": "T051",
-        "name": "BeK Flotten Sprotten"
-      },
-      "probability_a": 0.667077,
-      "probability_b": 0.332923,
-      "confidence": 0.628284
-    },
-    {
-      "match_id": "M136",
+      "match_id": "M115",
       "date": "08.11.2026",
       "season": "Season WiSe26/27",
       "league": "4. Liga",
@@ -244,9 +54,28 @@
         "id": "T085",
         "name": "OVGU Esports"
       },
-      "probability_a": 0.557533,
-      "probability_b": 0.442467,
-      "confidence": 0.324736
+      "probability_a": 0.606423,
+      "probability_b": 0.393577,
+      "confidence": 0.361147
+    },
+    {
+      "match_id": "M134",
+      "date": "08.11.2026",
+      "season": "Season WiSe26/27",
+      "league": "2. Liga",
+      "phase": "Regular Season",
+      "matchday": "3",
+      "team_a": {
+        "id": "T065",
+        "name": "DA Purrgatory"
+      },
+      "team_b": {
+        "id": "T051",
+        "name": "BeK Flotten Sprotten"
+      },
+      "probability_a": 0.703033,
+      "probability_b": 0.296967,
+      "confidence": 0.638213
     }
   ]
 }

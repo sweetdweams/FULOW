@@ -7,6 +7,7 @@ FULOW.code-workspace
 *.code-workspace
 ToDo.md
 *.psd
+*.pdf
 
 # Local documentation and test files
 Transistion_To_New_engineVersion.md

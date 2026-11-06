@@ -61,6 +61,19 @@
   margin-top: 0;
 }
 
+.history-panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.in-dev-label {
+  color: #DC2626;
+  font-size: .85rem;
+  white-space: nowrap;
+}
+
 .history-explanation {
   margin: -.55rem 0 .65rem;
   color: var(--muted);
