@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T17:02:59+00:00",
+  "generated_at": "2026-11-07T20:36:34+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -14772,17 +14772,17 @@
         },
         "T050": {
           "name": "DG Athena",
-          "rating": 2017.6445,
-          "power_rating": 2022.0212,
-          "form": 0.0833,
-          "rating_deviation": 175.0699,
+          "rating": 2059.6897,
+          "power_rating": 2075.3933,
+          "form": 0.3333,
+          "rating_deviation": 157.0364,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.859883,
+          "league_confidence": 0.903476,
           "league_probabilities": {
-            "1. Liga": 0.016076,
-            "2. Liga": 0.859883,
-            "3. Liga": 0.124014,
-            "4. Liga": 2.7e-05
+            "1. Liga": 0.021243,
+            "2. Liga": 0.903476,
+            "3. Liga": 0.075276,
+            "4. Liga": 4e-06
           }
         },
         "T075": {
@@ -15132,17 +15132,17 @@
         },
         "T068": {
           "name": "RUB Goats N\u00f6 LG",
-          "rating": 1869.8191,
-          "power_rating": 1880.6912,
-          "form": 0.1667,
-          "rating_deviation": 217.4423,
+          "rating": 1808.8137,
+          "power_rating": 1799.5012,
+          "form": -0.1667,
+          "rating_deviation": 186.2492,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.692765,
+          "league_confidence": 0.601141,
           "league_probabilities": {
-            "1. Liga": 0.008053,
-            "2. Liga": 0.692765,
-            "3. Liga": 0.298175,
-            "4. Liga": 0.001007
+            "1. Liga": 0.001662,
+            "2. Liga": 0.601141,
+            "3. Liga": 0.396061,
+            "4. Liga": 0.001137
           }
         },
         "T084": {
@@ -15162,17 +15162,17 @@
         },
         "T029": {
           "name": "LES GOOO",
-          "rating": 1237.1604,
-          "power_rating": 1240.904,
-          "form": 0.0833,
-          "rating_deviation": 149.7441,
+          "rating": 1356.7351,
+          "power_rating": 1370.8454,
+          "form": 0.3333,
+          "rating_deviation": 141.1032,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.821041,
+          "league_confidence": 0.886025,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.017979,
-            "3. Liga": 0.821041,
-            "4. Liga": 0.160981
+            "2. Liga": 0.05716,
+            "3. Liga": 0.886025,
+            "4. Liga": 0.056815
           }
         },
         "T047": {
@@ -15252,17 +15252,17 @@
         },
         "T046": {
           "name": "DG Chronos",
-          "rating": 1700.8923,
-          "power_rating": 1744.5993,
-          "form": 0.8333,
-          "rating_deviation": 174.8279,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.519445,
+          "rating": 1534.1304,
+          "power_rating": 1547.7474,
+          "form": 0.2778,
+          "rating_deviation": 163.4041,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.762405,
           "league_probabilities": {
-            "1. Liga": 0.000578,
-            "2. Liga": 0.519445,
-            "3. Liga": 0.478291,
-            "4. Liga": 0.001687
+            "1. Liga": 1.6e-05,
+            "2. Liga": 0.224237,
+            "3. Liga": 0.762405,
+            "4. Liga": 0.013343
           }
         },
         "T086": {

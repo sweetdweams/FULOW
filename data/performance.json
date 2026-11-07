@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T17:02:59+00:00",
+  "generated_at": "2026-11-07T20:36:34+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -7,14 +7,14 @@
   ],
   "evaluation_start": "22.04.2026",
   "evaluation_end": "11.11.2026",
-  "predictions": 505,
-  "accuracy": 0.673267,
-  "log_loss": 0.613457,
-  "brier_score": 0.210619,
-  "calibration_error": 0.077052,
-  "runtime_seconds": 1.24,
-  "runtime_display": "1,24 Sekunden",
-  "runtime_generated_at": "2026-11-06T17:02:59+00:00",
+  "predictions": 507,
+  "accuracy": 0.672584,
+  "log_loss": 0.614217,
+  "brier_score": 0.210978,
+  "calibration_error": 0.076102,
+  "runtime_seconds": 1.21,
+  "runtime_display": "1,21 Sekunden",
+  "runtime_generated_at": "2026-11-07T20:36:34+00:00",
   "periods": [
     {
       "id": "all_time",
@@ -22,23 +22,23 @@
       "season": null,
       "evaluation_start": "22.04.2026",
       "evaluation_end": "11.11.2026",
-      "predictions": 505,
-      "accuracy": 0.673267,
-      "log_loss": 0.613457,
-      "brier_score": 0.210619,
-      "calibration_error": 0.077052
+      "predictions": 507,
+      "accuracy": 0.672584,
+      "log_loss": 0.614217,
+      "brier_score": 0.210978,
+      "calibration_error": 0.076102
     },
     {
       "id": "last_20",
       "label": "Last 20",
       "season": null,
-      "evaluation_start": "11.11.2026",
+      "evaluation_start": "06.11.2026",
       "evaluation_end": "11.11.2026",
       "predictions": 20,
-      "accuracy": 0.75,
-      "log_loss": 0.613575,
-      "brier_score": 0.200476,
-      "calibration_error": 0.191984
+      "accuracy": 0.7,
+      "log_loss": 0.64925,
+      "brier_score": 0.2174,
+      "calibration_error": 0.202578
     },
     {
       "id": "last_50",
@@ -47,10 +47,10 @@
       "evaluation_start": "28.10.2026",
       "evaluation_end": "11.11.2026",
       "predictions": 50,
-      "accuracy": 0.62,
-      "log_loss": 0.708222,
-      "brier_score": 0.251121,
-      "calibration_error": 0.179303
+      "accuracy": 0.6,
+      "log_loss": 0.72521,
+      "brier_score": 0.258729,
+      "calibration_error": 0.18021
     },
     {
       "id": "season_Season SoSe26",
@@ -70,11 +70,11 @@
       "season": "Season WiSe26/27",
       "evaluation_start": "10.10.2026",
       "evaluation_end": "11.11.2026",
-      "predictions": 137,
-      "accuracy": 0.649635,
-      "log_loss": 0.658889,
-      "brier_score": 0.226995,
-      "calibration_error": 0.091236
+      "predictions": 139,
+      "accuracy": 0.647482,
+      "log_loss": 0.661009,
+      "brier_score": 0.228071,
+      "calibration_error": 0.087564
     }
   ],
   "matchday_history": [
@@ -1662,17 +1662,17 @@
         }
       },
       "weights": {
-        "direct": 0.268304,
-        "common_opponent": 0.215704,
-        "logic": 0.247738,
-        "form": 0.268255
+        "direct": 0.268694,
+        "common_opponent": 0.216295,
+        "logic": 0.24838,
+        "form": 0.26663
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.268304,
-          "common_opponent": 0.215704,
-          "logic": 0.247738,
-          "form": 0.268255
+          "direct": 0.268694,
+          "common_opponent": 0.216295,
+          "logic": 0.24838,
+          "form": 0.26663
         },
         "4. Liga": {
           "direct": 0.25,
@@ -1688,9 +1688,9 @@
         },
         "2. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.261397,
-          "logic": 0.266167,
-          "form": 0.222436
+          "common_opponent": 0.263479,
+          "logic": 0.268264,
+          "form": 0.218257
         },
         "3. Liga": {
           "direct": 0.25,
@@ -1778,17 +1778,17 @@
         }
       },
       "weights": {
-        "direct": 0.26802,
-        "common_opponent": 0.220893,
-        "logic": 0.246599,
-        "form": 0.264489
+        "direct": 0.26841,
+        "common_opponent": 0.22147,
+        "logic": 0.247222,
+        "form": 0.262899
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.26802,
-          "common_opponent": 0.220893,
-          "logic": 0.246599,
-          "form": 0.264489
+          "direct": 0.26841,
+          "common_opponent": 0.22147,
+          "logic": 0.247222,
+          "form": 0.262899
         },
         "4. Liga": {
           "direct": 0.25,
@@ -1797,22 +1797,22 @@
           "form": 0.319792
         },
         "1. Liga": {
-          "direct": 0.234828,
-          "common_opponent": 0.240035,
-          "logic": 0.276152,
-          "form": 0.248984
+          "direct": 0.234829,
+          "common_opponent": 0.240033,
+          "logic": 0.276149,
+          "form": 0.248989
         },
         "2. Liga": {
-          "direct": 0.269049,
-          "common_opponent": 0.251315,
-          "logic": 0.253627,
-          "form": 0.226009
+          "direct": 0.269067,
+          "common_opponent": 0.253365,
+          "logic": 0.255667,
+          "form": 0.221901
         },
         "3. Liga": {
-          "direct": 0.250855,
-          "common_opponent": 0.205836,
-          "logic": 0.228343,
-          "form": 0.314966
+          "direct": 0.250856,
+          "common_opponent": 0.205833,
+          "logic": 0.228341,
+          "form": 0.314971
         }
       },
       "crossover_zones": {
@@ -1838,11 +1838,11 @@
       "phase": "Regular Season",
       "phase_label": "Regular Season \u00b7 Tag (3)",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (3)",
-      "predictions": 505,
-      "accuracy": 0.673267,
-      "log_loss": 0.613457,
-      "brier_score": 0.210619,
-      "calibration_error": 0.077052,
+      "predictions": 507,
+      "accuracy": 0.672584,
+      "log_loss": 0.614217,
+      "brier_score": 0.210978,
+      "calibration_error": 0.076102,
       "modes": {
         "cumulative": {
           "id": "history",
@@ -1850,11 +1850,11 @@
           "season": null,
           "evaluation_start": "22.04.2026",
           "evaluation_end": "11.11.2026",
-          "predictions": 505,
-          "accuracy": 0.673267,
-          "log_loss": 0.613457,
-          "brier_score": 0.210619,
-          "calibration_error": 0.077052
+          "predictions": 507,
+          "accuracy": 0.672584,
+          "log_loss": 0.614217,
+          "brier_score": 0.210978,
+          "calibration_error": 0.076102
         },
         "season_cumulative": {
           "id": "history",
@@ -1862,23 +1862,23 @@
           "season": null,
           "evaluation_start": "10.10.2026",
           "evaluation_end": "11.11.2026",
-          "predictions": 137,
-          "accuracy": 0.649635,
-          "log_loss": 0.658889,
-          "brier_score": 0.226995,
-          "calibration_error": 0.091236
+          "predictions": 139,
+          "accuracy": 0.647482,
+          "log_loss": 0.661009,
+          "brier_score": 0.228071,
+          "calibration_error": 0.087564
         },
         "discrete": {
           "id": "history",
           "label": "History",
           "season": null,
-          "evaluation_start": "11.11.2026",
+          "evaluation_start": "06.11.2026",
           "evaluation_end": "11.11.2026",
-          "predictions": 32,
-          "accuracy": 0.6875,
-          "log_loss": 0.696193,
-          "brier_score": 0.242922,
-          "calibration_error": 0.228904
+          "predictions": 34,
+          "accuracy": 0.676471,
+          "log_loss": 0.702666,
+          "brier_score": 0.246385,
+          "calibration_error": 0.225085
         },
         "moving_average": {
           "id": "history",
@@ -1886,25 +1886,25 @@
           "season": null,
           "evaluation_start": "17.06.2026",
           "evaluation_end": "11.11.2026",
-          "predictions": 147,
-          "accuracy": 0.659864,
-          "log_loss": 0.65432,
-          "brier_score": 0.225189,
-          "calibration_error": 0.095448
+          "predictions": 149,
+          "accuracy": 0.657718,
+          "log_loss": 0.656359,
+          "brier_score": 0.226217,
+          "calibration_error": 0.091966
         }
       },
       "weights": {
-        "direct": 0.278127,
-        "common_opponent": 0.201332,
-        "logic": 0.244736,
-        "form": 0.275806
+        "direct": 0.278522,
+        "common_opponent": 0.201889,
+        "logic": 0.245339,
+        "form": 0.274251
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.278127,
-          "common_opponent": 0.201332,
-          "logic": 0.244736,
-          "form": 0.275806
+          "direct": 0.278522,
+          "common_opponent": 0.201889,
+          "logic": 0.245339,
+          "form": 0.274251
         },
         "4. Liga": {
           "direct": 0.261672,
@@ -1913,36 +1913,36 @@
           "form": 0.307664
         },
         "1. Liga": {
-          "direct": 0.240489,
-          "common_opponent": 0.208908,
-          "logic": 0.283363,
-          "form": 0.267239
+          "direct": 0.240491,
+          "common_opponent": 0.208901,
+          "logic": 0.283356,
+          "form": 0.267251
         },
         "2. Liga": {
-          "direct": 0.270582,
-          "common_opponent": 0.23408,
-          "logic": 0.258138,
-          "form": 0.2372
+          "direct": 0.270621,
+          "common_opponent": 0.236083,
+          "logic": 0.260126,
+          "form": 0.233169
         },
         "3. Liga": {
-          "direct": 0.287465,
-          "common_opponent": 0.199595,
-          "logic": 0.203514,
-          "form": 0.309426
+          "direct": 0.287485,
+          "common_opponent": 0.19958,
+          "logic": 0.2035,
+          "form": 0.309436
         }
       },
       "crossover_zones": {
         "1_2": {
           "rating": 2445.402,
-          "sigma": 124.3959
+          "sigma": 124.8374
         },
         "2_3": {
           "rating": 1676.5311,
-          "sigma": 91.5624
+          "sigma": 89.3209
         },
         "3_4": {
           "rating": 1052.2492,
-          "sigma": 81.6352
+          "sigma": 78.4144
         }
       }
     }
@@ -3266,17 +3266,17 @@
         }
       },
       "weights": {
-        "direct": 0.268304,
-        "common_opponent": 0.215704,
-        "logic": 0.247738,
-        "form": 0.268255
+        "direct": 0.268694,
+        "common_opponent": 0.216295,
+        "logic": 0.24838,
+        "form": 0.26663
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.268304,
-          "common_opponent": 0.215704,
-          "logic": 0.247738,
-          "form": 0.268255
+          "direct": 0.268694,
+          "common_opponent": 0.216295,
+          "logic": 0.24838,
+          "form": 0.26663
         },
         "4. Liga": {
           "direct": 0.25,
@@ -3292,9 +3292,9 @@
         },
         "2. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.261397,
-          "logic": 0.266167,
-          "form": 0.222436
+          "common_opponent": 0.263479,
+          "logic": 0.268264,
+          "form": 0.218257
         },
         "3. Liga": {
           "direct": 0.25,
@@ -3368,17 +3368,17 @@
         }
       },
       "weights": {
-        "direct": 0.26802,
-        "common_opponent": 0.220893,
-        "logic": 0.246599,
-        "form": 0.264489
+        "direct": 0.26841,
+        "common_opponent": 0.22147,
+        "logic": 0.247222,
+        "form": 0.262899
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.26802,
-          "common_opponent": 0.220893,
-          "logic": 0.246599,
-          "form": 0.264489
+          "direct": 0.26841,
+          "common_opponent": 0.22147,
+          "logic": 0.247222,
+          "form": 0.262899
         },
         "4. Liga": {
           "direct": 0.25,
@@ -3387,22 +3387,22 @@
           "form": 0.319792
         },
         "1. Liga": {
-          "direct": 0.234828,
-          "common_opponent": 0.240035,
-          "logic": 0.276152,
-          "form": 0.248984
+          "direct": 0.234829,
+          "common_opponent": 0.240033,
+          "logic": 0.276149,
+          "form": 0.248989
         },
         "2. Liga": {
-          "direct": 0.269049,
-          "common_opponent": 0.251315,
-          "logic": 0.253627,
-          "form": 0.226009
+          "direct": 0.269067,
+          "common_opponent": 0.253365,
+          "logic": 0.255667,
+          "form": 0.221901
         },
         "3. Liga": {
-          "direct": 0.250855,
-          "common_opponent": 0.205836,
-          "logic": 0.228343,
-          "form": 0.314966
+          "direct": 0.250856,
+          "common_opponent": 0.205833,
+          "logic": 0.228341,
+          "form": 0.314971
         }
       }
     },
@@ -3414,11 +3414,11 @@
       "phase": "Regular Season",
       "phase_label": "Regular Season \u00b7 Tag (3)",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (3)",
-      "predictions": 505,
-      "accuracy": 0.673267,
-      "log_loss": 0.613457,
-      "brier_score": 0.210619,
-      "calibration_error": 0.077052,
+      "predictions": 507,
+      "accuracy": 0.672584,
+      "log_loss": 0.614217,
+      "brier_score": 0.210978,
+      "calibration_error": 0.076102,
       "modes": {
         "cumulative": {
           "id": "history",
@@ -3426,11 +3426,11 @@
           "season": null,
           "evaluation_start": "22.04.2026",
           "evaluation_end": "11.11.2026",
-          "predictions": 505,
-          "accuracy": 0.673267,
-          "log_loss": 0.613457,
-          "brier_score": 0.210619,
-          "calibration_error": 0.077052
+          "predictions": 507,
+          "accuracy": 0.672584,
+          "log_loss": 0.614217,
+          "brier_score": 0.210978,
+          "calibration_error": 0.076102
         },
         "season_cumulative": {
           "id": "history",
@@ -3438,23 +3438,23 @@
           "season": null,
           "evaluation_start": "10.10.2026",
           "evaluation_end": "11.11.2026",
-          "predictions": 137,
-          "accuracy": 0.649635,
-          "log_loss": 0.658889,
-          "brier_score": 0.226995,
-          "calibration_error": 0.091236
+          "predictions": 139,
+          "accuracy": 0.647482,
+          "log_loss": 0.661009,
+          "brier_score": 0.228071,
+          "calibration_error": 0.087564
         },
         "discrete": {
           "id": "history",
           "label": "History",
           "season": null,
-          "evaluation_start": "11.11.2026",
+          "evaluation_start": "06.11.2026",
           "evaluation_end": "11.11.2026",
-          "predictions": 32,
-          "accuracy": 0.6875,
-          "log_loss": 0.696193,
-          "brier_score": 0.242922,
-          "calibration_error": 0.228904
+          "predictions": 34,
+          "accuracy": 0.676471,
+          "log_loss": 0.702666,
+          "brier_score": 0.246385,
+          "calibration_error": 0.225085
         },
         "moving_average": {
           "id": "history",
@@ -3462,25 +3462,25 @@
           "season": null,
           "evaluation_start": "17.06.2026",
           "evaluation_end": "11.11.2026",
-          "predictions": 147,
-          "accuracy": 0.659864,
-          "log_loss": 0.65432,
-          "brier_score": 0.225189,
-          "calibration_error": 0.095448
+          "predictions": 149,
+          "accuracy": 0.657718,
+          "log_loss": 0.656359,
+          "brier_score": 0.226217,
+          "calibration_error": 0.091966
         }
       },
       "weights": {
-        "direct": 0.278127,
-        "common_opponent": 0.201332,
-        "logic": 0.244736,
-        "form": 0.275806
+        "direct": 0.278522,
+        "common_opponent": 0.201889,
+        "logic": 0.245339,
+        "form": 0.274251
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.278127,
-          "common_opponent": 0.201332,
-          "logic": 0.244736,
-          "form": 0.275806
+          "direct": 0.278522,
+          "common_opponent": 0.201889,
+          "logic": 0.245339,
+          "form": 0.274251
         },
         "4. Liga": {
           "direct": 0.261672,
@@ -3489,22 +3489,22 @@
           "form": 0.307664
         },
         "1. Liga": {
-          "direct": 0.240489,
-          "common_opponent": 0.208908,
-          "logic": 0.283363,
-          "form": 0.267239
+          "direct": 0.240491,
+          "common_opponent": 0.208901,
+          "logic": 0.283356,
+          "form": 0.267251
         },
         "2. Liga": {
-          "direct": 0.270582,
-          "common_opponent": 0.23408,
-          "logic": 0.258138,
-          "form": 0.2372
+          "direct": 0.270621,
+          "common_opponent": 0.236083,
+          "logic": 0.260126,
+          "form": 0.233169
         },
         "3. Liga": {
-          "direct": 0.287465,
-          "common_opponent": 0.199595,
-          "logic": 0.203514,
-          "form": 0.309426
+          "direct": 0.287485,
+          "common_opponent": 0.19958,
+          "logic": 0.2035,
+          "form": 0.309436
         }
       }
     }
@@ -4110,19 +4110,19 @@
           "id": "1_2",
           "label": "1. Liga \u2194 2. Liga",
           "rating": 2445.402,
-          "sigma": 124.3959
+          "sigma": 124.8374
         },
         {
           "id": "2_3",
           "label": "2. Liga \u2194 3. Liga",
           "rating": 1676.5311,
-          "sigma": 91.5624
+          "sigma": 89.3209
         },
         {
           "id": "3_4",
           "label": "3. Liga \u2194 4. Liga",
           "rating": 1052.2492,
-          "sigma": 81.6352
+          "sigma": 78.4144
         }
       ]
     }

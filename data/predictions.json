@@ -1,44 +1,6 @@
 {
-  "generated_at": "2026-11-06T17:02:59+00:00",
+  "generated_at": "2026-11-07T20:36:34+00:00",
   "predictions": [
-    {
-      "match_id": "M121",
-      "date": "06.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "3. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T046",
-        "name": "DG Chronos"
-      },
-      "team_b": {
-        "id": "T029",
-        "name": "LES GOOO"
-      },
-      "probability_a": 0.68828,
-      "probability_b": 0.31172,
-      "confidence": 0.635135
-    },
-    {
-      "match_id": "M132",
-      "date": "07.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "2. Liga",
-      "phase": "Regular Season",
-      "matchday": "3",
-      "team_a": {
-        "id": "T050",
-        "name": "DG Athena"
-      },
-      "team_b": {
-        "id": "T068",
-        "name": "RUB Goats N\u00f6 LG"
-      },
-      "probability_a": 0.639978,
-      "probability_b": 0.360022,
-      "confidence": 0.511199
-    },
     {
       "match_id": "M115",
       "date": "08.11.2026",
@@ -73,9 +35,9 @@
         "id": "T051",
         "name": "BeK Flotten Sprotten"
       },
-      "probability_a": 0.703033,
-      "probability_b": 0.296967,
-      "confidence": 0.638213
+      "probability_a": 0.705149,
+      "probability_b": 0.294851,
+      "confidence": 0.639357
     }
   ]
 }

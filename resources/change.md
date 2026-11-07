@@ -1,3 +1,7 @@
+# 1.2.1 -- 07.11.2026
+- Datenaktualisierung
+- Deploymentfehler behoben
+
 # 1.2.0 -- 06.11.2026
 - **Neu**: Einsicht in die Signalkorrekturwerte auf der Modell Peroformance Seite (siehe Analytics)
 - **Neu**: Performance Rating Verbessert

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T17:02:59+00:00",
+  "generated_at": "2026-11-07T20:36:34+00:00",
   "history": [
     {
       "match_id": "M001",
@@ -11110,6 +11110,50 @@
       "team_name": "HGI Amber",
       "rating_before": 2788.2312,
       "rating": 2652.8266
+    },
+    {
+      "match_id": "M121",
+      "date": "06.11.2026",
+      "season": "Season WiSe26/27",
+      "rating_source": "regular",
+      "matchday": "3",
+      "team_id": "T046",
+      "team_name": "DG Chronos",
+      "rating_before": 1700.8923,
+      "rating": 1534.1304
+    },
+    {
+      "match_id": "M121",
+      "date": "06.11.2026",
+      "season": "Season WiSe26/27",
+      "rating_source": "regular",
+      "matchday": "3",
+      "team_id": "T029",
+      "team_name": "LES GOOO",
+      "rating_before": 1237.1604,
+      "rating": 1356.7351
+    },
+    {
+      "match_id": "M132",
+      "date": "07.11.2026",
+      "season": "Season WiSe26/27",
+      "rating_source": "regular",
+      "matchday": "3",
+      "team_id": "T050",
+      "team_name": "DG Athena",
+      "rating_before": 2017.6445,
+      "rating": 2059.6897
+    },
+    {
+      "match_id": "M132",
+      "date": "07.11.2026",
+      "season": "Season WiSe26/27",
+      "rating_source": "regular",
+      "matchday": "3",
+      "team_id": "T068",
+      "team_name": "RUB Goats N\u00f6 LG",
+      "rating_before": 1869.8191,
+      "rating": 1808.8137
     }
   ],
   "season_transitions": [

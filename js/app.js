@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.0.1 */
+/* Webseite version = 1.2.1 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -767,7 +767,7 @@ function weightsHistoryChart(history) {
 
   let currentMode = 'system'; // 'system' | 'signal'
   let currentSystemId = '1. Liga';
-  let currentSignalId = 'common_opponent';
+  let currentSignalId = 'direct';
 
   const container = element('div', { className: 'historical-chart' });
 
