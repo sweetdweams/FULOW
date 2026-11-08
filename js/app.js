@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.1 */
+/* Webseite version = 1.2.2 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -121,10 +121,23 @@ function teamLink(id, name, className = 'team-link') {
   if (!id) return element('span', { className, text: name });
   return element('a', { className, text: name, attributes: { href: `${ROOT}teams/team_detail.html?id=${encodeURIComponent(id)}` } });
 }
+function teamfLink(id, name, className = 'teamf-link') {
+  if (!id) return element('span', { className, text: name });
+  return element('a', { className, text: name, attributes: { href: `${ROOT}teams/team_detail.html?id=${encodeURIComponent(id)}` } });
+}
 
 function computeTeamTrends(teams, ratingHistory) {
   const activeSeason = teams.find(t => t.season)?.season || (ratingHistory?.history?.[ratingHistory.history.length - 1]?.season);
-  const seasonHistory = (ratingHistory?.history || []).filter(entry => entry.season === activeSeason);
+  let seasonHistory = (ratingHistory?.history || []).filter(entry => entry.season === activeSeason);
+
+  // Bestimme den aktuell publizierten Spieltag über alle Teams
+  const publishedMd = Math.max(...teams.map(t => Number(t.matchday) || 0), 0);
+  if (publishedMd > 0) {
+    seasonHistory = seasonHistory.filter(entry => {
+      const md = entry.matchday !== undefined && entry.matchday !== null ? Number(entry.matchday) : null;
+      return md === null || isNaN(md) || md <= publishedMd;
+    });
+  }
 
   // Extract matchdays in chronological order
   const matchdays = [];
@@ -422,7 +435,7 @@ function heroMatchCard(match) {
   const probB = probabilityPercent(match.probability_b);
   const isWinnerA = Number(match.probability_a) >= Number(match.probability_b);
   const winnerObj = isWinnerA ? match.team_a : match.team_b;
-  const winnerClass = isWinnerA ? 'team-link team-link-a' : 'team-link team-link-b';
+  const winnerClass = isWinnerA ? 'teamf-link team-link-a' : 'teamf-link team-link-b';
   const conf = getConfidenceInfo(match.confidence);
 
   return element('article', { className: 'featured-match-card' }, [
@@ -448,7 +461,7 @@ function heroMatchCard(match) {
     element('div', { className: 'featured-footer-single-line' }, [
       element('span', {}, [
         element('span', { className: 'muted', text: 'Prognostizierter Sieger: ' }),
-        teamLink(winnerObj.id, winnerObj.name, winnerClass)
+        teamfLink(winnerObj.id, winnerObj.name, winnerClass)
       ]),
       element('span', { className: 'confidence-text', text: `Confidence: ${conf.label}` })
     ])
@@ -740,7 +753,7 @@ function weightsHistoryChart(history) {
   const SIGNALS = [
     { id: 'direct', label: 'Direkter Vergleich', color: '#2563EB', desc: 'Direkte H2H-Duelle früherer Begegnungen' },
     { id: 'common_opponent', label: 'Gemeinsame Gegner', color: '#14B8A6', desc: 'Quervergleich über gemeinsame Kontrahenten' },
-    { id: 'logic', label: 'Logische Kette', color: '#A855F7', desc: 'Transitive Matchketten im Graphen' },
+    { id: 'logic', label: 'Transitiver Vergleich', color: '#A855F7', desc: 'Transitive Matchketten im Graphen' },
     { id: 'form', label: 'Aktuelle Form', color: '#F97316', desc: 'Kurzzeit-Momentum und jüngste Formkurve' }
   ];
 
@@ -1162,7 +1175,7 @@ function card(match) {
     probabilityBar,
     element('div', { className: 'probability-labels' }, [
       element('span', { style: { color: 'var(--blue)', fontWeight: '800' }, text: probA }),
-      element('span', { style: { color: '#14B8A6', fontWeight: '800' }, text: probB })
+      element('span', { style: { color: 'var(--red)', fontWeight: '800' }, text: probB })
     ]),
     element('div', { className: 'prediction-meta-bottom' }, [
       element('span', {}, [
@@ -1192,6 +1205,7 @@ async function home() {
   const teamsById = Object.fromEntries((teams.teams || []).map(team => [team.id, team]));
 
   // Hero match selection: rank closeness by league, then use the tie-breakers.
+  let heroMatch = null;
   if (predictions.predictions?.length) {
     const leagueModifier = match => {
       const phase = String(match.phase || '').toLowerCase().replace(/[\s-]+/g, '_');
@@ -1223,15 +1237,24 @@ async function home() {
       if (recordedMatchDifference !== 0) return recordedMatchDifference;
       return String(a.match_id || '').localeCompare(String(b.match_id || ''));
     });
-    const heroMatch = sortedByScore[0];
+    heroMatch = sortedByScore[0];
     const heroContainer = document.querySelector('#hero-match-card-container');
     if (heroContainer) replaceChildren(heroContainer, [heroMatchCard(heroMatch)]);
   }
 
-  // Upcoming matches (3 to 6 cards)
+  // Upcoming matches (3 to 6 cards, excluding featured hero match)
   const homePreds = document.querySelector('#home-predictions');
   if (homePreds) {
-    const list = predictions.predictions.slice(0, 6);
+    const isHeroMatch = match => Boolean(
+      heroMatch && (
+        (match.match_id && heroMatch.match_id)
+          ? match.match_id === heroMatch.match_id
+          : match === heroMatch
+      )
+    );
+    const list = (predictions.predictions || [])
+      .filter(match => !isHeroMatch(match))
+      .slice(0, 6);
     replaceChildren(homePreds, list.length ? list.map(card) : [emptyState('Keine Vorhersagen verfügbar.')]);
   }
 
@@ -1379,6 +1402,8 @@ async function teamsPage() {
     load('performanceHistory').catch(() => ({ history: [] }))
   ]);
 
+  const topMatchday = data.matchday || Math.max(...(data.teams || []).map(t => t.matchday || 0), 0);
+
   const trends = computeTeamTrends(data.teams || [], ratingHistory);
   const leagueThresholds = currentLeagueThresholds(data, performanceHistory);
   const leagueSigmas = currentLeagueSigmas(data, performanceHistory);
@@ -1406,6 +1431,42 @@ async function teamsPage() {
       .filter(team => team.name.toLowerCase().includes(query))
       .filter(team => !selectedLeague || team.league === selectedLeague)
       .sort((a,b) => sort === 'name' ? a.name.localeCompare(b.name) : sort === 'matches' ? b.matches_played - a.matches_played : (Number(b.power_rating ?? b.rating) - Number(a.power_rating ?? a.rating)));
+
+    const standPillText = document.querySelector('#ranking-stand-text');
+    if (standPillText) {
+      const groupStandMap = {};
+      teams.forEach(t => {
+        if (!t.matchday) return;
+        const grp = t.league ? `${t.league}${t.group ? ` Gruppe ${t.group}` : ''}` : 'Gesamt';
+        groupStandMap[grp] = t.matchday;
+      });
+
+      const uniqueMds = [...new Set(Object.values(groupStandMap))].sort((a, b) => b - a);
+      if (!uniqueMds.length) {
+        standPillText.textContent = topMatchday ? `Spieltag ${topMatchday}` : 'Vor Saisonstart';
+      } else if (uniqueMds.length === 1) {
+        standPillText.textContent = `Spieltag ${uniqueMds[0]}`;
+      } else {
+        const maxMd = uniqueMds[0];
+        const minMd = uniqueMds[uniqueMds.length - 1];
+        const exceptions = Object.entries(groupStandMap)
+          .filter(([, md]) => md !== maxMd)
+          .map(([grp, md]) => `${grp}: Spieltag ${md}`);
+
+        if (selectedLeague) {
+          const groupList = Object.entries(groupStandMap)
+            .map(([grp, md]) => {
+              const grpName = grp.replace(selectedLeague, '').trim();
+              return `${grpName || grp}: Spieltag ${md}`;
+            });
+          standPillText.textContent = groupList.join(' · ');
+        } else if (exceptions.length) {
+          standPillText.textContent = `Spieltag ${maxMd} (${exceptions.join(', ')})`;
+        } else {
+          standPillText.textContent = `Spieltag ${minMd}–${maxMd}`;
+        }
+      }
+    }
 
     if (table) {
       const rows = [];
@@ -1470,15 +1531,21 @@ async function teamsPage() {
             teamLink(team.id, team.name, 'team-link'),
             element('small', { className: 'team-abbreviation', text: ` (${teamAbbreviation(team)})` }),
             element('br'),
-            element('small', { className: 'muted', text: team.group ? `Group ${team.group}` : '' })
+            element('small', {
+              className: 'muted',
+              text: [
+                team.group ? `Group ${team.group}` : '',
+                team.matchday ? `Stand: Spieltag ${team.matchday}` : ''
+              ].filter(Boolean).join(' · ')
+            })
           ]),
           element('td', { text: team.league }),
           element('td', {
             text: Math.round(team.power_rating ?? team.rating),
             attributes: {
               title: team.power_rating !== undefined && Math.round(team.power_rating) !== Math.round(team.rating)
-                ? `Power-Rating: ${Math.round(team.power_rating)} (Glicko: ${Math.round(team.rating)})`
-                : `Rating: ${Math.round(team.rating)}`
+                ? `Power-Rating: ${Math.round(team.power_rating)} (Glicko: ${Math.round(team.rating)}) · Stand: Spieltag ${team.matchday || '-'}`
+                : `Rating: ${Math.round(team.rating)} · Stand: Spieltag ${team.matchday || '-'}`
             }
           }),
           element('td', { text: predictedSustainableLevel(team) }),
@@ -2002,14 +2069,19 @@ function lineChart(series, label, chartInfo = {}) {
 }
 
 function sustainabilityChart(team, sustainabilityData) {
+  const normalizeSeason = s => String(s || '').replace(/^Season\s+/i, '').trim();
   const snapshots = (sustainabilityData?.history || [])
-    .filter(snapshot => snapshot.season === team.season && snapshot.teams?.[team.id]);
-  const currentSnapshot = snapshots[snapshots.length - 1];
+    .filter(snapshot => {
+      const matchSeason = !team.season || snapshot.season === team.season || normalizeSeason(snapshot.season) === normalizeSeason(team.season);
+      return matchSeason && snapshot.teams?.[team.id];
+    });
+  const teamSnapshots = snapshots.length ? snapshots : (sustainabilityData?.history || []).filter(snapshot => snapshot.teams?.[team.id]);
+  const currentSnapshot = teamSnapshots[teamSnapshots.length - 1];
   const current = currentSnapshot?.teams?.[team.id];
   if (!current) return null;
 
   const leagues = ['1. Liga', '2. Liga', '3. Liga', '4. Liga'];
-  return element('aside', {
+  return element('div', {
     className: 'sustainability-chart',
     attributes: { 'aria-label': `Sustainable level: ${current.predicted_league}` }
   }, [
@@ -2164,8 +2236,8 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
     x2: '0',
     y2: '1'
   });
-  const stop1 = svgNode('stop', { offset: '0%', 'stop-color': '#2563EB', 'stop-opacity': '0.22' });
-  const stop2 = svgNode('stop', { offset: '100%', 'stop-color': '#2563EB', 'stop-opacity': '0.06' });
+  const stop1 = svgNode('stop', { offset: '0%', 'stop-color': 'var(--rating-deviation-area)', 'stop-opacity': '0.22' });
+  const stop2 = svgNode('stop', { offset: '100%', 'stop-color': 'var(--rating-deviation-area)', 'stop-opacity': '0.06' });
   gradient.append(stop1, stop2);
   defs.append(clipPath, gradient);
   svg.append(defs);
@@ -2197,7 +2269,7 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
     y: padding.top - 12,
     'text-anchor': 'middle',
     class: 'chart-label',
-    style: 'font-weight: 700; fill: var(--blue, #2563EB);'
+    style: 'font-weight: 700; fill: var(--rating-line);'
   });
   leftAxisTitle.textContent = 'Rating';
   svg.append(leftAxisTitle);
@@ -2211,7 +2283,7 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
       y: yPos + 4,
       'text-anchor': 'start',
       class: 'chart-label',
-      style: 'fill: #14B8A6;'
+      style: 'fill: var(--rating-deviation-line);'
     });
     lbl.textContent = `±${Math.round(val)}`;
     svg.append(lbl);
@@ -2223,7 +2295,7 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
     y: padding.top - 12,
     'text-anchor': 'middle',
     class: 'chart-label',
-    style: 'font-weight: 700; fill: #14B8A6;'
+    style: 'font-weight: 700; fill: var(--rating-deviation-line);'
   });
   rightAxisTitle.textContent = '± RD';
   svg.append(rightAxisTitle);
@@ -2267,7 +2339,7 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
     x2: width - padding.right,
     y2: height - padding.bottom,
     class: 'chart-axis',
-    style: 'stroke: color-mix(in srgb, #14B8A6 60%, var(--ink));'
+    style: 'stroke: color-mix(in srgb, var(--red) 60%, var(--ink));'
   }));
   svg.append(svgNode('line', {
     x1: padding.left,
@@ -2317,7 +2389,7 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
     const bandPath = svgNode('path', {
       d: `M ${upperCoords[0]} L ${upperCoords.slice(1).join(' L ')} L ${lowerCoords.join(' L ')} Z`,
       fill: `url(#${gradientId})`,
-      stroke: 'rgba(37, 99, 235, 0.28)',
+      stroke: 'var(--rating-deviation-area)',
       'stroke-width': '1',
       'stroke-dasharray': '3 3',
       'clip-path': `url(#${clipId})`
@@ -2334,7 +2406,7 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
     const rdLine = svgNode('polyline', {
       points: rdPoints,
       fill: 'none',
-      stroke: '#14B8A6',
+      stroke: 'var(--rating-deviation-line)',
       'stroke-width': '2.2',
       'stroke-dasharray': '5 3',
       'clip-path': `url(#${clipId})`
@@ -2348,7 +2420,7 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
       cx: x(idx),
       cy: yRD(p.rating_deviation),
       r: 3,
-      fill: '#14B8A6'
+      fill: 'var(--rating-deviation-line)'
     });
     const rdTitle = svgNode('title');
     rdTitle.textContent = `${p.label} (${dateLabel(p.date)})\nRating-Abweichung: ±${Math.round(p.rating_deviation)} RD`;
@@ -2362,7 +2434,7 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
     const ratingLine = svgNode('polyline', {
       points: ratingPoints,
       fill: 'none',
-      stroke: 'var(--blue, #2563EB)',
+      stroke: 'var(--rating-line)',
       'stroke-width': '3',
       'clip-path': `url(#${clipId})`
     });
@@ -2376,8 +2448,8 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
       cy: yRating(p.rating),
       r: 4.5,
       class: 'chart-point',
-      fill: 'var(--blue, #2563EB)',
-      stroke: 'var(--panel, #ffffff)',
+      fill: 'var(--rating-point)',
+      stroke: 'var(--rating-point)',
       'stroke-width': '2'
     });
     const circleTitle = svgNode('title');
@@ -2471,14 +2543,13 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
     }
   ];
 
-  const sustainability = sustainabilityChart(team, sustainabilityData);
   const chartSvg = teamRatingChart(team, points, leagueThresholds);
   const summary = chartSummary(points);
 
   const legend = element('div', { className: 'chart-legend', attributes: { role: 'list', 'aria-label': 'Diagramm-Legende' } }, [
-    element('span', { className: 'legend-item', style: { color: 'var(--blue, #2563EB)' }, text: 'Rating' }),
-    element('span', { className: 'legend-item', style: { color: 'rgba(37, 99, 235, 0.7)' }, text: 'Rating ± RD (Konfidenzbereich)' }),
-    element('span', { className: 'legend-item', style: { color: '#14B8A6' }, text: 'Rating-Abweichung (RD)' })
+    element('span', { className: 'legend-item', style: { color: 'var(--rating-line)' }, text: 'Rating' }),
+    element('span', { className: 'legend-item', style: { color: 'var(--rating-deviation-area)' }, text: 'Rating ± RD (Konfidenzbereich)' }),
+    element('span', { className: 'legend-item', style: { color: 'var(--rating-deviation-line)' }, text: 'Rating-Abweichung (RD)' })
   ]);
 
   const panel = element('section', { className: 'history-panel' }, [
@@ -2487,24 +2558,11 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
     ]),
     legend,
     element('div', { className: 'rating-history-canvas' }, [
-      chartSvg,
-      sustainability
+      chartSvg
     ]),
     summary
   ]);
 
-  const canvas = panel.querySelector('.rating-history-canvas');
-  if (canvas && sustainability) {
-    requestAnimationFrame(() => {
-      positionSustainabilityChart(canvas);
-    });
-    if (typeof ResizeObserver !== 'undefined') {
-      const resizeObserver = new ResizeObserver(() => {
-        positionSustainabilityChart(canvas);
-      });
-      resizeObserver.observe(canvas);
-    }
-  }
   return panel;
 }
 
@@ -2599,7 +2657,7 @@ async function comparePage() {
 
     const compareCardsNode = element('div', { className: 'compare-cards' }, [
       element('article', { className: 'compare-card', style: { borderTop: '4px solid var(--blue)' } }, [
-        element('p', { className: 'eyebrow', text: a.league }),
+        element('p', { className: 'compare-eyebrow', text: a.league }),
         element('h2', {}, [teamLink(a.id, a.name, 'team-link team-link-a')]),
         element('div', { className: 'compare-rating', text: Math.round(a.rating) }),
         element('p', { className: 'muted', text: `Rating-Abweichung: ${Math.round(a.rating_deviation)}` }),
@@ -2609,10 +2667,10 @@ async function comparePage() {
           element('a', { className: 'team-link team-link-a', text: 'Teamdetails anzeigen →', attributes: { href: `${ROOT}teams/team_detail.html?id=${encodeURIComponent(a.id)}` } })
         ])
       ]),
-      element('article', { className: 'compare-card', style: { borderTop: '4px solid #14B8A6' } }, [
-        element('p', { className: 'eyebrow', text: b.league }),
+      element('article', { className: 'compare-card', style: { borderTop: '4px solid var(--red)' } }, [
+        element('p', { className: 'compare-eyebrow', text: b.league }),
         element('h2', {}, [teamLink(b.id, b.name, 'team-link team-link-b')]),
-        element('div', { className: 'compare-rating', style: { color: '#14B8A6' }, text: Math.round(b.rating) }),
+        element('div', { className: 'compare-rating', style: { color: 'var(--red)' }, text: Math.round(b.rating) }),
         element('p', { className: 'muted', text: `Rating-Abweichung: ${Math.round(b.rating_deviation)}` }),
         element('div', { className: 'team-extra' }, [
           element('span', { text: `Saison: ${b.season}` }),
@@ -2665,21 +2723,42 @@ async function teamDetailPage() {
 
   if (target) {
     const displayRating = Math.round(team.power_rating ?? team.rating);
+    const sustainabilityNode = sustainabilityChart(team, sustainability);
+    const sustainabilityCard = element(
+      'article',
+      { className: 'performance-card performance-card-sustainability' },
+      sustainabilityNode
+        ? [sustainabilityNode]
+        : [
+            element('div', { className: 'performance-value', text: '—' }),
+            element('div', { className: 'performance-label', text: 'Sustainable level' })
+          ]
+    );
+
     const statCards = [
-      ['Rating', displayRating],
-      ['Rating-Abweichung', Math.round(team.rating_deviation)],
-      ['Prognostiziertes Liga-Niveau', predictedSustainableLevel(team)],
-      ['Liga-Confidence', team.league_confidence ? percent(team.league_confidence) : '—'],
-      ['Matches in dieser Season', team.matches_played]
-    ].map(([label, value]) => element('article', { className: 'performance-card' }, [
-      element('div', { className: 'performance-value', text: value }),
-      element('div', { className: 'performance-label', text: label })
-    ]));
-    statCards.push(element('article', { className: 'performance-card' }, [
-      element('div', { className: 'performance-label', text: 'Daten vom' }),
-      element('div', { className: 'performance-value', text: 'Wird geladen...', attributes: { id: 'home-updated' } }),
-      element('div', { className: 'performance-label', text: 'Öffentlicher Snapshot' })
-    ]));
+      element('article', { className: 'performance-card' }, [
+        element('div', { className: 'performance-value', text: displayRating }),
+        element('div', { className: 'performance-label', text: 'Rating' })
+      ]),
+      element('article', { className: 'performance-card' }, [
+        element('div', { className: 'performance-value', text: Math.round(team.rating_deviation) }),
+        element('div', { className: 'performance-label', text: 'Rating-Abweichung' })
+      ]),
+      element('article', { className: 'performance-card' }, [
+        element('div', { className: 'performance-value', text: predictedSustainableLevel(team) }),
+        element('div', { className: 'performance-label', text: 'Prognostiziertes Liga-Niveau' })
+      ]),
+      sustainabilityCard,
+      element('article', { className: 'performance-card' }, [
+        element('div', { className: 'performance-value', text: team.matches_played }),
+        element('div', { className: 'performance-label', text: 'Matches in dieser Season' })
+      ]),
+      element('article', { className: 'performance-card' }, [
+        element('div', { className: 'performance-label', text: 'Daten vom' }),
+        element('div', { className: 'performance-value', text: 'Wird geladen...', attributes: { id: 'home-updated' } }),
+        element('div', { className: 'performance-label', text: 'Öffentlicher Snapshot' })
+      ])
+    ];
     replaceChildren(target, [
       element('section', { className: 'team-hero' }, [
         element('p', { className: 'eyebrow', text: `${team.league}${team.group ? ' · Group ' + team.group : ''}` }),
@@ -2714,7 +2793,35 @@ async function performancePage() {
   const render = () => {
     const period = periods.find(item => item.id === select?.value) || periods[0];
     const target = document.querySelector('#performance-summary');
-    if (target) replaceChildren(target, [['Accuracy', percent(period.accuracy)], ['Log Loss', Number(period.log_loss).toFixed(3)], ['Brier Score', Number(period.brier_score).toFixed(3)], ['Calibration Error', Number(period.calibration_error).toFixed(3)], ['Vorhersagen', period.predictions], ['Auswertungszeitraum', `${dateLabel(period.evaluation_start)} - ${dateLabel(period.evaluation_end)}`]].map(([label, value]) => element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: value }), element('div', { className: 'performance-label', text: label })])));
+    if (target) {
+      const metrics = [
+        ['Accuracy', percent(period.accuracy), 'accuracy'],
+        ['Log Loss', Number(period.log_loss).toFixed(3), 'log-loss'],
+        ['Brier Score', Number(period.brier_score).toFixed(3), 'brier-score'],
+        ['Calibration Error', Number(period.calibration_error).toFixed(3), 'calibration-error'],
+        ['Vorhersagen', period.predictions, 'predictions'],
+        ['Auswertungszeitraum', `${dateLabel(period.evaluation_start)} - ${dateLabel(period.evaluation_end)}`, 'period']
+      ];
+      replaceChildren(
+        target,
+        metrics.map(([label, value, key]) =>
+          element(
+            'article',
+            {
+              className: `performance-card${key === 'period' ? ' performance-card-period' : ''}`,
+              attributes: { 'data-metric': key }
+            },
+            [
+              element('div', {
+                className: `performance-value${key === 'period' ? ' performance-value-period' : ''}`,
+                text: value
+              }),
+              element('div', { className: 'performance-label', text: label })
+            ]
+          )
+        )
+      );
+    }
     const chartTarget = document.querySelector('#performance-history-chart');
     if (chartTarget && !chartTarget.dataset.rendered) {
       replaceChildren(chartTarget, [
@@ -2982,24 +3089,83 @@ function positionHomeDataStamp() {
         stamp.before(placeholder);
         dataStampPlaceholders.set(stamp, placeholder);
       }
-      anchor.before(stamp);
+      const notice = document.getElementById('ranking-notice');
+      const target = (notice && notice.parentNode === anchor.parentNode && notice.nextElementSibling === anchor)
+        ? notice
+        : anchor;
+      if (stamp.nextElementSibling !== target) {
+        target.before(stamp);
+      }
     }
   }
 
   if (!shouldStackStamp) {
     if (page !== 'home') {
       const placeholder = dataStampPlaceholders.get(stamp);
-      if (placeholder) placeholder.after(stamp);
+      if (placeholder && placeholder.parentNode && stamp.previousSibling !== placeholder) {
+        placeholder.after(stamp);
+      }
     }
     stamp.style.setProperty('--data-stamp-left', `${stampLeft}px`);
     stamp.style.setProperty('--data-stamp-top', `${top}px`);
   }
 }
 
+let noticePlaceholders = new WeakMap();
+
+function positionRankingNotice() {
+  const notice = document.getElementById('ranking-notice');
+  const main = document.getElementById('main-content');
+  const header = document.querySelector('.site-header');
+  const { page } = document.body?.dataset ?? {};
+  if (!notice || !main || !header || page !== 'teams') return;
+
+  const anchor = main.querySelector('.toolbar') || main.querySelector('.page-intro');
+  if (!anchor) return;
+
+  const anchorRect = anchor.getBoundingClientRect();
+  const headerRect = header.getBoundingClientRect();
+  const viewportGap = Math.max(16, Math.min(32, anchorRect.left / 6));
+  const mainGap = viewportGap;
+  const rightGutter = window.innerWidth - anchorRect.right;
+
+  const maxNoticeWidth = 280;
+  const minNoticeWidth = 210;
+  const availableNoticeWidth = rightGutter - mainGap - viewportGap;
+  const shouldStackNotice = availableNoticeWidth < minNoticeWidth;
+
+  document.body.classList.toggle('ranking-notice-stacked', shouldStackNotice);
+  if (shouldStackNotice) {
+    notice.style.removeProperty('--ranking-notice-left');
+    notice.style.removeProperty('--ranking-notice-top');
+    notice.style.removeProperty('--ranking-notice-width');
+    if (!noticePlaceholders.has(notice)) {
+      const placeholder = document.createComment('ranking-notice-position');
+      notice.before(placeholder);
+      noticePlaceholders.set(notice, placeholder);
+    }
+    if (notice.nextElementSibling !== anchor) {
+      anchor.before(notice);
+    }
+  } else {
+    const placeholder = noticePlaceholders.get(notice);
+    if (placeholder && placeholder.parentNode && notice.previousSibling !== placeholder) {
+      placeholder.after(notice);
+    }
+
+    const noticeWidth = Math.min(maxNoticeWidth, Math.floor(availableNoticeWidth));
+    const noticeLeft = Math.round(anchorRect.right + mainGap);
+    const top = Math.round(Math.max(headerRect.bottom + viewportGap, anchorRect.top));
+    notice.style.setProperty('--ranking-notice-left', `${noticeLeft}px`);
+    notice.style.setProperty('--ranking-notice-top', `${top}px`);
+    notice.style.setProperty('--ranking-notice-width', `${noticeWidth}px`);
+  }
+}
+
 function scheduleDataStampPosition() {
   window.requestAnimationFrame(() => {
     positionHomeDataStamp();
-    window.requestAnimationFrame(positionHomeDataStamp);
+    positionRankingNotice();
   });
 }
 
@@ -3026,7 +3192,10 @@ window.addEventListener('resize', () => {
   updateStickyHeaderHeight();
   scheduleDataStampPosition();
 });
-window.addEventListener('scroll', positionHomeDataStamp, { passive: true });
+window.addEventListener('scroll', () => {
+  positionHomeDataStamp();
+  positionRankingNotice();
+}, { passive: true });
 if (typeof ResizeObserver !== 'undefined') {
   const mainContent = document.getElementById('main-content');
   if (mainContent) {

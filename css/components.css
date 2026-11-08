@@ -30,7 +30,7 @@
 }
 
 .comparison-probabilities div:last-child strong {
-  color: #14B8A6;
+  color: var(--red);
 }
 
 .comparison-probabilities strong {
@@ -139,16 +139,15 @@
 }
 
 .sustainability-chart {
-  position: absolute;
-  z-index: 2;
-  top: .75rem;
-  right: .75rem;
   width: 12.5rem;
+  max-width: 100%;
+  margin: 0 auto;
   padding: .7rem .8rem .6rem;
   background: var(--paper);
   box-shadow: 0 4px 14px color-mix(in srgb, var(--ink) 12%, transparent);
   border: 1px solid var(--line);
   border-radius: 8px;
+  text-align: left;
 }
 
 .sustainability-chart h3 {
@@ -461,6 +460,13 @@
   margin: 1.25rem 0;
 }
 
+.team-stats .performance-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 body[data-page='team-detail'] .team-detail > .history-panel {
   margin-top: 1.5rem;
 }
@@ -515,11 +521,11 @@ body[data-page='team-detail'] .team-detail > .history-panel {
 }
 
 .result-win .result-mark {
-  background: var(--blue);
+  background: var(--win);
 }
 
 .result-loss .result-mark {
-  background: #8993a6;
+  background: var(--loss);
 }
 
 .result-opponent {
@@ -569,9 +575,6 @@ body[data-page='team-detail'] .team-detail > .history-panel {
   }
 
   .sustainability-chart {
-    width: 100%;
-    top: .5rem;
-    right: .5rem;
     width: min(12.5rem, calc(100% - 1rem));
   }
 
@@ -771,6 +774,9 @@ body[data-page='team-detail'] .team-detail > .history-panel {
 
 .chart-line {
   fill: none;
+  stroke: var(--color-teal);
+  stroke-linecap: round;
+  stroke-linejoin: round;
   stroke-width: 3;
   vector-effect: non-scaling-stroke;
 }
@@ -786,9 +792,9 @@ body[data-page='team-detail'] .team-detail > .history-panel {
 }
 
 .chart-point {
-  fill: var(--color-teal);
-  stroke: var(--color-teal);
-  stroke-width: 2;
+  fill: var(--rating-point);
+  stroke: var(--rating-point);
+  stroke-width: 0;
   vector-effect: non-scaling-stroke;
 }
 
@@ -846,48 +852,6 @@ textarea:focus-visible {
     text-align: left;
   }
 }
-/* Accessible high-contrast foundation and centered header navigation */
-:root {
-  color-scheme: light;
-  --page-bg: #f7f9fc;
-  --surface-bg: #ffffff;
-  --surface-muted: #e8eef5;
-  --text-main: #17212b;
-  --text-muted: #34495e;
-  --border-strong: #526273;
-  --accent: #0645ad;
-  --accent-contrast: #ffffff;
-}
-
-html[data-theme="dark"], body.dark, .dark-mode {
-  color-scheme: dark;
-  --page-bg: #101820;
-  --surface-bg: #1b2733;
-  --surface-muted: #293847;
-  --text-main: #f5f7fa;
-  --text-muted: #d6e0ea;
-  --border-strong: #aebdcc;
-  --accent: #8db8ff;
-  --accent-contrast: #101820;
-}
-
-body { background: var(--page-bg); color: var(--text-main); }
-main, section, article, .card, .panel, .modal, .dropdown, .menu { color: var(--text-main); }
-p, label, small, .muted, .secondary, .description { color: var(--text-muted); }
-a { color: var(--accent); }
-button, input, select, textarea { color: var(--text-main); background: var(--surface-bg); border-color: var(--border-strong); }
-button { font-weight: 700; }
-button.primary, .btn-primary, .active { color: var(--accent-contrast); background: var(--accent); }
-
-header, .site-header, .header-inner, .header-content {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.brand, .site-brand, .logo { flex: 1 1 0%; }
-.site-nav { flex: 0 1 auto; display: flex; justify-content: center; align-items: center; gap: 1rem; }
-.header-actions, .header-controls, .actions { flex: 1 1 0%; display: flex; justify-content: flex-end; align-items: center; gap: .5rem; }
-@media (max-width: 700px) { .site-nav { order: 3; flex-basis: 100%; flex-wrap: wrap; } header, .site-header, .header-inner, .header-content { flex-wrap: wrap; } }
 
 /* Featured Matchup Card */
 .featured-match-card {
@@ -962,7 +926,7 @@ header, .site-header, .header-inner, .header-content {
 }
 
 .hero-team-prob.team-b-prob {
-  color: #14B8A6;
+  color: var(--red);
 }
 
 .hero-vs {
@@ -982,7 +946,7 @@ header, .site-header, .header-inner, .header-content {
 
 .prob-bar-track {
   height: 0.8rem;
-  background: #14B8A6;
+  background: var(--red);
   border-radius: 999px;
   overflow: hidden;
   display: flex;
