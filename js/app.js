@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.2 */
+/* Webseite version = 1.2.2.1 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -2552,7 +2552,7 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
     element('span', { className: 'legend-item', style: { color: 'var(--rating-deviation-line)' }, text: 'Rating-Abweichung (RD)' })
   ]);
 
-  const panel = element('section', { className: 'history-panel' }, [
+  return element('section', { className: 'history-panel' }, [
     element('h2', { className: 'history-panel-title', text: `${team.name} Rating-Verlauf` }, [
       element('span', { className: 'in-dev-label', text: '(in-Dev Version)' })
     ]),
@@ -2563,7 +2563,6 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
     summary
   ]);
 
-  return panel;
 }
 
 function resultsPanel(team, predictionHistory) {

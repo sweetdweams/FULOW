@@ -3,6 +3,8 @@
 - Engineversion geändert: 1.1.3-stable → 1.1.4-stable
 - Farbliche Überarbeitung
 - Matchpredictions aus dem aktuellen Spieltag werden erst angezeigt, sobald beide Teams des Matches die vorherige Runde abgeschlossen haben.
+## 1.2.2.1
+- Datenaktualisierung und MD4 Predictions
 
 # 1.2.1 -- 07.11.2026
 - Datenaktualisierung
