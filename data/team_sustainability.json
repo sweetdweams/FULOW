@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T19:21:11+00:00",
+  "generated_at": "2026-11-12T20:19:37+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -15652,7 +15652,7 @@
       "key": "Season WiSe26/27|4",
       "season": "Season WiSe26/27",
       "matchday": "4",
-      "date": "11.11.2026",
+      "date": "12.11.2026",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (4)",
       "teams": {
         "T081": {
@@ -15752,10 +15752,10 @@
           "form": 1.0,
           "rating_deviation": 187.658,
           "predicted_league": "1. Liga",
-          "league_confidence": 0.99945,
+          "league_confidence": 0.99114,
           "league_probabilities": {
-            "1. Liga": 0.99945,
-            "2. Liga": 0.00055,
+            "1. Liga": 0.99114,
+            "2. Liga": 0.00886,
             "3. Liga": 0.0,
             "4. Liga": 0.0
           }
@@ -16171,12 +16171,12 @@
           "power_rating": 2536.0013,
           "form": -0.3333,
           "rating_deviation": 146.7459,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.540884,
+          "predicted_league": "1. Liga",
+          "league_confidence": 0.695318,
           "league_probabilities": {
-            "1. Liga": 0.458848,
-            "2. Liga": 0.540884,
-            "3. Liga": 0.000268,
+            "1. Liga": 0.695318,
+            "2. Liga": 0.304664,
+            "3. Liga": 1.8e-05,
             "4. Liga": 0.0
           }
         },

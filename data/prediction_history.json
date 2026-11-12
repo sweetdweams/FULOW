@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T19:21:11+00:00",
+  "generated_at": "2026-11-12T20:19:37+00:00",
   "crosszone_history": [
     {
       "key": "Season SoSe26|0",
@@ -621,7 +621,7 @@
       "key": "Season WiSe26/27|4",
       "season": "Season WiSe26/27",
       "matchday": "4",
-      "date": "11.11.2026",
+      "date": "12.11.2026",
       "phase": "regular_season",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (4)",
       "zones": [
@@ -629,7 +629,7 @@
           "id": "1_2",
           "label": "1. Liga \u2194 2. Liga",
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         {
           "id": "2_3",
@@ -16955,7 +16955,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -16987,7 +16987,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17019,7 +17019,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17051,7 +17051,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17083,7 +17083,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17115,7 +17115,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17147,7 +17147,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17179,7 +17179,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17211,7 +17211,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17243,7 +17243,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17275,7 +17275,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17307,7 +17307,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17339,7 +17339,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17371,7 +17371,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17403,7 +17403,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17435,7 +17435,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17467,7 +17467,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17499,7 +17499,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17531,7 +17531,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17563,7 +17563,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17595,7 +17595,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17627,7 +17627,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17659,7 +17659,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17691,7 +17691,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17723,7 +17723,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17755,7 +17755,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17787,7 +17787,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17819,7 +17819,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17851,7 +17851,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17883,7 +17883,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17915,7 +17915,39 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.6582
+        }
+      }
+    },
+    {
+      "match_id": "M177",
+      "date": "12.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T055",
+      "team_b_id": "T040",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "Hamburger Delfine",
+      "team_b": "DG Elysium",
+      "probability_a": 0.89862,
+      "probability_b": 0.10138,
+      "confidence": 0.771088,
+      "correct": false,
+      "actual_winner_id": "T040",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,

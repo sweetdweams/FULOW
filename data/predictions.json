@@ -1,5 +1,6 @@
 {
-  "generated_at": "2026-11-12T19:21:11+00:00",
+  "generated_at": "2026-11-12T20:19:37+00:00",
+  "matchday": 4,
   "predictions": [
     {
       "match_id": "M147",
@@ -76,25 +77,6 @@
       "probability_a": 0.268516,
       "probability_b": 0.731484,
       "confidence": 0.692714
-    },
-    {
-      "match_id": "M177",
-      "date": "12.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "1. Liga",
-      "phase": "Regular Season",
-      "matchday": "4",
-      "team_a": {
-        "id": "T055",
-        "name": "Hamburger Delfine"
-      },
-      "team_b": {
-        "id": "T040",
-        "name": "DG Elysium"
-      },
-      "probability_a": 0.89862,
-      "probability_b": 0.10138,
-      "confidence": 0.771088
     }
   ]
 }

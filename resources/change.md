@@ -1,3 +1,7 @@
+# 1.2.4
+- Datenaktualisierung
+- Formulierung der Datenaktualität geändert
+
 # 1.2.3 -- 12.11.2026
 - Datenaktualisierung
 ## 1.2.3.1

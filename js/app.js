@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.3.1 */
+/* Webseite version = 1.2.4 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -2657,11 +2657,27 @@ function resultsPanel(team, predictionHistory) {
 }
 
 async function comparePage() {
-  const [data, comparisons, ratingHistory] = await Promise.all([
+  const [data, comparisons, ratingHistory, predictions] = await Promise.all([
     load('teams'),
     load('comparisons'),
-    load('ratingHistory').catch(() => ({ history: [] }))
+    load('ratingHistory').catch(() => ({ history: [] })),
+    load('predictions').catch(() => null)
   ]);
+
+  const currentMatchday = comparisons?.matchday
+    || (predictions?.predictions?.length ? Math.max(...predictions.predictions.map(p => Number(p.matchday) || 0), 0) : 0)
+    || predictions?.matchday
+    || (data?.matchday ? data.matchday + 1 : 0);
+
+  const standText = document.querySelector('#compare-stand-text') || document.querySelector('#ranking-stand-text');
+  if (standText) {
+    standText.textContent = currentMatchday ? `Spieltag ${currentMatchday}` : 'Vor Saisonstart';
+  }
+
+  const homeUpdated = document.querySelector('#home-updated');
+  if (homeUpdated) {
+    homeUpdated.textContent = technicalDateLabel(comparisons.generated_at);
+  }
 
   const options = data.teams.sort((a,b) => a.name.localeCompare(b.name)).map(team => element('option', { text: team.name, attributes: { value: team.id } }));
   document.querySelector('#compare-a')?.append(...options);
@@ -2928,7 +2944,7 @@ async function run() {
     if (page === 'compare') await comparePage();
     if (page === 'performance') await performancePage();
 
-    if (page !== 'teams' && page !== 'team-detail') {
+    if (page !== 'teams' && page !== 'team-detail' && page !== 'compare') {
       const homeUpdated = document.querySelector('#home-updated');
       if (homeUpdated) homeUpdated.textContent = technicalDateLabel(predictions.generated_at);
     }

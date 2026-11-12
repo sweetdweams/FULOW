@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T19:21:11+00:00",
+  "generated_at": "2026-11-12T20:19:37+00:00",
   "source": "performance.json",
   "description": "Historical cumulative performance metrics, dynamic crossover rating boundaries, and model correction weights by season and matchday.",
   "history": [
@@ -1875,63 +1875,63 @@
       "key": "Season WiSe26/27|4",
       "season": "Season WiSe26/27",
       "matchday": "4",
-      "date": "11.11.2026",
+      "date": "12.11.2026",
       "phase": "Regular Season",
       "phase_label": "Regular Season \u00b7 Tag (4)",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (4)",
-      "predictions": 540,
-      "accuracy": 0.681481,
-      "log_loss": 0.608684,
-      "brier_score": 0.208531,
-      "calibration_error": 0.070326,
+      "predictions": 541,
+      "accuracy": 0.680222,
+      "log_loss": 0.61179,
+      "brier_score": 0.209638,
+      "calibration_error": 0.068535,
       "modes": {
         "cumulative": {
           "id": "history",
           "label": "History",
           "season": null,
           "evaluation_start": "22.04.2026",
-          "evaluation_end": "11.11.2026",
-          "predictions": 540,
-          "accuracy": 0.681481,
-          "log_loss": 0.608684,
-          "brier_score": 0.208531,
-          "calibration_error": 0.070326
+          "evaluation_end": "12.11.2026",
+          "predictions": 541,
+          "accuracy": 0.680222,
+          "log_loss": 0.61179,
+          "brier_score": 0.209638,
+          "calibration_error": 0.068535
         },
         "season_cumulative": {
           "id": "history",
           "label": "History",
           "season": null,
           "evaluation_start": "10.10.2026",
-          "evaluation_end": "11.11.2026",
-          "predictions": 172,
-          "accuracy": 0.680233,
-          "log_loss": 0.634662,
-          "brier_score": 0.217108,
-          "calibration_error": 0.075368
+          "evaluation_end": "12.11.2026",
+          "predictions": 173,
+          "accuracy": 0.676301,
+          "log_loss": 0.644224,
+          "brier_score": 0.220521,
+          "calibration_error": 0.069738
         },
         "discrete": {
           "id": "history",
           "label": "History",
           "season": null,
           "evaluation_start": "11.11.2026",
-          "evaluation_end": "11.11.2026",
-          "predictions": 31,
-          "accuracy": 0.774194,
-          "log_loss": 0.550378,
-          "brier_score": 0.184084,
-          "calibration_error": 0.19824
+          "evaluation_end": "12.11.2026",
+          "predictions": 32,
+          "accuracy": 0.75,
+          "log_loss": 0.604706,
+          "brier_score": 0.203566,
+          "calibration_error": 0.202143
         },
         "moving_average": {
           "id": "history",
           "label": "History",
           "season": null,
           "evaluation_start": "10.10.2026",
-          "evaluation_end": "11.11.2026",
-          "predictions": 172,
-          "accuracy": 0.680233,
-          "log_loss": 0.634662,
-          "brier_score": 0.217108,
-          "calibration_error": 0.075368
+          "evaluation_end": "12.11.2026",
+          "predictions": 173,
+          "accuracy": 0.676301,
+          "log_loss": 0.644224,
+          "brier_score": 0.220521,
+          "calibration_error": 0.069738
         }
       },
       "weights": {
@@ -1975,7 +1975,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.374
+          "sigma": 114.2105
         },
         "2_3": {
           "rating": 1688.9243,
