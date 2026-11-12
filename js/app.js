@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.2.1 */
+/* Webseite version = 1.2.3.1 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -1408,6 +1408,49 @@ async function teamsPage() {
   const leagueThresholds = currentLeagueThresholds(data, performanceHistory);
   const leagueSigmas = currentLeagueSigmas(data, performanceHistory);
   const currentSeason = data.season || data.teams.find(team => team.season)?.season;
+
+  const resolveRatingDate = targetMatchday => {
+    const mdStr = String(targetMatchday);
+
+    if (data.matchday_timestamps && data.matchday_timestamps[mdStr]) {
+      return data.matchday_timestamps[mdStr];
+    }
+    if (ratingHistory?.matchday_timestamps && ratingHistory.matchday_timestamps[mdStr]) {
+      return ratingHistory.matchday_timestamps[mdStr];
+    }
+
+    if (String(topMatchday) === mdStr) {
+      if (data.rating_updated_at) return data.rating_updated_at;
+      if (data.generated_at) return data.generated_at;
+    }
+
+    const perfEntry = (performanceHistory.history || []).slice().reverse().find(row =>
+      (!currentSeason || row.season === currentSeason) && String(row.matchday) === mdStr && row.date
+    );
+    if (perfEntry?.date) return perfEntry.date;
+
+    const ratingEntry = (ratingHistory.history || []).slice().reverse().find(row =>
+      (!currentSeason || row.season === currentSeason) && String(row.matchday) === mdStr && row.date
+    );
+    if (ratingEntry?.date) return ratingEntry.date;
+
+    if (data.rating_date) return data.rating_date;
+
+    const lastRating = (ratingHistory.history || []).slice().reverse().find(row => row.date);
+    if (lastRating?.date) return lastRating.date;
+
+    return data.rating_updated_at || data.generated_at;
+  };
+
+  const updateHomeUpdated = targetMatchday => {
+    const homeUpdated = document.querySelector('#home-updated');
+    if (homeUpdated) {
+      const standDate = resolveRatingDate(targetMatchday);
+      homeUpdated.textContent = technicalDateLabel(standDate);
+    }
+  };
+
+  updateHomeUpdated(topMatchday);
   const table = document.querySelector('#team-table');
   const leagueSelect = document.querySelector('#team-league');
   const histogram = document.querySelector('#rating-histogram');
@@ -1442,6 +1485,8 @@ async function teamsPage() {
       });
 
       const uniqueMds = [...new Set(Object.values(groupStandMap))].sort((a, b) => b - a);
+      const activeMd = uniqueMds.length ? uniqueMds[0] : topMatchday;
+      updateHomeUpdated(activeMd);
       if (!uniqueMds.length) {
         standPillText.textContent = topMatchday ? `Spieltag ${topMatchday}` : 'Vor Saisonstart';
       } else if (uniqueMds.length === 1) {
@@ -2734,6 +2779,17 @@ async function teamDetailPage() {
           ]
     );
 
+    const teamMd = team.matchday || teams.matchday;
+    const teamTimestamp = teams.matchday_timestamps?.[String(teamMd)]
+      || history?.matchday_timestamps?.[String(teamMd)]
+      || teams.rating_updated_at
+      || (performanceHistory?.history || []).slice().reverse().find(row =>
+        (!team.season || row.season === team.season) && String(row.matchday) === String(teamMd) && row.date
+      )?.date
+      || (history?.history || []).slice().reverse().find(row => row.team_id === team.id && row.date)?.date
+      || teams.rating_date
+      || teams.generated_at;
+
     const statCards = [
       element('article', { className: 'performance-card' }, [
         element('div', { className: 'performance-value', text: displayRating }),
@@ -2754,7 +2810,7 @@ async function teamDetailPage() {
       ]),
       element('article', { className: 'performance-card' }, [
         element('div', { className: 'performance-label', text: 'Daten vom' }),
-        element('div', { className: 'performance-value', text: 'Wird geladen...', attributes: { id: 'home-updated' } }),
+        element('div', { className: 'performance-value', text: technicalDateLabel(teamTimestamp), attributes: { id: 'home-updated' } }),
         element('div', { className: 'performance-label', text: 'Öffentlicher Snapshot' })
       ])
     ];
@@ -2872,8 +2928,10 @@ async function run() {
     if (page === 'compare') await comparePage();
     if (page === 'performance') await performancePage();
 
-    const homeUpdated = document.querySelector('#home-updated');
-    if (homeUpdated) homeUpdated.textContent = technicalDateLabel(predictions.generated_at);
+    if (page !== 'teams' && page !== 'team-detail') {
+      const homeUpdated = document.querySelector('#home-updated');
+      if (homeUpdated) homeUpdated.textContent = technicalDateLabel(predictions.generated_at);
+    }
   } catch (error) {
     document.querySelectorAll('.loading').forEach(target => showError(target, error));
   }

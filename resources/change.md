@@ -1,5 +1,7 @@
 # 1.2.3 -- 12.11.2026
 - Datenaktualisierung
+## 1.2.3.1
+- Fehlerhafterhafte Datenanzeige in der Ranking-Tabelle behoben
 
 # 1.2.2 -- 08.11.2026
 - Datenaktualisierung
