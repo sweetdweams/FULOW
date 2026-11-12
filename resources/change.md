@@ -1,3 +1,6 @@
+# 1.2.3 -- 12.11.2026
+- Datenaktualisierung
+
 # 1.2.2 -- 08.11.2026
 - Datenaktualisierung
 - Engineversion geändert: 1.1.3-stable → 1.1.4-stable
