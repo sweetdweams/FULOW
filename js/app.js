@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.4 */
+/* Webseite version = 1.2.5 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -1146,6 +1146,46 @@ function weightsHistoryChart(history) {
   return container;
 }
 
+function matchdayDivider(matchdayKey, count) {
+  const label = matchdayKey === 'unknown'
+    ? 'Weitere Matches'
+    : (/^\d+$/.test(matchdayKey)
+      ? `Spieltag ${matchdayKey}`
+      : (matchdayKey.toLowerCase().startsWith('spieltag') ? matchdayKey : `Spieltag ${matchdayKey}`));
+
+  const countText = count === 1 ? '1 Match' : `${count} Matches`;
+
+  return element('div', {
+    className: 'home-matchday-divider',
+    attributes: { 'role': 'separator', 'aria-label': label }
+  }, [
+    element('div', { className: 'home-matchday-badge' }, [
+      svgElement('svg', {
+        className: 'home-matchday-icon',
+        attributes: {
+          viewBox: '0 0 24 24',
+          width: '13',
+          height: '13',
+          fill: 'none',
+          stroke: 'currentColor',
+          'stroke-width': '2.2',
+          'stroke-linecap': 'round',
+          'stroke-linejoin': 'round',
+          'aria-hidden': 'true'
+        }
+      }, [
+        svgElement('rect', { attributes: { x: '3', y: '4', width: '18', height: '18', rx: '2', ry: '2' } }),
+        svgElement('line', { attributes: { x1: '16', y1: '2', x2: '16', y2: '6' } }),
+        svgElement('line', { attributes: { x1: '8', y1: '2', x2: '8', y2: '6' } }),
+        svgElement('line', { attributes: { x1: '3', y1: '10', x2: '21', y2: '10' } })
+      ]),
+      element('span', { className: 'home-matchday-title', text: label })
+    ]),
+    element('div', { className: 'home-matchday-line' }),
+    element('span', { className: 'home-matchday-count', text: countText })
+  ]);
+}
+
 function card(match) {
   const probA = probabilityPercent(match.probability_a);
   const probB = probabilityPercent(match.probability_b);
@@ -1158,10 +1198,17 @@ function card(match) {
     element('i', { className: 'prob-bar-fill-a', style: { width: boundedPercent(match.probability_a) } })
   ]);
 
-  return element('article', { className: 'prediction-card' }, [
+  const matchdayStr = match.matchday !== undefined && match.matchday !== null && String(match.matchday).trim() !== ''
+    ? `Spieltag ${match.matchday}`
+    : 'Spieltag -';
+
+  return element('article', { className: 'prediction-card', attributes: { 'data-matchday': String(match.matchday ?? '') } }, [
     element('div', { className: 'prediction-meta' }, [
       element('span', { text: dateLabel(match.date) }),
-      element('span', { text: `${match.league || 'Liga'} · Matchday ${match.matchday || '-'}` })
+      element('span', { className: 'prediction-meta-right' }, [
+        element('span', { text: `${match.league || 'Liga'} · ` }),
+        element('span', { className: 'prediction-matchday-tag', text: matchdayStr })
+      ])
     ]),
     element('div', { className: 'teams-line-striped' }, [
       element('div', { className: 'team-stripe team-stripe-a' }, [
@@ -1252,10 +1299,49 @@ async function home() {
           : match === heroMatch
       )
     );
-    const list = (predictions.predictions || [])
-      .filter(match => !isHeroMatch(match))
-      .slice(0, 6);
-    replaceChildren(homePreds, list.length ? list.map(card) : [emptyState('Keine Vorhersagen verfügbar.')]);
+    const nonHeroMatches = (predictions.predictions || []).filter(match => !isHeroMatch(match));
+
+    const sortedPredictions = [...nonHeroMatches].sort((a, b) => {
+      const numA = Number(a.matchday);
+      const numB = Number(b.matchday);
+      const validA = !Number.isNaN(numA) && a.matchday !== '' && a.matchday !== null && a.matchday !== undefined;
+      const validB = !Number.isNaN(numB) && b.matchday !== '' && b.matchday !== null && b.matchday !== undefined;
+      if (validA && validB) return numA - numB;
+      if (validA) return -1;
+      if (validB) return 1;
+      return String(a.matchday || '').localeCompare(String(b.matchday || ''));
+    });
+
+    const list = sortedPredictions.slice(0, 6);
+
+    if (!list.length) {
+      replaceChildren(homePreds, [emptyState('Vorhersagen des nächsten Spieltags noch Ausstehend.')]);
+    } else {
+      const matchdayGroups = new Map();
+      list.forEach(match => {
+        const key = (match.matchday !== undefined && match.matchday !== null && String(match.matchday).trim() !== '')
+          ? String(match.matchday).trim()
+          : 'unknown';
+        if (!matchdayGroups.has(key)) {
+          matchdayGroups.set(key, []);
+        }
+        matchdayGroups.get(key).push(match);
+      });
+
+      const hasMultipleMatchdays = matchdayGroups.size > 1;
+      homePreds.classList.toggle('has-multiple-matchdays', hasMultipleMatchdays);
+
+      if (hasMultipleMatchdays) {
+        const children = [];
+        matchdayGroups.forEach((matches, key) => {
+          children.push(matchdayDivider(key, matches.length));
+          matches.forEach(match => children.push(card(match)));
+        });
+        replaceChildren(homePreds, children);
+      } else {
+        replaceChildren(homePreds, list.map(card));
+      }
+    }
   }
 
   // League Overview aggregation

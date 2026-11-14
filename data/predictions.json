@@ -1,26 +1,7 @@
 {
-  "generated_at": "2026-11-12T20:19:37+00:00",
+  "generated_at": "2026-11-14T14:59:46+00:00",
   "matchday": 4,
   "predictions": [
-    {
-      "match_id": "M147",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "4",
-      "team_a": {
-        "id": "T081",
-        "name": "DA Katerstrophe"
-      },
-      "team_b": {
-        "id": "T084",
-        "name": "UKGarKeinPlan"
-      },
-      "probability_a": 0.502136,
-      "probability_b": 0.497864,
-      "confidence": 0.383439
-    },
     {
       "match_id": "M149",
       "date": "11.11.2026",
@@ -36,47 +17,9 @@
         "id": "T005",
         "name": "Ilmenauer T.E.E."
       },
-      "probability_a": 0.313485,
-      "probability_b": 0.686515,
-      "confidence": 0.585771
-    },
-    {
-      "match_id": "M153",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "4",
-      "team_a": {
-        "id": "T007",
-        "name": "DG Lotus"
-      },
-      "team_b": {
-        "id": "T079",
-        "name": "UKG GutGuterAmGutesten"
-      },
-      "probability_a": 0.603657,
-      "probability_b": 0.396343,
-      "confidence": 0.520955
-    },
-    {
-      "match_id": "M154",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "4",
-      "team_a": {
-        "id": "T014",
-        "name": "Hai Noon"
-      },
-      "team_b": {
-        "id": "T009",
-        "name": "Bremer Wasch Dienst"
-      },
-      "probability_a": 0.268516,
-      "probability_b": 0.731484,
-      "confidence": 0.692714
+      "probability_a": 0.328837,
+      "probability_b": 0.671163,
+      "confidence": 0.567871
     }
   ]
 }

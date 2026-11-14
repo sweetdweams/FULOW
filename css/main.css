@@ -2729,6 +2729,92 @@ body[data-page='predictions'] #prediction-list .loading {
   grid-column: 1 / -1;
 }
 
+/* Home Upcoming Matches: Matchday Divider & Badge */
+.home-matchday-divider {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  padding-top: 0.5rem;
+  user-select: none;
+}
+
+.home-matchday-divider:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.home-matchday-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.75rem;
+  background: color-mix(in srgb, var(--panel) 85%, var(--focus) 15%);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, var(--focus) 30%);
+  border-radius: 999px;
+  box-shadow: 0 1px 3px rgba(18, 35, 64, 0.05);
+}
+
+.home-matchday-icon {
+  color: var(--focus);
+  flex-shrink: 0;
+}
+
+.home-matchday-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.home-matchday-line {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  opacity: 0.65;
+}
+
+.home-matchday-count {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.prediction-meta-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.prediction-matchday-tag {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--focus) 12%, transparent);
+  color: var(--focus);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+
+@media (max-width: 600px) {
+  .home-matchday-divider {
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+  .home-matchday-count {
+    font-size: 0.68rem;
+  }
+}
+
 @media (max-width: 860px) {
   body[data-page='home'] #home-predictions,
   body[data-page='predictions'] #prediction-list {
