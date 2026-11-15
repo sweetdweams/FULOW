@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T14:59:46+00:00",
+  "generated_at": "2026-11-15T21:11:35+00:00",
   "source": "performance.json",
   "description": "Historical cumulative performance metrics, dynamic crossover rating boundaries, and model correction weights by season and matchday.",
   "history": [
@@ -1879,11 +1879,11 @@
       "phase": "Regular Season",
       "phase_label": "Regular Season \u00b7 Tag (4)",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (4)",
-      "predictions": 544,
-      "accuracy": 0.680147,
-      "log_loss": 0.613027,
-      "brier_score": 0.21021,
-      "calibration_error": 0.071145,
+      "predictions": 545,
+      "accuracy": 0.680734,
+      "log_loss": 0.612634,
+      "brier_score": 0.210023,
+      "calibration_error": 0.070411,
       "modes": {
         "cumulative": {
           "id": "history",
@@ -1891,11 +1891,11 @@
           "season": null,
           "evaluation_start": "22.04.2026",
           "evaluation_end": "12.11.2026",
-          "predictions": 544,
-          "accuracy": 0.680147,
-          "log_loss": 0.613027,
-          "brier_score": 0.21021,
-          "calibration_error": 0.071145
+          "predictions": 545,
+          "accuracy": 0.680734,
+          "log_loss": 0.612634,
+          "brier_score": 0.210023,
+          "calibration_error": 0.070411
         },
         "season_cumulative": {
           "id": "history",
@@ -1903,11 +1903,11 @@
           "season": null,
           "evaluation_start": "10.10.2026",
           "evaluation_end": "12.11.2026",
-          "predictions": 176,
-          "accuracy": 0.676136,
-          "log_loss": 0.647495,
-          "brier_score": 0.222103,
-          "calibration_error": 0.077786
+          "predictions": 177,
+          "accuracy": 0.677966,
+          "log_loss": 0.64609,
+          "brier_score": 0.221459,
+          "calibration_error": 0.079205
         },
         "discrete": {
           "id": "history",
@@ -1915,11 +1915,11 @@
           "season": null,
           "evaluation_start": "11.11.2026",
           "evaluation_end": "12.11.2026",
-          "predictions": 35,
-          "accuracy": 0.742857,
-          "log_loss": 0.624545,
-          "brier_score": 0.212976,
-          "calibration_error": 0.166817
+          "predictions": 36,
+          "accuracy": 0.75,
+          "log_loss": 0.618273,
+          "brier_score": 0.210063,
+          "calibration_error": 0.171318
         },
         "moving_average": {
           "id": "history",
@@ -1927,11 +1927,11 @@
           "season": null,
           "evaluation_start": "10.10.2026",
           "evaluation_end": "12.11.2026",
-          "predictions": 176,
-          "accuracy": 0.676136,
-          "log_loss": 0.647495,
-          "brier_score": 0.222103,
-          "calibration_error": 0.077786
+          "predictions": 177,
+          "accuracy": 0.677966,
+          "log_loss": 0.64609,
+          "brier_score": 0.221459,
+          "calibration_error": 0.079205
         }
       },
       "weights": {
@@ -1983,7 +1983,7 @@
         },
         "3_4": {
           "rating": 1060.1243,
-          "sigma": 81.741
+          "sigma": 81.8476
         }
       }
     }

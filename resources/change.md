@@ -1,3 +1,6 @@
+# 1.2.6
+- Datenaktualisierung
+
 # 1.2.5
 - Datenaktualisierung
 - Unterschiedliche Spieltage bei den Vorhersagekarten deutlicher hervorgehoben
