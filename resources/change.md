@@ -2,6 +2,8 @@
 - Datenaktualisierung
 ## 1.2.6.1
 - Falsches Spielergebnis behoben
+## 1.2.6.2
+- Datenaktualisierung und MD5 Predictions
 
 # 1.2.5
 - Datenaktualisierung

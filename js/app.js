@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.6.1 */
+/* Webseite version = 1.2.6.2 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -1410,7 +1410,7 @@ async function home() {
           element('small', { className: 'muted', text: `${performance.predictions || 0} ausgewertete Spiele` })
         ]),
         element('div', { className: 'performance-metrics' }, [
-          element('article', { className: 'performance-card performance-card-primary' }, [element('div', { className: 'performance-value', text: percent(performance.accuracy) }), element('div', { className: 'performance-label', text: 'Trefferquote', attributes: { title: 'Anteil der Vorhersagen, bei denen der Sieger korrekt vorhergesagt wurde.' } })]),
+          element('article', { className: 'performance-card performance-card-primary' }, [element('div', { className: 'performance-value', text: percent(performance.accuracy) }), element('div', { className: 'performance-label', text: 'Accuracy', attributes: { title: 'Anteil der Vorhersagen, bei denen der Sieger korrekt vorhergesagt wurde.' } })]),
           element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: Number(performance.log_loss).toFixed(3) }), element('div', { className: 'performance-label', text: 'Logarithmischer Verlust', attributes: { title: 'Bewertet die Qualität der vorhergesagten Wahrscheinlichkeiten und bestraft falsche, sehr sichere Vorhersagen besonders stark. Kleiner = besser.' } })]),
           element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: Number(performance.brier_score).toFixed(3) }), element('div', { className: 'performance-label', text: 'Brier-Wert', attributes: { title: 'Misst den durchschnittlichen quadratischen Fehler zwischen vorhergesagter Wahrscheinlichkeit und tatsächlichem Ergebnis. Kleiner = besser.' } })]),
           element('article', { className: 'performance-card' }, [element('div', { className: 'performance-value', text: Number(performance.calibration_error).toFixed(3) }), element('div', { className: 'performance-label', text: 'Kalibrierungsfehler', attributes: { title: 'Zeigt, wie gut die vorhergesagten Wahrscheinlichkeiten mit den tatsächlich eingetretenen Häufigkeiten übereinstimmen. Kleiner = besser.' } })])
