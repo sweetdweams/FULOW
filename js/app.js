@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.6 */
+/* Webseite version = 1.2.6.1 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';

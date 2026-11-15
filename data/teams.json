@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-15T21:11:35+00:00",
-  "rating_updated_at": "2026-11-15T21:11:35+00:00",
+  "generated_at": "2026-11-15T21:30:30+00:00",
+  "rating_updated_at": "2026-11-15T21:30:30+00:00",
   "matchday_timestamps": {
     "0": "2026-10-18T20:00:00+00:00",
     "1": "2026-10-25T20:00:00+00:00",
     "2": "2026-11-08T18:57:11+00:00",
     "3": "2026-11-08T20:59:46+00:00",
-    "4": "2026-11-15T21:11:35+00:00"
+    "4": "2026-11-15T21:30:30+00:00"
   },
-  "rating_date": "11.11.2026",
+  "rating_date": "12.11.2026",
   "season": "Season WiSe26/27",
   "matchday": 4,
   "published_matchdays": {
@@ -830,18 +830,18 @@
       "group": "N",
       "matchday": 4,
       "initial_rating": 2450,
-      "rating": 2676.805,
-      "power_rating": 2676.805,
-      "form": 0.0,
-      "rating_deviation": 140.9019,
+      "rating": 2548.6904,
+      "power_rating": 2527.5557,
+      "form": -0.5,
+      "rating_deviation": 140.8983,
       "matches_played": 8,
-      "predicted_league": "1. Liga",
-      "league_confidence": 0.695318,
-      "league_uncertainty": 228.5899,
+      "predicted_league": "2. Liga",
+      "league_confidence": 0.556183,
+      "league_uncertainty": 228.5877,
       "league_probabilities": {
-        "1. Liga": 0.695318,
-        "2. Liga": 0.304664,
-        "3. Liga": 1.8e-05,
+        "1. Liga": 0.443566,
+        "2. Liga": 0.556183,
+        "3. Liga": 0.00025,
         "4. Liga": 0.0
       }
     },
@@ -1070,17 +1070,17 @@
       "group": "N",
       "matchday": 4,
       "initial_rating": 2450,
-      "rating": 3135.7934,
-      "power_rating": 3162.7074,
-      "form": 0.5,
-      "rating_deviation": 179.427,
+      "rating": 3355.1165,
+      "power_rating": 3408.9437,
+      "form": 1.0,
+      "rating_deviation": 179.424,
       "matches_played": 4,
       "predicted_league": "1. Liga",
-      "league_confidence": 0.99114,
-      "league_uncertainty": 254.1536,
+      "league_confidence": 0.999582,
+      "league_uncertainty": 254.1514,
       "league_probabilities": {
-        "1. Liga": 0.99114,
-        "2. Liga": 0.00886,
+        "1. Liga": 0.999582,
+        "2. Liga": 0.000418,
         "3. Liga": 0.0,
         "4. Liga": 0.0
       }

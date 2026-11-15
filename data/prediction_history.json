@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T21:11:35+00:00",
+  "generated_at": "2026-11-15T21:35:01+00:00",
   "crosszone_history": [
     {
       "key": "Season SoSe26|0",
@@ -629,7 +629,7 @@
           "id": "1_2",
           "label": "1. Liga \u2194 2. Liga",
           "rating": 2431.9022,
-          "sigma": 114.2105
+          "sigma": 127.5849
         },
         {
           "id": "2_3",
@@ -16915,9 +16915,9 @@
       "score_b": 0,
       "team_a": "DA Purrgatory",
       "team_b": "BeK Flotten Sprotten",
-      "probability_a": 0.727827,
-      "probability_b": 0.272173,
-      "confidence": 0.653722,
+      "probability_a": 0.718319,
+      "probability_b": 0.281681,
+      "confidence": 0.652753,
       "correct": true,
       "actual_winner_id": "T065",
       "crossover_zones": {
@@ -16947,15 +16947,15 @@
       "score_b": 0,
       "team_a": "T\u00dc V\u00ed\u00f0\u00f3pnir",
       "team_b": "KIT SC Bober",
-      "probability_a": 0.775576,
-      "probability_b": 0.224424,
-      "confidence": 0.706128,
+      "probability_a": 0.781637,
+      "probability_b": 0.218363,
+      "confidence": 0.709023,
       "correct": true,
       "actual_winner_id": "T074",
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 114.2105
+          "sigma": 127.5849
         },
         "2_3": {
           "rating": 1688.9243,
@@ -16979,15 +16979,15 @@
       "score_b": 1,
       "team_a": "OSGG Pink DinOS",
       "team_b": "THM Knights",
-      "probability_a": 0.518168,
-      "probability_b": 0.481832,
-      "confidence": 0.265958,
+      "probability_a": 0.515317,
+      "probability_b": 0.484683,
+      "confidence": 0.252531,
       "correct": true,
       "actual_winner_id": "T083",
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 114.2105
+          "sigma": 127.5849
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17011,15 +17011,15 @@
       "score_b": 0,
       "team_a": "Purrfect Aim",
       "team_b": "BeK F\u00f6rdeschwimmer",
-      "probability_a": 0.375872,
-      "probability_b": 0.624128,
-      "confidence": 0.638796,
+      "probability_a": 0.377322,
+      "probability_b": 0.622678,
+      "confidence": 0.63792,
       "correct": false,
       "actual_winner_id": "T020",
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 114.2105
+          "sigma": 127.5849
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17043,15 +17043,15 @@
       "score_b": 2,
       "team_a": "ESUG PlatParty",
       "team_b": "HSMW Esports Quacksalber",
-      "probability_a": 0.469156,
-      "probability_b": 0.530844,
-      "confidence": 0.239204,
+      "probability_a": 0.466611,
+      "probability_b": 0.533389,
+      "confidence": 0.241403,
       "correct": false,
       "actual_winner_id": "T012",
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 114.2105
+          "sigma": 127.5849
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17075,879 +17075,15 @@
       "score_b": 0,
       "team_a": "Mia san Meta",
       "team_b": "DA Wasted Pawtential",
-      "probability_a": 0.56154,
-      "probability_b": 0.43846,
-      "confidence": 0.367644,
+      "probability_a": 0.565951,
+      "probability_b": 0.434049,
+      "confidence": 0.369617,
       "correct": true,
       "actual_winner_id": "T072",
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M148",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T082",
-      "team_b_id": "T002",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "DG Orion",
-      "team_b": "HsGL Pumas",
-      "probability_a": 0.365696,
-      "probability_b": 0.634304,
-      "confidence": 0.564534,
-      "correct": true,
-      "actual_winner_id": "T002",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M150",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T078",
-      "team_b_id": "T015",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "KIT SC Ragebait Raudis",
-      "team_b": "LES Leutzscher Lappen",
-      "probability_a": 0.359356,
-      "probability_b": 0.640644,
-      "confidence": 0.628304,
-      "correct": true,
-      "actual_winner_id": "T015",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M151",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T080",
-      "team_b_id": "T019",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "DA Meowfia",
-      "team_b": "KIT SC Spezi auf 1",
-      "probability_a": 0.648902,
-      "probability_b": 0.351098,
-      "confidence": 0.506877,
-      "correct": false,
-      "actual_winner_id": "T019",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M152",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T027",
-      "team_b_id": "T085",
-      "score_a": 3,
-      "score_b": 0,
-      "team_a": "KIT SC [k\u0153ri]werk addicted tryhards",
-      "team_b": "OVGU Esports",
-      "probability_a": 0.72675,
-      "probability_b": 0.27325,
-      "confidence": 0.623004,
-      "correct": true,
-      "actual_winner_id": "T027",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M155",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T073",
-      "team_b_id": "T008",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "AIX Super C9",
-      "team_b": "Skill IssUEH",
-      "probability_a": 0.337033,
-      "probability_b": 0.662967,
-      "confidence": 0.640652,
-      "correct": true,
-      "actual_winner_id": "T008",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M156",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T013",
-      "team_b_id": "T017",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "UKGrrrS\u00fc\u00dfm\u00e4use",
-      "team_b": "LUNA Nova",
-      "probability_a": 0.64145,
-      "probability_b": 0.35855,
-      "confidence": 0.628943,
-      "correct": false,
-      "actual_winner_id": "T017",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M157",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T046",
-      "team_b_id": "T067",
-      "score_a": 1,
-      "score_b": 3,
-      "team_a": "DG Chronos",
-      "team_b": "1. ECF SendHelpAgain",
-      "probability_a": 0.40213,
-      "probability_b": 0.59787,
-      "confidence": 0.504016,
-      "correct": true,
-      "actual_winner_id": "T067",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M158",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T029",
-      "team_b_id": "T006",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "LES GOOO",
-      "team_b": "PBE Mondhasen",
-      "probability_a": 0.612113,
-      "probability_b": 0.387887,
-      "confidence": 0.596432,
-      "correct": false,
-      "actual_winner_id": "T006",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M159",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T036",
-      "team_b_id": "T034",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "AIX Au Huur",
-      "team_b": "RUB Goats Aqua",
-      "probability_a": 0.170913,
-      "probability_b": 0.829087,
-      "confidence": 0.735871,
-      "correct": true,
-      "actual_winner_id": "T034",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M160",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T071",
-      "team_b_id": "T077",
-      "score_a": 1,
-      "score_b": 3,
-      "team_a": "DA Meowntain Dew",
-      "team_b": "LUNA Void Veterans",
-      "probability_a": 0.246487,
-      "probability_b": 0.753513,
-      "confidence": 0.524333,
-      "correct": true,
-      "actual_winner_id": "T077",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M161",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T053",
-      "team_b_id": "T076",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "bUDSweiser",
-      "team_b": "UKG Runaway",
-      "probability_a": 0.160079,
-      "probability_b": 0.839921,
-      "confidence": 0.672096,
-      "correct": true,
-      "actual_winner_id": "T076",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M162",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T018",
-      "team_b_id": "T001",
-      "score_a": 3,
-      "score_b": 0,
-      "team_a": "DG Strix",
-      "team_b": "Berlin Makaken",
-      "probability_a": 0.621717,
-      "probability_b": 0.378283,
-      "confidence": 0.567799,
-      "correct": true,
-      "actual_winner_id": "T018",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M163",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T003",
-      "team_b_id": "T030",
-      "score_a": 3,
-      "score_b": 2,
-      "team_a": "HSK Satyrus",
-      "team_b": "Haiground",
-      "probability_a": 0.818576,
-      "probability_b": 0.181424,
-      "confidence": 0.736074,
-      "correct": true,
-      "actual_winner_id": "T003",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M164",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T023",
-      "team_b_id": "T033",
-      "score_a": 3,
-      "score_b": 1,
-      "team_a": "RUB Goats Venom",
-      "team_b": "ESUG L\u00fcckenf\u00fcller",
-      "probability_a": 0.652194,
-      "probability_b": 0.347806,
-      "confidence": 0.651654,
-      "correct": true,
-      "actual_winner_id": "T023",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M165",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T041",
-      "team_b_id": "T032",
-      "score_a": 3,
-      "score_b": 2,
-      "team_a": "LUnatics Ludwigshafen",
-      "team_b": "Mogontiacum",
-      "probability_a": 0.716149,
-      "probability_b": 0.283851,
-      "confidence": 0.603184,
-      "correct": true,
-      "actual_winner_id": "T041",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M166",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T054",
-      "team_b_id": "T024",
-      "score_a": 1,
-      "score_b": 3,
-      "team_a": "Mainhardt",
-      "team_b": "UKG Fehler",
-      "probability_a": 0.712465,
-      "probability_b": 0.287535,
-      "confidence": 0.672467,
-      "correct": false,
-      "actual_winner_id": "T024",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M167",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T069",
-      "team_b_id": "T068",
-      "score_a": 1,
-      "score_b": 3,
-      "team_a": "KIT SC Holy Inting Gamblers",
-      "team_b": "RUB Goats N\u00f6 LG",
-      "probability_a": 0.796244,
-      "probability_b": 0.203756,
-      "confidence": 0.658113,
-      "correct": false,
-      "actual_winner_id": "T068",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M168",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T066",
-      "team_b_id": "T050",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "clUEHless",
-      "team_b": "DG Athena",
-      "probability_a": 0.294622,
-      "probability_b": 0.705378,
-      "confidence": 0.653766,
-      "correct": true,
-      "actual_winner_id": "T050",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M169",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T039",
-      "team_b_id": "T051",
-      "score_a": 3,
-      "score_b": 0,
-      "team_a": "RUB Goats",
-      "team_b": "BeK Flotten Sprotten",
-      "probability_a": 0.893675,
-      "probability_b": 0.106325,
-      "confidence": 0.766616,
-      "correct": true,
-      "actual_winner_id": "T039",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M170",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T026",
-      "team_b_id": "T043",
-      "score_a": 1,
-      "score_b": 3,
-      "team_a": "Bielefeld Sapphire",
-      "team_b": "KIT SC White Lotus",
-      "probability_a": 0.298952,
-      "probability_b": 0.701048,
-      "confidence": 0.671704,
-      "correct": true,
-      "actual_winner_id": "T043",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M171",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T065",
-      "team_b_id": "T025",
-      "score_a": 3,
-      "score_b": 0,
-      "team_a": "DA Purrgatory",
-      "team_b": "HsGL Fennecs",
-      "probability_a": 0.560681,
-      "probability_b": 0.439319,
-      "confidence": 0.501727,
-      "correct": true,
-      "actual_winner_id": "T065",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M172",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T028",
-      "team_b_id": "T047",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "HSMW Esports Medics",
-      "team_b": "LES Connewitz Crusaders",
-      "probability_a": 0.302197,
-      "probability_b": 0.697803,
-      "confidence": 0.646881,
-      "correct": true,
-      "actual_winner_id": "T047",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M173",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T057",
-      "team_b_id": "T049",
-      "score_a": 3,
-      "score_b": 2,
-      "team_a": "T\u00dc Wyvern",
-      "team_b": "HSK Centauri",
-      "probability_a": 0.633901,
-      "probability_b": 0.366099,
-      "confidence": 0.643165,
-      "correct": true,
-      "actual_winner_id": "T057",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M174",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T063",
-      "team_b_id": "T056",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "KIT SC Eclipse",
-      "team_b": "DG Infinite",
-      "probability_a": 0.235401,
-      "probability_b": 0.764599,
-      "confidence": 0.694778,
-      "correct": true,
-      "actual_winner_id": "T056",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M175",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T059",
-      "team_b_id": "T064",
-      "score_a": 1,
-      "score_b": 3,
-      "team_a": "WUE X-Rays",
-      "team_b": "UEBertrieben gutaussehend",
-      "probability_a": 0.465164,
-      "probability_b": 0.534836,
-      "confidence": 0.463237,
-      "correct": true,
-      "actual_winner_id": "T064",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M176",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T061",
-      "team_b_id": "T062",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "404 Average Cake Enjoyer",
-      "team_b": "HGI Amber",
-      "probability_a": 0.47756,
-      "probability_b": 0.52244,
-      "confidence": 0.414418,
-      "correct": true,
-      "actual_winner_id": "T062",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M177",
-      "date": "12.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T055",
-      "team_b_id": "T040",
-      "score_a": 0,
-      "score_b": 3,
-      "team_a": "Hamburger Delfine",
-      "team_b": "DG Elysium",
-      "probability_a": 0.89862,
-      "probability_b": 0.10138,
-      "confidence": 0.771088,
-      "correct": false,
-      "actual_winner_id": "T040",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
+          "sigma": 127.5849
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17971,15 +17107,15 @@
       "score_b": 0,
       "team_a": "DA Katerstrophe",
       "team_b": "UKGarKeinPlan",
-      "probability_a": 0.502136,
-      "probability_b": 0.497864,
-      "confidence": 0.383439,
+      "probability_a": 0.502126,
+      "probability_b": 0.497874,
+      "confidence": 0.384908,
       "correct": true,
       "actual_winner_id": "T081",
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 114.2105
+          "sigma": 127.5849
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17992,58 +17128,26 @@
       }
     },
     {
-      "match_id": "M153",
+      "match_id": "M148",
       "date": "11.11.2026",
       "season": "Season WiSe26/27",
       "matchday": "4",
       "phase": "Regular Season",
-      "team_a_id": "T007",
-      "team_b_id": "T079",
-      "score_a": 3,
-      "score_b": 1,
-      "team_a": "DG Lotus",
-      "team_b": "UKG GutGuterAmGutesten",
-      "probability_a": 0.603657,
-      "probability_b": 0.396343,
-      "confidence": 0.520955,
+      "team_a_id": "T082",
+      "team_b_id": "T002",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "DG Orion",
+      "team_b": "HsGL Pumas",
+      "probability_a": 0.360967,
+      "probability_b": 0.639033,
+      "confidence": 0.567393,
       "correct": true,
-      "actual_winner_id": "T007",
+      "actual_winner_id": "T002",
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 114.2105
-        },
-        "2_3": {
-          "rating": 1688.9243,
-          "sigma": 91.5979
-        },
-        "3_4": {
-          "rating": 1060.1243,
-          "sigma": 81.8476
-        }
-      }
-    },
-    {
-      "match_id": "M154",
-      "date": "11.11.2026",
-      "season": "Season WiSe26/27",
-      "matchday": "4",
-      "phase": "Regular Season",
-      "team_a_id": "T014",
-      "team_b_id": "T009",
-      "score_a": 3,
-      "score_b": 0,
-      "team_a": "Hai Noon",
-      "team_b": "Bremer Wasch Dienst",
-      "probability_a": 0.268516,
-      "probability_b": 0.731484,
-      "confidence": 0.692714,
-      "correct": false,
-      "actual_winner_id": "T014",
-      "crossover_zones": {
-        "1_2": {
-          "rating": 2431.9022,
-          "sigma": 114.2105
+          "sigma": 127.5849
         },
         "2_3": {
           "rating": 1688.9243,
@@ -18067,15 +17171,911 @@
       "score_b": 3,
       "team_a": "BUW Strays",
       "team_b": "Ilmenauer T.E.E.",
-      "probability_a": 0.328837,
-      "probability_b": 0.671163,
-      "confidence": 0.567871,
+      "probability_a": 0.321526,
+      "probability_b": 0.678474,
+      "confidence": 0.577267,
       "correct": true,
       "actual_winner_id": "T005",
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 114.2105
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M150",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T078",
+      "team_b_id": "T015",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "KIT SC Ragebait Raudis",
+      "team_b": "LES Leutzscher Lappen",
+      "probability_a": 0.355513,
+      "probability_b": 0.644487,
+      "confidence": 0.630105,
+      "correct": true,
+      "actual_winner_id": "T015",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M151",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T080",
+      "team_b_id": "T019",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "DA Meowfia",
+      "team_b": "KIT SC Spezi auf 1",
+      "probability_a": 0.64933,
+      "probability_b": 0.35067,
+      "confidence": 0.501385,
+      "correct": false,
+      "actual_winner_id": "T019",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M152",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T027",
+      "team_b_id": "T085",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "KIT SC [k\u0153ri]werk addicted tryhards",
+      "team_b": "OVGU Esports",
+      "probability_a": 0.728877,
+      "probability_b": 0.271123,
+      "confidence": 0.621551,
+      "correct": true,
+      "actual_winner_id": "T027",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M153",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T007",
+      "team_b_id": "T079",
+      "score_a": 3,
+      "score_b": 1,
+      "team_a": "DG Lotus",
+      "team_b": "UKG GutGuterAmGutesten",
+      "probability_a": 0.604925,
+      "probability_b": 0.395075,
+      "confidence": 0.517984,
+      "correct": true,
+      "actual_winner_id": "T007",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M154",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T014",
+      "team_b_id": "T009",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "Hai Noon",
+      "team_b": "Bremer Wasch Dienst",
+      "probability_a": 0.266206,
+      "probability_b": 0.733794,
+      "confidence": 0.691999,
+      "correct": false,
+      "actual_winner_id": "T014",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M155",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T073",
+      "team_b_id": "T008",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "AIX Super C9",
+      "team_b": "Skill IssUEH",
+      "probability_a": 0.331624,
+      "probability_b": 0.668376,
+      "confidence": 0.643944,
+      "correct": true,
+      "actual_winner_id": "T008",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M156",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T013",
+      "team_b_id": "T017",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "UKGrrrS\u00fc\u00dfm\u00e4use",
+      "team_b": "LUNA Nova",
+      "probability_a": 0.644625,
+      "probability_b": 0.355375,
+      "confidence": 0.631341,
+      "correct": false,
+      "actual_winner_id": "T017",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M157",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T046",
+      "team_b_id": "T067",
+      "score_a": 1,
+      "score_b": 3,
+      "team_a": "DG Chronos",
+      "team_b": "1. ECF SendHelpAgain",
+      "probability_a": 0.39383,
+      "probability_b": 0.60617,
+      "confidence": 0.51561,
+      "correct": true,
+      "actual_winner_id": "T067",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M158",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T029",
+      "team_b_id": "T006",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "LES GOOO",
+      "team_b": "PBE Mondhasen",
+      "probability_a": 0.616359,
+      "probability_b": 0.383641,
+      "confidence": 0.602278,
+      "correct": false,
+      "actual_winner_id": "T006",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M159",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T036",
+      "team_b_id": "T034",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "AIX Au Huur",
+      "team_b": "RUB Goats Aqua",
+      "probability_a": 0.170301,
+      "probability_b": 0.829699,
+      "confidence": 0.738221,
+      "correct": true,
+      "actual_winner_id": "T034",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M160",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T071",
+      "team_b_id": "T077",
+      "score_a": 1,
+      "score_b": 3,
+      "team_a": "DA Meowntain Dew",
+      "team_b": "LUNA Void Veterans",
+      "probability_a": 0.251015,
+      "probability_b": 0.748985,
+      "confidence": 0.529969,
+      "correct": true,
+      "actual_winner_id": "T077",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M161",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T053",
+      "team_b_id": "T076",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "bUDSweiser",
+      "team_b": "UKG Runaway",
+      "probability_a": 0.158577,
+      "probability_b": 0.841423,
+      "confidence": 0.677061,
+      "correct": true,
+      "actual_winner_id": "T076",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M162",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T018",
+      "team_b_id": "T001",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "DG Strix",
+      "team_b": "Berlin Makaken",
+      "probability_a": 0.626596,
+      "probability_b": 0.373404,
+      "confidence": 0.575245,
+      "correct": true,
+      "actual_winner_id": "T018",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M163",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T003",
+      "team_b_id": "T030",
+      "score_a": 3,
+      "score_b": 2,
+      "team_a": "HSK Satyrus",
+      "team_b": "Haiground",
+      "probability_a": 0.814657,
+      "probability_b": 0.185343,
+      "confidence": 0.736141,
+      "correct": true,
+      "actual_winner_id": "T003",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M164",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T023",
+      "team_b_id": "T033",
+      "score_a": 3,
+      "score_b": 1,
+      "team_a": "RUB Goats Venom",
+      "team_b": "ESUG L\u00fcckenf\u00fcller",
+      "probability_a": 0.652216,
+      "probability_b": 0.347784,
+      "confidence": 0.653694,
+      "correct": true,
+      "actual_winner_id": "T023",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M165",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T041",
+      "team_b_id": "T032",
+      "score_a": 3,
+      "score_b": 2,
+      "team_a": "LUnatics Ludwigshafen",
+      "team_b": "Mogontiacum",
+      "probability_a": 0.722787,
+      "probability_b": 0.277213,
+      "confidence": 0.611673,
+      "correct": true,
+      "actual_winner_id": "T041",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M166",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T054",
+      "team_b_id": "T024",
+      "score_a": 1,
+      "score_b": 3,
+      "team_a": "Mainhardt",
+      "team_b": "UKG Fehler",
+      "probability_a": 0.706967,
+      "probability_b": 0.293033,
+      "confidence": 0.671224,
+      "correct": false,
+      "actual_winner_id": "T024",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M167",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T069",
+      "team_b_id": "T068",
+      "score_a": 1,
+      "score_b": 3,
+      "team_a": "KIT SC Holy Inting Gamblers",
+      "team_b": "RUB Goats N\u00f6 LG",
+      "probability_a": 0.793152,
+      "probability_b": 0.206848,
+      "confidence": 0.660326,
+      "correct": false,
+      "actual_winner_id": "T068",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M168",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T066",
+      "team_b_id": "T050",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "clUEHless",
+      "team_b": "DG Athena",
+      "probability_a": 0.295329,
+      "probability_b": 0.704671,
+      "confidence": 0.655955,
+      "correct": true,
+      "actual_winner_id": "T050",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M169",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T039",
+      "team_b_id": "T051",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "RUB Goats",
+      "team_b": "BeK Flotten Sprotten",
+      "probability_a": 0.891693,
+      "probability_b": 0.108307,
+      "confidence": 0.767701,
+      "correct": true,
+      "actual_winner_id": "T039",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M170",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T026",
+      "team_b_id": "T043",
+      "score_a": 1,
+      "score_b": 3,
+      "team_a": "Bielefeld Sapphire",
+      "team_b": "KIT SC White Lotus",
+      "probability_a": 0.294792,
+      "probability_b": 0.705208,
+      "confidence": 0.675813,
+      "correct": true,
+      "actual_winner_id": "T043",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M171",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T065",
+      "team_b_id": "T025",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "DA Purrgatory",
+      "team_b": "HsGL Fennecs",
+      "probability_a": 0.554993,
+      "probability_b": 0.445007,
+      "confidence": 0.494827,
+      "correct": true,
+      "actual_winner_id": "T065",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M172",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T028",
+      "team_b_id": "T047",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "HSMW Esports Medics",
+      "team_b": "LES Connewitz Crusaders",
+      "probability_a": 0.307067,
+      "probability_b": 0.692933,
+      "confidence": 0.644196,
+      "correct": true,
+      "actual_winner_id": "T047",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M173",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T057",
+      "team_b_id": "T049",
+      "score_a": 3,
+      "score_b": 2,
+      "team_a": "T\u00dc Wyvern",
+      "team_b": "HSK Centauri",
+      "probability_a": 0.631724,
+      "probability_b": 0.368276,
+      "confidence": 0.64405,
+      "correct": true,
+      "actual_winner_id": "T057",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M174",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T063",
+      "team_b_id": "T056",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "KIT SC Eclipse",
+      "team_b": "DG Infinite",
+      "probability_a": 0.23576,
+      "probability_b": 0.76424,
+      "confidence": 0.696616,
+      "correct": true,
+      "actual_winner_id": "T056",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M175",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T059",
+      "team_b_id": "T064",
+      "score_a": 1,
+      "score_b": 3,
+      "team_a": "WUE X-Rays",
+      "team_b": "UEBertrieben gutaussehend",
+      "probability_a": 0.459025,
+      "probability_b": 0.540975,
+      "confidence": 0.476769,
+      "correct": true,
+      "actual_winner_id": "T064",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M176",
+      "date": "11.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T061",
+      "team_b_id": "T062",
+      "score_a": 0,
+      "score_b": 3,
+      "team_a": "404 Average Cake Enjoyer",
+      "team_b": "HGI Amber",
+      "probability_a": 0.468142,
+      "probability_b": 0.531858,
+      "confidence": 0.430939,
+      "correct": true,
+      "actual_winner_id": "T062",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M177",
+      "date": "12.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "4",
+      "phase": "Regular Season",
+      "team_a_id": "T055",
+      "team_b_id": "T040",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "Hamburger Delfine",
+      "team_b": "DG Elysium",
+      "probability_a": 0.897797,
+      "probability_b": 0.102203,
+      "confidence": 0.765668,
+      "correct": true,
+      "actual_winner_id": "T055",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2431.9022,
+          "sigma": 127.5849
         },
         "2_3": {
           "rating": 1688.9243,

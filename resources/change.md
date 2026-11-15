@@ -1,5 +1,7 @@
 # 1.2.6
 - Datenaktualisierung
+## 1.2.6.1
+- Falsches Spielergebnis behoben
 
 # 1.2.5
 - Datenaktualisierung
