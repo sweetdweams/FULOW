@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.6.2 */
+/* Webseite version = 1.2.7 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -1376,7 +1376,7 @@ async function home() {
       const rankNum = trend?.cRank ? String(trend.cRank).padStart(2, '0') : String(index + 1).padStart(2, '0');
       const displayRating = Math.round(team.power_rating ?? team.rating);
       const ratingTitle = team.power_rating !== undefined && Math.round(team.power_rating) !== Math.round(team.rating)
-        ? `Power-Rating: ${Math.round(team.power_rating)} (Glicko: ${Math.round(team.rating)})`
+        ? `Performance Rating: ${Math.round(team.power_rating)} (Glicko: ${Math.round(team.rating)})`
         : `Rating: ${Math.round(team.rating)}`;
       return element('div', { className: 'rank-item' }, [
         element('span', { className: 'rank-number', text: rankNum }),
@@ -2312,7 +2312,7 @@ function positionSustainabilityChart(canvas) {
   chart.style.top = `${Math.max(0, selected.top)}px`;
 };
 
-function teamRatingChart(team, points, leagueThresholds = {}) {
+function teamRatingChart(team, points, leagueThresholds = {}, seasonAdjustZones = []) {
   const width = 740;
   const height = 300;
   const padding = { top: 32, right: 62, bottom: 42, left: 58 };
@@ -2488,6 +2488,10 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
     labelIndices.add(i);
   }
   labelIndices.add(points.length - 1);
+  seasonAdjustZones.forEach(zone => {
+    labelIndices.add(zone.fromIndex);
+    labelIndices.add(zone.toIndex);
+  });
 
   points.forEach((p, idx) => {
     const xPos = x(idx);
@@ -2499,9 +2503,10 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
       class: 'chart-grid'
     }));
     if (labelIndices.has(idx)) {
+      const isShifted = labelIndices.has(idx - 1);
       const txt = svgNode('text', {
         x: xPos,
-        y: height - 12,
+        y: isShifted ? height - 4 : height - 14,
         'text-anchor': 'middle',
         class: 'chart-label'
       });
@@ -2572,6 +2577,59 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
     svg.append(ratingLine);
   }
 
+  // Season Adjust Zones (rendered over rating line, so line runs underneath the grey area)
+  seasonAdjustZones.forEach(zone => {
+    const xStart = x(zone.fromIndex);
+    const xEnd = x(zone.toIndex);
+    const rectWidth = Math.max(0, xEnd - xStart);
+    if (rectWidth <= 0) return;
+
+    const adjustRect = svgNode('rect', {
+      x: xStart,
+      y: padding.top,
+      width: rectWidth,
+      height: plotHeight,
+      class: 'chart-season-adjust-area',
+      'clip-path': `url(#${clipId})`
+    });
+
+    const diffVal = Math.round(zone.toRating - zone.fromRating);
+    const diffSign = diffVal >= 0 ? '+' : '';
+    const title = svgNode('title');
+    title.textContent = `Season Adjust: ${Math.round(zone.fromRating)} → ${Math.round(zone.toRating)} (${diffSign}${diffVal})`;
+    adjustRect.append(title);
+    svg.append(adjustRect);
+
+    // Subtle boundary vertical lines
+    svg.append(svgNode('line', {
+      x1: xStart,
+      y1: padding.top,
+      x2: xStart,
+      y2: height - padding.bottom,
+      class: 'chart-season-boundary',
+      style: 'opacity: 0.5;'
+    }));
+    svg.append(svgNode('line', {
+      x1: xEnd,
+      y1: padding.top,
+      x2: xEnd,
+      y2: height - padding.bottom,
+      class: 'chart-season-boundary',
+      style: 'opacity: 0.5;'
+    }));
+
+    // Top label: Season Adjust
+    const labelX = (xStart + xEnd) / 2;
+    const adjustLabel = svgNode('text', {
+      x: labelX,
+      y: padding.top - 8,
+      'text-anchor': 'middle',
+      class: 'chart-season-adjust-label'
+    });
+    adjustLabel.textContent = 'Season Adjust';
+    svg.append(adjustLabel);
+  });
+
   // Rating Data Circles
   points.forEach((p, idx) => {
     const circle = svgNode('circle', {
@@ -2584,7 +2642,7 @@ function teamRatingChart(team, points, leagueThresholds = {}) {
       'stroke-width': '2'
     });
     const circleTitle = svgNode('title');
-    circleTitle.textContent = `${p.label} (${dateLabel(p.date)})\nRating: ${Math.round(p.rating)}\nRating-Abweichung: ±${Math.round(p.rating_deviation)} RD\nKonfidenzbereich: ${Math.round(p.rating - p.rating_deviation)} – ${Math.round(p.rating + p.rating_deviation)}`;
+    circleTitle.textContent = `${p.label} (${dateLabel(p.date)})\nRating: ${Math.round(p.rating)}\nRating-Abweichung: ±${Math.round(p.rating_deviation)} RD: ${Math.round(p.rating - p.rating_deviation)} – ${Math.round(p.rating + p.rating_deviation)}`;
     circle.append(circleTitle);
     svg.append(circle);
   });
@@ -2629,42 +2687,101 @@ function chartSummary(points) {
 }
 
 function historyPanel(team, history, leagueThresholds, sustainabilityData, seasonTransitions = [], predictionHistory = {}) {
-  const transitions = (seasonTransitions || []).filter(item => item.team_id === team.id);
-
-  const isFailedWildcard = snap => {
-    const isWildcard = String(snap.matchday) === '0' || String(snap.label || '').toLowerCase().includes('wildcard');
-    if (!isWildcard) return false;
-    const trans = transitions.find(item => item.season?.trim() === snap.season?.trim());
-    if (trans && (trans.wildcard_status === 'eliminated' || (trans.wildcard_status && trans.wildcard_status !== 'qualified'))) {
-      return true;
-    }
-    return false;
+  const isWildcard = snap => {
+    return String(snap.matchday) === '0'
+      || String(snap.label || '').toLowerCase().includes('wildcard')
+      || String(snap.phase || '').toLowerCase().includes('wildcard');
   };
 
   const rawSnapshots = (sustainabilityData?.history || [])
-    .filter(snap => snap.teams && snap.teams[team.id] && !isFailedWildcard(snap));
+    .filter(snap => snap.teams && snap.teams[team.id] && !isWildcard(snap));
 
   const seasons = [...new Set(rawSnapshots.map(snap => snap.season).filter(Boolean))];
   const hasMultipleSeasons = seasons.length > 1;
 
-  const teamSnapshots = rawSnapshots.map(snap => {
-    const entry = snap.teams[team.id];
-    const matchdayStr = String(snap.matchday ?? '');
-    const seasonShort = String(snap.season || '').replace(/^Season\s+/i, '').trim();
-    const label = matchdayStr === '0'
-      ? (hasMultipleSeasons && seasonShort ? `${seasonShort} WC` : 'Wildcard')
-      : (hasMultipleSeasons && seasonShort ? `${seasonShort} ST ${matchdayStr}` : `ST ${matchdayStr}`);
-    return {
-      date: snap.date,
-      matchday: snap.matchday,
-      season: snap.season,
-      label,
-      rating: Number(entry.rating),
-      rating_deviation: Number(entry.rating_deviation)
+  const points = [];
+  const seasonAdjustZones = [];
+
+  seasons.forEach((season, seasonIdx) => {
+    const seasonSnaps = rawSnapshots.filter(snap => snap.season === season);
+    if (!seasonSnaps.length) return;
+
+    const seasonShort = String(season || '')
+      .replace(/^Season\s+/i, '')
+      .trim();
+    const seasonPrefix = seasonShort.startsWith('SoSe') ? 'SoSe' : (seasonShort.startsWith('WiSe') ? 'WiSe' : seasonShort);
+
+    const firstRegularMatch = (history || []).find(row =>
+      row.team_id === team.id &&
+      row.season === season &&
+      row.rating_source === 'regular'
+    );
+    const fallbackMatch = seasonIdx === 0 ? (history || []).find(row =>
+      row.team_id === team.id &&
+      row.rating_source === 'regular'
+    ) : null;
+    const matchToUse = firstRegularMatch || fallbackMatch;
+
+    const transition = (seasonTransitions || []).find(row =>
+      row.team_id === team.id &&
+      row.season === season
+    );
+
+    const initialRating = Number(
+      matchToUse?.rating_before ??
+      transition?.season_start_rating ??
+      team.initial_rating ??
+      team.rating
+    );
+
+    const initialRD = Number(
+      matchToUse?.rd_before ??
+      matchToUse?.rating_deviation_before ??
+      transition?.season_start_rd ??
+      (seasonIdx === 0 ? 350 : (points[points.length - 1]?.rating_deviation ?? 350))
+    );
+
+    const initialLabel = hasMultipleSeasons ? `${seasonPrefix} Initial` : 'Initial';
+
+    const initialPoint = {
+      date: matchToUse?.date || seasonSnaps[0]?.date || 'Initial',
+      matchday: 'initial',
+      season: season,
+      label: initialLabel,
+      rating: initialRating,
+      rating_deviation: initialRD,
+      isInitial: true
     };
+
+    if (points.length > 0) {
+      seasonAdjustZones.push({
+        fromIndex: points.length - 1,
+        toIndex: points.length,
+        fromSeason: points[points.length - 1].season,
+        toSeason: season,
+        fromRating: points[points.length - 1].rating,
+        toRating: initialRating
+      });
+    }
+
+    points.push(initialPoint);
+
+    seasonSnaps.forEach(snap => {
+      const entry = snap.teams[team.id];
+      const matchdayStr = String(snap.matchday ?? '');
+      const label = hasMultipleSeasons ? `${seasonPrefix} ST ${matchdayStr}` : `ST ${matchdayStr}`;
+      points.push({
+        date: snap.date,
+        matchday: snap.matchday,
+        season: snap.season,
+        label,
+        rating: Number(entry.rating),
+        rating_deviation: Number(entry.rating_deviation)
+      });
+    });
   });
 
-  const points = teamSnapshots.length ? teamSnapshots : [
+  const finalPoints = points.length ? points : [
     {
       date: 'Aktuell',
       matchday: '0',
@@ -2674,13 +2791,13 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
     }
   ];
 
-  const chartSvg = teamRatingChart(team, points, leagueThresholds);
-  const summary = chartSummary(points);
+  const chartSvg = teamRatingChart(team, finalPoints, leagueThresholds, seasonAdjustZones);
+  const summary = chartSummary(finalPoints);
 
   const legend = element('div', { className: 'chart-legend', attributes: { role: 'list', 'aria-label': 'Diagramm-Legende' } }, [
     element('span', { className: 'legend-item', style: { color: 'var(--rating-line)' }, text: 'Rating' }),
-    element('span', { className: 'legend-item', style: { color: 'var(--rating-deviation-area)' }, text: 'Rating ± RD (Konfidenzbereich)' }),
-    element('span', { className: 'legend-item', style: { color: 'var(--rating-deviation-line)' }, text: 'Rating-Abweichung (RD)' })
+    element('span', { className: 'legend-item', style: { color: 'var(--rating-deviation-area)' }, text: 'Rating ± RD' }),
+    element('span', { className: 'legend-item', style: { color: 'var(--rating-deviation-line)' }, text: 'Rating Deviation (RD)' })
   ]);
 
   return element('section', { className: 'history-panel' }, [
@@ -2871,13 +2988,12 @@ async function teamDetailPage() {
     const displayRating = Math.round(team.power_rating ?? team.rating);
     const sustainabilityNode = sustainabilityChart(team, sustainability);
     const sustainabilityCard = element(
-      'article',
-      { className: 'performance-card performance-card-sustainability' },
+      'article', { className: 'performance-card performance-card-sustainability' },
       sustainabilityNode
         ? [sustainabilityNode]
         : [
             element('div', { className: 'performance-value', text: '—' }),
-            element('div', { className: 'performance-label', text: 'Sustainable level' })
+            element('div', { className: 'performance-label', text: 'Sustainable level' }),
           ]
     );
 
@@ -2894,16 +3010,16 @@ async function teamDetailPage() {
 
     const statCards = [
       element('article', { className: 'performance-card' }, [
-        element('div', { className: 'performance-value', text: displayRating }),
+        element('div', { className: 'performance-value', text: Math.round(team.rating) }),
         element('div', { className: 'performance-label', text: 'Rating' })
       ]),
       element('article', { className: 'performance-card' }, [
-        element('div', { className: 'performance-value', text: Math.round(team.rating_deviation) }),
-        element('div', { className: 'performance-label', text: 'Rating-Abweichung' })
+        element('div', { className: 'performance-value', text: '±' + Math.round(team.rating_deviation) }),
+        element('div', { className: 'performance-label', text: 'Rating Abweichung' })
       ]),
       element('article', { className: 'performance-card' }, [
-        element('div', { className: 'performance-value', text: predictedSustainableLevel(team) }),
-        element('div', { className: 'performance-label', text: 'Prognostiziertes Liga-Niveau' })
+        element('div', { className: 'performance-value', text: displayRating }),
+        element('div', { className: 'performance-label', text: 'Performance Rating' })
       ]),
       sustainabilityCard,
       element('article', { className: 'performance-card' }, [
@@ -2911,9 +3027,8 @@ async function teamDetailPage() {
         element('div', { className: 'performance-label', text: 'Matches in dieser Season' })
       ]),
       element('article', { className: 'performance-card' }, [
-        element('div', { className: 'performance-label', text: 'Daten vom' }),
+        element('div', { className: 'performance-label', text: 'Zul. aktualisiert' }),
         element('div', { className: 'performance-value', text: technicalDateLabel(teamTimestamp), attributes: { id: 'home-updated' } }),
-        element('div', { className: 'performance-label', text: 'Öffentlicher Snapshot' })
       ])
     ];
     replaceChildren(target, [

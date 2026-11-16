@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T22:18:38+00:00",
+  "generated_at": "2026-11-16T17:15:58+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -12,1212 +12,6 @@
       "matchday": "0",
       "date": "22.04.2026",
       "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (0)",
-      "teams": {
-        "T011": {
-          "name": "T\u00dc F\u00fcnf Freunde",
-          "rating": 873.9448,
-          "rating_deviation": 281.6094,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.656926,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.005124,
-            "3. Liga": 0.337949,
-            "4. Liga": 0.656926
-          }
-        },
-        "T024": {
-          "name": "UKG Fehler",
-          "rating": 1198.5665,
-          "rating_deviation": 281.6094,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.659468,
-          "league_probabilities": {
-            "1. Liga": 2.3e-05,
-            "2. Liga": 0.055216,
-            "3. Liga": 0.659468,
-            "4. Liga": 0.285293
-          }
-        },
-        "T003": {
-          "name": "HSK Satyrus",
-          "rating": 1198.5665,
-          "rating_deviation": 281.6094,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.659468,
-          "league_probabilities": {
-            "1. Liga": 2.3e-05,
-            "2. Liga": 0.055216,
-            "3. Liga": 0.659468,
-            "4. Liga": 0.285293
-          }
-        },
-        "T021": {
-          "name": "UKG Gopniki",
-          "rating": 873.9448,
-          "rating_deviation": 281.6094,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.656926,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.005124,
-            "3. Liga": 0.337949,
-            "4. Liga": 0.656926
-          }
-        },
-        "T001": {
-          "name": "Berlin Makaken - UEB",
-          "rating": 873.9448,
-          "rating_deviation": 281.6094,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.656926,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.005124,
-            "3. Liga": 0.337949,
-            "4. Liga": 0.656926
-          }
-        },
-        "T037": {
-          "name": "UKG Gl\u00fccksb\u00e4rchis",
-          "rating": 1198.5665,
-          "rating_deviation": 281.6094,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.659468,
-          "league_probabilities": {
-            "1. Liga": 2.3e-05,
-            "2. Liga": 0.055216,
-            "3. Liga": 0.659468,
-            "4. Liga": 0.285293
-          }
-        },
-        "T027": {
-          "name": "KIT SC [k\u0153ri]werk addicted tryhards",
-          "rating": 1198.5665,
-          "rating_deviation": 281.6094,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.659468,
-          "league_probabilities": {
-            "1. Liga": 2.3e-05,
-            "2. Liga": 0.055216,
-            "3. Liga": 0.659468,
-            "4. Liga": 0.285293
-          }
-        },
-        "T033": {
-          "name": "ESUG L\u00fcckenf\u00fcller",
-          "rating": 873.9448,
-          "rating_deviation": 281.6094,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.656926,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.005124,
-            "3. Liga": 0.337949,
-            "4. Liga": 0.656926
-          }
-        },
-        "T022": {
-          "name": "BUW Strays",
-          "rating": 873.9448,
-          "rating_deviation": 281.6094,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.656926,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.005124,
-            "3. Liga": 0.337949,
-            "4. Liga": 0.656926
-          }
-        },
-        "T036": {
-          "name": "Aix AuHuur",
-          "rating": 1198.5665,
-          "rating_deviation": 281.6094,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.659468,
-          "league_probabilities": {
-            "1. Liga": 2.3e-05,
-            "2. Liga": 0.055216,
-            "3. Liga": 0.659468,
-            "4. Liga": 0.285293
-          }
-        },
-        "T029": {
-          "name": "LES GOOO",
-          "rating": 873.9448,
-          "rating_deviation": 281.6094,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.656926,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.005124,
-            "3. Liga": 0.337949,
-            "4. Liga": 0.656926
-          }
-        },
-        "T038": {
-          "name": "THM Knights",
-          "rating": 1198.5665,
-          "rating_deviation": 281.6094,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.659468,
-          "league_probabilities": {
-            "1. Liga": 2.3e-05,
-            "2. Liga": 0.055216,
-            "3. Liga": 0.659468,
-            "4. Liga": 0.285293
-          }
-        },
-        "T023": {
-          "name": "RUB Goats Venom",
-          "rating": 1793.2891,
-          "rating_deviation": 281.6094,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.561855,
-          "league_probabilities": {
-            "1. Liga": 0.010895,
-            "2. Liga": 0.561855,
-            "3. Liga": 0.417778,
-            "4. Liga": 0.009472
-          }
-        },
-        "T025": {
-          "name": "HsGL Fennecs",
-          "rating": 2117.9109,
-          "rating_deviation": 281.6094,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.782924,
-          "league_probabilities": {
-            "1. Liga": 0.09296,
-            "2. Liga": 0.782924,
-            "3. Liga": 0.123662,
-            "4. Liga": 0.000453
-          }
-        },
-        "T048": {
-          "name": "UBTeufelsrochen",
-          "rating": 1793.2891,
-          "rating_deviation": 281.6094,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.561855,
-          "league_probabilities": {
-            "1. Liga": 0.010895,
-            "2. Liga": 0.561855,
-            "3. Liga": 0.417778,
-            "4. Liga": 0.009472
-          }
-        },
-        "T051": {
-          "name": "BeK Flotten Sprotten",
-          "rating": 2117.9109,
-          "rating_deviation": 281.6094,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.782924,
-          "league_probabilities": {
-            "1. Liga": 0.09296,
-            "2. Liga": 0.782924,
-            "3. Liga": 0.123662,
-            "4. Liga": 0.000453
-          }
-        },
-        "T049": {
-          "name": "HSK Centauri",
-          "rating": 2145.1691,
-          "rating_deviation": 281.6094,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.784542,
-          "league_probabilities": {
-            "1. Liga": 0.107268,
-            "2. Liga": 0.784542,
-            "3. Liga": 0.107852,
-            "4. Liga": 0.000338
-          }
-        },
-        "T057": {
-          "name": "T\u00dc Wyvern",
-          "rating": 2469.7909,
-          "rating_deviation": 281.6094,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.592745,
-          "league_probabilities": {
-            "1. Liga": 0.393615,
-            "2. Liga": 0.592745,
-            "3. Liga": 0.013634,
-            "4. Liga": 6e-06
-          }
-        }
-      }
-    },
-    {
-      "key": "Season SoSe26|1",
-      "season": "Season SoSe26",
-      "matchday": "1",
-      "date": "22.04.2026",
-      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (1)",
-      "teams": {
-        "T011": {
-          "name": "T\u00dc F\u00fcnf Freunde",
-          "rating": 873.9448,
-          "rating_deviation": 281.6094,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.656926,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.005124,
-            "3. Liga": 0.337949,
-            "4. Liga": 0.656926
-          }
-        },
-        "T024": {
-          "name": "UKG Fehler",
-          "rating": 1282.689,
-          "rating_deviation": 242.7961,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.748847,
-          "league_probabilities": {
-            "1. Liga": 1.2e-05,
-            "2. Liga": 0.068549,
-            "3. Liga": 0.748847,
-            "4. Liga": 0.182592
-          }
-        },
-        "T003": {
-          "name": "HSK Satyrus",
-          "rating": 1073.7822,
-          "rating_deviation": 233.9017,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.573999,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.012868,
-            "3. Liga": 0.573999,
-            "4. Liga": 0.413133
-          }
-        },
-        "T021": {
-          "name": "UKG Gopniki",
-          "rating": 749.1605,
-          "rating_deviation": 233.9017,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.810674,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000434,
-            "3. Liga": 0.188892,
-            "4. Liga": 0.810674
-          }
-        },
-        "T001": {
-          "name": "Berlin Makaken - UEB",
-          "rating": 998.7291,
-          "rating_deviation": 233.9017,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.51388,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.006488,
-            "3. Liga": 0.479632,
-            "4. Liga": 0.51388
-          }
-        },
-        "T037": {
-          "name": "UKG Gl\u00fccksb\u00e4rchis",
-          "rating": 1323.3508,
-          "rating_deviation": 233.9017,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.773488,
-          "league_probabilities": {
-            "1. Liga": 1.4e-05,
-            "2. Liga": 0.083077,
-            "3. Liga": 0.773488,
-            "4. Liga": 0.143421
-          }
-        },
-        "T027": {
-          "name": "KIT SC [k\u0153ri]werk addicted tryhards",
-          "rating": 1525.9415,
-          "rating_deviation": 262.827,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.688816,
-          "league_probabilities": {
-            "1. Liga": 0.000585,
-            "2. Liga": 0.258279,
-            "3. Liga": 0.688816,
-            "4. Liga": 0.05232
-          }
-        },
-        "T033": {
-          "name": "ESUG L\u00fcckenf\u00fcller",
-          "rating": 873.9448,
-          "rating_deviation": 281.6094,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.656926,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.005124,
-            "3. Liga": 0.337949,
-            "4. Liga": 0.656926
-          }
-        },
-        "T022": {
-          "name": "BUW Strays",
-          "rating": 749.1605,
-          "rating_deviation": 233.9017,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.810674,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000434,
-            "3. Liga": 0.188892,
-            "4. Liga": 0.810674
-          }
-        },
-        "T036": {
-          "name": "Aix AuHuur",
-          "rating": 1073.7822,
-          "rating_deviation": 233.9017,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.573999,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.012868,
-            "3. Liga": 0.573999,
-            "4. Liga": 0.413133
-          }
-        },
-        "T029": {
-          "name": "LES GOOO",
-          "rating": 998.7291,
-          "rating_deviation": 233.9017,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.51388,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.006488,
-            "3. Liga": 0.479632,
-            "4. Liga": 0.51388
-          }
-        },
-        "T038": {
-          "name": "THM Knights",
-          "rating": 1323.3508,
-          "rating_deviation": 233.9017,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.773488,
-          "league_probabilities": {
-            "1. Liga": 1.4e-05,
-            "2. Liga": 0.083077,
-            "3. Liga": 0.773488,
-            "4. Liga": 0.143421
-          }
-        },
-        "T023": {
-          "name": "RUB Goats Venom",
-          "rating": 1465.9141,
-          "rating_deviation": 260.8577,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.724726,
-          "league_probabilities": {
-            "1. Liga": 0.000278,
-            "2. Liga": 0.200298,
-            "3. Liga": 0.724726,
-            "4. Liga": 0.074697
-          }
-        },
-        "T025": {
-          "name": "HsGL Fennecs",
-          "rating": 1939.2247,
-          "rating_deviation": 242.7963,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.733533,
-          "league_probabilities": {
-            "1. Liga": 0.019993,
-            "2. Liga": 0.733533,
-            "3. Liga": 0.245432,
-            "4. Liga": 0.001043
-          }
-        },
-        "T048": {
-          "name": "UBTeufelsrochen",
-          "rating": 1793.2891,
-          "rating_deviation": 281.6094,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.561855,
-          "league_probabilities": {
-            "1. Liga": 0.010895,
-            "2. Liga": 0.561855,
-            "3. Liga": 0.417778,
-            "4. Liga": 0.009472
-          }
-        },
-        "T051": {
-          "name": "BeK Flotten Sprotten",
-          "rating": 2202.0333,
-          "rating_deviation": 242.7961,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.821913,
-          "league_probabilities": {
-            "1. Liga": 0.118133,
-            "2. Liga": 0.821913,
-            "3. Liga": 0.059915,
-            "4. Liga": 4e-05
-          }
-        },
-        "T049": {
-          "name": "HSK Centauri",
-          "rating": 2145.1691,
-          "rating_deviation": 281.6094,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.784542,
-          "league_probabilities": {
-            "1. Liga": 0.107268,
-            "2. Liga": 0.784542,
-            "3. Liga": 0.107852,
-            "4. Liga": 0.000338
-          }
-        },
-        "T057": {
-          "name": "T\u00dc Wyvern",
-          "rating": 2291.1047,
-          "rating_deviation": 242.7963,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.781011,
-          "league_probabilities": {
-            "1. Liga": 0.186822,
-            "2. Liga": 0.781011,
-            "3. Liga": 0.032156,
-            "4. Liga": 1.1e-05
-          }
-        },
-        "T002": {
-          "name": "HsGL Pumas",
-          "rating": 919.6895,
-          "rating_deviation": 277.1995,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.606503,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.006991,
-            "3. Liga": 0.386506,
-            "4. Liga": 0.606503
-          }
-        },
-        "T040": {
-          "name": "DG Elysium",
-          "rating": 2221.5554,
-          "rating_deviation": 277.9705,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.776944,
-          "league_probabilities": {
-            "1. Liga": 0.153392,
-            "2. Liga": 0.776944,
-            "3. Liga": 0.069538,
-            "4. Liga": 0.000125
-          }
-        },
-        "T046": {
-          "name": "DG Chronos",
-          "rating": 1839.0339,
-          "rating_deviation": 277.1995,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.612392,
-          "league_probabilities": {
-            "1. Liga": 0.014579,
-            "2. Liga": 0.612392,
-            "3. Liga": 0.367016,
-            "4. Liga": 0.006014
-          }
-        },
-        "T063": {
-          "name": "KIT SC Eclipse",
-          "rating": 2573.4354,
-          "rating_deviation": 277.9705,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.516181,
-          "league_probabilities": {
-            "1. Liga": 0.516181,
-            "2. Liga": 0.47829,
-            "3. Liga": 0.005528,
-            "4. Liga": 1e-06
-          }
-        },
-        "T041": {
-          "name": "Lunatics Ludwigshafen",
-          "rating": 2469.7909,
-          "rating_deviation": 281.6094,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.592745,
-          "league_probabilities": {
-            "1. Liga": 0.393615,
-            "2. Liga": 0.592745,
-            "3. Liga": 0.013634,
-            "4. Liga": 6e-06
-          }
-        },
-        "T052": {
-          "name": "Bremer Rush Dienst",
-          "rating": 2145.1691,
-          "rating_deviation": 281.6094,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.784542,
-          "league_probabilities": {
-            "1. Liga": 0.107268,
-            "2. Liga": 0.784542,
-            "3. Liga": 0.107852,
-            "4. Liga": 0.000338
-          }
-        }
-      }
-    },
-    {
-      "key": "Season SoSe26|2",
-      "season": "Season SoSe26",
-      "matchday": "2",
-      "date": "22.04.2026",
-      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (2)",
-      "teams": {
-        "T011": {
-          "name": "T\u00dc F\u00fcnf Freunde",
-          "rating": 852.2868,
-          "rating_deviation": 260.8225,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.689528,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.002752,
-            "3. Liga": 0.30772,
-            "4. Liga": 0.689528
-          }
-        },
-        "T024": {
-          "name": "UKG Fehler",
-          "rating": 1282.689,
-          "rating_deviation": 242.7961,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.748847,
-          "league_probabilities": {
-            "1. Liga": 1.2e-05,
-            "2. Liga": 0.068549,
-            "3. Liga": 0.748847,
-            "4. Liga": 0.182592
-          }
-        },
-        "T003": {
-          "name": "HSK Satyrus",
-          "rating": 942.3695,
-          "rating_deviation": 200.4139,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.59768,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.001688,
-            "3. Liga": 0.400632,
-            "4. Liga": 0.59768
-          }
-        },
-        "T021": {
-          "name": "UKG Gopniki",
-          "rating": 749.1605,
-          "rating_deviation": 233.9017,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.810674,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000434,
-            "3. Liga": 0.188892,
-            "4. Liga": 0.810674
-          }
-        },
-        "T001": {
-          "name": "Berlin Makaken - UEB",
-          "rating": 917.0158,
-          "rating_deviation": 200.4137,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.633624,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.001241,
-            "3. Liga": 0.365135,
-            "4. Liga": 0.633624
-          }
-        },
-        "T037": {
-          "name": "UKG Gl\u00fccksb\u00e4rchis",
-          "rating": 1323.3508,
-          "rating_deviation": 233.9017,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.773488,
-          "league_probabilities": {
-            "1. Liga": 1.4e-05,
-            "2. Liga": 0.083077,
-            "3. Liga": 0.773488,
-            "4. Liga": 0.143421
-          }
-        },
-        "T027": {
-          "name": "KIT SC [k\u0153ri]werk addicted tryhards",
-          "rating": 1525.9415,
-          "rating_deviation": 262.827,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.688816,
-          "league_probabilities": {
-            "1. Liga": 0.000585,
-            "2. Liga": 0.258279,
-            "3. Liga": 0.688816,
-            "4. Liga": 0.05232
-          }
-        },
-        "T033": {
-          "name": "ESUG L\u00fcckenf\u00fcller",
-          "rating": 1030.6898,
-          "rating_deviation": 233.9988,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.520522,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.008761,
-            "3. Liga": 0.520522,
-            "4. Liga": 0.470716
-          }
-        },
-        "T022": {
-          "name": "BUW Strays",
-          "rating": 749.1605,
-          "rating_deviation": 233.9017,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.810674,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000434,
-            "3. Liga": 0.188892,
-            "4. Liga": 0.810674
-          }
-        },
-        "T036": {
-          "name": "Aix AuHuur",
-          "rating": 1155.4955,
-          "rating_deviation": 200.4137,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.690546,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.016173,
-            "3. Liga": 0.690546,
-            "4. Liga": 0.293281
-          }
-        },
-        "T029": {
-          "name": "LES GOOO",
-          "rating": 1130.1418,
-          "rating_deviation": 200.8092,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.660547,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.012814,
-            "3. Liga": 0.660547,
-            "4. Liga": 0.326638
-          }
-        },
-        "T038": {
-          "name": "THM Knights",
-          "rating": 1323.3508,
-          "rating_deviation": 233.9017,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.773488,
-          "league_probabilities": {
-            "1. Liga": 1.4e-05,
-            "2. Liga": 0.083077,
-            "3. Liga": 0.773488,
-            "4. Liga": 0.143421
-          }
-        },
-        "T023": {
-          "name": "RUB Goats Venom",
-          "rating": 1446.3305,
-          "rating_deviation": 218.9561,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.781808,
-          "league_probabilities": {
-            "1. Liga": 4.3e-05,
-            "2. Liga": 0.156722,
-            "3. Liga": 0.781808,
-            "4. Liga": 0.061427
-          }
-        },
-        "T025": {
-          "name": "HsGL Fennecs",
-          "rating": 1788.6313,
-          "rating_deviation": 211.0992,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.578162,
-          "league_probabilities": {
-            "1. Liga": 0.002714,
-            "2. Liga": 0.578162,
-            "3. Liga": 0.416649,
-            "4. Liga": 0.002475
-          }
-        },
-        "T048": {
-          "name": "UBTeufelsrochen",
-          "rating": 1991.7047,
-          "rating_deviation": 234.2543,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.783126,
-          "league_probabilities": {
-            "1. Liga": 0.027198,
-            "2. Liga": 0.783126,
-            "3. Liga": 0.189236,
-            "4. Liga": 0.00044
-          }
-        },
-        "T051": {
-          "name": "BeK Flotten Sprotten",
-          "rating": 2202.0333,
-          "rating_deviation": 242.7961,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.821913,
-          "league_probabilities": {
-            "1. Liga": 0.118133,
-            "2. Liga": 0.821913,
-            "3. Liga": 0.059915,
-            "4. Liga": 4e-05
-          }
-        },
-        "T049": {
-          "name": "HSK Centauri",
-          "rating": 2020.3848,
-          "rating_deviation": 233.9017,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.801988,
-          "league_probabilities": {
-            "1. Liga": 0.033751,
-            "2. Liga": 0.801988,
-            "3. Liga": 0.163955,
-            "4. Liga": 0.000305
-          }
-        },
-        "T057": {
-          "name": "T\u00dc Wyvern",
-          "rating": 2291.1047,
-          "rating_deviation": 242.7963,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.781011,
-          "league_probabilities": {
-            "1. Liga": 0.186822,
-            "2. Liga": 0.781011,
-            "3. Liga": 0.032156,
-            "4. Liga": 1.1e-05
-          }
-        },
-        "T002": {
-          "name": "HsGL Pumas",
-          "rating": 767.139,
-          "rating_deviation": 231.4968,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.795253,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0005,
-            "3. Liga": 0.204247,
-            "4. Liga": 0.795253
-          }
-        },
-        "T040": {
-          "name": "DG Elysium",
-          "rating": 2221.5554,
-          "rating_deviation": 277.9705,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.776944,
-          "league_probabilities": {
-            "1. Liga": 0.153392,
-            "2. Liga": 0.776944,
-            "3. Liga": 0.069538,
-            "4. Liga": 0.000125
-          }
-        },
-        "T046": {
-          "name": "DG Chronos",
-          "rating": 1886.8202,
-          "rating_deviation": 243.4287,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.682368,
-          "league_probabilities": {
-            "1. Liga": 0.013089,
-            "2. Liga": 0.682368,
-            "3. Liga": 0.302674,
-            "4. Liga": 0.001869
-          }
-        },
-        "T063": {
-          "name": "KIT SC Eclipse",
-          "rating": 2670.2892,
-          "rating_deviation": 233.1516,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.645959,
-          "league_probabilities": {
-            "1. Liga": 0.645959,
-            "2. Liga": 0.353319,
-            "3. Liga": 0.000723,
-            "4. Liga": 0.0
-          }
-        },
-        "T041": {
-          "name": "Lunatics Ludwigshafen",
-          "rating": 2370.9137,
-          "rating_deviation": 235.0833,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.723,
-          "league_probabilities": {
-            "1. Liga": 0.261532,
-            "2. Liga": 0.723,
-            "3. Liga": 0.015466,
-            "4. Liga": 2e-06
-          }
-        },
-        "T052": {
-          "name": "Bremer Rush Dienst",
-          "rating": 2269.9534,
-          "rating_deviation": 233.9017,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.802954,
-          "league_probabilities": {
-            "1. Liga": 0.16287,
-            "2. Liga": 0.802954,
-            "3. Liga": 0.034166,
-            "4. Liga": 1e-05
-          }
-        }
-      }
-    },
-    {
-      "key": "Season SoSe26|3",
-      "season": "Season SoSe26",
-      "matchday": "3",
-      "date": "22.04.2026",
-      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (3)",
-      "teams": {
-        "T011": {
-          "name": "T\u00dc F\u00fcnf Freunde",
-          "rating": 852.2868,
-          "rating_deviation": 260.8225,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.689528,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.002752,
-            "3. Liga": 0.30772,
-            "4. Liga": 0.689528
-          }
-        },
-        "T024": {
-          "name": "UKG Fehler",
-          "rating": 1282.689,
-          "rating_deviation": 242.7961,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.748847,
-          "league_probabilities": {
-            "1. Liga": 1.2e-05,
-            "2. Liga": 0.068549,
-            "3. Liga": 0.748847,
-            "4. Liga": 0.182592
-          }
-        },
-        "T003": {
-          "name": "HSK Satyrus",
-          "rating": 942.3695,
-          "rating_deviation": 200.4139,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.59768,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.001688,
-            "3. Liga": 0.400632,
-            "4. Liga": 0.59768
-          }
-        },
-        "T021": {
-          "name": "UKG Gopniki",
-          "rating": 749.1605,
-          "rating_deviation": 233.9017,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.810674,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000434,
-            "3. Liga": 0.188892,
-            "4. Liga": 0.810674
-          }
-        },
-        "T001": {
-          "name": "Berlin Makaken - UEB",
-          "rating": 917.0158,
-          "rating_deviation": 200.4137,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.633624,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.001241,
-            "3. Liga": 0.365135,
-            "4. Liga": 0.633624
-          }
-        },
-        "T037": {
-          "name": "UKG Gl\u00fccksb\u00e4rchis",
-          "rating": 1323.3508,
-          "rating_deviation": 233.9017,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.773488,
-          "league_probabilities": {
-            "1. Liga": 1.4e-05,
-            "2. Liga": 0.083077,
-            "3. Liga": 0.773488,
-            "4. Liga": 0.143421
-          }
-        },
-        "T027": {
-          "name": "KIT SC [k\u0153ri]werk addicted tryhards",
-          "rating": 1525.9415,
-          "rating_deviation": 262.827,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.688816,
-          "league_probabilities": {
-            "1. Liga": 0.000585,
-            "2. Liga": 0.258279,
-            "3. Liga": 0.688816,
-            "4. Liga": 0.05232
-          }
-        },
-        "T033": {
-          "name": "ESUG L\u00fcckenf\u00fcller",
-          "rating": 1030.6898,
-          "rating_deviation": 233.9988,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.520522,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.008761,
-            "3. Liga": 0.520522,
-            "4. Liga": 0.470716
-          }
-        },
-        "T022": {
-          "name": "BUW Strays",
-          "rating": 749.1605,
-          "rating_deviation": 233.9017,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.810674,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000434,
-            "3. Liga": 0.188892,
-            "4. Liga": 0.810674
-          }
-        },
-        "T036": {
-          "name": "Aix AuHuur",
-          "rating": 1155.4955,
-          "rating_deviation": 200.4137,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.690546,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.016173,
-            "3. Liga": 0.690546,
-            "4. Liga": 0.293281
-          }
-        },
-        "T029": {
-          "name": "LES GOOO",
-          "rating": 1130.1418,
-          "rating_deviation": 200.8092,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.660547,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.012814,
-            "3. Liga": 0.660547,
-            "4. Liga": 0.326638
-          }
-        },
-        "T038": {
-          "name": "THM Knights",
-          "rating": 1323.3508,
-          "rating_deviation": 233.9017,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.773488,
-          "league_probabilities": {
-            "1. Liga": 1.4e-05,
-            "2. Liga": 0.083077,
-            "3. Liga": 0.773488,
-            "4. Liga": 0.143421
-          }
-        },
-        "T023": {
-          "name": "RUB Goats Venom",
-          "rating": 1446.3305,
-          "rating_deviation": 218.9561,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.781808,
-          "league_probabilities": {
-            "1. Liga": 4.3e-05,
-            "2. Liga": 0.156722,
-            "3. Liga": 0.781808,
-            "4. Liga": 0.061427
-          }
-        },
-        "T025": {
-          "name": "HsGL Fennecs",
-          "rating": 1788.6313,
-          "rating_deviation": 211.0992,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.578162,
-          "league_probabilities": {
-            "1. Liga": 0.002714,
-            "2. Liga": 0.578162,
-            "3. Liga": 0.416649,
-            "4. Liga": 0.002475
-          }
-        },
-        "T048": {
-          "name": "UBTeufelsrochen",
-          "rating": 1991.7047,
-          "rating_deviation": 234.2543,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.783126,
-          "league_probabilities": {
-            "1. Liga": 0.027198,
-            "2. Liga": 0.783126,
-            "3. Liga": 0.189236,
-            "4. Liga": 0.00044
-          }
-        },
-        "T051": {
-          "name": "BeK Flotten Sprotten",
-          "rating": 2202.0333,
-          "rating_deviation": 242.7961,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.821913,
-          "league_probabilities": {
-            "1. Liga": 0.118133,
-            "2. Liga": 0.821913,
-            "3. Liga": 0.059915,
-            "4. Liga": 4e-05
-          }
-        },
-        "T049": {
-          "name": "HSK Centauri",
-          "rating": 1973.3931,
-          "rating_deviation": 207.408,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.79396,
-          "league_probabilities": {
-            "1. Liga": 0.016338,
-            "2. Liga": 0.79396,
-            "3. Liga": 0.189479,
-            "4. Liga": 0.000223
-          }
-        },
-        "T057": {
-          "name": "T\u00dc Wyvern",
-          "rating": 2340.9551,
-          "rating_deviation": 213.5721,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.76893,
-          "league_probabilities": {
-            "1. Liga": 0.216449,
-            "2. Liga": 0.76893,
-            "3. Liga": 0.014619,
-            "4. Liga": 1e-06
-          }
-        },
-        "T002": {
-          "name": "HsGL Pumas",
-          "rating": 767.139,
-          "rating_deviation": 231.4968,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.795253,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0005,
-            "3. Liga": 0.204247,
-            "4. Liga": 0.795253
-          }
-        },
-        "T040": {
-          "name": "DG Elysium",
-          "rating": 2221.5554,
-          "rating_deviation": 277.9705,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.776944,
-          "league_probabilities": {
-            "1. Liga": 0.153392,
-            "2. Liga": 0.776944,
-            "3. Liga": 0.069538,
-            "4. Liga": 0.000125
-          }
-        },
-        "T046": {
-          "name": "DG Chronos",
-          "rating": 1886.8202,
-          "rating_deviation": 243.4287,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.682368,
-          "league_probabilities": {
-            "1. Liga": 0.013089,
-            "2. Liga": 0.682368,
-            "3. Liga": 0.302674,
-            "4. Liga": 0.001869
-          }
-        },
-        "T063": {
-          "name": "KIT SC Eclipse",
-          "rating": 2670.2892,
-          "rating_deviation": 233.1516,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.645959,
-          "league_probabilities": {
-            "1. Liga": 0.645959,
-            "2. Liga": 0.353319,
-            "3. Liga": 0.000723,
-            "4. Liga": 0.0
-          }
-        },
-        "T041": {
-          "name": "Lunatics Ludwigshafen",
-          "rating": 2370.9137,
-          "rating_deviation": 235.0833,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.723,
-          "league_probabilities": {
-            "1. Liga": 0.261532,
-            "2. Liga": 0.723,
-            "3. Liga": 0.015466,
-            "4. Liga": 2e-06
-          }
-        },
-        "T052": {
-          "name": "Bremer Rush Dienst",
-          "rating": 2269.9534,
-          "rating_deviation": 233.9017,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.802954,
-          "league_probabilities": {
-            "1. Liga": 0.16287,
-            "2. Liga": 0.802954,
-            "3. Liga": 0.034166,
-            "4. Liga": 1e-05
-          }
-        }
-      }
-    },
-    {
-      "key": "Season SoSe26|4",
-      "season": "Season SoSe26",
-      "matchday": "4",
-      "date": "22.04.2026",
-      "label": "Season SoSe26 \u00b7 Wildcard \u00b7 Tag (4)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -1534,11 +328,11 @@
       }
     },
     {
-      "key": "Season SoSe26|5",
+      "key": "Season SoSe26|1",
       "season": "Season SoSe26",
-      "matchday": "5",
+      "matchday": "1",
       "date": "22.04.2026",
-      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (5)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (1)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -2375,11 +1169,11 @@
       }
     },
     {
-      "key": "Season SoSe26|6",
+      "key": "Season SoSe26|2",
       "season": "Season SoSe26",
-      "matchday": "6",
+      "matchday": "2",
       "date": "22.04.2026",
-      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (6)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (2)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -3216,11 +2010,11 @@
       }
     },
     {
-      "key": "Season SoSe26|7",
+      "key": "Season SoSe26|3",
       "season": "Season SoSe26",
-      "matchday": "7",
+      "matchday": "3",
       "date": "29.04.2026",
-      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (7)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (3)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -4057,11 +2851,11 @@
       }
     },
     {
-      "key": "Season SoSe26|8",
+      "key": "Season SoSe26|4",
       "season": "Season SoSe26",
-      "matchday": "8",
+      "matchday": "4",
       "date": "06.05.2026",
-      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (8)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (4)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -4898,11 +3692,11 @@
       }
     },
     {
-      "key": "Season SoSe26|9",
+      "key": "Season SoSe26|5",
       "season": "Season SoSe26",
-      "matchday": "9",
+      "matchday": "5",
       "date": "13.05.2026",
-      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (9)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (5)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -5739,11 +4533,11 @@
       }
     },
     {
-      "key": "Season SoSe26|10",
+      "key": "Season SoSe26|6",
       "season": "Season SoSe26",
-      "matchday": "10",
+      "matchday": "6",
       "date": "20.05.2026",
-      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (10)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (6)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -6580,11 +5374,11 @@
       }
     },
     {
-      "key": "Season SoSe26|11",
+      "key": "Season SoSe26|7",
       "season": "Season SoSe26",
-      "matchday": "11",
+      "matchday": "7",
       "date": "27.05.2026",
-      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (11)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (7)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -7421,11 +6215,11 @@
       }
     },
     {
-      "key": "Season SoSe26|12",
+      "key": "Season SoSe26|8",
       "season": "Season SoSe26",
-      "matchday": "12",
+      "matchday": "8",
       "date": "03.06.2026",
-      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (12)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (8)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -8262,11 +7056,11 @@
       }
     },
     {
-      "key": "Season SoSe26|13",
+      "key": "Season SoSe26|9",
       "season": "Season SoSe26",
-      "matchday": "13",
+      "matchday": "9",
       "date": "03.06.2026",
-      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (13)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (9)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -9103,11 +7897,11 @@
       }
     },
     {
-      "key": "Season SoSe26|14",
+      "key": "Season SoSe26|10",
       "season": "Season SoSe26",
-      "matchday": "14",
+      "matchday": "10",
       "date": "10.06.2026",
-      "label": "Season SoSe26 \u00b7 Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (14)",
+      "label": "Season SoSe26 \u00b7 Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (10)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -9944,852 +8738,11 @@
       }
     },
     {
-      "key": "Season SoSe26|15",
+      "key": "Season SoSe26|11",
       "season": "Season SoSe26",
-      "matchday": "15",
+      "matchday": "11",
       "date": "17.06.2026",
-      "label": "Season SoSe26 \u00b7 Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (15)",
-      "teams": {
-        "T011": {
-          "name": "T\u00dc F\u00fcnf Freunde",
-          "rating": 680.8664,
-          "rating_deviation": 100.7391,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.94417,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.05583,
-            "4. Liga": 0.94417
-          }
-        },
-        "T024": {
-          "name": "UKG Fehler",
-          "rating": 1722.9348,
-          "rating_deviation": 109.9118,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.516787,
-          "league_probabilities": {
-            "1. Liga": 3.6e-05,
-            "2. Liga": 0.482822,
-            "3. Liga": 0.516787,
-            "4. Liga": 0.000356
-          }
-        },
-        "T003": {
-          "name": "HSK Satyrus",
-          "rating": 1063.0686,
-          "rating_deviation": 92.679,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.604812,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000477,
-            "3. Liga": 0.604812,
-            "4. Liga": 0.394711
-          }
-        },
-        "T021": {
-          "name": "UKG Gopniki",
-          "rating": 358.1475,
-          "rating_deviation": 105.332,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.999098,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.000902,
-            "4. Liga": 0.999098
-          }
-        },
-        "T001": {
-          "name": "Berlin Makaken - UEB",
-          "rating": 1165.4727,
-          "rating_deviation": 98.4553,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.774288,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.002879,
-            "3. Liga": 0.774288,
-            "4. Liga": 0.222833
-          }
-        },
-        "T037": {
-          "name": "UKG Gl\u00fccksb\u00e4rchis",
-          "rating": 1200.966,
-          "rating_deviation": 103.5097,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.817119,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.005272,
-            "3. Liga": 0.817119,
-            "4. Liga": 0.177609
-          }
-        },
-        "T027": {
-          "name": "KIT SC [k\u0153ri]werk addicted tryhards",
-          "rating": 1315.6977,
-          "rating_deviation": 108.6341,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.903843,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.023845,
-            "3. Liga": 0.903843,
-            "4. Liga": 0.072312
-          }
-        },
-        "T033": {
-          "name": "ESUG L\u00fcckenf\u00fcller",
-          "rating": 1324.9429,
-          "rating_deviation": 109.546,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.906422,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.026692,
-            "3. Liga": 0.906422,
-            "4. Liga": 0.066886
-          }
-        },
-        "T022": {
-          "name": "BUW Strays",
-          "rating": 204.7063,
-          "rating_deviation": 101.6363,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.99995,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 5e-05,
-            "4. Liga": 0.99995
-          }
-        },
-        "T036": {
-          "name": "Aix AuHuur",
-          "rating": 1099.9228,
-          "rating_deviation": 97.133,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.670671,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.001,
-            "3. Liga": 0.670671,
-            "4. Liga": 0.328329
-          }
-        },
-        "T029": {
-          "name": "LES GOOO",
-          "rating": 1057.0842,
-          "rating_deviation": 104.8218,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.590685,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000597,
-            "3. Liga": 0.590685,
-            "4. Liga": 0.408718
-          }
-        },
-        "T038": {
-          "name": "THM Knights",
-          "rating": 979.0162,
-          "rating_deviation": 104.3822,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.557289,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000148,
-            "3. Liga": 0.442563,
-            "4. Liga": 0.557289
-          }
-        },
-        "T023": {
-          "name": "RUB Goats Venom",
-          "rating": 1792.7319,
-          "rating_deviation": 103.9299,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.614819,
-          "league_probabilities": {
-            "1. Liga": 0.000111,
-            "2. Liga": 0.614819,
-            "3. Liga": 0.384989,
-            "4. Liga": 8.1e-05
-          }
-        },
-        "T025": {
-          "name": "HsGL Fennecs",
-          "rating": 1657.3855,
-          "rating_deviation": 108.7732,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.637597,
-          "league_probabilities": {
-            "1. Liga": 9e-06,
-            "2. Liga": 0.361369,
-            "3. Liga": 0.637597,
-            "4. Liga": 0.001025
-          }
-        },
-        "T048": {
-          "name": "UBTeufelsrochen",
-          "rating": 2281.0754,
-          "rating_deviation": 106.7368,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.904364,
-          "league_probabilities": {
-            "1. Liga": 0.091288,
-            "2. Liga": 0.904364,
-            "3. Liga": 0.004348,
-            "4. Liga": 0.0
-          }
-        },
-        "T051": {
-          "name": "BeK Flotten Sprotten",
-          "rating": 1916.4213,
-          "rating_deviation": 106.9902,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.80971,
-          "league_probabilities": {
-            "1. Liga": 0.001058,
-            "2. Liga": 0.80971,
-            "3. Liga": 0.189225,
-            "4. Liga": 7e-06
-          }
-        },
-        "T049": {
-          "name": "HSK Centauri",
-          "rating": 2182.516,
-          "rating_deviation": 105.0491,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.949627,
-          "league_probabilities": {
-            "1. Liga": 0.035052,
-            "2. Liga": 0.949627,
-            "3. Liga": 0.015322,
-            "4. Liga": 0.0
-          }
-        },
-        "T057": {
-          "name": "T\u00dc Wyvern",
-          "rating": 2667.3261,
-          "rating_deviation": 105.4235,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.696551,
-          "league_probabilities": {
-            "1. Liga": 0.696551,
-            "2. Liga": 0.303445,
-            "3. Liga": 4e-06,
-            "4. Liga": 0.0
-          }
-        },
-        "T002": {
-          "name": "HsGL Pumas",
-          "rating": 858.4902,
-          "rating_deviation": 96.0646,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.769647,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 9e-06,
-            "3. Liga": 0.230344,
-            "4. Liga": 0.769647
-          }
-        },
-        "T040": {
-          "name": "DG Elysium",
-          "rating": 2123.9462,
-          "rating_deviation": 121.0785,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.942389,
-          "league_probabilities": {
-            "1. Liga": 0.022211,
-            "2. Liga": 0.942389,
-            "3. Liga": 0.0354,
-            "4. Liga": 0.0
-          }
-        },
-        "T046": {
-          "name": "DG Chronos",
-          "rating": 1780.8737,
-          "rating_deviation": 109.6251,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.591582,
-          "league_probabilities": {
-            "1. Liga": 0.000109,
-            "2. Liga": 0.591582,
-            "3. Liga": 0.408184,
-            "4. Liga": 0.000125
-          }
-        },
-        "T063": {
-          "name": "KIT SC Eclipse",
-          "rating": 2550.3225,
-          "rating_deviation": 122.7007,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.517631,
-          "league_probabilities": {
-            "1. Liga": 0.482283,
-            "2. Liga": 0.517631,
-            "3. Liga": 8.6e-05,
-            "4. Liga": 0.0
-          }
-        },
-        "T041": {
-          "name": "Lunatics Ludwigshafen",
-          "rating": 2393.5926,
-          "rating_deviation": 105.2775,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.786814,
-          "league_probabilities": {
-            "1. Liga": 0.212431,
-            "2. Liga": 0.786814,
-            "3. Liga": 0.000755,
-            "4. Liga": 0.0
-          }
-        },
-        "T052": {
-          "name": "Bremer Rush Dienst",
-          "rating": 1988.6957,
-          "rating_deviation": 106.3057,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.887124,
-          "league_probabilities": {
-            "1. Liga": 0.003139,
-            "2. Liga": 0.887124,
-            "3. Liga": 0.109735,
-            "4. Liga": 1e-06
-          }
-        },
-        "T009": {
-          "name": "Bremer Wasch Dienst",
-          "rating": 625.1604,
-          "rating_deviation": 108.6583,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.966045,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.033955,
-            "4. Liga": 0.966045
-          }
-        },
-        "T013": {
-          "name": "UKGrrr S\u00fc\u00dfm\u00e4use",
-          "rating": 389.9632,
-          "rating_deviation": 117.0808,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.99803,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.00197,
-            "4. Liga": 0.99803
-          }
-        },
-        "T014": {
-          "name": "Hamburger Hai Noon",
-          "rating": 650.5193,
-          "rating_deviation": 106.3742,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.956785,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.043214,
-            "4. Liga": 0.956785
-          }
-        },
-        "T005": {
-          "name": "Ilmenauer T.E.E.",
-          "rating": 831.2711,
-          "rating_deviation": 113.9172,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.797953,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 1.2e-05,
-            "3. Liga": 0.202035,
-            "4. Liga": 0.797953
-          }
-        },
-        "T019": {
-          "name": "KIT SC Spezi auf 1",
-          "rating": 582.6561,
-          "rating_deviation": 105.0551,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.979605,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.020395,
-            "4. Liga": 0.979605
-          }
-        },
-        "T012": {
-          "name": "ESUG PlatParty",
-          "rating": 525.6306,
-          "rating_deviation": 116.4549,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.987923,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.012077,
-            "4. Liga": 0.987923
-          }
-        },
-        "T008": {
-          "name": "Skill IssUEH",
-          "rating": 662.4088,
-          "rating_deviation": 107.9161,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.950676,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.049323,
-            "4. Liga": 0.950676
-          }
-        },
-        "T010": {
-          "name": "KIT SC Bober",
-          "rating": 670.1338,
-          "rating_deviation": 111.0292,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.945454,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.054546,
-            "4. Liga": 0.945454
-          }
-        },
-        "T015": {
-          "name": "LES Leutzscher Lappen",
-          "rating": 548.4837,
-          "rating_deviation": 103.6447,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.986693,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.013307,
-            "4. Liga": 0.986693
-          }
-        },
-        "T004": {
-          "name": "AIX Super C(lap)",
-          "rating": 822.574,
-          "rating_deviation": 115.4833,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.808319,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 1.1e-05,
-            "3. Liga": 0.191671,
-            "4. Liga": 0.808319
-          }
-        },
-        "T006": {
-          "name": "PBE Mondhasen",
-          "rating": 978.7813,
-          "rating_deviation": 106.8027,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.5574,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.00016,
-            "3. Liga": 0.442441,
-            "4. Liga": 0.5574
-          }
-        },
-        "T018": {
-          "name": "DG Strix",
-          "rating": 606.5402,
-          "rating_deviation": 107.5683,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.972526,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.027474,
-            "4. Liga": 0.972526
-          }
-        },
-        "T007": {
-          "name": "DG Lotus",
-          "rating": 772.1155,
-          "rating_deviation": 104.705,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.872349,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 2e-06,
-            "3. Liga": 0.127649,
-            "4. Liga": 0.872349
-          }
-        },
-        "T016": {
-          "name": "BeK F\u00f6rdeschwimmer",
-          "rating": 702.2061,
-          "rating_deviation": 103.7211,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.930133,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.069867,
-            "4. Liga": 0.930133
-          }
-        },
-        "T017": {
-          "name": "LUNA Nova",
-          "rating": 130.5496,
-          "rating_deviation": 108.6704,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.999985,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 1.5e-05,
-            "4. Liga": 0.999985
-          }
-        },
-        "T020": {
-          "name": "Purrfect Aim",
-          "rating": 528.6941,
-          "rating_deviation": 114.2789,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.987861,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.012139,
-            "4. Liga": 0.987861
-          }
-        },
-        "T026": {
-          "name": "Bielefeld Sapphire",
-          "rating": 1547.9195,
-          "rating_deviation": 113.4506,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.800869,
-          "league_probabilities": {
-            "1. Liga": 1e-06,
-            "2. Liga": 0.193474,
-            "3. Liga": 0.800869,
-            "4. Liga": 0.005657
-          }
-        },
-        "T028": {
-          "name": "HSMW Esports Medics",
-          "rating": 1320.0998,
-          "rating_deviation": 118.1302,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.897898,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.027866,
-            "3. Liga": 0.897898,
-            "4. Liga": 0.074236
-          }
-        },
-        "T030": {
-          "name": "Hamburger Haiground",
-          "rating": 1078.2961,
-          "rating_deviation": 119.5681,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.624529,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.001243,
-            "3. Liga": 0.624529,
-            "4. Liga": 0.374228
-          }
-        },
-        "T034": {
-          "name": "RUB Goats Aqua",
-          "rating": 1444.6897,
-          "rating_deviation": 115.1981,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.889854,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.089407,
-            "3. Liga": 0.889854,
-            "4. Liga": 0.020739
-          }
-        },
-        "T031": {
-          "name": "Bremer Bestattungs Dienst",
-          "rating": 1752.2024,
-          "rating_deviation": 118.9376,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.537212,
-          "league_probabilities": {
-            "1. Liga": 9e-05,
-            "2. Liga": 0.537212,
-            "3. Liga": 0.462412,
-            "4. Liga": 0.000286
-          }
-        },
-        "T035": {
-          "name": "404 Average Cookie Enjoyer",
-          "rating": 1268.3471,
-          "rating_deviation": 117.6778,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.870542,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.015542,
-            "3. Liga": 0.870542,
-            "4. Liga": 0.113916
-          }
-        },
-        "T032": {
-          "name": "Mogontiacum",
-          "rating": 1614.7095,
-          "rating_deviation": 109.8448,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.708934,
-          "league_probabilities": {
-            "1. Liga": 4e-06,
-            "2. Liga": 0.289025,
-            "3. Liga": 0.708934,
-            "4. Liga": 0.002037
-          }
-        },
-        "T039": {
-          "name": "RUB Goats Kanoqel",
-          "rating": 2402.9464,
-          "rating_deviation": 126.7761,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.761031,
-          "league_probabilities": {
-            "1. Liga": 0.237815,
-            "2. Liga": 0.761031,
-            "3. Liga": 0.001154,
-            "4. Liga": 0.0
-          }
-        },
-        "T042": {
-          "name": "UwUwutch",
-          "rating": 2127.0072,
-          "rating_deviation": 122.6142,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.941735,
-          "league_probabilities": {
-            "1. Liga": 0.023401,
-            "2. Liga": 0.941735,
-            "3. Liga": 0.034864,
-            "4. Liga": 0.0
-          }
-        },
-        "T045": {
-          "name": "T\u00dc Phoenix",
-          "rating": 1813.2216,
-          "rating_deviation": 115.5982,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.647667,
-          "league_probabilities": {
-            "1. Liga": 0.000241,
-            "2. Liga": 0.647667,
-            "3. Liga": 0.352007,
-            "4. Liga": 8.5e-05
-          }
-        },
-        "T043": {
-          "name": "KIT SC White Lotus",
-          "rating": 1986.5061,
-          "rating_deviation": 122.3918,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.874635,
-          "league_probabilities": {
-            "1. Liga": 0.00421,
-            "2. Liga": 0.874635,
-            "3. Liga": 0.121151,
-            "4. Liga": 4e-06
-          }
-        },
-        "T044": {
-          "name": "LUNA Augsburg",
-          "rating": 1702.9389,
-          "rating_deviation": 123.843,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.552161,
-          "league_probabilities": {
-            "1. Liga": 4.4e-05,
-            "2. Liga": 0.447049,
-            "3. Liga": 0.552161,
-            "4. Liga": 0.000746
-          }
-        },
-        "T047": {
-          "name": "LES Connewitz Crusaders",
-          "rating": 2380.0798,
-          "rating_deviation": 115.8018,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.798488,
-          "league_probabilities": {
-            "1. Liga": 0.200281,
-            "2. Liga": 0.798488,
-            "3. Liga": 0.001231,
-            "4. Liga": 0.0
-          }
-        },
-        "T053": {
-          "name": "bUDSweiser",
-          "rating": 1562.6207,
-          "rating_deviation": 119.3286,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.778388,
-          "league_probabilities": {
-            "1. Liga": 2e-06,
-            "2. Liga": 0.216429,
-            "3. Liga": 0.778388,
-            "4. Liga": 0.005181
-          }
-        },
-        "T050": {
-          "name": "DG Athena",
-          "rating": 2137.7435,
-          "rating_deviation": 116.0736,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.946581,
-          "league_probabilities": {
-            "1. Liga": 0.024333,
-            "2. Liga": 0.946581,
-            "3. Liga": 0.029086,
-            "4. Liga": 0.0
-          }
-        },
-        "T054": {
-          "name": "1. ECF Mainhardt",
-          "rating": 1718.8623,
-          "rating_deviation": 120.6143,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.523648,
-          "league_probabilities": {
-            "1. Liga": 5.2e-05,
-            "2. Liga": 0.475774,
-            "3. Liga": 0.523648,
-            "4. Liga": 0.000526
-          }
-        },
-        "T061": {
-          "name": "404 Average Cake Enjoyer",
-          "rating": 2927.3527,
-          "rating_deviation": 118.9369,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.955689,
-          "league_probabilities": {
-            "1. Liga": 0.955689,
-            "2. Liga": 0.044311,
-            "3. Liga": 0.0,
-            "4. Liga": 0.0
-          }
-        },
-        "T062": {
-          "name": "HGI Amber",
-          "rating": 2752.9843,
-          "rating_deviation": 117.301,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.815471,
-          "league_probabilities": {
-            "1. Liga": 0.815471,
-            "2. Liga": 0.184528,
-            "3. Liga": 1e-06,
-            "4. Liga": 0.0
-          }
-        },
-        "T056": {
-          "name": "DG Infinite",
-          "rating": 3513.7381,
-          "rating_deviation": 141.514,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.999984,
-          "league_probabilities": {
-            "1. Liga": 0.999984,
-            "2. Liga": 1.6e-05,
-            "3. Liga": 0.0,
-            "4. Liga": 0.0
-          }
-        },
-        "T064": {
-          "name": "Berlin Monkes - UEB",
-          "rating": 2860.0526,
-          "rating_deviation": 118.6132,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.918027,
-          "league_probabilities": {
-            "1. Liga": 0.918027,
-            "2. Liga": 0.081973,
-            "3. Liga": 0.0,
-            "4. Liga": 0.0
-          }
-        },
-        "T058": {
-          "name": "Berlin B\u00fcrgergeld",
-          "rating": 2883.4618,
-          "rating_deviation": 125.0377,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.93001,
-          "league_probabilities": {
-            "1. Liga": 0.93001,
-            "2. Liga": 0.06999,
-            "3. Liga": 0.0,
-            "4. Liga": 0.0
-          }
-        },
-        "T060": {
-          "name": "Darmadillos",
-          "rating": 2999.3664,
-          "rating_deviation": 121.9094,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.978361,
-          "league_probabilities": {
-            "1. Liga": 0.978361,
-            "2. Liga": 0.021639,
-            "3. Liga": 0.0,
-            "4. Liga": 0.0
-          }
-        },
-        "T055": {
-          "name": "Hamburger Delfine",
-          "rating": 3376.5671,
-          "rating_deviation": 148.285,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.999769,
-          "league_probabilities": {
-            "1. Liga": 0.999769,
-            "2. Liga": 0.000231,
-            "3. Liga": 0.0,
-            "4. Liga": 0.0
-          }
-        },
-        "T059": {
-          "name": "WUE X-Rays",
-          "rating": 3151.5273,
-          "rating_deviation": 132.9729,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.995894,
-          "league_probabilities": {
-            "1. Liga": 0.995894,
-            "2. Liga": 0.004106,
-            "3. Liga": 0.0,
-            "4. Liga": 0.0
-          }
-        }
-      }
-    },
-    {
-      "key": "Season SoSe26|16",
-      "season": "Season SoSe26",
-      "matchday": "16",
-      "date": "17.06.2026",
-      "label": "Season SoSe26 \u00b7 Playoffs, Relegation \u00b7 Tag (16)",
+      "label": "Season SoSe26 \u00b7 Playoffs, Relegation, Showdown 4. Liga \u00b7 Tag (11)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -11626,11 +9579,11 @@
       }
     },
     {
-      "key": "Season SoSe26|17",
+      "key": "Season SoSe26|12",
       "season": "Season SoSe26",
-      "matchday": "17",
+      "matchday": "12",
       "date": "17.06.2026",
-      "label": "Season SoSe26 \u00b7 Relegation \u00b7 Tag (17)",
+      "label": "Season SoSe26 \u00b7 Relegation \u00b7 Tag (12)",
       "teams": {
         "T011": {
           "name": "T\u00dc F\u00fcnf Freunde",
@@ -15655,409 +13608,19 @@
       "date": "12.11.2026",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (4)",
       "teams": {
-        "T080": {
-          "name": "DA Meowfia",
-          "rating": 567.3984,
-          "power_rating": 544.7406,
-          "form": -0.4583,
-          "rating_deviation": 164.7843,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.971442,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 1e-06,
-            "3. Liga": 0.028558,
-            "4. Liga": 0.971442
-          }
-        },
-        "T020": {
-          "name": "Purrfect Aim",
-          "rating": 781.6447,
-          "power_rating": 805.2431,
-          "form": 0.5833,
-          "rating_deviation": 134.8475,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.81752,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 1.9e-05,
-            "3. Liga": 0.182461,
-            "4. Liga": 0.81752
-          }
-        },
-        "T047": {
-          "name": "LES Connewitz Crusaders",
-          "rating": 2089.8995,
-          "power_rating": 2080.7682,
-          "form": -0.2222,
-          "rating_deviation": 136.9685,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.921401,
-          "league_probabilities": {
-            "1. Liga": 0.017056,
-            "2. Liga": 0.921401,
-            "3. Liga": 0.061542,
-            "4. Liga": 1e-06
-          }
-        },
-        "T076": {
-          "name": "UKG Runaway",
-          "rating": 1738.6512,
-          "power_rating": 1793.1065,
-          "form": 1.0,
-          "rating_deviation": 181.5176,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.593112,
-          "league_probabilities": {
-            "1. Liga": 0.00135,
-            "2. Liga": 0.593112,
-            "3. Liga": 0.404458,
-            "4. Liga": 0.00108
-          }
-        },
-        "T082": {
-          "name": "DG Orion",
-          "rating": 724.9835,
-          "power_rating": 722.892,
-          "form": -0.0417,
-          "rating_deviation": 167.317,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.87783,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 2e-05,
-            "3. Liga": 0.12215,
-            "4. Liga": 0.87783
-          }
-        },
-        "T003": {
-          "name": "HSK Satyrus",
-          "rating": 1442.6339,
-          "power_rating": 1453.6355,
-          "form": 0.2917,
-          "rating_deviation": 125.7326,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.876136,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.102434,
-            "3. Liga": 0.876136,
-            "4. Liga": 0.02143
-          }
-        },
-        "T013": {
-          "name": "UKGrrrS\u00fc\u00dfm\u00e4use",
-          "rating": 249.5606,
-          "power_rating": 206.9456,
-          "form": -1.0,
-          "rating_deviation": 142.0498,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.999765,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.000235,
-            "4. Liga": 0.999765
-          }
-        },
-        "T032": {
-          "name": "Mogontiacum",
-          "rating": 1742.3837,
-          "power_rating": 1724.5434,
-          "form": -0.4167,
-          "rating_deviation": 142.7221,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.512027,
-          "league_probabilities": {
-            "1. Liga": 0.000138,
-            "2. Liga": 0.486915,
-            "3. Liga": 0.512027,
-            "4. Liga": 0.00092
-          }
-        },
-        "T027": {
-          "name": "KIT SC [k\u0153ri]werk addicted tryhards",
-          "rating": 984.3534,
-          "power_rating": 986.1527,
-          "form": 0.0417,
-          "rating_deviation": 143.943,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.539483,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000606,
-            "3. Liga": 0.459911,
-            "4. Liga": 0.539483
-          }
-        },
-        "T063": {
-          "name": "KIT SC Eclipse",
-          "rating": 2846.4306,
-          "power_rating": 2844.4982,
-          "form": -0.0417,
-          "rating_deviation": 154.588,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.884745,
-          "league_probabilities": {
-            "1. Liga": 0.884745,
-            "2. Liga": 0.115254,
-            "3. Liga": 1e-06,
-            "4. Liga": 0.0
-          }
-        },
-        "T036": {
-          "name": "AIX Au Huur",
-          "rating": 1166.6176,
-          "power_rating": 1130.1787,
-          "form": -0.8889,
-          "rating_deviation": 136.6461,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.700221,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.003872,
-            "3. Liga": 0.700221,
-            "4. Liga": 0.295907
-          }
-        },
-        "T030": {
-          "name": "Haiground",
-          "rating": 988.7192,
-          "power_rating": 954.4745,
-          "form": -0.8333,
-          "rating_deviation": 136.9787,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.595245,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000294,
-            "3. Liga": 0.404462,
-            "4. Liga": 0.595245
-          }
-        },
-        "T083": {
-          "name": "OSGG Pink DinOS",
-          "rating": 1197.5246,
-          "power_rating": 1242.1772,
-          "form": 0.875,
-          "rating_deviation": 170.1051,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.802805,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.023976,
-            "3. Liga": 0.802805,
-            "4. Liga": 0.173219
-          }
-        },
-        "T016": {
-          "name": "BeK F\u00f6rdeschwimmer",
-          "rating": 721.1145,
-          "power_rating": 724.4258,
-          "form": 0.0833,
-          "rating_deviation": 132.449,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.898559,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 3e-06,
-            "3. Liga": 0.101438,
-            "4. Liga": 0.898559
-          }
-        },
-        "T065": {
-          "name": "DA Purrgatory",
-          "rating": 2317.9003,
-          "power_rating": 2341.1373,
-          "form": 0.4583,
-          "rating_deviation": 168.996,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.805501,
-          "league_probabilities": {
-            "1. Liga": 0.18769,
-            "2. Liga": 0.805501,
-            "3. Liga": 0.00681,
-            "4. Liga": 0.0
-          }
-        },
-        "T074": {
-          "name": "T\u00dc V\u00ed\u00f0\u00f3pnir",
-          "rating": 1212.8481,
-          "power_rating": 1262.4742,
-          "form": 1.0,
-          "rating_deviation": 165.4201,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.822706,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.02739,
-            "3. Liga": 0.822706,
-            "4. Liga": 0.149904
-          }
-        },
-        "T075": {
-          "name": "DA Wasted Pawtential",
-          "rating": 786.4955,
-          "power_rating": 784.4016,
-          "form": -0.0417,
-          "rating_deviation": 167.5132,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.819489,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 5.8e-05,
-            "3. Liga": 0.180453,
-            "4. Liga": 0.819489
-          }
-        },
-        "T009": {
-          "name": "Bremer Wasch Dienst",
-          "rating": 523.4455,
-          "power_rating": 501.606,
-          "form": -0.5417,
-          "rating_deviation": 134.3969,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.988049,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.011951,
-            "4. Liga": 0.988049
-          }
-        },
-        "T071": {
-          "name": "DA Meowntain Dew",
-          "rating": 907.4005,
-          "power_rating": 861.6849,
-          "form": -0.9167,
-          "rating_deviation": 166.2388,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.726158,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000191,
-            "3. Liga": 0.273651,
-            "4. Liga": 0.726158
-          }
-        },
-        "T017": {
-          "name": "LUNA Nova",
-          "rating": 273.8195,
-          "power_rating": 251.7234,
-          "form": -0.5,
-          "rating_deviation": 147.3072,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.999435,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.000565,
-            "4. Liga": 0.999435
-          }
-        },
-        "T029": {
-          "name": "LES GOOO",
-          "rating": 1263.0404,
-          "power_rating": 1263.0404,
+        "T046": {
+          "name": "DG Chronos",
+          "rating": 1490.6455,
+          "power_rating": 1490.6455,
           "form": 0.0,
-          "rating_deviation": 130.7361,
+          "rating_deviation": 147.0038,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.85574,
+          "league_confidence": 0.831377,
           "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.017516,
-            "3. Liga": 0.85574,
-            "4. Liga": 0.126744
-          }
-        },
-        "T053": {
-          "name": "bUDSweiser",
-          "rating": 1407.3948,
-          "power_rating": 1390.4915,
-          "form": -0.4167,
-          "rating_deviation": 135.2259,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.890269,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.064646,
-            "3. Liga": 0.890269,
-            "4. Liga": 0.045085
-          }
-        },
-        "T028": {
-          "name": "HSMW Esports Medics",
-          "rating": 1639.1974,
-          "power_rating": 1596.4293,
-          "form": -1.0,
-          "rating_deviation": 142.5604,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.717288,
-          "league_probabilities": {
-            "1. Liga": 1.4e-05,
-            "2. Liga": 0.27744,
-            "3. Liga": 0.717288,
-            "4. Liga": 0.005259
-          }
-        },
-        "T039": {
-          "name": "RUB Goats",
-          "rating": 2459.4757,
-          "power_rating": 2506.2652,
-          "form": 1.0,
-          "rating_deviation": 155.965,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.588674,
-          "league_probabilities": {
-            "1. Liga": 0.41075,
-            "2. Liga": 0.588674,
-            "3. Liga": 0.000575,
-            "4. Liga": 0.0
-          }
-        },
-        "T067": {
-          "name": "1. ECF SendHelpAgain",
-          "rating": 1697.544,
-          "power_rating": 1749.0538,
-          "form": 0.9583,
-          "rating_deviation": 179.1646,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.526065,
-          "league_probabilities": {
-            "1. Liga": 0.000704,
-            "2. Liga": 0.526065,
-            "3. Liga": 0.471447,
-            "4. Liga": 0.001784
-          }
-        },
-        "T008": {
-          "name": "Skill IssUEH",
-          "rating": 525.3258,
-          "power_rating": 505.8033,
-          "form": -0.5,
-          "rating_deviation": 130.1498,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.988256,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.011744,
-            "4. Liga": 0.988256
-          }
-        },
-        "T078": {
-          "name": "KIT SC Ragebait Raudis",
-          "rating": 438.9561,
-          "power_rating": 426.1847,
-          "form": -0.2222,
-          "rating_deviation": 191.5704,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.986693,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.013306,
-            "4. Liga": 0.986693
+            "1. Liga": 2e-06,
+            "2. Liga": 0.14951,
+            "3. Liga": 0.831377,
+            "4. Liga": 0.01911
           }
         },
         "T079": {
@@ -16075,154 +13638,19 @@
             "4. Liga": 0.979335
           }
         },
-        "T006": {
-          "name": "PBE Mondhasen",
-          "rating": 1188.699,
-          "power_rating": 1190.4603,
+        "T019": {
+          "name": "KIT SC Spezi auf 1",
+          "rating": 618.3931,
+          "power_rating": 620.0103,
           "form": 0.0417,
-          "rating_deviation": 140.8997,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.777436,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.008917,
-            "3. Liga": 0.777436,
-            "4. Liga": 0.213647
-          }
-        },
-        "T041": {
-          "name": "LUnatics Ludwigshafen",
-          "rating": 2282.5544,
-          "power_rating": 2299.9774,
-          "form": 0.4167,
-          "rating_deviation": 139.384,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.867008,
-          "league_probabilities": {
-            "1. Liga": 0.126692,
-            "2. Liga": 0.867008,
-            "3. Liga": 0.0063,
-            "4. Liga": 0.0
-          }
-        },
-        "T066": {
-          "name": "clUEHless",
-          "rating": 1800.2311,
-          "power_rating": 1778.0995,
-          "form": -0.4583,
-          "rating_deviation": 160.957,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.575101,
-          "league_probabilities": {
-            "1. Liga": 0.000602,
-            "2. Liga": 0.575101,
-            "3. Liga": 0.423573,
-            "4. Liga": 0.000724
-          }
-        },
-        "T046": {
-          "name": "DG Chronos",
-          "rating": 1490.6455,
-          "power_rating": 1490.6455,
-          "form": 0.0,
-          "rating_deviation": 147.0038,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.831377,
-          "league_probabilities": {
-            "1. Liga": 2e-06,
-            "2. Liga": 0.14951,
-            "3. Liga": 0.831377,
-            "4. Liga": 0.01911
-          }
-        },
-        "T057": {
-          "name": "T\u00dc Wyvern",
-          "rating": 2627.5944,
-          "power_rating": 2627.5944,
-          "form": 0.0,
-          "rating_deviation": 131.4101,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.619169,
-          "league_probabilities": {
-            "1. Liga": 0.619169,
-            "2. Liga": 0.380802,
-            "3. Liga": 2.9e-05,
-            "4. Liga": 0.0
-          }
-        },
-        "T068": {
-          "name": "RUB Goats N\u00f6 LG",
-          "rating": 1968.6283,
-          "power_rating": 1972.9003,
-          "form": 0.0833,
-          "rating_deviation": 170.8821,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.825125,
-          "league_probabilities": {
-            "1. Liga": 0.009003,
-            "2. Liga": 0.825125,
-            "3. Liga": 0.16582,
-            "4. Liga": 5.1e-05
-          }
-        },
-        "T069": {
-          "name": "KIT SC Holy Inting Gamblers",
-          "rating": 1996.1305,
-          "power_rating": 1996.1305,
-          "form": 0.0,
-          "rating_deviation": 181.3089,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.835739,
-          "league_probabilities": {
-            "1. Liga": 0.013655,
-            "2. Liga": 0.835739,
-            "3. Liga": 0.15055,
-            "4. Liga": 5.6e-05
-          }
-        },
-        "T072": {
-          "name": "Mia san Meta",
-          "rating": 1038.0531,
-          "power_rating": 1062.9592,
-          "form": 0.5,
-          "rating_deviation": 166.0409,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.584051,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.003147,
-            "3. Liga": 0.584051,
-            "4. Liga": 0.412802
-          }
-        },
-        "T022": {
-          "name": "BUW Strays",
-          "rating": 517.6723,
-          "power_rating": 514.2226,
-          "form": -0.0833,
-          "rating_deviation": 137.9886,
+          "rating_deviation": 129.3725,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.985427,
+          "league_confidence": 0.960355,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.014573,
-            "4. Liga": 0.985427
-          }
-        },
-        "T023": {
-          "name": "RUB Goats Venom",
-          "rating": 1366.1416,
-          "power_rating": 1350.594,
-          "form": -0.4167,
-          "rating_deviation": 124.3806,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.900122,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.040647,
-            "3. Liga": 0.900122,
-            "4. Liga": 0.059231
+            "3. Liga": 0.039645,
+            "4. Liga": 0.960355
           }
         },
         "T012": {
@@ -16240,6 +13668,246 @@
             "4. Liga": 0.715793
           }
         },
+        "T002": {
+          "name": "HsGL Pumas",
+          "rating": 923.1564,
+          "power_rating": 939.1875,
+          "form": 0.4167,
+          "rating_deviation": 128.2484,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.62395,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.000167,
+            "3. Liga": 0.375883,
+            "4. Liga": 0.62395
+          }
+        },
+        "T014": {
+          "name": "Hai Noon",
+          "rating": 523.5936,
+          "power_rating": 523.5936,
+          "form": 0.0,
+          "rating_deviation": 136.9862,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.984061,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.0,
+            "3. Liga": 0.015939,
+            "4. Liga": 0.984061
+          }
+        },
+        "T018": {
+          "name": "DG Strix",
+          "rating": 1583.8692,
+          "power_rating": 1614.5441,
+          "form": 0.7917,
+          "rating_deviation": 129.1575,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.698868,
+          "league_probabilities": {
+            "1. Liga": 1e-05,
+            "2. Liga": 0.297987,
+            "3. Liga": 0.698868,
+            "4. Liga": 0.003135
+          }
+        },
+        "T063": {
+          "name": "KIT SC Eclipse",
+          "rating": 2846.4306,
+          "power_rating": 2844.4982,
+          "form": -0.0417,
+          "rating_deviation": 154.588,
+          "predicted_league": "1. Liga",
+          "league_confidence": 0.884745,
+          "league_probabilities": {
+            "1. Liga": 0.884745,
+            "2. Liga": 0.115254,
+            "3. Liga": 1e-06,
+            "4. Liga": 0.0
+          }
+        },
+        "T050": {
+          "name": "DG Athena",
+          "rating": 2086.9889,
+          "power_rating": 2108.4764,
+          "form": 0.5,
+          "rating_deviation": 143.25,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.924299,
+          "league_probabilities": {
+            "1. Liga": 0.024837,
+            "2. Liga": 0.924299,
+            "3. Liga": 0.050863,
+            "4. Liga": 1e-06
+          }
+        },
+        "T068": {
+          "name": "RUB Goats N\u00f6 LG",
+          "rating": 1968.6283,
+          "power_rating": 1972.9003,
+          "form": 0.0833,
+          "rating_deviation": 170.8821,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.825125,
+          "league_probabilities": {
+            "1. Liga": 0.009003,
+            "2. Liga": 0.825125,
+            "3. Liga": 0.16582,
+            "4. Liga": 5.1e-05
+          }
+        },
+        "T001": {
+          "name": "Berlin Makaken",
+          "rating": 1292.5428,
+          "power_rating": 1290.9729,
+          "form": -0.0417,
+          "rating_deviation": 125.5927,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.878303,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.022249,
+            "3. Liga": 0.878303,
+            "4. Liga": 0.099448
+          }
+        },
+        "T077": {
+          "name": "LUNA Void Veterans",
+          "rating": 1320.3361,
+          "power_rating": 1318.2312,
+          "form": -0.0417,
+          "rating_deviation": 168.3962,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.848566,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.046611,
+            "3. Liga": 0.848566,
+            "4. Liga": 0.104823
+          }
+        },
+        "T024": {
+          "name": "UKG Fehler",
+          "rating": 1764.9502,
+          "power_rating": 1763.2669,
+          "form": -0.0417,
+          "rating_deviation": 134.6599,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.555114,
+          "league_probabilities": {
+            "1. Liga": 0.000197,
+            "2. Liga": 0.555114,
+            "3. Liga": 0.444293,
+            "4. Liga": 0.000396
+          }
+        },
+        "T067": {
+          "name": "1. ECF SendHelpAgain",
+          "rating": 1697.544,
+          "power_rating": 1749.0538,
+          "form": 0.9583,
+          "rating_deviation": 179.1646,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.526065,
+          "league_probabilities": {
+            "1. Liga": 0.000704,
+            "2. Liga": 0.526065,
+            "3. Liga": 0.471447,
+            "4. Liga": 0.001784
+          }
+        },
+        "T005": {
+          "name": "Ilmenauer T.E.E.",
+          "rating": 743.4461,
+          "power_rating": 746.8947,
+          "form": 0.0833,
+          "rating_deviation": 137.9458,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.876112,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 7e-06,
+            "3. Liga": 0.123881,
+            "4. Liga": 0.876112
+          }
+        },
+        "T047": {
+          "name": "LES Connewitz Crusaders",
+          "rating": 2089.8995,
+          "power_rating": 2080.7682,
+          "form": -0.2222,
+          "rating_deviation": 136.9685,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.921401,
+          "league_probabilities": {
+            "1. Liga": 0.017056,
+            "2. Liga": 0.921401,
+            "3. Liga": 0.061542,
+            "4. Liga": 1e-06
+          }
+        },
+        "T061": {
+          "name": "404 Average Cake Enjoyer",
+          "rating": 2628.3152,
+          "power_rating": 2589.7032,
+          "form": -0.9167,
+          "rating_deviation": 140.4071,
+          "predicted_league": "1. Liga",
+          "league_confidence": 0.551762,
+          "league_probabilities": {
+            "1. Liga": 0.551762,
+            "2. Liga": 0.448152,
+            "3. Liga": 8.6e-05,
+            "4. Liga": 0.0
+          }
+        },
+        "T009": {
+          "name": "Bremer Wasch Dienst",
+          "rating": 523.4455,
+          "power_rating": 501.606,
+          "form": -0.5417,
+          "rating_deviation": 134.3969,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.988049,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.0,
+            "3. Liga": 0.011951,
+            "4. Liga": 0.988049
+          }
+        },
+        "T016": {
+          "name": "BeK F\u00f6rdeschwimmer",
+          "rating": 721.1145,
+          "power_rating": 724.4258,
+          "form": 0.0833,
+          "rating_deviation": 132.449,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.898559,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 3e-06,
+            "3. Liga": 0.101438,
+            "4. Liga": 0.898559
+          }
+        },
+        "T043": {
+          "name": "KIT SC White Lotus",
+          "rating": 1952.2931,
+          "power_rating": 1968.2243,
+          "form": 0.3889,
+          "rating_deviation": 136.5533,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.847707,
+          "league_probabilities": {
+            "1. Liga": 0.004406,
+            "2. Liga": 0.847707,
+            "3. Liga": 0.147876,
+            "4. Liga": 1.1e-05
+          }
+        },
         "T086": {
           "name": "HSMW Esports Quacksalber",
           "rating": 747.1671,
@@ -16253,6 +13921,96 @@
             "2. Liga": 2.3e-05,
             "3. Liga": 0.13398,
             "4. Liga": 0.865997
+          }
+        },
+        "T017": {
+          "name": "LUNA Nova",
+          "rating": 273.8195,
+          "power_rating": 251.7234,
+          "form": -0.5,
+          "rating_deviation": 147.3072,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.999435,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.0,
+            "3. Liga": 0.000565,
+            "4. Liga": 0.999435
+          }
+        },
+        "T085": {
+          "name": "OVGU Esports",
+          "rating": 538.9072,
+          "power_rating": 515.0249,
+          "form": -0.4583,
+          "rating_deviation": 173.6897,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.975856,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 1e-06,
+            "3. Liga": 0.024143,
+            "4. Liga": 0.975856
+          }
+        },
+        "T057": {
+          "name": "T\u00dc Wyvern",
+          "rating": 2627.5944,
+          "power_rating": 2627.5944,
+          "form": 0.0,
+          "rating_deviation": 131.4101,
+          "predicted_league": "1. Liga",
+          "league_confidence": 0.619169,
+          "league_probabilities": {
+            "1. Liga": 0.619169,
+            "2. Liga": 0.380802,
+            "3. Liga": 2.9e-05,
+            "4. Liga": 0.0
+          }
+        },
+        "T006": {
+          "name": "PBE Mondhasen",
+          "rating": 1188.699,
+          "power_rating": 1190.4603,
+          "form": 0.0417,
+          "rating_deviation": 140.8997,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.777436,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.008917,
+            "3. Liga": 0.777436,
+            "4. Liga": 0.213647
+          }
+        },
+        "T069": {
+          "name": "KIT SC Holy Inting Gamblers",
+          "rating": 1996.1305,
+          "power_rating": 1996.1305,
+          "form": 0.0,
+          "rating_deviation": 181.3089,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.835739,
+          "league_probabilities": {
+            "1. Liga": 0.013655,
+            "2. Liga": 0.835739,
+            "3. Liga": 0.15055,
+            "4. Liga": 5.6e-05
+          }
+        },
+        "T034": {
+          "name": "RUB Goats Aqua",
+          "rating": 1536.1576,
+          "power_rating": 1572.1597,
+          "form": 0.8333,
+          "rating_deviation": 144.0084,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.748687,
+          "league_probabilities": {
+            "1. Liga": 9e-06,
+            "2. Liga": 0.244021,
+            "3. Liga": 0.748687,
+            "4. Liga": 0.007282
           }
         },
         "T056": {
@@ -16270,19 +14028,19 @@
             "4. Liga": 0.0
           }
         },
-        "T073": {
-          "name": "AIX Super C9",
-          "rating": 357.2288,
-          "power_rating": 310.3931,
-          "form": -0.9583,
-          "rating_deviation": 162.9069,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.997997,
+        "T039": {
+          "name": "RUB Goats",
+          "rating": 2459.4757,
+          "power_rating": 2506.2652,
+          "form": 1.0,
+          "rating_deviation": 155.965,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.588674,
           "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.002003,
-            "4. Liga": 0.997997
+            "1. Liga": 0.41075,
+            "2. Liga": 0.588674,
+            "3. Liga": 0.000575,
+            "4. Liga": 0.0
           }
         },
         "T051": {
@@ -16315,379 +14073,34 @@
             "4. Liga": 0.619315
           }
         },
-        "T019": {
-          "name": "KIT SC Spezi auf 1",
-          "rating": 618.3931,
-          "power_rating": 620.0103,
-          "form": 0.0417,
-          "rating_deviation": 129.3725,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.960355,
+        "T065": {
+          "name": "DA Purrgatory",
+          "rating": 2317.9003,
+          "power_rating": 2341.1373,
+          "form": 0.4583,
+          "rating_deviation": 168.996,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.805501,
           "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.039645,
-            "4. Liga": 0.960355
+            "1. Liga": 0.18769,
+            "2. Liga": 0.805501,
+            "3. Liga": 0.00681,
+            "4. Liga": 0.0
           }
         },
-        "T085": {
-          "name": "OVGU Esports",
-          "rating": 538.9072,
-          "power_rating": 515.0249,
+        "T080": {
+          "name": "DA Meowfia",
+          "rating": 567.3984,
+          "power_rating": 544.7406,
           "form": -0.4583,
-          "rating_deviation": 173.6897,
+          "rating_deviation": 164.7843,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.975856,
+          "league_confidence": 0.971442,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 1e-06,
-            "3. Liga": 0.024143,
-            "4. Liga": 0.975856
-          }
-        },
-        "T018": {
-          "name": "DG Strix",
-          "rating": 1583.8692,
-          "power_rating": 1614.5441,
-          "form": 0.7917,
-          "rating_deviation": 129.1575,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.698868,
-          "league_probabilities": {
-            "1. Liga": 1e-05,
-            "2. Liga": 0.297987,
-            "3. Liga": 0.698868,
-            "4. Liga": 0.003135
-          }
-        },
-        "T055": {
-          "name": "Hamburger Delfine",
-          "rating": 3355.1165,
-          "power_rating": 3408.9437,
-          "form": 1.0,
-          "rating_deviation": 179.424,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.999582,
-          "league_probabilities": {
-            "1. Liga": 0.999582,
-            "2. Liga": 0.000418,
-            "3. Liga": 0.0,
-            "4. Liga": 0.0
-          }
-        },
-        "T049": {
-          "name": "HSK Centauri",
-          "rating": 2404.3286,
-          "power_rating": 2367.8842,
-          "form": -0.875,
-          "rating_deviation": 138.8359,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.798403,
-          "league_probabilities": {
-            "1. Liga": 0.19902,
-            "2. Liga": 0.798403,
-            "3. Liga": 0.002577,
-            "4. Liga": 0.0
-          }
-        },
-        "T024": {
-          "name": "UKG Fehler",
-          "rating": 1764.9502,
-          "power_rating": 1763.2669,
-          "form": -0.0417,
-          "rating_deviation": 134.6599,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.555114,
-          "league_probabilities": {
-            "1. Liga": 0.000197,
-            "2. Liga": 0.555114,
-            "3. Liga": 0.444293,
-            "4. Liga": 0.000396
-          }
-        },
-        "T001": {
-          "name": "Berlin Makaken",
-          "rating": 1292.5428,
-          "power_rating": 1290.9729,
-          "form": -0.0417,
-          "rating_deviation": 125.5927,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.878303,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.022249,
-            "3. Liga": 0.878303,
-            "4. Liga": 0.099448
-          }
-        },
-        "T050": {
-          "name": "DG Athena",
-          "rating": 2086.9889,
-          "power_rating": 2108.4764,
-          "form": 0.5,
-          "rating_deviation": 143.25,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.924299,
-          "league_probabilities": {
-            "1. Liga": 0.024837,
-            "2. Liga": 0.924299,
-            "3. Liga": 0.050863,
-            "4. Liga": 1e-06
-          }
-        },
-        "T061": {
-          "name": "404 Average Cake Enjoyer",
-          "rating": 2628.3152,
-          "power_rating": 2589.7032,
-          "form": -0.9167,
-          "rating_deviation": 140.4071,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.551762,
-          "league_probabilities": {
-            "1. Liga": 0.551762,
-            "2. Liga": 0.448152,
-            "3. Liga": 8.6e-05,
-            "4. Liga": 0.0
-          }
-        },
-        "T015": {
-          "name": "LES Leutzscher Lappen",
-          "rating": 579.8906,
-          "power_rating": 568.77,
-          "form": -0.2778,
-          "rating_deviation": 133.4481,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.975274,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.024726,
-            "4. Liga": 0.975274
-          }
-        },
-        "T005": {
-          "name": "Ilmenauer T.E.E.",
-          "rating": 743.4461,
-          "power_rating": 746.8947,
-          "form": 0.0833,
-          "rating_deviation": 137.9458,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.876112,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 7e-06,
-            "3. Liga": 0.123881,
-            "4. Liga": 0.876112
-          }
-        },
-        "T033": {
-          "name": "ESUG L\u00fcckenf\u00fcller",
-          "rating": 1181.6104,
-          "power_rating": 1166.5536,
-          "form": -0.375,
-          "rating_deviation": 133.8383,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.752935,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.005853,
-            "3. Liga": 0.752935,
-            "4. Liga": 0.241212
-          }
-        },
-        "T034": {
-          "name": "RUB Goats Aqua",
-          "rating": 1536.1576,
-          "power_rating": 1572.1597,
-          "form": 0.8333,
-          "rating_deviation": 144.0084,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.748687,
-          "league_probabilities": {
-            "1. Liga": 9e-06,
-            "2. Liga": 0.244021,
-            "3. Liga": 0.748687,
-            "4. Liga": 0.007282
-          }
-        },
-        "T025": {
-          "name": "HsGL Fennecs",
-          "rating": 2073.6434,
-          "power_rating": 2086.8515,
-          "form": 0.3333,
-          "rating_deviation": 132.0809,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.926981,
-          "league_probabilities": {
-            "1. Liga": 0.017034,
-            "2. Liga": 0.926981,
-            "3. Liga": 0.055984,
-            "4. Liga": 1e-06
-          }
-        },
-        "T043": {
-          "name": "KIT SC White Lotus",
-          "rating": 1952.2931,
-          "power_rating": 1968.2243,
-          "form": 0.3889,
-          "rating_deviation": 136.5533,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.847707,
-          "league_probabilities": {
-            "1. Liga": 0.004406,
-            "2. Liga": 0.847707,
-            "3. Liga": 0.147876,
-            "4. Liga": 1.1e-05
-          }
-        },
-        "T084": {
-          "name": "UKGarKeinPlan",
-          "rating": 816.2147,
-          "power_rating": 814.122,
-          "form": -0.0417,
-          "rating_deviation": 167.4162,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.786042,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 9.4e-05,
-            "3. Liga": 0.213864,
-            "4. Liga": 0.786042
-          }
-        },
-        "T026": {
-          "name": "Bielefeld Sapphire",
-          "rating": 1684.2033,
-          "power_rating": 1666.4305,
-          "form": -0.4167,
-          "rating_deviation": 142.1821,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.610427,
-          "league_probabilities": {
-            "1. Liga": 4.9e-05,
-            "2. Liga": 0.387446,
-            "3. Liga": 0.610427,
-            "4. Liga": 0.002078
-          }
-        },
-        "T038": {
-          "name": "THM Knights",
-          "rating": 1056.883,
-          "power_rating": 1074.3981,
-          "form": 0.4167,
-          "rating_deviation": 140.1211,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.610857,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.001971,
-            "3. Liga": 0.610857,
-            "4. Liga": 0.387172
-          }
-        },
-        "T014": {
-          "name": "Hai Noon",
-          "rating": 523.5936,
-          "power_rating": 523.5936,
-          "form": 0.0,
-          "rating_deviation": 136.9862,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.984061,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.0,
-            "3. Liga": 0.015939,
-            "4. Liga": 0.984061
-          }
-        },
-        "T062": {
-          "name": "HGI Amber",
-          "rating": 2727.0082,
-          "power_rating": 2744.4192,
-          "form": 0.4167,
-          "rating_deviation": 139.2874,
-          "predicted_league": "1. Liga",
-          "league_confidence": 0.791111,
-          "league_probabilities": {
-            "1. Liga": 0.791111,
-            "2. Liga": 0.208884,
-            "3. Liga": 4e-06,
-            "4. Liga": 0.0
-          }
-        },
-        "T002": {
-          "name": "HsGL Pumas",
-          "rating": 923.1564,
-          "power_rating": 939.1875,
-          "form": 0.4167,
-          "rating_deviation": 128.2484,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.62395,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.000167,
-            "3. Liga": 0.375883,
-            "4. Liga": 0.62395
-          }
-        },
-        "T081": {
-          "name": "DA Katerstrophe",
-          "rating": 967.1889,
-          "power_rating": 989.9846,
-          "form": 0.4583,
-          "rating_deviation": 165.7869,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.530968,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.001214,
-            "3. Liga": 0.467818,
-            "4. Liga": 0.530968
-          }
-        },
-        "T054": {
-          "name": "Mainhardt",
-          "rating": 1830.6442,
-          "power_rating": 1827.1076,
-          "form": -0.0833,
-          "rating_deviation": 141.4619,
-          "predicted_league": "2. Liga",
-          "league_confidence": 0.660404,
-          "league_probabilities": {
-            "1. Liga": 0.000684,
-            "2. Liga": 0.660404,
-            "3. Liga": 0.338736,
-            "4. Liga": 0.000176
-          }
-        },
-        "T007": {
-          "name": "DG Lotus",
-          "rating": 776.738,
-          "power_rating": 788.1135,
-          "form": 0.2778,
-          "rating_deviation": 136.5058,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.835908,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 1.5e-05,
-            "3. Liga": 0.164077,
-            "4. Liga": 0.835908
-          }
-        },
-        "T077": {
-          "name": "LUNA Void Veterans",
-          "rating": 1320.3361,
-          "power_rating": 1318.2312,
-          "form": -0.0417,
-          "rating_deviation": 168.3962,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.848566,
-          "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.046611,
-            "3. Liga": 0.848566,
-            "4. Liga": 0.104823
+            "3. Liga": 0.028558,
+            "4. Liga": 0.971442
           }
         },
         "T064": {
@@ -16705,6 +14118,171 @@
             "4. Liga": 0.0
           }
         },
+        "T073": {
+          "name": "AIX Super C9",
+          "rating": 357.2288,
+          "power_rating": 310.3931,
+          "form": -0.9583,
+          "rating_deviation": 162.9069,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.997997,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.0,
+            "3. Liga": 0.002003,
+            "4. Liga": 0.997997
+          }
+        },
+        "T023": {
+          "name": "RUB Goats Venom",
+          "rating": 1366.1416,
+          "power_rating": 1350.594,
+          "form": -0.4167,
+          "rating_deviation": 124.3806,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.900122,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.040647,
+            "3. Liga": 0.900122,
+            "4. Liga": 0.059231
+          }
+        },
+        "T008": {
+          "name": "Skill IssUEH",
+          "rating": 525.3258,
+          "power_rating": 505.8033,
+          "form": -0.5,
+          "rating_deviation": 130.1498,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.988256,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.0,
+            "3. Liga": 0.011744,
+            "4. Liga": 0.988256
+          }
+        },
+        "T082": {
+          "name": "DG Orion",
+          "rating": 724.9835,
+          "power_rating": 722.892,
+          "form": -0.0417,
+          "rating_deviation": 167.317,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.87783,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 2e-05,
+            "3. Liga": 0.12215,
+            "4. Liga": 0.87783
+          }
+        },
+        "T041": {
+          "name": "LUnatics Ludwigshafen",
+          "rating": 2282.5544,
+          "power_rating": 2299.9774,
+          "form": 0.4167,
+          "rating_deviation": 139.384,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.867008,
+          "league_probabilities": {
+            "1. Liga": 0.126692,
+            "2. Liga": 0.867008,
+            "3. Liga": 0.0063,
+            "4. Liga": 0.0
+          }
+        },
+        "T075": {
+          "name": "DA Wasted Pawtential",
+          "rating": 786.4955,
+          "power_rating": 784.4016,
+          "form": -0.0417,
+          "rating_deviation": 167.5132,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.819489,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 5.8e-05,
+            "3. Liga": 0.180453,
+            "4. Liga": 0.819489
+          }
+        },
+        "T022": {
+          "name": "BUW Strays",
+          "rating": 517.6723,
+          "power_rating": 514.2226,
+          "form": -0.0833,
+          "rating_deviation": 137.9886,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.985427,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.0,
+            "3. Liga": 0.014573,
+            "4. Liga": 0.985427
+          }
+        },
+        "T083": {
+          "name": "OSGG Pink DinOS",
+          "rating": 1197.5246,
+          "power_rating": 1242.1772,
+          "form": 0.875,
+          "rating_deviation": 170.1051,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.802805,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.023976,
+            "3. Liga": 0.802805,
+            "4. Liga": 0.173219
+          }
+        },
+        "T015": {
+          "name": "LES Leutzscher Lappen",
+          "rating": 579.8906,
+          "power_rating": 568.77,
+          "form": -0.2778,
+          "rating_deviation": 133.4481,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.975274,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.0,
+            "3. Liga": 0.024726,
+            "4. Liga": 0.975274
+          }
+        },
+        "T027": {
+          "name": "KIT SC [k\u0153ri]werk addicted tryhards",
+          "rating": 984.3534,
+          "power_rating": 986.1527,
+          "form": 0.0417,
+          "rating_deviation": 143.943,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.539483,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.000606,
+            "3. Liga": 0.459911,
+            "4. Liga": 0.539483
+          }
+        },
+        "T033": {
+          "name": "ESUG L\u00fcckenf\u00fcller",
+          "rating": 1181.6104,
+          "power_rating": 1166.5536,
+          "form": -0.375,
+          "rating_deviation": 133.8383,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.752935,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.005853,
+            "3. Liga": 0.752935,
+            "4. Liga": 0.241212
+          }
+        },
         "T040": {
           "name": "DG Elysium",
           "rating": 2548.6904,
@@ -16720,6 +14298,156 @@
             "4. Liga": 0.0
           }
         },
+        "T003": {
+          "name": "HSK Satyrus",
+          "rating": 1442.6339,
+          "power_rating": 1453.6355,
+          "form": 0.2917,
+          "rating_deviation": 125.7326,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.876136,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.102434,
+            "3. Liga": 0.876136,
+            "4. Liga": 0.02143
+          }
+        },
+        "T032": {
+          "name": "Mogontiacum",
+          "rating": 1742.3837,
+          "power_rating": 1724.5434,
+          "form": -0.4167,
+          "rating_deviation": 142.7221,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.512027,
+          "league_probabilities": {
+            "1. Liga": 0.000138,
+            "2. Liga": 0.486915,
+            "3. Liga": 0.512027,
+            "4. Liga": 0.00092
+          }
+        },
+        "T081": {
+          "name": "DA Katerstrophe",
+          "rating": 967.1889,
+          "power_rating": 989.9846,
+          "form": 0.4583,
+          "rating_deviation": 165.7869,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.530968,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.001214,
+            "3. Liga": 0.467818,
+            "4. Liga": 0.530968
+          }
+        },
+        "T055": {
+          "name": "Hamburger Delfine",
+          "rating": 3355.1165,
+          "power_rating": 3408.9437,
+          "form": 1.0,
+          "rating_deviation": 179.424,
+          "predicted_league": "1. Liga",
+          "league_confidence": 0.999582,
+          "league_probabilities": {
+            "1. Liga": 0.999582,
+            "2. Liga": 0.000418,
+            "3. Liga": 0.0,
+            "4. Liga": 0.0
+          }
+        },
+        "T074": {
+          "name": "T\u00dc V\u00ed\u00f0\u00f3pnir",
+          "rating": 1212.8481,
+          "power_rating": 1262.4742,
+          "form": 1.0,
+          "rating_deviation": 165.4201,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.822706,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.02739,
+            "3. Liga": 0.822706,
+            "4. Liga": 0.149904
+          }
+        },
+        "T026": {
+          "name": "Bielefeld Sapphire",
+          "rating": 1684.2033,
+          "power_rating": 1666.4305,
+          "form": -0.4167,
+          "rating_deviation": 142.1821,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.610427,
+          "league_probabilities": {
+            "1. Liga": 4.9e-05,
+            "2. Liga": 0.387446,
+            "3. Liga": 0.610427,
+            "4. Liga": 0.002078
+          }
+        },
+        "T020": {
+          "name": "Purrfect Aim",
+          "rating": 781.6447,
+          "power_rating": 805.2431,
+          "form": 0.5833,
+          "rating_deviation": 134.8475,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.81752,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 1.9e-05,
+            "3. Liga": 0.182461,
+            "4. Liga": 0.81752
+          }
+        },
+        "T076": {
+          "name": "UKG Runaway",
+          "rating": 1738.6512,
+          "power_rating": 1793.1065,
+          "form": 1.0,
+          "rating_deviation": 181.5176,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.593112,
+          "league_probabilities": {
+            "1. Liga": 0.00135,
+            "2. Liga": 0.593112,
+            "3. Liga": 0.404458,
+            "4. Liga": 0.00108
+          }
+        },
+        "T028": {
+          "name": "HSMW Esports Medics",
+          "rating": 1639.1974,
+          "power_rating": 1596.4293,
+          "form": -1.0,
+          "rating_deviation": 142.5604,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.717288,
+          "league_probabilities": {
+            "1. Liga": 1.4e-05,
+            "2. Liga": 0.27744,
+            "3. Liga": 0.717288,
+            "4. Liga": 0.005259
+          }
+        },
+        "T030": {
+          "name": "Haiground",
+          "rating": 988.7192,
+          "power_rating": 954.4745,
+          "form": -0.8333,
+          "rating_deviation": 136.9787,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.595245,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.000294,
+            "3. Liga": 0.404462,
+            "4. Liga": 0.595245
+          }
+        },
         "T059": {
           "name": "WUE X-Rays",
           "rating": 2797.3643,
@@ -16733,6 +14461,231 @@
             "2. Liga": 0.1798,
             "3. Liga": 5e-06,
             "4. Liga": 0.0
+          }
+        },
+        "T007": {
+          "name": "DG Lotus",
+          "rating": 776.738,
+          "power_rating": 788.1135,
+          "form": 0.2778,
+          "rating_deviation": 136.5058,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.835908,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 1.5e-05,
+            "3. Liga": 0.164077,
+            "4. Liga": 0.835908
+          }
+        },
+        "T036": {
+          "name": "AIX Au Huur",
+          "rating": 1166.6176,
+          "power_rating": 1130.1787,
+          "form": -0.8889,
+          "rating_deviation": 136.6461,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.700221,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.003872,
+            "3. Liga": 0.700221,
+            "4. Liga": 0.295907
+          }
+        },
+        "T038": {
+          "name": "THM Knights",
+          "rating": 1056.883,
+          "power_rating": 1074.3981,
+          "form": 0.4167,
+          "rating_deviation": 140.1211,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.610857,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.001971,
+            "3. Liga": 0.610857,
+            "4. Liga": 0.387172
+          }
+        },
+        "T062": {
+          "name": "HGI Amber",
+          "rating": 2727.0082,
+          "power_rating": 2744.4192,
+          "form": 0.4167,
+          "rating_deviation": 139.2874,
+          "predicted_league": "1. Liga",
+          "league_confidence": 0.791111,
+          "league_probabilities": {
+            "1. Liga": 0.791111,
+            "2. Liga": 0.208884,
+            "3. Liga": 4e-06,
+            "4. Liga": 0.0
+          }
+        },
+        "T078": {
+          "name": "KIT SC Ragebait Raudis",
+          "rating": 438.9561,
+          "power_rating": 426.1847,
+          "form": -0.2222,
+          "rating_deviation": 191.5704,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.986693,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.0,
+            "3. Liga": 0.013306,
+            "4. Liga": 0.986693
+          }
+        },
+        "T084": {
+          "name": "UKGarKeinPlan",
+          "rating": 816.2147,
+          "power_rating": 814.122,
+          "form": -0.0417,
+          "rating_deviation": 167.4162,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.786042,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 9.4e-05,
+            "3. Liga": 0.213864,
+            "4. Liga": 0.786042
+          }
+        },
+        "T066": {
+          "name": "clUEHless",
+          "rating": 1800.2311,
+          "power_rating": 1778.0995,
+          "form": -0.4583,
+          "rating_deviation": 160.957,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.575101,
+          "league_probabilities": {
+            "1. Liga": 0.000602,
+            "2. Liga": 0.575101,
+            "3. Liga": 0.423573,
+            "4. Liga": 0.000724
+          }
+        },
+        "T029": {
+          "name": "LES GOOO",
+          "rating": 1263.0404,
+          "power_rating": 1263.0404,
+          "form": 0.0,
+          "rating_deviation": 130.7361,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.85574,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.017516,
+            "3. Liga": 0.85574,
+            "4. Liga": 0.126744
+          }
+        },
+        "T071": {
+          "name": "DA Meowntain Dew",
+          "rating": 907.4005,
+          "power_rating": 861.6849,
+          "form": -0.9167,
+          "rating_deviation": 166.2388,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.726158,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.000191,
+            "3. Liga": 0.273651,
+            "4. Liga": 0.726158
+          }
+        },
+        "T025": {
+          "name": "HsGL Fennecs",
+          "rating": 2073.6434,
+          "power_rating": 2086.8515,
+          "form": 0.3333,
+          "rating_deviation": 132.0809,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.926981,
+          "league_probabilities": {
+            "1. Liga": 0.017034,
+            "2. Liga": 0.926981,
+            "3. Liga": 0.055984,
+            "4. Liga": 1e-06
+          }
+        },
+        "T049": {
+          "name": "HSK Centauri",
+          "rating": 2404.3286,
+          "power_rating": 2367.8842,
+          "form": -0.875,
+          "rating_deviation": 138.8359,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.798403,
+          "league_probabilities": {
+            "1. Liga": 0.19902,
+            "2. Liga": 0.798403,
+            "3. Liga": 0.002577,
+            "4. Liga": 0.0
+          }
+        },
+        "T053": {
+          "name": "bUDSweiser",
+          "rating": 1407.3948,
+          "power_rating": 1390.4915,
+          "form": -0.4167,
+          "rating_deviation": 135.2259,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.890269,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.064646,
+            "3. Liga": 0.890269,
+            "4. Liga": 0.045085
+          }
+        },
+        "T054": {
+          "name": "Mainhardt",
+          "rating": 1830.6442,
+          "power_rating": 1827.1076,
+          "form": -0.0833,
+          "rating_deviation": 141.4619,
+          "predicted_league": "2. Liga",
+          "league_confidence": 0.660404,
+          "league_probabilities": {
+            "1. Liga": 0.000684,
+            "2. Liga": 0.660404,
+            "3. Liga": 0.338736,
+            "4. Liga": 0.000176
+          }
+        },
+        "T013": {
+          "name": "UKGrrrS\u00fc\u00dfm\u00e4use",
+          "rating": 249.5606,
+          "power_rating": 206.9456,
+          "form": -1.0,
+          "rating_deviation": 142.0498,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.999765,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.0,
+            "3. Liga": 0.000235,
+            "4. Liga": 0.999765
+          }
+        },
+        "T072": {
+          "name": "Mia san Meta",
+          "rating": 1038.0531,
+          "power_rating": 1062.9592,
+          "form": 0.5,
+          "rating_deviation": 166.0409,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.584051,
+          "league_probabilities": {
+            "1. Liga": 0.0,
+            "2. Liga": 0.003147,
+            "3. Liga": 0.584051,
+            "4. Liga": 0.412802
           }
         }
       }

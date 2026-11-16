@@ -74,6 +74,18 @@
   white-space: nowrap;
 }
 
+.history-panel-notice {
+  color: #db2b2b;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+[data-theme='dark'] .history-panel-notice {
+  color: #db2b2b;
+}
+
 .history-explanation {
   margin: -.55rem 0 .65rem;
   color: var(--muted);
@@ -603,6 +615,21 @@ body[data-page='team-detail'] .team-detail > .history-panel {
   stroke-dasharray: 3 5;
   stroke-width: 1.5;
   opacity: .8;
+}
+
+.chart-season-adjust-area {
+  fill: rgba(148, 163, 184, 0.22);
+  pointer-events: all;
+}
+
+[data-theme='dark'] .chart-season-adjust-area {
+  fill: rgba(148, 163, 184, 0.16);
+}
+
+.chart-season-adjust-label {
+  fill: var(--muted);
+  font: 700 9px 'Nunito Sans', sans-serif;
+  letter-spacing: 0.02em;
 }
 
 .chart-season-label {

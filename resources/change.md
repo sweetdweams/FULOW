@@ -1,15 +1,18 @@
-# 1.2.6
+# 1.2.7 -- 16.11.2026
+- Rating Diagramm in den Team Details überarbeitet
+
+# 1.2.6 -- 15.11.2026
 - Datenaktualisierung
 ## 1.2.6.1
 - Falsches Spielergebnis behoben
 ## 1.2.6.2
 - Datenaktualisierung und MD5 Predictions
 
-# 1.2.5
+# 1.2.5 -- 14.11.2026
 - Datenaktualisierung
 - Unterschiedliche Spieltage bei den Vorhersagekarten deutlicher hervorgehoben
 
-# 1.2.4
+# 1.2.4 -- 13.11.2026
 - Datenaktualisierung
 - Formulierung der Datenaktualität geändert
 
