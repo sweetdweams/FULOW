@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T17:15:58+00:00",
+  "generated_at": "2026-11-17T08:25:34+00:00",
   "source": "performance.json",
   "description": "Historical cumulative performance metrics, dynamic crossover rating boundaries, and model correction weights by season and matchday.",
   "history": [
@@ -1586,6 +1586,122 @@
         "1_2": {
           "rating": 2431.9022,
           "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "key": "Season WiSe26/27|5",
+      "season": "Season WiSe26/27",
+      "matchday": "5",
+      "date": "16.11.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (5)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (5)",
+      "predictions": 546,
+      "accuracy": 0.681319,
+      "log_loss": 0.607789,
+      "brier_score": 0.208126,
+      "calibration_error": 0.074864,
+      "modes": {
+        "cumulative": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "22.04.2026",
+          "evaluation_end": "16.11.2026",
+          "predictions": 546,
+          "accuracy": 0.681319,
+          "log_loss": 0.607789,
+          "brier_score": 0.208126,
+          "calibration_error": 0.074864
+        },
+        "season_cumulative": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "10.10.2026",
+          "evaluation_end": "16.11.2026",
+          "predictions": 178,
+          "accuracy": 0.685393,
+          "log_loss": 0.632626,
+          "brier_score": 0.216434,
+          "calibration_error": 0.086365
+        },
+        "discrete": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "16.11.2026",
+          "evaluation_end": "16.11.2026",
+          "predictions": 1,
+          "accuracy": 1.0,
+          "log_loss": 0.50104,
+          "brier_score": 0.155315,
+          "calibration_error": 0.3941
+        },
+        "moving_average": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "21.10.2026",
+          "evaluation_end": "16.11.2026",
+          "predictions": 145,
+          "accuracy": 0.689655,
+          "log_loss": 0.610778,
+          "brier_score": 0.209729,
+          "calibration_error": 0.082999
+        }
+      },
+      "weights": {
+        "direct": 0.265244,
+        "common_opponent": 0.199026,
+        "logic": 0.255499,
+        "form": 0.280231
+      },
+      "weights_by_system": {
+        "Ligen 1\u20133": {
+          "direct": 0.265244,
+          "common_opponent": 0.199026,
+          "logic": 0.255499,
+          "form": 0.280231
+        },
+        "4. Liga": {
+          "direct": 0.28111,
+          "common_opponent": 0.165325,
+          "logic": 0.250768,
+          "form": 0.302797
+        },
+        "1. Liga": {
+          "direct": 0.201472,
+          "common_opponent": 0.223569,
+          "logic": 0.288999,
+          "form": 0.28596
+        },
+        "2. Liga": {
+          "direct": 0.264105,
+          "common_opponent": 0.21979,
+          "logic": 0.298817,
+          "form": 0.217288
+        },
+        "3. Liga": {
+          "direct": 0.298824,
+          "common_opponent": 0.195184,
+          "logic": 0.180297,
+          "form": 0.325695
+        }
+      },
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2420.9246,
+          "sigma": 128.1446
         },
         "2_3": {
           "rating": 1688.9243,

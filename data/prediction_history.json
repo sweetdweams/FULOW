@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T17:15:58+00:00",
+  "generated_at": "2026-11-17T08:25:34+00:00",
   "crosszone_history": [
     {
       "key": "Season SoSe26|0",
@@ -490,6 +490,34 @@
           "label": "1. Liga \u2194 2. Liga",
           "rating": 2431.9022,
           "sigma": 127.5849
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      ]
+    },
+    {
+      "key": "Season WiSe26/27|5",
+      "season": "Season WiSe26/27",
+      "matchday": "5",
+      "date": "16.11.2026",
+      "phase": "regular_season",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (5)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2420.9246,
+          "sigma": 128.1446
         },
         {
           "id": "2_3",
@@ -17936,6 +17964,38 @@
         "1_2": {
           "rating": 2431.9022,
           "sigma": 127.5849
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "match_id": "M211",
+      "date": "16.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "5",
+      "phase": "Regular Season",
+      "team_a_id": "T061",
+      "team_b_id": "T049",
+      "score_a": 3,
+      "score_b": 1,
+      "team_a": "404 Average Cake Enjoyer",
+      "team_b": "HSK Centauri",
+      "probability_a": 0.6059,
+      "probability_b": 0.3941,
+      "confidence": 0.56399,
+      "correct": true,
+      "actual_winner_id": "T061",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2420.9246,
+          "sigma": 128.1446
         },
         "2_3": {
           "rating": 1688.9243,
