@@ -9,8 +9,8 @@
   --color-ice: #f5f1ea;
   --color-amber: #e9b44c;
   
-  --paper: #F4F7FB;
-  --panel: #FFFFFF;
+  --paper: rgb(241, 244, 248);
+  --panel: #ffffff;
   --ink: #122340;
   --inkf: #f7f3ec;
   --muted: #3B4D68;

@@ -1,8 +1,10 @@
-# 1.2.7 -- 16.11.2026
+# 1.2.7 -- 17.11.2026
 - Rating Diagramm in den Team Details überarbeitet
-## 1.2.7.1 -- 16.11.2026
+## 1.2.7.1
 - Datenaktualisierung
 - Rechtschreibfehler korrigiert
+## 1.2.7.2
+- Behoben: Ratingverlaufs-Diagramm auf der Team Detail Seite hat einen doppelten Eintrag
 
 # 1.2.6 -- 15.11.2026
 - Datenaktualisierung

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T08:25:34+00:00",
+  "generated_at": "2026-11-18T13:31:41+00:00",
   "matchday": 5,
   "predictions": [
     {
@@ -17,9 +17,9 @@
         "id": "T083",
         "name": "OSGG Pink DinOS"
       },
-      "probability_a": 0.460995,
-      "probability_b": 0.539005,
-      "confidence": 0.358544
+      "probability_a": 0.461323,
+      "probability_b": 0.538677,
+      "confidence": 0.353751
     },
     {
       "match_id": "M179",
@@ -36,9 +36,9 @@
         "id": "T072",
         "name": "Mia san Meta"
       },
-      "probability_a": 0.410149,
-      "probability_b": 0.589851,
-      "confidence": 0.523366
+      "probability_a": 0.407871,
+      "probability_b": 0.592129,
+      "confidence": 0.517922
     },
     {
       "match_id": "M180",
@@ -55,9 +55,9 @@
         "id": "T081",
         "name": "DA Katerstrophe"
       },
-      "probability_a": 0.432918,
-      "probability_b": 0.567082,
-      "confidence": 0.503883
+      "probability_a": 0.431859,
+      "probability_b": 0.568141,
+      "confidence": 0.511755
     },
     {
       "match_id": "M181",
@@ -74,28 +74,9 @@
         "id": "T038",
         "name": "THM Knights"
       },
-      "probability_a": 0.382327,
-      "probability_b": 0.617673,
-      "confidence": 0.640844
-    },
-    {
-      "match_id": "M182",
-      "date": "18.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "5",
-      "team_a": {
-        "id": "T002",
-        "name": "HsGL Pumas"
-      },
-      "team_b": {
-        "id": "T086",
-        "name": "HSMW Esports Quacksalber"
-      },
-      "probability_a": 0.716589,
-      "probability_b": 0.283411,
-      "confidence": 0.61261
+      "probability_a": 0.385454,
+      "probability_b": 0.614546,
+      "confidence": 0.639274
     },
     {
       "match_id": "M183",
@@ -112,9 +93,9 @@
         "id": "T016",
         "name": "BeK F\u00f6rdeschwimmer"
       },
-      "probability_a": 0.576284,
-      "probability_b": 0.423716,
-      "confidence": 0.50924
+      "probability_a": 0.582385,
+      "probability_b": 0.417615,
+      "confidence": 0.515866
     },
     {
       "match_id": "M184",
@@ -131,9 +112,9 @@
         "id": "T027",
         "name": "KIT SC [k\u0153ri]werk addicted tryhards"
       },
-      "probability_a": 0.33706,
-      "probability_b": 0.66294,
-      "confidence": 0.659607
+      "probability_a": 0.337233,
+      "probability_b": 0.662767,
+      "confidence": 0.659514
     },
     {
       "match_id": "M185",
@@ -150,9 +131,9 @@
         "id": "T014",
         "name": "Hai Noon"
       },
-      "probability_a": 0.538015,
-      "probability_b": 0.461985,
-      "confidence": 0.573711
+      "probability_a": 0.534368,
+      "probability_b": 0.465632,
+      "confidence": 0.568085
     },
     {
       "match_id": "M186",
@@ -169,9 +150,9 @@
         "id": "T082",
         "name": "DG Orion"
       },
-      "probability_a": 0.583681,
-      "probability_b": 0.416319,
-      "confidence": 0.550464
+      "probability_a": 0.580501,
+      "probability_b": 0.419499,
+      "confidence": 0.549051
     },
     {
       "match_id": "M187",
@@ -188,9 +169,9 @@
         "id": "T084",
         "name": "UKGarKeinPlan"
       },
-      "probability_a": 0.465358,
-      "probability_b": 0.534642,
-      "confidence": 0.442385
+      "probability_a": 0.465402,
+      "probability_b": 0.534598,
+      "confidence": 0.445416
     },
     {
       "match_id": "M188",
@@ -207,9 +188,9 @@
         "id": "T079",
         "name": "UKG GutGuterAmGutesten"
       },
-      "probability_a": 0.415911,
-      "probability_b": 0.584089,
-      "confidence": 0.46214
+      "probability_a": 0.409023,
+      "probability_b": 0.590977,
+      "confidence": 0.471439
     },
     {
       "match_id": "M189",
@@ -226,9 +207,9 @@
         "id": "T080",
         "name": "DA Meowfia"
       },
-      "probability_a": 0.427348,
-      "probability_b": 0.572652,
-      "confidence": 0.386052
+      "probability_a": 0.428864,
+      "probability_b": 0.571136,
+      "confidence": 0.382625
     },
     {
       "match_id": "M190",
@@ -245,28 +226,9 @@
         "id": "T008",
         "name": "Skill IssUEH"
       },
-      "probability_a": 0.525891,
-      "probability_b": 0.474109,
-      "confidence": 0.479917
-    },
-    {
-      "match_id": "M191",
-      "date": "18.11.2026",
-      "season": "Season WiSe26/27",
-      "league": "4. Liga",
-      "phase": "Regular Season",
-      "matchday": "5",
-      "team_a": {
-        "id": "T017",
-        "name": "LUNA Nova"
-      },
-      "team_b": {
-        "id": "T009",
-        "name": "Bremer Wasch Dienst"
-      },
-      "probability_a": 0.298172,
-      "probability_b": 0.701828,
-      "confidence": 0.678139
+      "probability_a": 0.527636,
+      "probability_b": 0.472364,
+      "confidence": 0.488051
     },
     {
       "match_id": "M192",
@@ -283,9 +245,9 @@
         "id": "T013",
         "name": "UKGrrrS\u00fc\u00dfm\u00e4use"
       },
-      "probability_a": 0.563369,
-      "probability_b": 0.436631,
-      "confidence": 0.499018
+      "probability_a": 0.558481,
+      "probability_b": 0.441519,
+      "confidence": 0.497797
     },
     {
       "match_id": "M193",
@@ -302,9 +264,9 @@
         "id": "T006",
         "name": "PBE Mondhasen"
       },
-      "probability_a": 0.508815,
-      "probability_b": 0.491185,
-      "confidence": 0.442143
+      "probability_a": 0.508818,
+      "probability_b": 0.491182,
+      "confidence": 0.442148
     },
     {
       "match_id": "M194",
@@ -321,9 +283,9 @@
         "id": "T034",
         "name": "RUB Goats Aqua"
       },
-      "probability_a": 0.649441,
-      "probability_b": 0.350559,
-      "confidence": 0.613185
+      "probability_a": 0.649443,
+      "probability_b": 0.350557,
+      "confidence": 0.613186
     },
     {
       "match_id": "M195",
@@ -340,9 +302,9 @@
         "id": "T077",
         "name": "LUNA Void Veterans"
       },
-      "probability_a": 0.459176,
-      "probability_b": 0.540824,
-      "confidence": 0.46124
+      "probability_a": 0.459174,
+      "probability_b": 0.540826,
+      "confidence": 0.461243
     },
     {
       "match_id": "M196",
@@ -359,9 +321,9 @@
         "id": "T071",
         "name": "DA Meowntain Dew"
       },
-      "probability_a": 0.706783,
-      "probability_b": 0.293217,
-      "confidence": 0.682692
+      "probability_a": 0.706784,
+      "probability_b": 0.293216,
+      "confidence": 0.682694
     },
     {
       "match_id": "M197",
@@ -378,9 +340,9 @@
         "id": "T001",
         "name": "Berlin Makaken"
       },
-      "probability_a": 0.448645,
-      "probability_b": 0.551355,
-      "confidence": 0.454775
+      "probability_a": 0.448644,
+      "probability_b": 0.551356,
+      "confidence": 0.454778
     },
     {
       "match_id": "M198",
@@ -399,7 +361,7 @@
       },
       "probability_a": 0.945705,
       "probability_b": 0.054295,
-      "confidence": 0.798583
+      "confidence": 0.798584
     },
     {
       "match_id": "M199",
@@ -416,8 +378,8 @@
         "id": "T033",
         "name": "ESUG L\u00fcckenf\u00fcller"
       },
-      "probability_a": 0.829018,
-      "probability_b": 0.170982,
+      "probability_a": 0.829017,
+      "probability_b": 0.170983,
       "confidence": 0.752349
     },
     {
@@ -435,9 +397,9 @@
         "id": "T023",
         "name": "RUB Goats Venom"
       },
-      "probability_a": 0.641777,
-      "probability_b": 0.358223,
-      "confidence": 0.652781
+      "probability_a": 0.641775,
+      "probability_b": 0.358225,
+      "confidence": 0.65278
     },
     {
       "match_id": "M201",
@@ -454,9 +416,9 @@
         "id": "T024",
         "name": "UKG Fehler"
       },
-      "probability_a": 0.763574,
-      "probability_b": 0.236426,
-      "confidence": 0.717342
+      "probability_a": 0.763575,
+      "probability_b": 0.236425,
+      "confidence": 0.717344
     },
     {
       "match_id": "M202",
@@ -475,7 +437,7 @@
       },
       "probability_a": 0.245169,
       "probability_b": 0.754831,
-      "confidence": 0.704537
+      "confidence": 0.704538
     },
     {
       "match_id": "M203",
@@ -492,9 +454,9 @@
         "id": "T050",
         "name": "DG Athena"
       },
-      "probability_a": 0.324997,
-      "probability_b": 0.675003,
-      "confidence": 0.672266
+      "probability_a": 0.324996,
+      "probability_b": 0.675004,
+      "confidence": 0.672267
     },
     {
       "match_id": "M204",
@@ -513,7 +475,7 @@
       },
       "probability_a": 0.811992,
       "probability_b": 0.188008,
-      "confidence": 0.727326
+      "confidence": 0.727327
     },
     {
       "match_id": "M205",
@@ -530,9 +492,9 @@
         "id": "T043",
         "name": "KIT SC White Lotus"
       },
-      "probability_a": 0.755477,
-      "probability_b": 0.244523,
-      "confidence": 0.711594
+      "probability_a": 0.755478,
+      "probability_b": 0.244522,
+      "confidence": 0.711595
     },
     {
       "match_id": "M206",
@@ -549,9 +511,9 @@
         "id": "T025",
         "name": "HsGL Fennecs"
       },
-      "probability_a": 0.364121,
-      "probability_b": 0.635879,
-      "confidence": 0.647658
+      "probability_a": 0.364122,
+      "probability_b": 0.635878,
+      "confidence": 0.647659
     },
     {
       "match_id": "M207",
@@ -568,9 +530,9 @@
         "id": "T047",
         "name": "LES Connewitz Crusaders"
       },
-      "probability_a": 0.339348,
-      "probability_b": 0.660652,
-      "confidence": 0.623182
+      "probability_a": 0.339346,
+      "probability_b": 0.660654,
+      "confidence": 0.623185
     },
     {
       "match_id": "M208",
@@ -589,7 +551,7 @@
       },
       "probability_a": 0.909826,
       "probability_b": 0.090174,
-      "confidence": 0.782487
+      "confidence": 0.782488
     },
     {
       "match_id": "M209",
@@ -627,7 +589,7 @@
       },
       "probability_a": 0.137958,
       "probability_b": 0.862042,
-      "confidence": 0.755972
+      "confidence": 0.755973
     },
     {
       "match_id": "M212",
@@ -644,13 +606,13 @@
         "id": "T057",
         "name": "T\u00dc Wyvern"
       },
-      "probability_a": 0.905932,
-      "probability_b": 0.094068,
-      "confidence": 0.780159
+      "probability_a": 0.905923,
+      "probability_b": 0.094077,
+      "confidence": 0.780164
     },
     {
       "match_id": "M213",
-      "date": "22.11.2026",
+      "date": "18.11.2026",
       "season": "Season WiSe26/27",
       "league": "1. Liga",
       "phase": "Regular Season",
@@ -663,9 +625,9 @@
         "id": "T040",
         "name": "DG Elysium"
       },
-      "probability_a": 0.791588,
-      "probability_b": 0.208412,
-      "confidence": 0.729077
+      "probability_a": 0.792641,
+      "probability_b": 0.207359,
+      "confidence": 0.729614
     }
   ]
 }

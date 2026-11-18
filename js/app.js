@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.7.1 */
+/* Webseite version = 1.2.7.2 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -2693,8 +2693,24 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
       || String(snap.phase || '').toLowerCase().includes('wildcard');
   };
 
+  const playedMatchdays = new Set(
+    (history || [])
+      .filter(row =>
+        row.team_id === team.id &&
+        row.rating_source === 'regular' &&
+        row.season &&
+        row.matchday != null
+      )
+      .map(row => `${row.season}|${String(row.matchday)}`)
+  );
+
   const rawSnapshots = (sustainabilityData?.history || [])
-    .filter(snap => snap.teams && snap.teams[team.id] && !isWildcard(snap));
+    .filter(snap =>
+      snap.teams &&
+      snap.teams[team.id] &&
+      !isWildcard(snap) &&
+      playedMatchdays.has(`${snap.season}|${String(snap.matchday)}`)
+    );
 
   const seasons = [...new Set(rawSnapshots.map(snap => snap.season).filter(Boolean))];
   const hasMultipleSeasons = seasons.length > 1;
@@ -2703,7 +2719,13 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
   const seasonAdjustZones = [];
 
   seasons.forEach((season, seasonIdx) => {
-    const seasonSnaps = rawSnapshots.filter(snap => snap.season === season);
+    const seasonSnapByMatchday = new Map();
+    rawSnapshots
+      .filter(snap => snap.season === season)
+      .forEach(snap => seasonSnapByMatchday.set(String(snap.matchday), snap));
+    const seasonSnaps = [...seasonSnapByMatchday.entries()]
+      .sort((left, right) => Number(left[0]) - Number(right[0]))
+      .map(([, snap]) => snap);
     if (!seasonSnaps.length) return;
 
     const seasonShort = String(season || '')
@@ -2797,11 +2819,11 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
   const legend = element('div', { className: 'chart-legend', attributes: { role: 'list', 'aria-label': 'Diagramm-Legende' } }, [
     element('span', { className: 'legend-item', style: { color: 'var(--rating-line)' }, text: 'Rating' }),
     element('span', { className: 'legend-item', style: { color: 'var(--rating-deviation-area)' }, text: 'Rating ± RD' }),
-    element('span', { className: 'legend-item', style: { color: 'var(--rating-deviation-line)' }, text: 'Rating Deviation (RD)' })
+    element('span', { className: 'legend-item', style: { color: 'var(--rating-deviation-line)' }, text: 'Rating Deviation (RD, die Unsicherheit)' })
   ]);
 
   return element('section', { className: 'history-panel' }, [
-    element('h2', { className: 'history-panel-title', text: `${team.name} Rating-Verlauf` }, [
+    element('h2', { className: 'history-panel-title', text: `${team.name} Rating-Verlauf (ohne Wildcard)` }, [
       element('span', { className: 'in-dev-label', text: '(in-Dev Version)' })
     ]),
     legend,

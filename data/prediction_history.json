@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T08:25:34+00:00",
+  "generated_at": "2026-11-18T13:31:41+00:00",
   "crosszone_history": [
     {
       "key": "Season SoSe26|0",
@@ -320,14 +320,14 @@
         {
           "id": "1_2",
           "label": "1. Liga \u2194 2. Liga",
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         {
           "id": "2_3",
           "label": "2. Liga \u2194 3. Liga",
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         {
           "id": "3_4",
@@ -481,7 +481,7 @@
       "key": "Season WiSe26/27|4",
       "season": "Season WiSe26/27",
       "matchday": "4",
-      "date": "12.11.2026",
+      "date": "11.11.2026",
       "phase": "regular_season",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (4)",
       "zones": [
@@ -489,7 +489,7 @@
           "id": "1_2",
           "label": "1. Liga \u2194 2. Liga",
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         {
           "id": "2_3",
@@ -509,7 +509,7 @@
       "key": "Season WiSe26/27|5",
       "season": "Season WiSe26/27",
       "matchday": "5",
-      "date": "16.11.2026",
+      "date": "17.11.2026",
       "phase": "regular_season",
       "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (5)",
       "zones": [
@@ -517,7 +517,7 @@
           "id": "1_2",
           "label": "1. Liga \u2194 2. Liga",
           "rating": 2420.9246,
-          "sigma": 128.1446
+          "sigma": 128.1445
         },
         {
           "id": "2_3",
@@ -529,7 +529,7 @@
           "id": "3_4",
           "label": "3. Liga \u2194 4. Liga",
           "rating": 1060.1243,
-          "sigma": 81.8476
+          "sigma": 81.5869
         }
       ]
     }
@@ -11018,12 +11018,12 @@
       "actual_winner_id": "T034",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11050,12 +11050,12 @@
       "actual_winner_id": "T037",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11082,12 +11082,12 @@
       "actual_winner_id": "T028",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11114,12 +11114,12 @@
       "actual_winner_id": "T027",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11146,12 +11146,12 @@
       "actual_winner_id": "T030",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11178,12 +11178,12 @@
       "actual_winner_id": "T003",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11210,12 +11210,12 @@
       "actual_winner_id": "T002",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11242,12 +11242,12 @@
       "actual_winner_id": "T038",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11274,12 +11274,12 @@
       "actual_winner_id": "T043",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11306,12 +11306,12 @@
       "actual_winner_id": "T024",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11338,12 +11338,12 @@
       "actual_winner_id": "T031",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11370,12 +11370,12 @@
       "actual_winner_id": "T052",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11402,12 +11402,12 @@
       "actual_winner_id": "T032",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11434,12 +11434,12 @@
       "actual_winner_id": "T051",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11466,12 +11466,12 @@
       "actual_winner_id": "T046",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11498,12 +11498,12 @@
       "actual_winner_id": "T053",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11530,12 +11530,12 @@
       "actual_winner_id": "T062",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11562,12 +11562,12 @@
       "actual_winner_id": "T064",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11594,12 +11594,12 @@
       "actual_winner_id": "T041",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11626,12 +11626,12 @@
       "actual_winner_id": "T048",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11658,12 +11658,12 @@
       "actual_winner_id": "T047",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11690,12 +11690,12 @@
       "actual_winner_id": "T039",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11722,12 +11722,12 @@
       "actual_winner_id": "T056",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11754,12 +11754,12 @@
       "actual_winner_id": "T055",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2476.6344,
+          "sigma": 130.3855
         },
         "2_3": {
           "rating": 1677.6763,
-          "sigma": 104.1352
+          "sigma": 103.8189
         },
         "3_4": {
           "rating": 1072.2444,
@@ -11771,7 +11771,7 @@
       "match_id": "M352",
       "date": "17.06.2026",
       "season": "Season SoSe26",
-      "matchday": "11",
+      "matchday": "12",
       "phase": "Showdown 4. Liga",
       "team_a_id": "T019",
       "team_b_id": "T016",
@@ -11779,23 +11779,23 @@
       "score_b": 3,
       "team_a": "KIT SC Spezi auf 1",
       "team_b": "BeK F\u00f6rdeschwimmer",
-      "probability_a": 0.376035,
-      "probability_b": 0.623965,
-      "confidence": 0.24793,
+      "probability_a": 0.452519,
+      "probability_b": 0.547481,
+      "confidence": 0.094961,
       "correct": true,
       "actual_winner_id": "T016",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2499.2871,
+          "sigma": 129.8667
         },
         "2_3": {
-          "rating": 1677.6763,
-          "sigma": 104.1352
+          "rating": 1647.5378,
+          "sigma": 105.4702
         },
         "3_4": {
-          "rating": 1072.2444,
-          "sigma": 94.8518
+          "rating": 1070.5376,
+          "sigma": 95.6108
         }
       }
     },
@@ -11803,7 +11803,7 @@
       "match_id": "M353",
       "date": "17.06.2026",
       "season": "Season SoSe26",
-      "matchday": "11",
+      "matchday": "12",
       "phase": "Showdown 4. Liga",
       "team_a_id": "T007",
       "team_b_id": "T018",
@@ -11811,23 +11811,23 @@
       "score_b": 3,
       "team_a": "DG Lotus",
       "team_b": "DG Strix",
-      "probability_a": 0.814945,
-      "probability_b": 0.185055,
-      "confidence": 0.62989,
+      "probability_a": 0.822407,
+      "probability_b": 0.177593,
+      "confidence": 0.644813,
       "correct": false,
       "actual_winner_id": "T018",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2499.2871,
+          "sigma": 129.8667
         },
         "2_3": {
-          "rating": 1677.6763,
-          "sigma": 104.1352
+          "rating": 1647.5378,
+          "sigma": 105.4702
         },
         "3_4": {
-          "rating": 1072.2444,
-          "sigma": 94.8518
+          "rating": 1070.5376,
+          "sigma": 95.6108
         }
       }
     },
@@ -11835,7 +11835,7 @@
       "match_id": "M354",
       "date": "17.06.2026",
       "season": "Season SoSe26",
-      "matchday": "11",
+      "matchday": "12",
       "phase": "Showdown 4. Liga",
       "team_a_id": "T022",
       "team_b_id": "T009",
@@ -11843,23 +11843,23 @@
       "score_b": 3,
       "team_a": "BUW Strays",
       "team_b": "Bremer Wasch Dienst",
-      "probability_a": 0.212814,
-      "probability_b": 0.787186,
-      "confidence": 0.574371,
+      "probability_a": 0.148812,
+      "probability_b": 0.851188,
+      "confidence": 0.702376,
       "correct": true,
       "actual_winner_id": "T009",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2499.2871,
+          "sigma": 129.8667
         },
         "2_3": {
-          "rating": 1677.6763,
-          "sigma": 104.1352
+          "rating": 1647.5378,
+          "sigma": 105.4702
         },
         "3_4": {
-          "rating": 1072.2444,
-          "sigma": 94.8518
+          "rating": 1070.5376,
+          "sigma": 95.6108
         }
       }
     },
@@ -11867,7 +11867,7 @@
       "match_id": "M355",
       "date": "17.06.2026",
       "season": "Season SoSe26",
-      "matchday": "11",
+      "matchday": "12",
       "phase": "Showdown 4. Liga",
       "team_a_id": "T017",
       "team_b_id": "T015",
@@ -11875,23 +11875,23 @@
       "score_b": 3,
       "team_a": "LUNA Nova",
       "team_b": "LES Leutzscher Lappen",
-      "probability_a": 0.179808,
-      "probability_b": 0.820192,
-      "confidence": 0.640383,
+      "probability_a": 0.124416,
+      "probability_b": 0.875584,
+      "confidence": 0.751167,
       "correct": true,
       "actual_winner_id": "T015",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2499.2871,
+          "sigma": 129.8667
         },
         "2_3": {
-          "rating": 1677.6763,
-          "sigma": 104.1352
+          "rating": 1647.5378,
+          "sigma": 105.4702
         },
         "3_4": {
-          "rating": 1072.2444,
-          "sigma": 94.8518
+          "rating": 1070.5376,
+          "sigma": 95.6108
         }
       }
     },
@@ -11899,7 +11899,7 @@
       "match_id": "M356",
       "date": "17.06.2026",
       "season": "Season SoSe26",
-      "matchday": "11",
+      "matchday": "12",
       "phase": "Relegation",
       "team_a_id": "T047",
       "team_b_id": "T039",
@@ -11907,23 +11907,23 @@
       "score_b": 3,
       "team_a": "LES Connewitz Crusaders",
       "team_b": "RUB Goats",
-      "probability_a": 0.488268,
-      "probability_b": 0.511732,
-      "confidence": 0.023463,
-      "correct": true,
+      "probability_a": 0.508771,
+      "probability_b": 0.491229,
+      "confidence": 0.017542,
+      "correct": false,
       "actual_winner_id": "T039",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2499.2871,
+          "sigma": 129.8667
         },
         "2_3": {
-          "rating": 1677.6763,
-          "sigma": 104.1352
+          "rating": 1647.5378,
+          "sigma": 105.4702
         },
         "3_4": {
-          "rating": 1072.2444,
-          "sigma": 94.8518
+          "rating": 1070.5376,
+          "sigma": 95.6108
         }
       }
     },
@@ -11931,7 +11931,7 @@
       "match_id": "M357",
       "date": "17.06.2026",
       "season": "Season SoSe26",
-      "matchday": "11",
+      "matchday": "12",
       "phase": "Relegation",
       "team_a_id": "T041",
       "team_b_id": "T048",
@@ -11939,23 +11939,23 @@
       "score_b": 2,
       "team_a": "LUnatics Ludwigshafen",
       "team_b": "UBTeufelsrochen",
-      "probability_a": 0.591841,
-      "probability_b": 0.408159,
-      "confidence": 0.183683,
+      "probability_a": 0.627284,
+      "probability_b": 0.372716,
+      "confidence": 0.254567,
       "correct": true,
       "actual_winner_id": "T041",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2499.2871,
+          "sigma": 129.8667
         },
         "2_3": {
-          "rating": 1677.6763,
-          "sigma": 104.1352
+          "rating": 1647.5378,
+          "sigma": 105.4702
         },
         "3_4": {
-          "rating": 1072.2444,
-          "sigma": 94.8518
+          "rating": 1070.5376,
+          "sigma": 95.6108
         }
       }
     },
@@ -11963,7 +11963,7 @@
       "match_id": "M358",
       "date": "17.06.2026",
       "season": "Season SoSe26",
-      "matchday": "11",
+      "matchday": "12",
       "phase": "Playoffs",
       "team_a_id": "T056",
       "team_b_id": "T055",
@@ -11971,23 +11971,23 @@
       "score_b": 4,
       "team_a": "DG Infinite",
       "team_b": "Hamburger Delfine",
-      "probability_a": 0.601808,
-      "probability_b": 0.398192,
-      "confidence": 0.203616,
+      "probability_a": 0.582903,
+      "probability_b": 0.417097,
+      "confidence": 0.165806,
       "correct": false,
       "actual_winner_id": "T055",
       "crossover_zones": {
         "1_2": {
-          "rating": 2494.9838,
-          "sigma": 130.6375
+          "rating": 2499.2871,
+          "sigma": 129.8667
         },
         "2_3": {
-          "rating": 1677.6763,
-          "sigma": 104.1352
+          "rating": 1647.5378,
+          "sigma": 105.4702
         },
         "3_4": {
-          "rating": 1072.2444,
-          "sigma": 94.8518
+          "rating": 1070.5376,
+          "sigma": 95.6108
         }
       }
     },
@@ -12003,9 +12003,9 @@
       "score_b": 3,
       "team_a": "AIX Au Huur",
       "team_b": "Haiground",
-      "probability_a": 0.503047,
-      "probability_b": 0.496953,
-      "confidence": 0.006095,
+      "probability_a": 0.50924,
+      "probability_b": 0.49076,
+      "confidence": 0.018481,
       "correct": false,
       "actual_winner_id": "T030",
       "crossover_zones": {
@@ -12035,9 +12035,9 @@
       "score_b": 2,
       "team_a": "LES GOOO",
       "team_b": "THM Knights",
-      "probability_a": 0.557739,
-      "probability_b": 0.442261,
-      "confidence": 0.115477,
+      "probability_a": 0.556944,
+      "probability_b": 0.443056,
+      "confidence": 0.113887,
       "correct": true,
       "actual_winner_id": "T029",
       "crossover_zones": {
@@ -12067,9 +12067,9 @@
       "score_b": 2,
       "team_a": "PBE Mondhasen",
       "team_b": "HsGL Pumas",
-      "probability_a": 0.579892,
-      "probability_b": 0.420108,
-      "confidence": 0.159784,
+      "probability_a": 0.5789,
+      "probability_b": 0.4211,
+      "confidence": 0.1578,
       "correct": true,
       "actual_winner_id": "T006",
       "crossover_zones": {
@@ -12099,9 +12099,9 @@
       "score_b": 0,
       "team_a": "Berlin Makaken",
       "team_b": "HSK Satyrus",
-      "probability_a": 0.578894,
-      "probability_b": 0.421106,
-      "confidence": 0.157788,
+      "probability_a": 0.578902,
+      "probability_b": 0.421098,
+      "confidence": 0.157804,
       "correct": true,
       "actual_winner_id": "T001",
       "crossover_zones": {
@@ -12131,9 +12131,9 @@
       "score_b": 3,
       "team_a": "T\u00dc Phoenix",
       "team_b": "Mogontiacum",
-      "probability_a": 0.571828,
-      "probability_b": 0.428172,
-      "confidence": 0.143656,
+      "probability_a": 0.573357,
+      "probability_b": 0.426643,
+      "confidence": 0.146713,
       "correct": false,
       "actual_winner_id": "T032",
       "crossover_zones": {
@@ -12163,9 +12163,9 @@
       "score_b": 1,
       "team_a": "Mainhardt",
       "team_b": "DG Chronos",
-      "probability_a": 0.44967,
-      "probability_b": 0.55033,
-      "confidence": 0.100661,
+      "probability_a": 0.452786,
+      "probability_b": 0.547214,
+      "confidence": 0.094427,
       "correct": false,
       "actual_winner_id": "T054",
       "crossover_zones": {
@@ -12195,9 +12195,9 @@
       "score_b": 3,
       "team_a": "RUB Goats Venom",
       "team_b": "BeK Flotten Sprotten",
-      "probability_a": 0.383695,
-      "probability_b": 0.616305,
-      "confidence": 0.232609,
+      "probability_a": 0.380938,
+      "probability_b": 0.619062,
+      "confidence": 0.238125,
       "correct": true,
       "actual_winner_id": "T051",
       "crossover_zones": {
@@ -12227,9 +12227,9 @@
       "score_b": 1,
       "team_a": "Bielefeld Sapphire",
       "team_b": "bUDSweiser",
-      "probability_a": 0.581226,
-      "probability_b": 0.418774,
-      "confidence": 0.162451,
+      "probability_a": 0.575243,
+      "probability_b": 0.424757,
+      "confidence": 0.150485,
       "correct": true,
       "actual_winner_id": "T026",
       "crossover_zones": {
@@ -12259,9 +12259,9 @@
       "score_b": 2,
       "team_a": "T\u00dc Wyvern",
       "team_b": "RUB Goats",
-      "probability_a": 0.740637,
-      "probability_b": 0.259363,
-      "confidence": 0.481274,
+      "probability_a": 0.763381,
+      "probability_b": 0.236619,
+      "confidence": 0.526761,
       "correct": true,
       "actual_winner_id": "T057",
       "crossover_zones": {
@@ -12291,9 +12291,9 @@
       "score_b": 1,
       "team_a": "KIT SC Eclipse",
       "team_b": "LUnatics Ludwigshafen",
-      "probability_a": 0.658583,
-      "probability_b": 0.341417,
-      "confidence": 0.317165,
+      "probability_a": 0.680767,
+      "probability_b": 0.319233,
+      "confidence": 0.361534,
       "correct": true,
       "actual_winner_id": "T063",
       "crossover_zones": {
@@ -16843,7 +16843,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -16875,7 +16875,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -16907,7 +16907,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -16939,7 +16939,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -16971,7 +16971,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17003,7 +17003,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17035,7 +17035,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17067,7 +17067,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17099,7 +17099,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17131,7 +17131,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17163,7 +17163,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17195,7 +17195,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17227,7 +17227,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17259,7 +17259,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17291,7 +17291,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17323,7 +17323,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17355,7 +17355,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17387,7 +17387,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17419,7 +17419,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17451,7 +17451,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17483,7 +17483,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17515,7 +17515,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17547,7 +17547,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17579,7 +17579,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17611,7 +17611,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17643,7 +17643,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17675,7 +17675,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17707,7 +17707,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17739,7 +17739,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17771,7 +17771,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17803,7 +17803,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17835,7 +17835,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17867,7 +17867,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17899,7 +17899,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17931,7 +17931,7 @@
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17945,7 +17945,7 @@
     },
     {
       "match_id": "M177",
-      "date": "12.11.2026",
+      "date": "11.11.2026",
       "season": "Season WiSe26/27",
       "matchday": "4",
       "phase": "Regular Season",
@@ -17955,15 +17955,15 @@
       "score_b": 0,
       "team_a": "Hamburger Delfine",
       "team_b": "DG Elysium",
-      "probability_a": 0.897797,
-      "probability_b": 0.102203,
-      "confidence": 0.765668,
+      "probability_a": 0.89799,
+      "probability_b": 0.10201,
+      "confidence": 0.765781,
       "correct": true,
       "actual_winner_id": "T055",
       "crossover_zones": {
         "1_2": {
           "rating": 2431.9022,
-          "sigma": 127.5849
+          "sigma": 127.5848
         },
         "2_3": {
           "rating": 1688.9243,
@@ -17987,15 +17987,15 @@
       "score_b": 1,
       "team_a": "404 Average Cake Enjoyer",
       "team_b": "HSK Centauri",
-      "probability_a": 0.6059,
-      "probability_b": 0.3941,
-      "confidence": 0.56399,
+      "probability_a": 0.600429,
+      "probability_b": 0.399571,
+      "confidence": 0.558413,
       "correct": true,
       "actual_winner_id": "T061",
       "crossover_zones": {
         "1_2": {
           "rating": 2420.9246,
-          "sigma": 128.1446
+          "sigma": 128.1445
         },
         "2_3": {
           "rating": 1688.9243,
@@ -18003,7 +18003,71 @@
         },
         "3_4": {
           "rating": 1060.1243,
-          "sigma": 81.8476
+          "sigma": 81.5869
+        }
+      }
+    },
+    {
+      "match_id": "M182",
+      "date": "17.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "5",
+      "phase": "Regular Season",
+      "team_a_id": "T002",
+      "team_b_id": "T086",
+      "score_a": 3,
+      "score_b": 0,
+      "team_a": "HsGL Pumas",
+      "team_b": "HSMW Esports Quacksalber",
+      "probability_a": 0.718121,
+      "probability_b": 0.281879,
+      "confidence": 0.610343,
+      "correct": true,
+      "actual_winner_id": "T002",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2420.9246,
+          "sigma": 128.1445
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.5869
+        }
+      }
+    },
+    {
+      "match_id": "M191",
+      "date": "17.11.2026",
+      "season": "Season WiSe26/27",
+      "matchday": "5",
+      "phase": "Regular Season",
+      "team_a_id": "T017",
+      "team_b_id": "T009",
+      "score_a": 3,
+      "score_b": 1,
+      "team_a": "LUNA Nova",
+      "team_b": "Bremer Wasch Dienst",
+      "probability_a": 0.296694,
+      "probability_b": 0.703306,
+      "confidence": 0.678624,
+      "correct": false,
+      "actual_winner_id": "T017",
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2420.9246,
+          "sigma": 128.1445
+        },
+        "2_3": {
+          "rating": 1688.9243,
+          "sigma": 91.5979
+        },
+        "3_4": {
+          "rating": 1060.1243,
+          "sigma": 81.5869
         }
       }
     }
