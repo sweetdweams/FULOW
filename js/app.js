@@ -751,10 +751,10 @@ function weightsHistoryChart(history) {
   }
 
   const SIGNALS = [
-    { id: 'direct', label: 'Direkter Vergleich', color: '#2563EB', desc: 'Direkte H2H-Duelle früherer Begegnungen' },
-    { id: 'common_opponent', label: 'Gemeinsame Gegner', color: '#14B8A6', desc: 'Quervergleich über gemeinsame Kontrahenten' },
-    { id: 'logic', label: 'Transitiver Vergleich', color: '#A855F7', desc: 'Transitive Matchketten im Graphen' },
-    { id: 'form', label: 'Aktuelle Form', color: '#F97316', desc: 'Kurzzeit-Momentum und jüngste Formkurve' }
+    { id: 'direct', label: 'Direkter Vergleich', color: '#2563EB', desc: 'Direkte frühere Begegnungen' },
+    { id: 'common_opponent', label: 'Gemeinsame Gegner', color: '#14B8A6', desc: 'Vergleich über gemeinsame Gegner' },
+    { id: 'logic', label: 'Transitiver Vergleich', color: '#A855F7', desc: 'Transitive Matchketten' },
+    { id: 'form', label: 'Aktuelle Form', color: '#F97316', desc: 'Performance der letzten 5 Spiele' }
   ];
 
   const SYSTEMS = [

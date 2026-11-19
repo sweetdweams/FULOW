@@ -1,3 +1,6 @@
+# 1.2.8 -- 19.11.2026
+- Datenaktualisierung
+
 # 1.2.7 -- 17.11.2026
 - Rating Diagramm in den Team Details überarbeitet
 ## 1.2.7.1
