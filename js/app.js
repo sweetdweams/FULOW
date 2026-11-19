@@ -1,4 +1,4 @@
-/* Webseite version = 1.2.7.2 */
+/* Webseite version = 1.2.8.1 */
 
 const { page } = document.body.dataset;
 const ROOT = page === 'home' ? '' : '../';
@@ -509,7 +509,16 @@ function performanceChart(periods) {
 }
 
 function historicalPerformanceCharts(history) {
-  if (!history.length) {
+  const cleanHistory = [];
+  const seenHistoryKeys = new Set();
+  (history || []).forEach(p => {
+    if (p && p.key && !seenHistoryKeys.has(p.key)) {
+      seenHistoryKeys.add(p.key);
+      cleanHistory.push(p);
+    }
+  });
+
+  if (!cleanHistory.length) {
     return emptyState('Keine historischen Analytics-Daten verfügbar.');
   }
 
@@ -585,7 +594,7 @@ function historicalPerformanceCharts(history) {
     let currentMode = 'cumulative';
     const getSeries = () => ids.map(id => ({
       id,
-      values: history.map(point => {
+      values: cleanHistory.map(point => {
         let value = NaN;
         if (ratingAxis) {
           value = point.crossover_zones?.[id]?.rating == null
@@ -611,7 +620,7 @@ function historicalPerformanceCharts(history) {
     const controls = element('div', { className: 'chart-controls' });
     const active = new Set(ids);
     const chartTarget = element('div', { className: 'historical-chart-target' });
-    const dates = history.map(point => point.key);
+    const dates = cleanHistory.map(point => point.key);
 
     const render = () => {
       const series = getSeries();
@@ -743,9 +752,16 @@ function historicalPerformanceCharts(history) {
 }
 
 function weightsHistoryChart(history) {
-  const pointsWithWeights = (history || []).filter(
-    p => p && (p.weights || p.weights_by_system) && (!p.season || !p.season.includes('SoSe26'))
-  );
+  const pointsWithWeights = [];
+  const seenWeightKeys = new Set();
+  (history || []).forEach(p => {
+    if (p && (p.weights || p.weights_by_system) && (!p.season || !p.season.includes('SoSe26'))) {
+      if (p.key && !seenWeightKeys.has(p.key)) {
+        seenWeightKeys.add(p.key);
+        pointsWithWeights.push(p);
+      }
+    }
+  });
   if (!pointsWithWeights.length) {
     return emptyState('Keine Verlaufsdaten zu Modell-Gewichten ab WiSe26/27 vorhanden.');
   }
@@ -2803,7 +2819,30 @@ function historyPanel(team, history, leagueThresholds, sustainabilityData, seaso
     });
   });
 
-  const finalPoints = points.length ? points : [
+  // Deduplicate points (prevent identical duplicate labels or adjacent duplicate ratings)
+  const dedupedPoints = [];
+  const seenPointKeys = new Set();
+  points.forEach(pt => {
+    const ptKey = `${pt.season || ''}|${pt.matchday}|${pt.label}`;
+    if (!seenPointKeys.has(ptKey)) {
+      seenPointKeys.add(ptKey);
+      const prev = dedupedPoints[dedupedPoints.length - 1];
+      if (
+        prev &&
+        prev.season === pt.season &&
+        Math.abs(prev.rating - pt.rating) < 1e-4 &&
+        Math.abs(prev.rating_deviation - pt.rating_deviation) < 1e-4 &&
+        prev.isInitial &&
+        !pt.isInitial
+      ) {
+        dedupedPoints[dedupedPoints.length - 1] = pt;
+      } else {
+        dedupedPoints.push(pt);
+      }
+    }
+  });
+
+  const finalPoints = dedupedPoints.length ? dedupedPoints : [
     {
       date: 'Aktuell',
       matchday: '0',
