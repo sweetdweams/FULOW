@@ -1,56 +1,56 @@
 {
-  "generated_at": "2026-11-19T20:25:08+00:00",
+  "generated_at": "2026-11-22T21:13:59+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
     "Season WiSe26/27"
   ],
   "evaluation_start": "22.04.2026",
-  "evaluation_end": "18.11.2026",
-  "predictions": 577,
-  "accuracy": 0.684575,
-  "log_loss": 0.602974,
-  "brier_score": 0.206259,
-  "calibration_error": 0.083042,
-  "runtime_seconds": 1.43,
-  "runtime_display": "1,43 Sekunden",
-  "runtime_generated_at": "2026-11-19T20:25:08+00:00",
+  "evaluation_end": "22.11.2026",
+  "predictions": 581,
+  "accuracy": 0.685026,
+  "log_loss": 0.60271,
+  "brier_score": 0.206158,
+  "calibration_error": 0.083735,
+  "runtime_seconds": 1.82,
+  "runtime_display": "1,82 Sekunden",
+  "runtime_generated_at": "2026-11-22T21:13:59+00:00",
   "periods": [
     {
       "id": "all_time",
       "label": "All Time",
       "season": null,
       "evaluation_start": "22.04.2026",
-      "evaluation_end": "18.11.2026",
-      "predictions": 577,
-      "accuracy": 0.684575,
-      "log_loss": 0.602974,
-      "brier_score": 0.206259,
-      "calibration_error": 0.083042
+      "evaluation_end": "22.11.2026",
+      "predictions": 581,
+      "accuracy": 0.685026,
+      "log_loss": 0.60271,
+      "brier_score": 0.206158,
+      "calibration_error": 0.083735
     },
     {
       "id": "last_20",
       "label": "Last 20",
       "season": null,
       "evaluation_start": "18.11.2026",
-      "evaluation_end": "18.11.2026",
+      "evaluation_end": "22.11.2026",
       "predictions": 20,
       "accuracy": 0.85,
-      "log_loss": 0.438949,
-      "brier_score": 0.138297,
-      "calibration_error": 0.32681
+      "log_loss": 0.421967,
+      "brier_score": 0.130956,
+      "calibration_error": 0.315402
     },
     {
       "id": "last_50",
       "label": "Last 50",
       "season": null,
       "evaluation_start": "11.11.2026",
-      "evaluation_end": "18.11.2026",
+      "evaluation_end": "22.11.2026",
       "predictions": 50,
-      "accuracy": 0.82,
-      "log_loss": 0.503712,
-      "brier_score": 0.164784,
-      "calibration_error": 0.214812
+      "accuracy": 0.8,
+      "log_loss": 0.526204,
+      "brier_score": 0.174874,
+      "calibration_error": 0.214312
     },
     {
       "id": "season_Season SoSe26",
@@ -69,12 +69,12 @@
       "label": "Season Season Wise26/27",
       "season": "Season WiSe26/27",
       "evaluation_start": "10.10.2026",
-      "evaluation_end": "18.11.2026",
-      "predictions": 209,
-      "accuracy": 0.698565,
-      "log_loss": 0.616035,
-      "brier_score": 0.210099,
-      "calibration_error": 0.103613
+      "evaluation_end": "22.11.2026",
+      "predictions": 213,
+      "accuracy": 0.699531,
+      "log_loss": 0.615071,
+      "brier_score": 0.209752,
+      "calibration_error": 0.105116
     }
   ],
   "matchday_history": [
@@ -162,8 +162,8 @@
       "matchday": "1",
       "date": "22.04.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (1)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (1)",
+      "phase_label": "Regular Season \u00b7 Tag (1)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (1)",
       "predictions": 61,
       "accuracy": 0.52459,
       "log_loss": 0.735287,
@@ -240,8 +240,8 @@
       "matchday": "2",
       "date": "22.04.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (2)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (2)",
+      "phase_label": "Regular Season \u00b7 Tag (2)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (2)",
       "predictions": 93,
       "accuracy": 0.580645,
       "log_loss": 0.708669,
@@ -318,8 +318,8 @@
       "matchday": "3",
       "date": "29.04.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (3)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (3)",
+      "phase_label": "Regular Season \u00b7 Tag (3)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (3)",
       "predictions": 125,
       "accuracy": 0.592,
       "log_loss": 0.690192,
@@ -396,8 +396,8 @@
       "matchday": "4",
       "date": "06.05.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (4)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (4)",
+      "phase_label": "Regular Season \u00b7 Tag (4)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (4)",
       "predictions": 157,
       "accuracy": 0.611465,
       "log_loss": 0.653538,
@@ -474,8 +474,8 @@
       "matchday": "5",
       "date": "13.05.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (5)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (5)",
+      "phase_label": "Regular Season \u00b7 Tag (5)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (5)",
       "predictions": 189,
       "accuracy": 0.62963,
       "log_loss": 0.61914,
@@ -552,8 +552,8 @@
       "matchday": "6",
       "date": "20.05.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (6)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (6)",
+      "phase_label": "Regular Season \u00b7 Tag (6)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (6)",
       "predictions": 221,
       "accuracy": 0.633484,
       "log_loss": 0.606236,
@@ -630,8 +630,8 @@
       "matchday": "7",
       "date": "27.05.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (7)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (7)",
+      "phase_label": "Regular Season \u00b7 Tag (7)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (7)",
       "predictions": 253,
       "accuracy": 0.660079,
       "log_loss": 0.592517,
@@ -708,8 +708,8 @@
       "matchday": "8",
       "date": "03.06.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (8)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (8)",
+      "phase_label": "Regular Season \u00b7 Tag (8)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (8)",
       "predictions": 285,
       "accuracy": 0.652632,
       "log_loss": 0.592931,
@@ -786,8 +786,8 @@
       "matchday": "9",
       "date": "03.06.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (9)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (9)",
+      "phase_label": "Regular Season \u00b7 Tag (9)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (9)",
       "predictions": 301,
       "accuracy": 0.654485,
       "log_loss": 0.607079,
@@ -1214,8 +1214,8 @@
       "matchday": "1",
       "date": "25.10.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (1)",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (1)",
+      "phase_label": "Regular Season \u00b7 Tag (1)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (1)",
       "predictions": 437,
       "accuracy": 0.677346,
       "log_loss": 0.604607,
@@ -1272,23 +1272,23 @@
         }
       },
       "weights": {
-        "direct": 0.268395,
-        "common_opponent": 0.215847,
-        "logic": 0.247894,
-        "form": 0.267864
+        "direct": 0.268225,
+        "common_opponent": 0.215589,
+        "logic": 0.247614,
+        "form": 0.268572
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.268395,
-          "common_opponent": 0.215847,
-          "logic": 0.247894,
-          "form": 0.267864
+          "direct": 0.268225,
+          "common_opponent": 0.215589,
+          "logic": 0.247614,
+          "form": 0.268572
         },
         "4. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.228887,
-          "logic": 0.232979,
-          "form": 0.288134
+          "common_opponent": 0.229062,
+          "logic": 0.233176,
+          "form": 0.287762
         },
         "1. Liga": {
           "direct": 0.260717,
@@ -1304,9 +1304,9 @@
         },
         "3. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.207824,
-          "logic": 0.231704,
-          "form": 0.310473
+          "common_opponent": 0.207632,
+          "logic": 0.231455,
+          "form": 0.310913
         }
       },
       "crossover_zones": {
@@ -1330,8 +1330,8 @@
       "matchday": "2",
       "date": "01.11.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (2)",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (2)",
+      "phase_label": "Regular Season \u00b7 Tag (2)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (2)",
       "predictions": 473,
       "accuracy": 0.67019,
       "log_loss": 0.605671,
@@ -1388,41 +1388,41 @@
         }
       },
       "weights": {
-        "direct": 0.267916,
-        "common_opponent": 0.220826,
-        "logic": 0.246537,
-        "form": 0.264721
+        "direct": 0.267746,
+        "common_opponent": 0.220575,
+        "logic": 0.246265,
+        "form": 0.265414
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.267916,
-          "common_opponent": 0.220826,
-          "logic": 0.246537,
-          "form": 0.264721
+          "direct": 0.267746,
+          "common_opponent": 0.220575,
+          "logic": 0.246265,
+          "form": 0.265414
         },
         "4. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.184989,
-          "logic": 0.24419,
-          "form": 0.320821
+          "common_opponent": 0.186405,
+          "logic": 0.245775,
+          "form": 0.317821
         },
         "1. Liga": {
           "direct": 0.235131,
-          "common_opponent": 0.240399,
-          "logic": 0.276575,
-          "form": 0.247895
+          "common_opponent": 0.2404,
+          "logic": 0.276577,
+          "form": 0.247893
         },
         "2. Liga": {
-          "direct": 0.269057,
-          "common_opponent": 0.252343,
-          "logic": 0.254651,
-          "form": 0.223949
+          "direct": 0.269055,
+          "common_opponent": 0.252345,
+          "logic": 0.254654,
+          "form": 0.223947
         },
         "3. Liga": {
-          "direct": 0.250535,
-          "common_opponent": 0.205054,
-          "logic": 0.227442,
-          "form": 0.316969
+          "direct": 0.250534,
+          "common_opponent": 0.204867,
+          "logic": 0.2272,
+          "form": 0.317399
         }
       },
       "crossover_zones": {
@@ -1446,8 +1446,8 @@
       "matchday": "3",
       "date": "08.11.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (3)",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (3)",
+      "phase_label": "Regular Season \u00b7 Tag (3)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (3)",
       "predictions": 509,
       "accuracy": 0.671906,
       "log_loss": 0.611548,
@@ -1504,41 +1504,41 @@
         }
       },
       "weights": {
-        "direct": 0.275015,
-        "common_opponent": 0.211011,
-        "logic": 0.247184,
-        "form": 0.26679
+        "direct": 0.274845,
+        "common_opponent": 0.210768,
+        "logic": 0.24692,
+        "form": 0.267467
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.275015,
-          "common_opponent": 0.211011,
-          "logic": 0.247184,
-          "form": 0.26679
+          "direct": 0.274845,
+          "common_opponent": 0.210768,
+          "logic": 0.24692,
+          "form": 0.267467
         },
         "4. Liga": {
-          "direct": 0.261666,
-          "common_opponent": 0.189745,
-          "logic": 0.239919,
-          "form": 0.308671
+          "direct": 0.261682,
+          "common_opponent": 0.191115,
+          "logic": 0.241469,
+          "form": 0.305734
         },
         "1. Liga": {
-          "direct": 0.240782,
-          "common_opponent": 0.209267,
-          "logic": 0.28378,
-          "form": 0.266172
+          "direct": 0.240781,
+          "common_opponent": 0.20927,
+          "logic": 0.283783,
+          "form": 0.266166
         },
         "2. Liga": {
-          "direct": 0.264099,
-          "common_opponent": 0.25757,
-          "logic": 0.265173,
-          "form": 0.213158
+          "direct": 0.264096,
+          "common_opponent": 0.257575,
+          "logic": 0.265176,
+          "form": 0.213153
         },
         "3. Liga": {
-          "direct": 0.287114,
-          "common_opponent": 0.198817,
-          "logic": 0.202615,
-          "form": 0.311454
+          "direct": 0.287098,
+          "common_opponent": 0.198636,
+          "logic": 0.202378,
+          "form": 0.311888
         }
       },
       "crossover_zones": {
@@ -1562,8 +1562,8 @@
       "matchday": "4",
       "date": "11.11.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (4)",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (4)",
+      "phase_label": "Regular Season \u00b7 Tag (4)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (4)",
       "predictions": 545,
       "accuracy": 0.678899,
       "log_loss": 0.607836,
@@ -1620,41 +1620,41 @@
         }
       },
       "weights": {
-        "direct": 0.283069,
-        "common_opponent": 0.210985,
-        "logic": 0.246773,
-        "form": 0.259172
+        "direct": 0.282903,
+        "common_opponent": 0.210748,
+        "logic": 0.246515,
+        "form": 0.259833
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.283069,
-          "common_opponent": 0.210985,
-          "logic": 0.246773,
-          "form": 0.259172
+          "direct": 0.282903,
+          "common_opponent": 0.210748,
+          "logic": 0.246515,
+          "form": 0.259833
         },
         "4. Liga": {
-          "direct": 0.275294,
-          "common_opponent": 0.153479,
-          "logic": 0.24427,
-          "form": 0.326957
+          "direct": 0.275304,
+          "common_opponent": 0.154836,
+          "logic": 0.245806,
+          "form": 0.324054
         },
         "1. Liga": {
-          "direct": 0.221757,
-          "common_opponent": 0.229456,
-          "logic": 0.292174,
-          "form": 0.256614
+          "direct": 0.221755,
+          "common_opponent": 0.22946,
+          "logic": 0.292177,
+          "form": 0.256607
         },
         "2. Liga": {
-          "direct": 0.264099,
-          "common_opponent": 0.262372,
-          "logic": 0.273524,
-          "form": 0.200005
+          "direct": 0.264096,
+          "common_opponent": 0.262379,
+          "logic": 0.27353,
+          "form": 0.199995
         },
         "3. Liga": {
-          "direct": 0.324293,
-          "common_opponent": 0.175755,
-          "logic": 0.185172,
-          "form": 0.314781
+          "direct": 0.324278,
+          "common_opponent": 0.175573,
+          "logic": 0.184934,
+          "form": 0.315216
         }
       },
       "crossover_zones": {
@@ -1669,6 +1669,122 @@
         "3_4": {
           "rating": 1060.1243,
           "sigma": 81.8476
+        }
+      }
+    },
+    {
+      "key": "Season WiSe26/27|5",
+      "season": "Season WiSe26/27",
+      "matchday": "5",
+      "date": "22.11.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (5)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (5)",
+      "predictions": 581,
+      "accuracy": 0.685026,
+      "log_loss": 0.60271,
+      "brier_score": 0.206158,
+      "calibration_error": 0.083735,
+      "modes": {
+        "cumulative": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "22.04.2026",
+          "evaluation_end": "22.11.2026",
+          "predictions": 581,
+          "accuracy": 0.685026,
+          "log_loss": 0.60271,
+          "brier_score": 0.206158,
+          "calibration_error": 0.083735
+        },
+        "season_cumulative": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "10.10.2026",
+          "evaluation_end": "22.11.2026",
+          "predictions": 213,
+          "accuracy": 0.699531,
+          "log_loss": 0.615071,
+          "brier_score": 0.209752,
+          "calibration_error": 0.105116
+        },
+        "discrete": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "16.11.2026",
+          "evaluation_end": "22.11.2026",
+          "predictions": 36,
+          "accuracy": 0.777778,
+          "log_loss": 0.525107,
+          "brier_score": 0.175204,
+          "calibration_error": 0.333697
+        },
+        "moving_average": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "21.10.2026",
+          "evaluation_end": "22.11.2026",
+          "predictions": 180,
+          "accuracy": 0.705556,
+          "log_loss": 0.594252,
+          "brier_score": 0.203126,
+          "calibration_error": 0.093639
+        }
+      },
+      "weights": {
+        "direct": 0.2649,
+        "common_opponent": 0.198466,
+        "logic": 0.254892,
+        "form": 0.281742
+      },
+      "weights_by_system": {
+        "Ligen 1\u20133": {
+          "direct": 0.2649,
+          "common_opponent": 0.198466,
+          "logic": 0.254892,
+          "form": 0.281742
+        },
+        "4. Liga": {
+          "direct": 0.281165,
+          "common_opponent": 0.166632,
+          "logic": 0.25214,
+          "form": 0.300063
+        },
+        "1. Liga": {
+          "direct": 0.201562,
+          "common_opponent": 0.223695,
+          "logic": 0.289193,
+          "form": 0.28555
+        },
+        "2. Liga": {
+          "direct": 0.264096,
+          "common_opponent": 0.219782,
+          "logic": 0.2988,
+          "form": 0.217322
+        },
+        "3. Liga": {
+          "direct": 0.299126,
+          "common_opponent": 0.194607,
+          "logic": 0.179515,
+          "form": 0.326753
+        }
+      },
+      "crossover_zones": {
+        "1_2": {
+          "rating": 2424.9232,
+          "sigma": 130.7768
+        },
+        "2_3": {
+          "rating": 1688.9483,
+          "sigma": 95.0259
+        },
+        "3_4": {
+          "rating": 1075.3912,
+          "sigma": 84.2172
         }
       }
     }
@@ -1744,8 +1860,8 @@
       "matchday": "1",
       "date": "22.04.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (1)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (1)",
+      "phase_label": "Regular Season \u00b7 Tag (1)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (1)",
       "predictions": 61,
       "accuracy": 0.52459,
       "log_loss": 0.735287,
@@ -1808,8 +1924,8 @@
       "matchday": "2",
       "date": "22.04.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (2)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (2)",
+      "phase_label": "Regular Season \u00b7 Tag (2)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (2)",
       "predictions": 93,
       "accuracy": 0.580645,
       "log_loss": 0.708669,
@@ -1872,8 +1988,8 @@
       "matchday": "3",
       "date": "29.04.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (3)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (3)",
+      "phase_label": "Regular Season \u00b7 Tag (3)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (3)",
       "predictions": 125,
       "accuracy": 0.592,
       "log_loss": 0.690192,
@@ -1936,8 +2052,8 @@
       "matchday": "4",
       "date": "06.05.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (4)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (4)",
+      "phase_label": "Regular Season \u00b7 Tag (4)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (4)",
       "predictions": 157,
       "accuracy": 0.611465,
       "log_loss": 0.653538,
@@ -2000,8 +2116,8 @@
       "matchday": "5",
       "date": "13.05.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (5)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (5)",
+      "phase_label": "Regular Season \u00b7 Tag (5)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (5)",
       "predictions": 189,
       "accuracy": 0.62963,
       "log_loss": 0.61914,
@@ -2064,8 +2180,8 @@
       "matchday": "6",
       "date": "20.05.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (6)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (6)",
+      "phase_label": "Regular Season \u00b7 Tag (6)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (6)",
       "predictions": 221,
       "accuracy": 0.633484,
       "log_loss": 0.606236,
@@ -2128,8 +2244,8 @@
       "matchday": "7",
       "date": "27.05.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (7)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (7)",
+      "phase_label": "Regular Season \u00b7 Tag (7)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (7)",
       "predictions": 253,
       "accuracy": 0.660079,
       "log_loss": 0.592517,
@@ -2192,8 +2308,8 @@
       "matchday": "8",
       "date": "03.06.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (8)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (8)",
+      "phase_label": "Regular Season \u00b7 Tag (8)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (8)",
       "predictions": 285,
       "accuracy": 0.652632,
       "log_loss": 0.592931,
@@ -2256,8 +2372,8 @@
       "matchday": "9",
       "date": "03.06.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (9)",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (9)",
+      "phase_label": "Regular Season \u00b7 Tag (9)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (9)",
       "predictions": 301,
       "accuracy": 0.654485,
       "log_loss": 0.607079,
@@ -2614,8 +2730,8 @@
       "matchday": "1",
       "date": "25.10.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (1)",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (1)",
+      "phase_label": "Regular Season \u00b7 Tag (1)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (1)",
       "predictions": 437,
       "accuracy": 0.677346,
       "log_loss": 0.604607,
@@ -2672,23 +2788,23 @@
         }
       },
       "weights": {
-        "direct": 0.268395,
-        "common_opponent": 0.215847,
-        "logic": 0.247894,
-        "form": 0.267864
+        "direct": 0.268225,
+        "common_opponent": 0.215589,
+        "logic": 0.247614,
+        "form": 0.268572
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.268395,
-          "common_opponent": 0.215847,
-          "logic": 0.247894,
-          "form": 0.267864
+          "direct": 0.268225,
+          "common_opponent": 0.215589,
+          "logic": 0.247614,
+          "form": 0.268572
         },
         "4. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.228887,
-          "logic": 0.232979,
-          "form": 0.288134
+          "common_opponent": 0.229062,
+          "logic": 0.233176,
+          "form": 0.287762
         },
         "1. Liga": {
           "direct": 0.260717,
@@ -2704,9 +2820,9 @@
         },
         "3. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.207824,
-          "logic": 0.231704,
-          "form": 0.310473
+          "common_opponent": 0.207632,
+          "logic": 0.231455,
+          "form": 0.310913
         }
       }
     },
@@ -2716,8 +2832,8 @@
       "matchday": "2",
       "date": "01.11.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (2)",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (2)",
+      "phase_label": "Regular Season \u00b7 Tag (2)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (2)",
       "predictions": 473,
       "accuracy": 0.67019,
       "log_loss": 0.605671,
@@ -2774,41 +2890,41 @@
         }
       },
       "weights": {
-        "direct": 0.267916,
-        "common_opponent": 0.220826,
-        "logic": 0.246537,
-        "form": 0.264721
+        "direct": 0.267746,
+        "common_opponent": 0.220575,
+        "logic": 0.246265,
+        "form": 0.265414
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.267916,
-          "common_opponent": 0.220826,
-          "logic": 0.246537,
-          "form": 0.264721
+          "direct": 0.267746,
+          "common_opponent": 0.220575,
+          "logic": 0.246265,
+          "form": 0.265414
         },
         "4. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.184989,
-          "logic": 0.24419,
-          "form": 0.320821
+          "common_opponent": 0.186405,
+          "logic": 0.245775,
+          "form": 0.317821
         },
         "1. Liga": {
           "direct": 0.235131,
-          "common_opponent": 0.240399,
-          "logic": 0.276575,
-          "form": 0.247895
+          "common_opponent": 0.2404,
+          "logic": 0.276577,
+          "form": 0.247893
         },
         "2. Liga": {
-          "direct": 0.269057,
-          "common_opponent": 0.252343,
-          "logic": 0.254651,
-          "form": 0.223949
+          "direct": 0.269055,
+          "common_opponent": 0.252345,
+          "logic": 0.254654,
+          "form": 0.223947
         },
         "3. Liga": {
-          "direct": 0.250535,
-          "common_opponent": 0.205054,
-          "logic": 0.227442,
-          "form": 0.316969
+          "direct": 0.250534,
+          "common_opponent": 0.204867,
+          "logic": 0.2272,
+          "form": 0.317399
         }
       }
     },
@@ -2818,8 +2934,8 @@
       "matchday": "3",
       "date": "08.11.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (3)",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (3)",
+      "phase_label": "Regular Season \u00b7 Tag (3)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (3)",
       "predictions": 509,
       "accuracy": 0.671906,
       "log_loss": 0.611548,
@@ -2876,41 +2992,41 @@
         }
       },
       "weights": {
-        "direct": 0.275015,
-        "common_opponent": 0.211011,
-        "logic": 0.247184,
-        "form": 0.26679
+        "direct": 0.274845,
+        "common_opponent": 0.210768,
+        "logic": 0.24692,
+        "form": 0.267467
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.275015,
-          "common_opponent": 0.211011,
-          "logic": 0.247184,
-          "form": 0.26679
+          "direct": 0.274845,
+          "common_opponent": 0.210768,
+          "logic": 0.24692,
+          "form": 0.267467
         },
         "4. Liga": {
-          "direct": 0.261666,
-          "common_opponent": 0.189745,
-          "logic": 0.239919,
-          "form": 0.308671
+          "direct": 0.261682,
+          "common_opponent": 0.191115,
+          "logic": 0.241469,
+          "form": 0.305734
         },
         "1. Liga": {
-          "direct": 0.240782,
-          "common_opponent": 0.209267,
-          "logic": 0.28378,
-          "form": 0.266172
+          "direct": 0.240781,
+          "common_opponent": 0.20927,
+          "logic": 0.283783,
+          "form": 0.266166
         },
         "2. Liga": {
-          "direct": 0.264099,
-          "common_opponent": 0.25757,
-          "logic": 0.265173,
-          "form": 0.213158
+          "direct": 0.264096,
+          "common_opponent": 0.257575,
+          "logic": 0.265176,
+          "form": 0.213153
         },
         "3. Liga": {
-          "direct": 0.287114,
-          "common_opponent": 0.198817,
-          "logic": 0.202615,
-          "form": 0.311454
+          "direct": 0.287098,
+          "common_opponent": 0.198636,
+          "logic": 0.202378,
+          "form": 0.311888
         }
       }
     },
@@ -2920,8 +3036,8 @@
       "matchday": "4",
       "date": "11.11.2026",
       "phase": "Regular Season",
-      "phase_label": "Regul\u00e4re Saison \u00b7 Tag (4)",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (4)",
+      "phase_label": "Regular Season \u00b7 Tag (4)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (4)",
       "predictions": 545,
       "accuracy": 0.678899,
       "log_loss": 0.607836,
@@ -2978,41 +3094,143 @@
         }
       },
       "weights": {
-        "direct": 0.283069,
-        "common_opponent": 0.210985,
-        "logic": 0.246773,
-        "form": 0.259172
+        "direct": 0.282903,
+        "common_opponent": 0.210748,
+        "logic": 0.246515,
+        "form": 0.259833
       },
       "weights_by_system": {
         "Ligen 1\u20133": {
-          "direct": 0.283069,
-          "common_opponent": 0.210985,
-          "logic": 0.246773,
-          "form": 0.259172
+          "direct": 0.282903,
+          "common_opponent": 0.210748,
+          "logic": 0.246515,
+          "form": 0.259833
         },
         "4. Liga": {
-          "direct": 0.275294,
-          "common_opponent": 0.153479,
-          "logic": 0.24427,
-          "form": 0.326957
+          "direct": 0.275304,
+          "common_opponent": 0.154836,
+          "logic": 0.245806,
+          "form": 0.324054
         },
         "1. Liga": {
-          "direct": 0.221757,
-          "common_opponent": 0.229456,
-          "logic": 0.292174,
-          "form": 0.256614
+          "direct": 0.221755,
+          "common_opponent": 0.22946,
+          "logic": 0.292177,
+          "form": 0.256607
         },
         "2. Liga": {
-          "direct": 0.264099,
-          "common_opponent": 0.262372,
-          "logic": 0.273524,
-          "form": 0.200005
+          "direct": 0.264096,
+          "common_opponent": 0.262379,
+          "logic": 0.27353,
+          "form": 0.199995
         },
         "3. Liga": {
-          "direct": 0.324293,
-          "common_opponent": 0.175755,
-          "logic": 0.185172,
-          "form": 0.314781
+          "direct": 0.324278,
+          "common_opponent": 0.175573,
+          "logic": 0.184934,
+          "form": 0.315216
+        }
+      }
+    },
+    {
+      "key": "Season WiSe26/27|5",
+      "season": "Season WiSe26/27",
+      "matchday": "5",
+      "date": "22.11.2026",
+      "phase": "Regular Season",
+      "phase_label": "Regular Season \u00b7 Tag (5)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (5)",
+      "predictions": 581,
+      "accuracy": 0.685026,
+      "log_loss": 0.60271,
+      "brier_score": 0.206158,
+      "calibration_error": 0.083735,
+      "modes": {
+        "cumulative": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "22.04.2026",
+          "evaluation_end": "22.11.2026",
+          "predictions": 581,
+          "accuracy": 0.685026,
+          "log_loss": 0.60271,
+          "brier_score": 0.206158,
+          "calibration_error": 0.083735
+        },
+        "season_cumulative": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "10.10.2026",
+          "evaluation_end": "22.11.2026",
+          "predictions": 213,
+          "accuracy": 0.699531,
+          "log_loss": 0.615071,
+          "brier_score": 0.209752,
+          "calibration_error": 0.105116
+        },
+        "discrete": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "16.11.2026",
+          "evaluation_end": "22.11.2026",
+          "predictions": 36,
+          "accuracy": 0.777778,
+          "log_loss": 0.525107,
+          "brier_score": 0.175204,
+          "calibration_error": 0.333697
+        },
+        "moving_average": {
+          "id": "history",
+          "label": "History",
+          "season": null,
+          "evaluation_start": "21.10.2026",
+          "evaluation_end": "22.11.2026",
+          "predictions": 180,
+          "accuracy": 0.705556,
+          "log_loss": 0.594252,
+          "brier_score": 0.203126,
+          "calibration_error": 0.093639
+        }
+      },
+      "weights": {
+        "direct": 0.2649,
+        "common_opponent": 0.198466,
+        "logic": 0.254892,
+        "form": 0.281742
+      },
+      "weights_by_system": {
+        "Ligen 1\u20133": {
+          "direct": 0.2649,
+          "common_opponent": 0.198466,
+          "logic": 0.254892,
+          "form": 0.281742
+        },
+        "4. Liga": {
+          "direct": 0.281165,
+          "common_opponent": 0.166632,
+          "logic": 0.25214,
+          "form": 0.300063
+        },
+        "1. Liga": {
+          "direct": 0.201562,
+          "common_opponent": 0.223695,
+          "logic": 0.289193,
+          "form": 0.28555
+        },
+        "2. Liga": {
+          "direct": 0.264096,
+          "common_opponent": 0.219782,
+          "logic": 0.2988,
+          "form": 0.217322
+        },
+        "3. Liga": {
+          "direct": 0.299126,
+          "common_opponent": 0.194607,
+          "logic": 0.179515,
+          "form": 0.326753
         }
       }
     }
@@ -3052,7 +3270,7 @@
       "matchday": "1",
       "date": "22.04.2026",
       "phase": "regular_season",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (1)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (1)",
       "zones": [
         {
           "id": "1_2",
@@ -3080,7 +3298,7 @@
       "matchday": "2",
       "date": "22.04.2026",
       "phase": "regular_season",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (2)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (2)",
       "zones": [
         {
           "id": "1_2",
@@ -3108,7 +3326,7 @@
       "matchday": "3",
       "date": "29.04.2026",
       "phase": "regular_season",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (3)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (3)",
       "zones": [
         {
           "id": "1_2",
@@ -3136,7 +3354,7 @@
       "matchday": "4",
       "date": "06.05.2026",
       "phase": "regular_season",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (4)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (4)",
       "zones": [
         {
           "id": "1_2",
@@ -3164,7 +3382,7 @@
       "matchday": "5",
       "date": "13.05.2026",
       "phase": "regular_season",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (5)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (5)",
       "zones": [
         {
           "id": "1_2",
@@ -3192,7 +3410,7 @@
       "matchday": "6",
       "date": "20.05.2026",
       "phase": "regular_season",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (6)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (6)",
       "zones": [
         {
           "id": "1_2",
@@ -3220,7 +3438,7 @@
       "matchday": "7",
       "date": "27.05.2026",
       "phase": "regular_season",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (7)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (7)",
       "zones": [
         {
           "id": "1_2",
@@ -3248,7 +3466,7 @@
       "matchday": "8",
       "date": "03.06.2026",
       "phase": "regular_season",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (8)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (8)",
       "zones": [
         {
           "id": "1_2",
@@ -3276,7 +3494,7 @@
       "matchday": "9",
       "date": "03.06.2026",
       "phase": "regular_season",
-      "label": "Season SoSe26 \u00b7 Regul\u00e4re Saison \u00b7 Tag (9)",
+      "label": "Season SoSe26 \u00b7 Regular Season \u00b7 Tag (9)",
       "zones": [
         {
           "id": "1_2",
@@ -3416,7 +3634,7 @@
       "matchday": "1",
       "date": "25.10.2026",
       "phase": "regular_season",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (1)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (1)",
       "zones": [
         {
           "id": "1_2",
@@ -3444,7 +3662,7 @@
       "matchday": "2",
       "date": "01.11.2026",
       "phase": "regular_season",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (2)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (2)",
       "zones": [
         {
           "id": "1_2",
@@ -3472,7 +3690,7 @@
       "matchday": "3",
       "date": "08.11.2026",
       "phase": "regular_season",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (3)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (3)",
       "zones": [
         {
           "id": "1_2",
@@ -3500,7 +3718,7 @@
       "matchday": "4",
       "date": "11.11.2026",
       "phase": "regular_season",
-      "label": "Season WiSe26/27 \u00b7 Regul\u00e4re Saison \u00b7 Tag (4)",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (4)",
       "zones": [
         {
           "id": "1_2",
@@ -3519,6 +3737,34 @@
           "label": "3. Liga \u2194 4. Liga",
           "rating": 1060.1243,
           "sigma": 81.8476
+        }
+      ]
+    },
+    {
+      "key": "Season WiSe26/27|5",
+      "season": "Season WiSe26/27",
+      "matchday": "5",
+      "date": "22.11.2026",
+      "phase": "regular_season",
+      "label": "Season WiSe26/27 \u00b7 Regular Season \u00b7 Tag (5)",
+      "zones": [
+        {
+          "id": "1_2",
+          "label": "1. Liga \u2194 2. Liga",
+          "rating": 2424.9232,
+          "sigma": 130.7768
+        },
+        {
+          "id": "2_3",
+          "label": "2. Liga \u2194 3. Liga",
+          "rating": 1688.9483,
+          "sigma": 95.0259
+        },
+        {
+          "id": "3_4",
+          "label": "3. Liga \u2194 4. Liga",
+          "rating": 1075.3912,
+          "sigma": 84.2172
         }
       ]
     }

@@ -1,3 +1,6 @@
+# 1.2.9 -- 22.11.2026
+- Datenaktualisierung
+
 # 1.2.8 -- 19.11.2026
 - Datenaktualisierung
 ## 1.2.8.1 
