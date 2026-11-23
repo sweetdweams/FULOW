@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T21:13:59+00:00",
+  "generated_at": "2026-11-23T00:19:48+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -12,9 +12,9 @@
   "log_loss": 0.60271,
   "brier_score": 0.206158,
   "calibration_error": 0.083735,
-  "runtime_seconds": 1.82,
-  "runtime_display": "1,82 Sekunden",
-  "runtime_generated_at": "2026-11-22T21:13:59+00:00",
+  "runtime_seconds": 1.61,
+  "runtime_display": "1,61 Sekunden",
+  "runtime_generated_at": "2026-11-23T00:19:49+00:00",
   "periods": [
     {
       "id": "all_time",
@@ -1286,9 +1286,9 @@
         },
         "4. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.229062,
-          "logic": 0.233176,
-          "form": 0.287762
+          "common_opponent": 0.228627,
+          "logic": 0.232649,
+          "form": 0.288724
         },
         "1. Liga": {
           "direct": 0.260717,
@@ -1304,9 +1304,9 @@
         },
         "3. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.207632,
-          "logic": 0.231455,
-          "form": 0.310913
+          "common_opponent": 0.207601,
+          "logic": 0.231427,
+          "form": 0.310972
         }
       },
       "crossover_zones": {
@@ -1402,9 +1402,9 @@
         },
         "4. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.186405,
-          "logic": 0.245775,
-          "form": 0.317821
+          "common_opponent": 0.185981,
+          "logic": 0.245263,
+          "form": 0.318756
         },
         "1. Liga": {
           "direct": 0.235131,
@@ -1419,10 +1419,10 @@
           "form": 0.223947
         },
         "3. Liga": {
-          "direct": 0.250534,
-          "common_opponent": 0.204867,
-          "logic": 0.2272,
-          "form": 0.317399
+          "direct": 0.250533,
+          "common_opponent": 0.204836,
+          "logic": 0.227173,
+          "form": 0.317458
         }
       },
       "crossover_zones": {
@@ -1517,10 +1517,10 @@
           "form": 0.267467
         },
         "4. Liga": {
-          "direct": 0.261682,
-          "common_opponent": 0.191115,
-          "logic": 0.241469,
-          "form": 0.305734
+          "direct": 0.261677,
+          "common_opponent": 0.190705,
+          "logic": 0.240968,
+          "form": 0.30665
         },
         "1. Liga": {
           "direct": 0.240781,
@@ -1535,10 +1535,10 @@
           "form": 0.213153
         },
         "3. Liga": {
-          "direct": 0.287098,
-          "common_opponent": 0.198636,
-          "logic": 0.202378,
-          "form": 0.311888
+          "direct": 0.287097,
+          "common_opponent": 0.198605,
+          "logic": 0.202351,
+          "form": 0.311947
         }
       },
       "crossover_zones": {
@@ -1633,10 +1633,10 @@
           "form": 0.259833
         },
         "4. Liga": {
-          "direct": 0.275304,
-          "common_opponent": 0.154836,
-          "logic": 0.245806,
-          "form": 0.324054
+          "direct": 0.2753,
+          "common_opponent": 0.15443,
+          "logic": 0.24531,
+          "form": 0.324959
         },
         "1. Liga": {
           "direct": 0.221755,
@@ -1651,10 +1651,10 @@
           "form": 0.199995
         },
         "3. Liga": {
-          "direct": 0.324278,
-          "common_opponent": 0.175573,
-          "logic": 0.184934,
-          "form": 0.315216
+          "direct": 0.324277,
+          "common_opponent": 0.175542,
+          "logic": 0.184906,
+          "form": 0.315276
         }
       },
       "crossover_zones": {
@@ -1749,10 +1749,10 @@
           "form": 0.281742
         },
         "4. Liga": {
-          "direct": 0.281165,
-          "common_opponent": 0.166632,
-          "logic": 0.25214,
-          "form": 0.300063
+          "direct": 0.281147,
+          "common_opponent": 0.16625,
+          "logic": 0.251655,
+          "form": 0.300948
         },
         "1. Liga": {
           "direct": 0.201562,
@@ -1767,10 +1767,10 @@
           "form": 0.217322
         },
         "3. Liga": {
-          "direct": 0.299126,
-          "common_opponent": 0.194607,
-          "logic": 0.179515,
-          "form": 0.326753
+          "direct": 0.299125,
+          "common_opponent": 0.194577,
+          "logic": 0.179488,
+          "form": 0.326811
         }
       },
       "crossover_zones": {
@@ -2802,9 +2802,9 @@
         },
         "4. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.229062,
-          "logic": 0.233176,
-          "form": 0.287762
+          "common_opponent": 0.228627,
+          "logic": 0.232649,
+          "form": 0.288724
         },
         "1. Liga": {
           "direct": 0.260717,
@@ -2820,9 +2820,9 @@
         },
         "3. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.207632,
-          "logic": 0.231455,
-          "form": 0.310913
+          "common_opponent": 0.207601,
+          "logic": 0.231427,
+          "form": 0.310972
         }
       }
     },
@@ -2904,9 +2904,9 @@
         },
         "4. Liga": {
           "direct": 0.25,
-          "common_opponent": 0.186405,
-          "logic": 0.245775,
-          "form": 0.317821
+          "common_opponent": 0.185981,
+          "logic": 0.245263,
+          "form": 0.318756
         },
         "1. Liga": {
           "direct": 0.235131,
@@ -2921,10 +2921,10 @@
           "form": 0.223947
         },
         "3. Liga": {
-          "direct": 0.250534,
-          "common_opponent": 0.204867,
-          "logic": 0.2272,
-          "form": 0.317399
+          "direct": 0.250533,
+          "common_opponent": 0.204836,
+          "logic": 0.227173,
+          "form": 0.317458
         }
       }
     },
@@ -3005,10 +3005,10 @@
           "form": 0.267467
         },
         "4. Liga": {
-          "direct": 0.261682,
-          "common_opponent": 0.191115,
-          "logic": 0.241469,
-          "form": 0.305734
+          "direct": 0.261677,
+          "common_opponent": 0.190705,
+          "logic": 0.240968,
+          "form": 0.30665
         },
         "1. Liga": {
           "direct": 0.240781,
@@ -3023,10 +3023,10 @@
           "form": 0.213153
         },
         "3. Liga": {
-          "direct": 0.287098,
-          "common_opponent": 0.198636,
-          "logic": 0.202378,
-          "form": 0.311888
+          "direct": 0.287097,
+          "common_opponent": 0.198605,
+          "logic": 0.202351,
+          "form": 0.311947
         }
       }
     },
@@ -3107,10 +3107,10 @@
           "form": 0.259833
         },
         "4. Liga": {
-          "direct": 0.275304,
-          "common_opponent": 0.154836,
-          "logic": 0.245806,
-          "form": 0.324054
+          "direct": 0.2753,
+          "common_opponent": 0.15443,
+          "logic": 0.24531,
+          "form": 0.324959
         },
         "1. Liga": {
           "direct": 0.221755,
@@ -3125,10 +3125,10 @@
           "form": 0.199995
         },
         "3. Liga": {
-          "direct": 0.324278,
-          "common_opponent": 0.175573,
-          "logic": 0.184934,
-          "form": 0.315216
+          "direct": 0.324277,
+          "common_opponent": 0.175542,
+          "logic": 0.184906,
+          "form": 0.315276
         }
       }
     },
@@ -3209,10 +3209,10 @@
           "form": 0.281742
         },
         "4. Liga": {
-          "direct": 0.281165,
-          "common_opponent": 0.166632,
-          "logic": 0.25214,
-          "form": 0.300063
+          "direct": 0.281147,
+          "common_opponent": 0.16625,
+          "logic": 0.251655,
+          "form": 0.300948
         },
         "1. Liga": {
           "direct": 0.201562,
@@ -3227,10 +3227,10 @@
           "form": 0.217322
         },
         "3. Liga": {
-          "direct": 0.299126,
-          "common_opponent": 0.194607,
-          "logic": 0.179515,
-          "form": 0.326753
+          "direct": 0.299125,
+          "common_opponent": 0.194577,
+          "logic": 0.179488,
+          "form": 0.326811
         }
       }
     }

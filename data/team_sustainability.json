@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T21:13:59+00:00",
+  "generated_at": "2026-11-23T00:19:48+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -14661,7 +14661,7 @@
         "T073": {
           "name": "AIX Super C9",
           "rating": 378.9548,
-          "power_rating": 337.2301,
+          "power_rating": 337.2302,
           "form": -0.9583,
           "rating_deviation": 145.1294,
           "predicted_league": "4. Liga",
@@ -15546,7 +15546,7 @@
         "T039": {
           "name": "RUB Goats",
           "rating": 2467.4729,
-          "power_rating": 2508.7297,
+          "power_rating": 2508.7298,
           "form": 0.9333,
           "rating_deviation": 147.3458,
           "predicted_league": "2. Liga",
