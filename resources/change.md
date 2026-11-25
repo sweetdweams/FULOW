@@ -1,3 +1,6 @@
+# 1.2.10 -- 25.11.2026
+- Datenaktualisierung
+
 # 1.2.9 -- 22.11.2026
 - Datenaktualisierung
 ## 1.2.9.1
@@ -38,7 +41,7 @@
 
 # 1.2.2 -- 08.11.2026
 - Datenaktualisierung
-- Engineversion geändert: 1.1.3-stable → 1.1.4-stable
+- Engineversion geändert: 1.1.3-stable → 1.1.5-stable
 - Farbliche Überarbeitung
 - Matchpredictions aus dem aktuellen Spieltag werden erst angezeigt, sobald beide Teams des Matches die vorherige Runde abgeschlossen haben.
 ## 1.2.2.1
