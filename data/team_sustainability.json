@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T11:02:07+00:00",
+  "generated_at": "2026-11-26T10:39:23+00:00",
   "season": "Season WiSe26/27",
   "available_seasons": [
     "Season SoSe26",
@@ -15520,12 +15520,12 @@
           "form": -0.2,
           "rating_deviation": 124.5901,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.991929,
+          "league_confidence": 0.98162,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.008071,
-            "4. Liga": 0.991929
+            "3. Liga": 0.018379,
+            "4. Liga": 0.98162
           }
         },
         "T006": {
@@ -15535,12 +15535,12 @@
           "form": -0.1667,
           "rating_deviation": 130.9721,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.753514,
+          "league_confidence": 0.714088,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.005466,
-            "3. Liga": 0.753514,
-            "4. Liga": 0.24102
+            "2. Liga": 0.0028,
+            "3. Liga": 0.714088,
+            "4. Liga": 0.283111
           }
         },
         "T074": {
@@ -15550,12 +15550,12 @@
           "form": 1.0,
           "rating_deviation": 146.9507,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.869302,
+          "league_confidence": 0.881202,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.036004,
-            "3. Liga": 0.869302,
-            "4. Liga": 0.094694
+            "2. Liga": 0.035444,
+            "3. Liga": 0.881202,
+            "4. Liga": 0.083354
           }
         },
         "T015": {
@@ -15565,12 +15565,12 @@
           "form": -0.4583,
           "rating_deviation": 125.89,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.981071,
+          "league_confidence": 0.987694,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.018928,
-            "4. Liga": 0.981071
+            "3. Liga": 0.012306,
+            "4. Liga": 0.987694
           }
         },
         "T057": {
@@ -15580,11 +15580,11 @@
           "form": -0.2,
           "rating_deviation": 126.214,
           "predicted_league": "1. Liga",
-          "league_confidence": 0.603704,
+          "league_confidence": 0.599712,
           "league_probabilities": {
-            "1. Liga": 0.603704,
-            "2. Liga": 0.396268,
-            "3. Liga": 2.8e-05,
+            "1. Liga": 0.599712,
+            "2. Liga": 0.400264,
+            "3. Liga": 2.4e-05,
             "4. Liga": 0.0
           }
         },
@@ -15595,12 +15595,12 @@
           "form": 0.5,
           "rating_deviation": 150.2948,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.732919,
+          "league_confidence": 0.772914,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.007364,
-            "3. Liga": 0.732919,
-            "4. Liga": 0.259717
+            "2. Liga": 0.007615,
+            "3. Liga": 0.772914,
+            "4. Liga": 0.219471
           }
         },
         "T010": {
@@ -15610,12 +15610,12 @@
           "form": 0.1333,
           "rating_deviation": 125.2241,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.692781,
+          "league_confidence": 0.674832,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 7.2e-05,
-            "3. Liga": 0.307147,
-            "4. Liga": 0.692781
+            "2. Liga": 6.9e-05,
+            "3. Liga": 0.325099,
+            "4. Liga": 0.674832
           }
         },
         "T067": {
@@ -15625,12 +15625,12 @@
           "form": 0.9,
           "rating_deviation": 158.4315,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.583879,
+          "league_confidence": 0.582582,
           "league_probabilities": {
-            "1. Liga": 0.000598,
-            "2. Liga": 0.583879,
-            "3. Liga": 0.4149,
-            "4. Liga": 0.000622
+            "1. Liga": 0.000477,
+            "2. Liga": 0.582582,
+            "3. Liga": 0.416417,
+            "4. Liga": 0.000524
           }
         },
         "T034": {
@@ -15640,12 +15640,12 @@
           "form": 0.4583,
           "rating_deviation": 131.7497,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.812717,
+          "league_confidence": 0.869102,
           "league_probabilities": {
-            "1. Liga": 2e-06,
-            "2. Liga": 0.176952,
-            "3. Liga": 0.812717,
-            "4. Liga": 0.010329
+            "1. Liga": 0.0,
+            "2. Liga": 0.114704,
+            "3. Liga": 0.869102,
+            "4. Liga": 0.016194
           }
         },
         "T080": {
@@ -15655,12 +15655,12 @@
           "form": -0.5667,
           "rating_deviation": 148.0709,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.991759,
+          "league_confidence": 0.986376,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.008241,
-            "4. Liga": 0.991759
+            "3. Liga": 0.013624,
+            "4. Liga": 0.986376
           }
         },
         "T049": {
@@ -15670,11 +15670,11 @@
           "form": -0.8667,
           "rating_deviation": 127.8422,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.827642,
+          "league_confidence": 0.855117,
           "league_probabilities": {
-            "1. Liga": 0.169765,
-            "2. Liga": 0.827642,
-            "3. Liga": 0.002593,
+            "1. Liga": 0.142144,
+            "2. Liga": 0.855117,
+            "3. Liga": 0.002739,
             "4. Liga": 0.0
           }
         },
@@ -15685,12 +15685,12 @@
           "form": 0.125,
           "rating_deviation": 129.7497,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.834867,
+          "league_confidence": 0.804398,
           "league_probabilities": {
-            "1. Liga": 0.003018,
-            "2. Liga": 0.834867,
-            "3. Liga": 0.162104,
-            "4. Liga": 1.1e-05
+            "1. Liga": 0.001484,
+            "2. Liga": 0.804398,
+            "3. Liga": 0.194106,
+            "4. Liga": 1.3e-05
           }
         },
         "T013": {
@@ -15700,12 +15700,12 @@
           "form": -1.0,
           "rating_deviation": 129.2938,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.999883,
+          "league_confidence": 0.999942,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.000117,
-            "4. Liga": 0.999883
+            "3. Liga": 5.8e-05,
+            "4. Liga": 0.999942
           }
         },
         "T005": {
@@ -15715,12 +15715,12 @@
           "form": 0.2333,
           "rating_deviation": 124.9714,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.836199,
+          "league_confidence": 0.86065,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 9e-06,
-            "3. Liga": 0.163792,
-            "4. Liga": 0.836199
+            "2. Liga": 4e-06,
+            "3. Liga": 0.139346,
+            "4. Liga": 0.86065
           }
         },
         "T008": {
@@ -15730,12 +15730,12 @@
           "form": -0.6,
           "rating_deviation": 119.3648,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.994016,
+          "league_confidence": 0.997123,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.005984,
-            "4. Liga": 0.994016
+            "3. Liga": 0.002877,
+            "4. Liga": 0.997123
           }
         },
         "T009": {
@@ -15745,12 +15745,12 @@
           "form": -0.6,
           "rating_deviation": 124.6045,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.996543,
+          "league_confidence": 0.995351,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.003457,
-            "4. Liga": 0.996543
+            "3. Liga": 0.004649,
+            "4. Liga": 0.995351
           }
         },
         "T039": {
@@ -15760,11 +15760,11 @@
           "form": 0.9333,
           "rating_deviation": 147.3458,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.586802,
+          "league_confidence": 0.572231,
           "league_probabilities": {
-            "1. Liga": 0.412777,
-            "2. Liga": 0.586802,
-            "3. Liga": 0.00042,
+            "1. Liga": 0.427509,
+            "2. Liga": 0.572231,
+            "3. Liga": 0.00026,
             "4. Liga": 0.0
           }
         },
@@ -15775,12 +15775,12 @@
           "form": 1.0,
           "rating_deviation": 173.3236,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.596698,
+          "league_confidence": 0.615877,
           "league_probabilities": {
-            "1. Liga": 0.001085,
-            "2. Liga": 0.596698,
-            "3. Liga": 0.401375,
-            "4. Liga": 0.000842
+            "1. Liga": 0.00086,
+            "2. Liga": 0.615877,
+            "3. Liga": 0.382769,
+            "4. Liga": 0.000495
           }
         },
         "T032": {
@@ -15805,12 +15805,12 @@
           "form": 0.6667,
           "rating_deviation": 125.2678,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.707887,
+          "league_confidence": 0.748125,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 6e-05,
-            "3. Liga": 0.292052,
-            "4. Liga": 0.707887
+            "2. Liga": 2.9e-05,
+            "3. Liga": 0.251847,
+            "4. Liga": 0.748125
           }
         },
         "T028": {
@@ -15820,12 +15820,12 @@
           "form": -0.9667,
           "rating_deviation": 136.4576,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.721135,
+          "league_confidence": 0.659155,
           "league_probabilities": {
-            "1. Liga": 1e-05,
-            "2. Liga": 0.274204,
-            "3. Liga": 0.721135,
-            "4. Liga": 0.004651
+            "1. Liga": 1.4e-05,
+            "2. Liga": 0.338835,
+            "3. Liga": 0.659155,
+            "4. Liga": 0.001997
           }
         },
         "T079": {
@@ -15835,12 +15835,12 @@
           "form": -0.4583,
           "rating_deviation": 143.5238,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.989202,
+          "league_confidence": 0.985001,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.010798,
-            "4. Liga": 0.989202
+            "3. Liga": 0.014999,
+            "4. Liga": 0.985001
           }
         },
         "T084": {
@@ -15850,12 +15850,12 @@
           "form": 0.1,
           "rating_deviation": 148.413,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.714516,
+          "league_confidence": 0.787824,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.000123,
-            "3. Liga": 0.285361,
-            "4. Liga": 0.714516
+            "2. Liga": 3e-05,
+            "3. Liga": 0.212146,
+            "4. Liga": 0.787824
           }
         },
         "T066": {
@@ -15880,12 +15880,12 @@
           "form": 0.2,
           "rating_deviation": 161.3809,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.885526,
+          "league_confidence": 0.911231,
           "league_probabilities": {
-            "1. Liga": 0.016514,
-            "2. Liga": 0.885526,
-            "3. Liga": 0.09795,
-            "4. Liga": 9e-06
+            "1. Liga": 0.017737,
+            "2. Liga": 0.911231,
+            "3. Liga": 0.07103,
+            "4. Liga": 2e-06
           }
         },
         "T007": {
@@ -15895,12 +15895,12 @@
           "form": 0.4583,
           "rating_deviation": 124.5206,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.791936,
+          "league_confidence": 0.854012,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 1.9e-05,
-            "3. Liga": 0.208045,
-            "4. Liga": 0.791936
+            "2. Liga": 4e-06,
+            "3. Liga": 0.145984,
+            "4. Liga": 0.854012
           }
         },
         "T051": {
@@ -15910,12 +15910,12 @@
           "form": -1.0,
           "rating_deviation": 129.2585,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.62527,
+          "league_confidence": 0.567566,
           "league_probabilities": {
-            "1. Liga": 0.000317,
-            "2. Liga": 0.62527,
-            "3. Liga": 0.374243,
-            "4. Liga": 0.00017
+            "1. Liga": 0.000126,
+            "2. Liga": 0.567566,
+            "3. Liga": 0.432089,
+            "4. Liga": 0.000219
           }
         },
         "T041": {
@@ -15925,11 +15925,11 @@
           "form": 0.5333,
           "rating_deviation": 132.4425,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.86364,
+          "league_confidence": 0.859988,
           "league_probabilities": {
-            "1. Liga": 0.131502,
-            "2. Liga": 0.86364,
-            "3. Liga": 0.004858,
+            "1. Liga": 0.136297,
+            "2. Liga": 0.859988,
+            "3. Liga": 0.003715,
             "4. Liga": 0.0
           }
         },
@@ -15940,11 +15940,11 @@
           "form": 0.5333,
           "rating_deviation": 161.1029,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.804783,
+          "league_confidence": 0.807252,
           "league_probabilities": {
-            "1. Liga": 0.189817,
-            "2. Liga": 0.804783,
-            "3. Liga": 0.005401,
+            "1. Liga": 0.188291,
+            "2. Liga": 0.807252,
+            "3. Liga": 0.004458,
             "4. Liga": 0.0
           }
         },
@@ -15955,11 +15955,11 @@
           "form": 0.2,
           "rating_deviation": 127.0617,
           "predicted_league": "1. Liga",
-          "league_confidence": 0.741715,
+          "league_confidence": 0.681662,
           "league_probabilities": {
-            "1. Liga": 0.741715,
-            "2. Liga": 0.25828,
-            "3. Liga": 5e-06,
+            "1. Liga": 0.681662,
+            "2. Liga": 0.318331,
+            "3. Liga": 7e-06,
             "4. Liga": 0.0
           }
         },
@@ -15970,12 +15970,12 @@
           "form": 0.1667,
           "rating_deviation": 119.8862,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.89766,
+          "league_confidence": 0.874712,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.029514,
-            "3. Liga": 0.89766,
-            "4. Liga": 0.072825
+            "2. Liga": 0.013889,
+            "3. Liga": 0.874712,
+            "4. Liga": 0.1114
           }
         },
         "T075": {
@@ -15985,12 +15985,12 @@
           "form": -0.1667,
           "rating_deviation": 148.4821,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.889946,
+          "league_confidence": 0.855212,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 8e-06,
-            "3. Liga": 0.110046,
-            "4. Liga": 0.889946
+            "2. Liga": 9e-06,
+            "3. Liga": 0.144779,
+            "4. Liga": 0.855212
           }
         },
         "T053": {
@@ -16000,12 +16000,12 @@
           "form": -0.1667,
           "rating_deviation": 123.3208,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.889064,
+          "league_confidence": 0.891565,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.084721,
-            "3. Liga": 0.889064,
-            "4. Liga": 0.026215
+            "2. Liga": 0.085507,
+            "3. Liga": 0.891565,
+            "4. Liga": 0.022928
           }
         },
         "T012": {
@@ -16015,12 +16015,12 @@
           "form": 0.1667,
           "rating_deviation": 126.839,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.78674,
+          "league_confidence": 0.740411,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 2.3e-05,
-            "3. Liga": 0.213237,
-            "4. Liga": 0.78674
+            "2. Liga": 2.9e-05,
+            "3. Liga": 0.25956,
+            "4. Liga": 0.740411
           }
         },
         "T071": {
@@ -16030,12 +16030,12 @@
           "form": -0.9,
           "rating_deviation": 150.9793,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.763844,
+          "league_confidence": 0.767165,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 7.3e-05,
-            "3. Liga": 0.236082,
-            "4. Liga": 0.763844
+            "2. Liga": 5.7e-05,
+            "3. Liga": 0.232778,
+            "4. Liga": 0.767165
           }
         },
         "T002": {
@@ -16045,12 +16045,12 @@
           "form": 0.5333,
           "rating_deviation": 118.6497,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.581402,
+          "league_confidence": 0.639138,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.000186,
-            "3. Liga": 0.418411,
-            "4. Liga": 0.581402
+            "2. Liga": 7.9e-05,
+            "3. Liga": 0.360783,
+            "4. Liga": 0.639138
           }
         },
         "T026": {
@@ -16060,12 +16060,12 @@
           "form": -0.5333,
           "rating_deviation": 133.6475,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.637227,
+          "league_confidence": 0.643262,
           "league_probabilities": {
-            "1. Liga": 2.6e-05,
-            "2. Liga": 0.360684,
-            "3. Liga": 0.637227,
-            "4. Liga": 0.002063
+            "1. Liga": 1.9e-05,
+            "2. Liga": 0.35486,
+            "3. Liga": 0.643262,
+            "4. Liga": 0.001859
           }
         },
         "T082": {
@@ -16075,12 +16075,12 @@
           "form": -0.2333,
           "rating_deviation": 147.595,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.932699,
+          "league_confidence": 0.978322,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 2e-06,
-            "3. Liga": 0.067299,
-            "4. Liga": 0.932699
+            "2. Liga": 0.0,
+            "3. Liga": 0.021678,
+            "4. Liga": 0.978322
           }
         },
         "T018": {
@@ -16090,12 +16090,12 @@
           "form": 0.8333,
           "rating_deviation": 122.0376,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.688777,
+          "league_confidence": 0.796266,
           "league_probabilities": {
-            "1. Liga": 8e-06,
-            "2. Liga": 0.308854,
-            "3. Liga": 0.688777,
-            "4. Liga": 0.00236
+            "1. Liga": 1e-06,
+            "2. Liga": 0.198486,
+            "3. Liga": 0.796266,
+            "4. Liga": 0.005247
           }
         },
         "T063": {
@@ -16120,12 +16120,12 @@
           "form": 0.0833,
           "rating_deviation": 167.2434,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.964289,
+          "league_confidence": 0.982151,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 1e-06,
-            "3. Liga": 0.03571,
-            "4. Liga": 0.964289
+            "2. Liga": 0.0,
+            "3. Liga": 0.017848,
+            "4. Liga": 0.982151
           }
         },
         "T023": {
@@ -16135,12 +16135,12 @@
           "form": -0.5,
           "rating_deviation": 114.2148,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.900631,
+          "league_confidence": 0.902445,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.026297,
-            "3. Liga": 0.900631,
-            "4. Liga": 0.073071
+            "2. Liga": 0.022948,
+            "3. Liga": 0.902445,
+            "4. Liga": 0.074607
           }
         },
         "T077": {
@@ -16150,12 +16150,12 @@
           "form": -0.2,
           "rating_deviation": 148.2803,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.806415,
+          "league_confidence": 0.856675,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.014592,
-            "3. Liga": 0.806415,
-            "4. Liga": 0.178993
+            "2. Liga": 0.018981,
+            "3. Liga": 0.856675,
+            "4. Liga": 0.124344
           }
         },
         "T022": {
@@ -16165,12 +16165,12 @@
           "form": -0.0833,
           "rating_deviation": 125.5186,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.98329,
+          "league_confidence": 0.9877,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.01671,
-            "4. Liga": 0.98329
+            "3. Liga": 0.0123,
+            "4. Liga": 0.9877
           }
         },
         "T055": {
@@ -16180,10 +16180,10 @@
           "form": 1.0,
           "rating_deviation": 171.1869,
           "predicted_league": "1. Liga",
-          "league_confidence": 0.999689,
+          "league_confidence": 0.999762,
           "league_probabilities": {
-            "1. Liga": 0.999689,
-            "2. Liga": 0.000311,
+            "1. Liga": 0.999762,
+            "2. Liga": 0.000238,
             "3. Liga": 0.0,
             "4. Liga": 0.0
           }
@@ -16195,12 +16195,12 @@
           "form": 0.2333,
           "rating_deviation": 118.5491,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.94875,
+          "league_confidence": 0.958859,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.051249,
-            "4. Liga": 0.94875
+            "3. Liga": 0.041141,
+            "4. Liga": 0.958859
           }
         },
         "T061": {
@@ -16210,11 +16210,11 @@
           "form": -0.5667,
           "rating_deviation": 129.1354,
           "predicted_league": "1. Liga",
-          "league_confidence": 0.621879,
+          "league_confidence": 0.620936,
           "league_probabilities": {
-            "1. Liga": 0.621879,
-            "2. Liga": 0.378095,
-            "3. Liga": 2.6e-05,
+            "1. Liga": 0.620936,
+            "2. Liga": 0.379043,
+            "3. Liga": 2.1e-05,
             "4. Liga": 0.0
           }
         },
@@ -16225,12 +16225,12 @@
           "form": -0.4583,
           "rating_deviation": 126.8277,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.759557,
+          "league_confidence": 0.849667,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.005207,
-            "3. Liga": 0.759557,
-            "4. Liga": 0.235236
+            "2. Liga": 0.011085,
+            "3. Liga": 0.849667,
+            "4. Liga": 0.139249
           }
         },
         "T030": {
@@ -16240,12 +16240,12 @@
           "form": -0.8667,
           "rating_deviation": 131.5075,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.600292,
+          "league_confidence": 0.609706,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.000235,
-            "3. Liga": 0.399473,
-            "4. Liga": 0.600292
+            "2. Liga": 0.000171,
+            "3. Liga": 0.390122,
+            "4. Liga": 0.609706
           }
         },
         "T073": {
@@ -16255,12 +16255,12 @@
           "form": -0.9583,
           "rating_deviation": 145.1294,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.998166,
+          "league_confidence": 0.999184,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.001834,
-            "4. Liga": 0.998166
+            "3. Liga": 0.000816,
+            "4. Liga": 0.999184
           }
         },
         "T017": {
@@ -16270,12 +16270,12 @@
           "form": -0.2333,
           "rating_deviation": 135.3,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.997896,
+          "league_confidence": 0.998778,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 0.0,
-            "3. Liga": 0.002104,
-            "4. Liga": 0.997896
+            "3. Liga": 0.001222,
+            "4. Liga": 0.998778
           }
         },
         "T003": {
@@ -16285,12 +16285,12 @@
           "form": 0.4,
           "rating_deviation": 115.2983,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.861234,
+          "league_confidence": 0.816128,
           "league_probabilities": {
-            "1. Liga": 0.0,
-            "2. Liga": 0.126137,
-            "3. Liga": 0.861234,
-            "4. Liga": 0.012629
+            "1. Liga": 1e-06,
+            "2. Liga": 0.178185,
+            "3. Liga": 0.816128,
+            "4. Liga": 0.005687
           }
         },
         "T040": {
@@ -16300,11 +16300,11 @@
           "form": -0.6,
           "rating_deviation": 132.334,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.582976,
+          "league_confidence": 0.517001,
           "league_probabilities": {
-            "1. Liga": 0.416788,
-            "2. Liga": 0.582976,
-            "3. Liga": 0.000236,
+            "1. Liga": 0.482918,
+            "2. Liga": 0.517001,
+            "3. Liga": 8.1e-05,
             "4. Liga": 0.0
           }
         },
@@ -16329,13 +16329,13 @@
           "power_rating": 1004.847,
           "form": 0.2333,
           "rating_deviation": 135.1868,
-          "predicted_league": "4. Liga",
-          "league_confidence": 0.50736,
+          "predicted_league": "3. Liga",
+          "league_confidence": 0.52623,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.000619,
-            "3. Liga": 0.492022,
-            "4. Liga": 0.50736
+            "2. Liga": 0.000607,
+            "3. Liga": 0.52623,
+            "4. Liga": 0.473163
           }
         },
         "T046": {
@@ -16345,12 +16345,12 @@
           "form": 0.2,
           "rating_deviation": 136.1239,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.81767,
+          "league_confidence": 0.777582,
           "league_probabilities": {
             "1. Liga": 2e-06,
-            "2. Liga": 0.170102,
-            "3. Liga": 0.81767,
-            "4. Liga": 0.012226
+            "2. Liga": 0.216692,
+            "3. Liga": 0.777582,
+            "4. Liga": 0.005725
           }
         },
         "T086": {
@@ -16360,12 +16360,12 @@
           "form": -0.375,
           "rating_deviation": 147.3126,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.911289,
+          "league_confidence": 0.886285,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 4e-06,
-            "3. Liga": 0.088707,
-            "4. Liga": 0.911289
+            "2. Liga": 5e-06,
+            "3. Liga": 0.11371,
+            "4. Liga": 0.886285
           }
         },
         "T059": {
@@ -16375,11 +16375,11 @@
           "form": -0.5333,
           "rating_deviation": 144.8703,
           "predicted_league": "1. Liga",
-          "league_confidence": 0.814781,
+          "league_confidence": 0.867262,
           "league_probabilities": {
-            "1. Liga": 0.814781,
-            "2. Liga": 0.185215,
-            "3. Liga": 4e-06,
+            "1. Liga": 0.867262,
+            "2. Liga": 0.132738,
+            "3. Liga": 1e-06,
             "4. Liga": 0.0
           }
         },
@@ -16390,12 +16390,12 @@
           "form": -0.2,
           "rating_deviation": 130.6673,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.62439,
+          "league_confidence": 0.574235,
           "league_probabilities": {
-            "1. Liga": 0.000331,
-            "2. Liga": 0.62439,
-            "3. Liga": 0.375099,
-            "4. Liga": 0.00018
+            "1. Liga": 0.000143,
+            "2. Liga": 0.574235,
+            "3. Liga": 0.425405,
+            "4. Liga": 0.000217
           }
         },
         "T050": {
@@ -16420,12 +16420,12 @@
           "form": -0.1,
           "rating_deviation": 120.6876,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.936497,
+          "league_confidence": 0.920694,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 1e-06,
-            "3. Liga": 0.063502,
-            "4. Liga": 0.936497
+            "3. Liga": 0.079305,
+            "4. Liga": 0.920694
           }
         },
         "T025": {
@@ -16435,11 +16435,11 @@
           "form": 0.3333,
           "rating_deviation": 122.2306,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.936363,
+          "league_confidence": 0.934622,
           "league_probabilities": {
-            "1. Liga": 0.016488,
-            "2. Liga": 0.936363,
-            "3. Liga": 0.047148,
+            "1. Liga": 0.012006,
+            "2. Liga": 0.934622,
+            "3. Liga": 0.053372,
             "4. Liga": 0.0
           }
         },
@@ -16450,12 +16450,12 @@
           "form": -0.0667,
           "rating_deviation": 153.8539,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.676306,
+          "league_confidence": 0.660475,
           "league_probabilities": {
-            "1. Liga": 0.001199,
-            "2. Liga": 0.676306,
-            "3. Liga": 0.322274,
-            "4. Liga": 0.000221
+            "1. Liga": 0.00076,
+            "2. Liga": 0.660475,
+            "3. Liga": 0.33857,
+            "4. Liga": 0.000194
           }
         },
         "T038": {
@@ -16465,12 +16465,12 @@
           "form": 0.5333,
           "rating_deviation": 127.6316,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.671034,
+          "league_confidence": 0.719141,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.002347,
-            "3. Liga": 0.671034,
-            "4. Liga": 0.326619
+            "2. Liga": 0.002733,
+            "3. Liga": 0.719141,
+            "4. Liga": 0.278126
           }
         },
         "T056": {
@@ -16480,10 +16480,10 @@
           "form": 0.9333,
           "rating_deviation": 167.8281,
           "predicted_league": "1. Liga",
-          "league_confidence": 0.999633,
+          "league_confidence": 0.999722,
           "league_probabilities": {
-            "1. Liga": 0.999633,
-            "2. Liga": 0.000367,
+            "1. Liga": 0.999722,
+            "2. Liga": 0.000278,
             "3. Liga": 0.0,
             "4. Liga": 0.0
           }
@@ -16495,12 +16495,12 @@
           "form": 0.2,
           "rating_deviation": 150.7274,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.644594,
+          "league_confidence": 0.614492,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.00028,
-            "3. Liga": 0.355126,
-            "4. Liga": 0.644594
+            "2. Liga": 0.000255,
+            "3. Liga": 0.385253,
+            "4. Liga": 0.614492
           }
         },
         "T033": {
@@ -16510,12 +16510,12 @@
           "form": -0.5,
           "rating_deviation": 126.196,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.739576,
+          "league_confidence": 0.702133,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.004222,
-            "3. Liga": 0.739576,
-            "4. Liga": 0.256202
+            "2. Liga": 0.002242,
+            "3. Liga": 0.702133,
+            "4. Liga": 0.295624
           }
         },
         "T001": {
@@ -16525,12 +16525,12 @@
           "form": -0.2,
           "rating_deviation": 115.5846,
           "predicted_league": "3. Liga",
-          "league_confidence": 0.86489,
+          "league_confidence": 0.89602,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.013444,
-            "3. Liga": 0.86489,
-            "4. Liga": 0.121667
+            "2. Liga": 0.018658,
+            "3. Liga": 0.89602,
+            "4. Liga": 0.085321
           }
         },
         "T081": {
@@ -16539,13 +16539,13 @@
           "power_rating": 1037.13,
           "form": 0.5667,
           "rating_deviation": 147.2131,
-          "predicted_league": "3. Liga",
-          "league_confidence": 0.54674,
+          "predicted_league": "4. Liga",
+          "league_confidence": 0.550349,
           "league_probabilities": {
             "1. Liga": 0.0,
-            "2. Liga": 0.001403,
-            "3. Liga": 0.54674,
-            "4. Liga": 0.451857
+            "2. Liga": 0.000387,
+            "3. Liga": 0.449264,
+            "4. Liga": 0.550349
           }
         },
         "T047": {
@@ -16555,11 +16555,11 @@
           "form": 0.0833,
           "rating_deviation": 129.0374,
           "predicted_league": "2. Liga",
-          "league_confidence": 0.93356,
+          "league_confidence": 0.944689,
           "league_probabilities": {
-            "1. Liga": 0.01958,
-            "2. Liga": 0.93356,
-            "3. Liga": 0.04686,
+            "1. Liga": 0.023898,
+            "2. Liga": 0.944689,
+            "3. Liga": 0.031413,
             "4. Liga": 0.0
           }
         },
@@ -16570,12 +16570,12 @@
           "form": -0.1667,
           "rating_deviation": 151.8102,
           "predicted_league": "4. Liga",
-          "league_confidence": 0.960492,
+          "league_confidence": 0.948756,
           "league_probabilities": {
             "1. Liga": 0.0,
             "2. Liga": 1e-06,
-            "3. Liga": 0.039507,
-            "4. Liga": 0.960492
+            "3. Liga": 0.051244,
+            "4. Liga": 0.948756
           }
         }
       }

@@ -1,5 +1,7 @@
 # 1.2.10 -- 25.11.2026
 - Datenaktualisierung
+## 1.2.10.1
+- Datenaktualisierung
 
 # 1.2.9 -- 22.11.2026
 - Datenaktualisierung
